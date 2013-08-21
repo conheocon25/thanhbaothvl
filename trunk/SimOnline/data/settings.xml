@@ -1,0 +1,169 @@
+<options>    
+	<control>
+		<!-- ==================================================	-->
+		<!-- Các lệnh xử lí SYSTEM 								-->		
+		<!-- ==================================================	-->
+		<command name="DefaultCommand">
+			<view>DefaultCommand</view>
+			<status value="CMD_OK">
+				<forward>ViewNumbers</forward>
+			</status>
+		</command>
+		
+		<!-- ===================== Signout ===================== -->
+		<command name="Signout">
+			<view>Signout</view>
+			<status value="CMD_OK">
+				<forward>ViewNumbers</forward>
+			</status>
+		</command>
+				
+		<!-- ====================== Network ====================== -->
+		<command name="ViewNetworks">
+			<view>ViewNetworks</view>
+		</command>
+		<command name="ViewNumberByNetwork">
+			<view>ViewNumberByNetwork</view>
+		</command>
+		<command name="InsertNetwork">
+			<view>InsertNetwork</view>
+			<status value="CMD_OK">
+				<forward>ViewNetworks</forward>
+			</status>
+		</command>
+
+		<command name="UpdateNetwork">
+			<view>UpdateNetwork</view>
+			<status value="CMD_OK">
+				<forward>ViewNetworks</forward>
+			</status>
+		</command>
+
+		<command name="DeleteNetwork">
+			<view>DeleteNetwork</view>
+			<status value="CMD_OK">
+				<forward>ViewNetworks</forward>
+			</status>
+		</command>
+		<!-- ====================== Introduction - Giới Thiệu ====================== -->
+		<command name="Introduction">
+			<view>Introduction</view>
+		</command>
+		<command name="Introduction2">
+			<view>Introduction2</view>
+		</command>
+		<command name="Introduction3">
+			<view>Introduction3</view>
+		</command>
+		<!-- ====================== Payment - Thanh Toán ====================== -->
+		<command name="Payment">
+			<view>Payment</view>
+		</command>
+		<!-- ====================== RecordNight - Chấm Đểm Cho Sim ====================== -->
+		<command name="RecordNight">
+			<view>RecordNight</view>
+		</command>
+		<!-- ====================== Contact ====================== -->
+		<command name="Contact">
+			<view>Contact</view>
+		</command>
+		<!-- ====================== Category ====================== -->
+		<command name="ViewCategorys">
+			<view>ViewCategorys</view>
+		</command>
+		<command name="ViewNumberByCategory">
+			<view>ViewNumberByCategory</view>
+		</command>
+		<!-- ====================== Number ====================== -->
+		<command name="ViewNumbers">
+			<view>ViewNumbers</view>
+		</command>
+		<command name="ViewHotNumbers">
+			<view>ViewHotNumbers</view>
+		</command>
+		<command name="Search">
+			<view>Search</view>
+		</command>
+		<command name="SearchByPrice">
+			<view>SearchByPrice</view>
+		</command>
+		<!-- ====================== Order ====================== -->
+		<command name="ViewOrders">
+			<view>ViewOrders</view>
+		</command>
+		<command name="InsertOrder">
+			<view>InsertOrder</view>
+			<status value="CMD_OK">
+				<forward>ViewNumbers</forward>
+			</status>
+		</command>
+		<!-- ====================== Cart ====================== -->
+		<command name="ViewCart">
+			<view>ViewCart</view>			
+		</command>
+		<command name="DeleteCart">
+			<view>DeleteCart</view>
+			<status value="CMD_OK">
+				<forward>ViewCart</forward>
+			</status>
+			<status value="CMD_ERROR">
+				<forward>ViewNumbers</forward>
+			</status>
+		</command>
+		<command name="ClearCart">
+			<view>ClearCart</view>
+			<status value="CMD_OK">
+				<forward>ViewNumbers</forward>
+			</status>
+		</command>
+		<command name="CashCart">
+			<view>CashCart</view>
+			<status value="CMD_OK">
+				<forward>ReportCart</forward>
+			</status>
+		</command>
+		<command name="ReportCart">
+			<view>ReportCart</view>			
+		</command>
+		<!-- ====================== Customer ====================== -->
+		<command name="PutSimOnDemand">
+			<view>PutSimOnDemand</view>
+			<status value="CMD_OK">
+				<forward>ViewNumbers</forward>
+			</status>
+		</command>
+		<!-- ====================== User ====================== -->
+		<command name="ViewUsers">
+			<view>ViewUsers</view>
+		</command>
+
+		<command name="InsertUser">
+			<view>InsertUser</view>
+			<status value="CMD_OK">
+				<forward>ViewUsers</forward>
+			</status>
+		</command>
+
+		<command name="UpdateUser">
+			<view>UpdateUser</view>
+			<status value="CMD_OK">
+				<forward>ViewUsers</forward>
+			</status>
+		</command>
+
+		<command name="DeleteUser">
+			<view>DeleteUser</view>
+			<status value="CMD_OK">
+				<forward>ViewUsers</forward>
+			</status>
+		</command>
+
+		<command name="ChangePass">
+			<view>ChangePass</view>
+			<status value="CMD_OK">
+				<forward>Signin</forward>
+			</status>
+		</command>
+
+	</control>
+</options>
