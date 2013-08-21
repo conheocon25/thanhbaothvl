@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />		
+		<span metal:use-macro="macros.xhtml/Include"/>
+		<script>
+			/*<![CDATA[*/
+				$(document).ready(function() {			
+					$('#DataTable').find('tbody tr').hover(
+						function(){ $(this).find('td').addClass('table_highlighted');}, 
+						function(){	$(this).find('td').removeClass('table_highlighted');}
+					);
+				
+					var oTable = $('#DataTable').dataTable({				
+						"bScrollCollapse": true,
+						"bStateSave": false,
+						"bFilter": false,
+						"bInfo": false,
+						"bSort": true,
+						"bPaginate": false,
+						"fnDrawCallback": function(oSettings ){
+							if ( oSettings.bSorted || oSettings.bFiltered ){
+								for ( var i=0, iLen=oSettings.aiDisplay.length ; i<iLen ; i++ ){
+									$('td:eq(0)', oSettings.aoData[ oSettings.aiDisplay[i] ].nTr ).html( i+1 );
+								}
+							}
+						}
+					});
+					
+					new FixedHeader( oTable, { "top": true, "zTop": 105 } );
+				});	
+			/*]]>*/	
+		</script>
+	</head>	
+	<body>	
+		<div id="frame">
+			<span metal:use-macro="macros.xhtml/Header"/>
+			<span metal:use-macro="macros.xhtml/MenuIndex"/>
+			<div id="main">
+				<span metal:use-macro="macros.xhtml/main3_of1"/>
+				<div id="main3_of2">
+					<div id="tieude_main">Vì sao phải dùng Sim Số Đẹp Giá Rẻ?</div>
+					<div align="justify" style="margin-bottom: 10px; padding: 0 20px 0 20px;">
+						<p style="text-indent:25px;">Chơi sim số đẹp hiện đang trở thành một trào lưu khá phổ biến ở Việt Nam; đặc biệt tại các thành phố lớn như TP HCM, Hà Nội, Hải Phòng… Tuy nhiên, những câu hỏi xung quanh việc chơi sim số như : chơi sim số cụ thể là gì; chơi sim như thế nào mới là đúng cách; những kinh nghiệm và kiến thức khi chơi sim số…đang được rất nhiều người đặt ra và đi tìm câu trả lời.Trong khuôn khổ loạt bai viết về “Chơi sim số” chúng tôi sẽ cố gắng cung cấp những thông tin hữu ích nhất về “Chơi sim số”; giúp bạn đọc có cái nhìn tổng quan và sâu hơn về trào lưu “Chơi sim số” hiện nay.</p><br/>
+						<p style="text-indent:25px;">Phải khẳng định vui 1 chút là “Chơi sim số đẹp” khác hẳn với “Chơi Số Đề” , sim số đẹp có rất nhiều cách chơi, ở đây tôi có thể kể ra một vài cách chơi thường gặp và quen thuộc:</p><br/>
+						<p style="text-indent:25px; font-size: 18px; font-weight:bold;">1. Phân loại Sim số:</p>
+						<table cellspacing="-2" style="margin: 5px 0 5px 0; float: left; border: 1px solid #999;">
+							<tr bgcolor="#93bede" style="font-weight:bold;">
+								<td>STT</td>
+								<td align="center">Phân loại Sim Số</td>
+							</tr>
+							<tr>
+								<td class="ow_td1">01</td>
+								<td style="padding-left: 5px;">SIM rác :dòng này ko tính vì giá trị quá nhỏ (rất thập cẩm)</td>
+							</tr>
+							<tr class="ow_tr1">
+								<td class="ow_td2">02</td>
+								<td style="padding-left: 5px;">Sim số đẹp trùng biển số xe</td>
+							</tr>
+							<tr>
+								<td class="ow_td1">03</td>
+								<td style="padding-left: 5px;">Sim số đẹp ngày tháng năm sinh</td>
+							</tr>
+							<tr class="ow_tr1">
+								<td class="ow_td2">04</td>
+								<td style="padding-left: 5px;">Sim số đẹp ngày tháng có ý nghĩa (Quốc Khánh… hoặc ý nghĩa với người sử dụng)</td>
+							</tr>
+							<tr>
+								<td class="ow_td1">05</td>
+								<td style="padding-left: 5px;">Sim số đẹp soi gương (ABC.CBA)</td>
+							</tr>
+							<tr class="ow_tr1">
+								<td class="ow_td2">06</td>
+								<td style="padding-left: 5px;">Sim số đẹp lồng lộn (AB.BA.AB / ABC.CBA.ABC)</td>
+							</tr>
+							<tr>
+								<td class="ow_td1">07</td>
+								<td style="padding-left: 5px;">Sim số đẹp số gánh (ABBA / ABBBA)</td>
+							</tr>
+							<tr class="ow_tr1">
+								<td class="ow_td2">08</td>
+								<td style="padding-left: 5px;">Sim số đẹp số tiến (VD : 1234… 010203… 203040…)</td>
+							</tr>
+							<tr>
+								<td class="ow_td1">09</td>
+								<td style="padding-left: 5px;">Sim số đẹp luận / dịch nôm (Như phía bài trên đã nói)</td>
+							</tr>
+							<tr class="ow_tr1">
+								<td class="ow_td2">10</td>
+								<td style="padding-left: 5px;">Sim số đẹp phong thủy (sim số đẹp hợp với mệnh người sử dụng sim số đẹp theo cách tính phong thủy)</td>
+							</tr>
+							<tr>
+								<td class="ow_td1">11</td>
+								<td style="padding-left: 5px;">Sim taxi (AB.AB.AB / ABC.ABC)</td>
+							</tr>
+							<tr class="ow_tr1">
+								<td class="ow_td2">12</td>
+								<td style="padding-left: 5px;">Sim số đẹp VIP (Tứ quý – ngũ phúc – lục tài…) SIM dòng này dễ nhớ và rất đắt</td>
+							</tr>
+							<tr>
+								<td class="ow_td1">13</td>
+								<td style="padding-left: 5px;">Sim số đẹp độc (Sim số xấu, hiếm gặp)</td>
+							</tr>
+						</table>
+
+						<p style="text-indent:25px; font-weight:bold; font-size: 18px;">2. Một số dạng luận sim số đẹp phổ biến hiện nay:</p><br/>
+						<table cellspacing="-2" width="100%" style="margin: 5px 0 5px 0; border: 1px solid #999;">
+							<tr bgcolor="#93bede" style="font-weight:bold;">
+								<td align="center">Con Số</td>
+								<td align="center">Ý nghĩa</td>
+							</tr>
+							<tr>
+								<td class="ow_td1">0</td>
+								<td style="padding-left: 5px;">Tay trắng / Bất (phủ định)</td>
+							</tr>
+							<tr class="ow_tr1">
+								<td class="ow_td2">1</td>
+								<td style="padding-left: 5px;">Nhất / Độc / Sinh</td>
+							</tr>
+							<tr>
+								<td class="ow_td1">2</td>
+								<td style="padding-left: 5px;">Mãi</td>
+							</tr>
+							<tr class="ow_tr1">
+								<td class="ow_td2">3</td>
+								<td style="padding-left: 5px;">Tài</td>
+							</tr>
+							<tr>
+								<td class="ow_td1">4</td>
+								<td style="padding-left: 5px;">Tử</td>
+							</tr>
+							<tr class="ow_tr1">
+								<td class="ow_td2">5</td>
+								<td style="padding-left: 5px;">Phúc / Sinh</td>
+							</tr>
+							<tr>
+								<td class="ow_td1">6</td>
+								<td style="padding-left: 5px;">Lộc</td>
+							</tr>
+							<tr class="ow_tr1">
+								<td class="ow_td2">7</td>
+								<td style="padding-left: 5px;">Thất</td>
+							</tr>
+							<tr>
+								<td class="ow_td1">8</td>
+								<td style="padding-left: 5px;">Phát</td>
+							</tr>
+							<tr class="ow_tr1">
+								<td class="ow_td2">9</td>
+								<td style="padding-left: 5px;">Trường / Vĩnh cửu</td>
+							</tr>
+						</table>
+
+						<p style="text-indent:25px; font-weight:bold; font-size: 18px;">3. Một số dạng luận theo dải số:</p><br/>
+						<table cellspacing="-2" style="margin: 5px 0 5px 0; border: 1px solid #999;">
+							<tr bgcolor="#93bede" style="font-weight:bold;">
+								<td align="center">Dãy Số</td>
+								<td align="center">Ý nghĩa</td>
+							</tr>
+							<tr>
+								<td class="ow_td1">1102</td>
+								<td style="padding-left: 5px;">Nhất nhất ko nhì / Độc nhất vô nhị</td>
+							</tr>
+							<tr class="ow_tr1">
+								<td class="ow_td2">4078</td>
+								<td style="padding-left: 5px;">4 mùa không thất bát</td>
+							</tr>
+							<tr>
+								<td class="ow_td1">2204</td>
+								<td style="padding-left: 5px;">Mãi mãi không chết</td>
+							</tr>
+							<tr class="ow_tr1">
+								<td class="ow_td2">1486</td>
+								<td style="padding-left: 5px;">1 năm 4 mùa phát lộc / 1 năm 4 mùa lộc phát</td>
+							</tr>
+							<tr>
+								<td class="ow_td1">01234</td>
+								<td style="padding-left: 5px;">Tay trắng đi lên – 1 vợ – 2 con – 3 tầng – 4 bánh (Từ tay trắng – cưới vợ – yên bề con cái – xây nhà – mua ôtô ^^)</td>
+							</tr>
+							<tr class="ow_tr1">
+								<td class="ow_td2">456</td>
+								<td style="padding-left: 5px;">4 mùa sinh lộc</td>
+							</tr>
+							<tr>
+								<td class="ow_td1">4953</td>
+								<td style="padding-left: 5px;">49 chưa qua 53 đã tới (Số tử / Tử vi)</td>
+							</tr>
+							<tr class="ow_tr1">
+								<td class="ow_td2">68</td>
+								<td style="padding-left: 5px;">Lộc Phát</td>
+							</tr>
+							<tr>
+								<td class="ow_td1">39</td>
+								<td style="padding-left: 5px;">Thần tài nhỏ</td>
+							</tr>
+							<tr class="ow_tr1">
+								<td class="ow_td2">79</td>
+								<td style="padding-left: 5px;">Thần tài lớn</td>
+							</tr>
+							<tr>
+								<td class="ow_td1">38</td>
+								<td style="padding-left: 5px;">Ông địa nhỏ</td>
+							</tr>
+							<tr class="ow_tr1">
+								<td class="ow_td2">78</td>
+								<td style="padding-left: 5px;">Thất bát / Ông địa lớn</td>
+							</tr>
+							<tr>
+								<td class="ow_td1">83</td>
+								<td style="padding-left: 5px;">Phát tài</td>
+							</tr>
+							<tr class="ow_tr1">
+								<td class="ow_td2">86</td>
+								<td style="padding-left: 5px;">Phát lộc</td>
+							</tr>
+							<tr>
+								<td class="ow_td1">04</td>
+								<td style="padding-left: 5px;">Bất tử</td>
+							</tr>
+							<tr class="ow_tr1">
+								<td class="ow_td2">94</td>
+								<td style="padding-left: 5px;">Thái tử</td>
+							</tr>
+							<tr>
+								<td class="ow_td1">569</td>
+								<td style="padding-left: 5px;">Phúc – Lộc – Thọ</td>
+							</tr>
+							<tr class="ow_tr1">
+								<td class="ow_td2">227</td>
+								<td style="padding-left: 5px;">Vạn Vạn Tuế</td>
+							</tr>
+							<tr>
+								<td class="ow_td1">15.16.18</td>
+								<td style="padding-left: 5px;">Mỗi năm – mỗi lộc – mỗi phát</td>
+							</tr>
+							<tr class="ow_tr1">
+								<td class="ow_td2">6886/8668</td>
+								<td style="padding-left: 5px;">Lộc phát phát lộc / Phát lộc lộc phát</td>
+							</tr>
+							<tr>
+								<td class="ow_td1">8386/8683</td>
+								<td style="padding-left: 5px;">Phát tài phát lộc / Phát lộc phát tài</td>
+							</tr>
+							<tr class="ow_tr1">
+								<td class="ow_td2">18.18.18</td>
+								<td style="padding-left: 5px;">Mỗi năm 1 phát</td>
+							</tr>
+							<tr>
+								<td class="ow_td1">19.19.19</td>
+								<td style="padding-left: 5px;">1 bước lên trời</td>
+							</tr>
+							<tr class="ow_tr1">
+								<td class="ow_td2">1368</td>
+								<td style="padding-left: 5px;">Nhất tài lộc phát / Kim lâu (Tử vi)</td>
+							</tr>
+							<tr>
+								<td class="ow_td1"></td>
+								<td style="padding-left: 5px;">Dãy số đuôi 1368 thực sự là dãy số rất chi là đặc biệt,dân Sim số thường quan niệm con số 1 là Sinh (sinh sôi nảy nở),3 là tài,68 là lộc phát=> 1368 là Sinh Tài Lộc Phát rất đẹp với dân làm ăn buôn bán.Tuy nhiên dãy số 1368 còn có một điểm rất đặc biệt mà ít người phát hiện ra đó là : 123+456+789=1368 Đây là 3 cặp số nối tiếp nhau trong dãy số tự nhiên từ 0-9 cộng tổng lại thành ra 1368,có thể hiểu 1368 là chuỗi số đại diện cho sự tổng hòa các con số có đẹp có xấu và mang tính chọn lọc cao nhất của dãy số tự nhiên.Vậy có thể coi 1368 là đẹp? Hơn nữa 1368 lại không chứa các số bị coi là xấu như 4 và 7 trong đó nên càng mang tính chọn lọc rất cao,hơn nữa đây là số tiến đều ko bị ngắt đoạn lên xuống chập chùng chỉ sự thăng tiến cho chủ nhân của con số này.</td>
+							</tr>
+						</table>
+
+					</div>
+					<span metal:use-macro="macros.xhtml/MenuXemThem"/> 
+					<br/>
+				</div>
+				<span metal:use-macro="macros.xhtml/main3_of3"/>
+				<div class="vide"></div>
+			</div>
+			<div id="line"></div>
+			<span metal:use-macro="macros.xhtml/Footer"/>
+			<div class="vide"></div>
+		</div>
+	</body>
+</html>
