@@ -16,7 +16,7 @@
 		function __construct()
 		{			
 			$this->key = "123appspncompanynumberone";
-			$this->fullpath = "F:\\key.dat";
+			$this->fullpath = "D:\\key.dat";
 			$this->DNS="mysql:host=localhost;dbname=";
 			$this->DBUser="a23app_userdb";
 			$this->DBName="a23app_pagoda";

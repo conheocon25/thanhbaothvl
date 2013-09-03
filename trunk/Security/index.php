@@ -2,7 +2,7 @@
 	require_once("Encrypted.php" );
 	//require_once("smtp.php" );
 	$Encrypted = new Encrypted();	
-	$Encrypted->writeToFile();	
+	//$Encrypted->writeToFile();	
 	$tt = $Encrypted->readFromFile($Encrypted->SizeFileConfig());
 	print_r($tt);
 	echo $Encrypted->decryptData($tt[0]);
