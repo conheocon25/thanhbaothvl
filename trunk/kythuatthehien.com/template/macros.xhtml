@@ -1,0 +1,514 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<body>
+	<div metal:define-macro="footer" id="footer">
+			<div>© Copyright 2011 </div>
+			<div> Design By: SPN Co,Ltd </div>
+	</div>
+	
+	<div metal:define-macro="MenuIndex" id="menu">				
+		<ul id="nav">
+			<li class="current"><a href="../index.php">Trang chủ</a></li>
+			<li><a href="../Command/gioithieu.php">Giới thiệu</a></li>
+			<li><a href="../Command/thanhtoan.php">Thanh toán</a></li>
+			<li><a href="../Command/datsim.php">Ðặt sim theo yêu cầu</a></li>
+			<li><a href="../Command/chamdiem.php">Chấm điểm cho sim</a></li>
+			<li><a href="../Command/lienhe.php">Liên hệ</a></li>
+		</ul>			
+	</div>
+	
+	<div metal:define-macro="MenuGioithieu" id="menu">				
+		<ul id="nav">
+			<li><a href="../index.php">Trang chủ</a></li>
+			<li class="current"><a href="../Command/gioithieu.php">Giới thiệu</a></li>
+			<li><a href="../Command/thanhtoan.php">Thanh toán</a></li>
+			<li><a href="../Command/datsim.php">Ðặt sim theo yêu cầu</a></li>
+			<li><a href="../Command/chamdiem.php">Chấm điểm cho sim</a></li>
+			<li><a href="../Command/lienhe.php">Liên hệ</a></li>
+		</ul>			
+	</div>
+	
+	<div metal:define-macro="MenuMuasim" id="menu">				
+		<ul id="nav">
+			<li><a href="../index.php">Trang chủ</a></li>
+			<li><a href="../Command/gioithieu.php">Giới thiệu</a></li>
+			<li class="current"><a href="../Command/thanhtoan.php">Thanh toán</a></li>
+			<li><a href="../Command/datsim.php">Ðặt sim theo yêu cầu</a></li>
+			<li><a href="../Command/chamdiem.php">Chấm điểm cho sim</a></li>
+			<li><a href="../Command/lienhe.php">Liên hệ</a></li>
+		</ul>			
+	</div>
+	
+	<div metal:define-macro="MenuDatsim" id="menu">				
+		<ul id="nav">
+			<li><a href="../index.php">Trang chủ</a></li>
+			<li><a href="../Command/gioithieu.php">Giới thiệu</a></li>
+			<li><a href="../Command/thanhtoan.php">Thanh toán</a></li>
+			<li class="current"><a href="../Command/datsim.php">Ðặt sim theo yêu cầu</a></li>
+			<li><a href="../Command/chamdiem.php">Chấm điểm cho sim</a></li>
+			<li><a href="../Command/lienhe.php">Liên hệ</a></li>
+		</ul>			
+	</div>
+	
+	<div metal:define-macro="MenuChamdiem" id="menu">				
+		<ul id="nav">
+			<li><a href="../index.php">Trang chủ</a></li>
+			<li><a href="../Command/gioithieu.php">Giới thiệu</a></li>
+			<li><a href="../Command/thanhtoan.php">Thanh toán</a></li>
+			<li><a href="../Command/datsim.php">Ðặt sim theo yêu cầu</a></li>
+			<li class="current"><a href="../Command/chamdiem.php">Chấm điểm cho sim</a></li>
+			<li><a href="../Command/lienhe.php">Liên hệ</a></li>
+		</ul>			
+	</div>
+	
+	<div metal:define-macro="MenuLienhe" id="menu">				
+		<ul id="nav">
+			<li><a href="../index.php">Trang chủ</a></li>
+			<li><a href="../Command/gioithieu.php">Giới thiệu</a></li>
+			<li><a href="../Command/thanhtoan.php">Thanh toán</a></li>
+			<li><a href="../Command/datsim.php">Ðặt sim theo yêu cầu</a></li>
+			<li><a href="../Command/chamdiem.php">Chấm điểm cho sim</a></li>
+			<li class="current"><a href="../Command/lienhe.php">Liên hệ</a></li>
+		</ul>			
+	</div>
+	
+	<div metal:define-macro="MenuSearch" id="MenuSearch">
+					<form bgcolor="#fff;" id="name" onsubmit="formsubmit('name','homesimlist');return false" name="tim" action="../hai_sim24h/index.php" method="post">
+						<table style="padding-left:7%" >
+							<tr height="35px">								
+								<td id="icon-search" style="margin-top: 2px; border: 1px solid #277CBF;">
+									<input id="txtSearch" type="text" name="num" onblur="if (this.value == '') {this.value = 'Nhập số Sim bạn cần tìm!';$('num').setStyle({color:'#45b6f5'})}" onfocus="if (this.value = 'Nhập số Sim bạn cần tìm!') {this.value = '';$('num').setStyle({color:'red'})}" value="Nhập số Sim bạn cần tìm!" style="width:350px; font-size: 17px; color: blue;" />									
+								</td>
+								<td>
+									<input type="image" name="submit" src="Template/images/timkiem20.jpg" style="border:0px; height: 33px;" onmouseout="this.src='Template/images/timkiem20.jpg';" onmouseover="this.src='Template/images/timkiem22.jpg';" />
+								</td>
+							</tr>
+						</table>
+					</form>
+	</div>		
+	<div metal:define-macro="MenuTotalIncome" style="height: 50px; margin-top:10px;" align="center">
+					<form bgcolor="#fff;" id="name" action="totalincome.php" method="post">
+						<div style="padding-bottom:10px">
+							<div style="padding-top:2px">
+								Từ ngày: <input type="text" id="fromdate" name="fromdate" size="15" value="2011-07-01" style="font-size: 16px;" />
+							</div>
+							<div style="padding-top:10px"> 
+								Đến ngày:<input type="text" id="todate" name="todate" size="15" value="2011-08-30" style="font-size: 16px;" />
+							</div>
+							<div style="padding-top:10px">
+								<input type="submit" value="Lọc doanh thu" name="submit" />
+							</div>
+							<div align="right" style="font-size:19px;color:red;padding-right:10px;padding-top:15px;" tal:content="SumTotal"></div>
+						</div>
+					</form>
+	</div>
+	
+	<div metal:define-macro="MenuEditSimByPrice" style="height: 50px; margin-top:10px;" align="center">
+					<form id="form_LH" action="editsimbyprice.php" method="post">
+						<div style="padding-bottom:10px">
+						<ol>
+							<li>
+							<div style="padding-top:5px;padding-bottom:10px">
+								<h2>Thay đổi tất cả các Sim hiện có</h2>
+							</div>
+							</li>
+							<li>
+							<div style="padding-top:10px">
+								Loại Mạng:
+								<select style="font-size: 16px;" id="idNetwork_" name ='idNetwork_' >
+									<option tal:repeat="Network Networks" tal:content="Network/name" tal:attributes="value Network/id" ></option>
+								</select>
+							</div>
+							</li>
+							<li>
+							<div style="padding-top:10px">
+								Giá bán cũ: <input type="text" id="fromprice" name="fromprice" size="5" value="200000" style="font-size: 16px;" />
+							</div>
+							</li>
+							<li>
+							<div style="padding-top:10px"> 
+								Giá bán mới:<input type="text" id="toprice" name="toprice" size="5" value="300000" style="font-size: 16px;" />
+							</div>
+							</li>
+							<li id="send">
+								<button class="send1" type="submit" onclick="return CheckSubmit();" >Cập nhật Giá"</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="send2" type="reset">Nhập lại</button>
+							</li>																	
+						</ol>
+						</div>
+					</form>
+	</div>
+	
+	<div metal:define-macro="Main3of1" >
+		<div id="tieude1">Danh sách nhà mạng</div>
+				<div class="margin">
+					<ul id="menu_left">
+						<li class="odd"><a href="../../hai_sim24h/index.php?SearchNetwork=2">MobiFone</a></li>
+						<li class="even"><a href="../../hai_sim24h/index.php?SearchNetwork=3">VinaPhone</a></li>
+						<li class="odd"><a href="../../hai_sim24h/index.php?SearchNetwork=1">Viettel</a></li>
+						<li class="even"><a href="../../hai_sim24h/index.php?SearchNetwork=4">Vietnamobile</a></li>
+						<li class="odd"><a href="../../hai_sim24h/index.php?SearchNetwork=5">Beeline</a></li>
+						<li class="even"><a href="../../hai_sim24h/index.php?SearchNetwork=6">SFone</a></li>
+						<li class="odd"><a href="../../hai_sim24h/index.php?SearchNetwork=7">EVN Telecom</a></li>
+					</ul>
+				</div>
+				<div id="tieude1" style="margin-top: 10px;">Sim đẹp phân loại</div>
+				<div class="margin">
+					<ul id="menu_left" border="1">
+						<li class="odd"><a href="../../hai_sim24h/index.php?idcategory=2">Sim Ngũ-Lục-Quý</a></li>
+						<li class="even"><a href="../../hai_sim24h/index.php?idcategory=3">Sim Đẹp Tứ Quý</a></li>
+						<li class="odd"><a href="../../hai_sim24h/index.php?idcategory=4">Sim Đẹp Taxi</a></li>
+						<li class="even"><a href="../../hai_sim24h/index.php?idcategory=5">Sim Đẹp Tam Hoa</a></li>
+						<li class="odd"><a href="../../hai_sim24h/index.php?idcategory=6">Sim Đẹp Số Tiến</a></li>
+						<li class="even"><a href="../../hai_sim24h/index.php?idcategory=7">Sim Đẹp Lộc Phát</a></li>
+						<li class="odd"><a href="../../hai_sim24h/index.php?idcategory=8">Sim Đẹp Thần Tài</a></li>
+						<li class="even"><a href="../../hai_sim24h/index.php?idcategory=12">Sim Thổ Địa</a></li>
+						<li class="odd"><a href="../../hai_sim24h/index.php?idcategory=9">Sim Đẹp Gánh Lặp Kép</a></li>
+						<li class="even"><a href="../../hai_sim24h/index.php?idcategory=13">Sim Số Cặp</a></li>
+						<li class="odd"><a href="../../hai_sim24h/index.php?idcategory=10">Sim Đẹp Năm Sinh</a></li>
+						<li class="even"><a href="../../hai_sim24h/index.php?idcategory=11">Sim Đẹp Dễ Nhớ Độc Đáo</a></li>						
+						<li class="odd"><a href="../../hai_sim24h/index.php?idcategory=1">Sim Đẹp Tự Nhiên</a></li>						
+					</ul>
+				</div>
+				<div id="tieude1" style="margin-top: 10px;">Sim đẹp mới về</div>
+				<div class="margin">
+					<marquee height="530" style="overflow: hide;" onmouseout="this.start();" onmouseover="this.stop();" scrollamount="1" scrolldelay="1" behavior="SCROLL" direction="down">
+					<table id="slidee" width="100%" cellpadding="5" bordercolor="#C0C0C0" border="1" style="border-collapse: collapse;background:#FFFFFF">
+						<tr  tal:repeat='NumberHot PhoneNumberHotLine'>
+							<td align="center" width="180px">
+								<a tal:attributes="title NumberHot/getTitleCartLinked;href NumberHot/getCartLinked" >
+								<b tal:content="NumberHot/number" >xxxxxxxxx</b>
+								</a>
+								<br/>
+								<span tal:content="NumberHot/getPrice"></span>
+								<sup>vnd</sup>
+							</td>
+						</tr>					
+					</table>
+					</marquee>
+				</div>
+	</div>
+	
+	<div metal:define-macro="Main3of3">
+		<div id="tieude1">Hỗ trợ Mua Sim</div>
+			<div class="margin" style="height: 200px; color:red; text-align: center; font-size: 20px; padding: 10px 0 0 0;">
+				<p style="margin: 10px 0 10px 0; padding-left: 33px;"><b>0944 92 96 96</b></p><br/>
+				<p style="padding-left: 33px;"><b>0977 666 098 </b></p><br/>
+				<p style="margin: 0 0 15px 0; padding-left: 60px;padding-top: 10px;font-size: 19px;"><font color="blue" size="2">Hỗ trợ 24/24</font></p>
+				<p style="margin: 0 0 15px 0; padding-left: 15px;"><a href="datsim.php"><font color="blue" size="3"><b>Đặt sim theo yêu cầu</b></font></a></p>
+			</div>
+		<div id="tieude1" style="margin-top: 10px;">Sim đẹp theo giá</div>
+				<div class="margin" style="height: 390px;">
+					<ul id="menu_left" border="1">
+						<li class="odd"><a href="../../hai_sim24h/index.php?SearchPrice=01">Sim Đẹp < 500 Nghìn</a></li>
+						<li class="even"><a href="../../hai_sim24h/index.php?SearchPrice=02">Sim Đẹp 500 ~ 1 Triệu</a></li>
+						<li class="odd"><a href="../../hai_sim24h/index.php?SearchPrice=03">Sim Đẹp 1 ~ 3 Triệu</a></li>
+						<li class="even"><a href="../../hai_sim24h/index.php?SearchPrice=04">Sim Đẹp 3 ~ 5 Triệu</a></li>
+						<li class="odd"><a href="../../hai_sim24h/index.php?SearchPrice=05">Sim Đẹp 5 ~ 10 Triệu</a></li>
+						<li class="even"><a href="../../hai_sim24h/index.php?SearchPrice=06">Sim Đẹp 10 ~ 30 Triệu</a></li>
+						<li class="odd"><a href="../../hai_sim24h/index.php?SearchPrice=07">Sim Đẹp 30 ~ 50 Triệu</a></li>
+						<li class="even"><a href="../../hai_sim24h/index.php?SearchPrice=08">Sim Đẹp Trên 50 Triệu</a></li>
+					</ul>
+				</div>
+				<div id="tieude1" style="margin-top: 10px;">Đơn đặt hàng mới</div>
+				<div class="margin">
+					<marquee height="168" style="overflow: hide" onmouseout="this.start();" onmouseover="this.stop();" scrollamount="1" scrolldelay="1" behavior="SCROLL" direction="down">
+						<table id="slidee" width="100%" cellpadding="5" bordercolor="#C0C0C0" border="1" style="border-collapse: collapse;background:#FFFFFF">
+							<tr  tal:repeat='order ListOrder'>
+							<td align="center">								
+								<div tal:content="order/idcustomer"/>								
+								<div tal:content="order/getTitleOrder"/>								
+							</td>
+						</tr>					
+						</table>
+					</marquee>
+				</div> 
+				<div id="tieude1" style="margin-top: 10px;">Thống kê</div>
+				<div class="margin">
+					<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="padding-left: 5px;">
+						<tr>
+							<td height="30">
+								<font size="2" color="#800000">
+									<img width="11" src="../Template/images/tree_main_plus_active.gif" />&nbsp;Trực tuyến
+								</font>
+							</td>
+							<td>
+								<font size="2" face="Arial" color="#FF3399">
+									<b>
+										<script language="Javascript" src="http://www.freeusersonline.com/?action=track&siteurl=http://www.thegioisim24h.com"></script>
+									</b>
+								</font>
+							</td>
+						</tr>
+						<tr>
+							<td height="30">
+								<font size="2" color="#800000">
+									<img width="11" src="../Template/images/tree_main_plus_active.gif" />&nbsp;Lượt truy cập
+								</font>
+							</td>
+							<td>							
+									<div align='right'>									
+										<img src='http://www.hit-counts.com/counter.php?t=13&digits=6&ic=1&cid=944518' border='0' alt='hit counters'/>											
+									</div>							
+							</td>
+						</tr>
+					</table>
+				</div>
+	</div>
+	<div metal:define-macro="Main3of3Index">
+		<div id="tieude1">Hỗ trợ Mua Sim</div>
+			<div class="margin" style="height: 200px; color:red; text-align: center; font-size: 20px; padding: 10px 0 0 0;">
+				<p style="margin: 10px 0 10px 0; padding-left: 33px;"><b>0944 92 96 96</b></p><br/>
+				<p style="padding-left: 33px;"><b>0977 666 098 </b></p><br/>
+				<p style="margin: 0 0 15px 0; padding-left: 60px;padding-top: 10px;font-size: 19px;"><font color="blue" size="2">Hỗ trợ 24/24</font></p>
+				<p style="margin: 0 0 15px 0; padding-left: 15px;"><a href="/hai_sim24h/Command/datsim.php"><font color="blue" size="3"><b>Đặt sim theo yêu cầu</b></font></a></p>
+			</div>
+		<div id="tieude1" style="margin-top: 10px;">Sim đẹp theo giá</div>
+				<div class="margin" style="height: 390px;">
+					<ul id="menu_left" border="1">
+						<li class="odd"><a href="../../hai_sim24h/index.php?SearchPrice=01">Sim Đẹp < 500 Nghìn</a></li>
+						<li class="even"><a href="../../hai_sim24h/index.php?SearchPrice=02">Sim Đẹp 500 ~ 1 Triệu</a></li>
+						<li class="odd"><a href="../../hai_sim24h/index.php?SearchPrice=03">Sim Đẹp 1 ~ 3 Triệu</a></li>
+						<li class="even"><a href="../../hai_sim24h/index.php?SearchPrice=04">Sim Đẹp 3 ~ 5 Triệu</a></li>
+						<li class="odd"><a href="../../hai_sim24h/index.php?SearchPrice=05">Sim Đẹp 5 ~ 10 Triệu</a></li>
+						<li class="even"><a href="../../hai_sim24h/index.php?SearchPrice=06">Sim Đẹp 10 ~ 30 Triệu</a></li>
+						<li class="odd"><a href="../../hai_sim24h/index.php?SearchPrice=07">Sim Đẹp 30 ~ 50 Triệu</a></li>
+						<li class="even"><a href="../../hai_sim24h/index.php?SearchPrice=08">Sim Đẹp Trên 50 Triệu</a></li>
+					</ul>
+				</div>
+				<div id="tieude1" style="margin-top: 10px;">Đơn đặt hàng mới</div>
+				<div class="margin">
+					<marquee height="168" style="overflow: hide" onmouseout="this.start();" onmouseover="this.stop();" scrollamount="1" scrolldelay="1" behavior="SCROLL" direction="down">
+						<table id="slidee" width="100%" cellpadding="5" bordercolor="#C0C0C0" border="1" style="border-collapse: collapse;background:#FFFFFF">
+							<tr  tal:repeat='order ListOrder'>
+							<td align="center">								
+								<div tal:content="order/idcustomer"/>								
+								<div tal:content="order/getTitleOrder"/>								
+							</td>
+						</tr>					
+						</table>
+					</marquee>
+				</div> 
+				<div id="tieude1" style="margin-top: 10px;">Thống kê</div>
+				<div class="margin">
+					<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="padding-left: 5px;">
+						<tr>
+							<td height="30">
+								<font size="2" color="#800000">
+									<img width="11" src="../Template/images/tree_main_plus_active.gif" />&nbsp;Trực tuyến
+								</font>
+							</td>
+							<td>
+								<font size="2" face="Arial" color="#FF3399">
+									<b>
+										<script language="Javascript" src="http://www.freeusersonline.com/?action=track&siteurl=http://www.thegioisim24h.com"></script>
+									</b>
+								</font>
+							</td>
+						</tr>
+						<tr>
+							<td height="30">
+								<font size="2" color="#800000">
+									<img width="11" src="../Template/images/tree_main_plus_active.gif" />&nbsp;Lượt truy cập
+								</font>
+							</td>
+							<td>							
+									<div align='right'>									
+										<img src='http://www.hit-counts.com/counter.php?t=13&digits=6&ic=1&cid=944518' border='0' alt='hit counters'/>											
+									</div>							
+							</td>
+						</tr>
+					</table>
+				</div>
+	</div>	
+	<div metal:define-macro="Main3of3Admin">
+		<div id="tieude1">Quản trị hệ thống</div>
+				<div class="margin_hethong" style="padding: 5px 0 5px 0; height: 200px;font-size:15px">							
+					<div style="padding:5px 0px 5px 20px;">	
+						<a style="padding:0px 15px 0px 0px;" href="../Command/edituser.php">
+							<b id="buttonAdmin2" tal:content="UserName"></b></a>
+						<a href="../Command/logout.php"><b id="buttonAdmin2">Thoát</b></a>
+					</div>
+					<div id="buttonAdmin" align="center" style="font-weight:bold;padding:2px 0 2px;color:black" class="RightButton">
+						<a href="../Command/themsim.php">Thêm sim số mới</a>
+					</div>
+					<div id="buttonAdmin" align="center" style="font-weight:bold;padding:2px 0 2px;color:black" class="RightButton">
+						<a href="../Command/themsimformexcel.php">Thêm sim từ Excel</a>
+					</div>
+					<div id="buttonAdmin" align="center" style="font-weight:bold;padding:2px 0 2px;color:black" class="RightButton">
+						<a href="../Command/vieworder.php">Xem Đơn hàng mua</a>
+					</div>
+					<div id="buttonAdmin" align="center" style="font-weight:bold;padding:2px 0 2px;color:black" class="RightButton">
+						<a href="../Command/vieworderother.php">Xem Đơn hàng đặt</a>
+					</div>					
+					<div id="buttonAdmin" align="center" style="font-weight:bold;padding:2px 0 2px;color:black" class="RightButton">
+						<a href="../Command/totalincome.php">Thống kê Doanh thu</a>
+					</div>
+					<div id="buttonAdmin" align="center" style="font-weight:bold;padding:2px 0 2px;color:black" class="RightButton">
+						<a href="../Command/editsimbyprice.php">Thay đổi giá Sim</a>
+					</div>
+					<div id="buttonAdmin" align="center" style="font-weight:bold;padding:2px 0 2px;color:black" class="RightButton">
+						<a href="../Command/viewhotnumber.php">Xem Sim Mới về</a>
+					</div>
+				</div>  
+				<div id="tieude1" style="margin-top: 10px;">Sim đẹp theo giá</div>
+				<div class="margin" style="height: 390px;">
+					<ul id="menu_left" border="1">
+						<li class="odd"><a href="../../hai_sim24h/index.php?SearchPrice=01">Sim Đẹp < 500 Nghìn</a></li>
+						<li class="even"><a href="../../hai_sim24h/index.php?SearchPrice=02">Sim Đẹp 500 ~ 1 Triệu</a></li>
+						<li class="odd"><a href="../../hai_sim24h/index.php?SearchPrice=03">Sim Đẹp 1 ~ 3 Triệu</a></li>
+						<li class="even"><a href="../../hai_sim24h/index.php?SearchPrice=04">Sim Đẹp 3 ~ 5 Triệu</a></li>
+						<li class="odd"><a href="../../hai_sim24h/index.php?SearchPrice=05">Sim Đẹp 5 ~ 10 Triệu</a></li>
+						<li class="even"><a href="../../hai_sim24h/index.php?SearchPrice=06">Sim Đẹp 10 ~ 30 Triệu</a></li>
+						<li class="odd"><a href="../../hai_sim24h/index.php?SearchPrice=07">Sim Đẹp 30 ~ 50 Triệu</a></li>
+						<li class="even"><a href="../../hai_sim24h/index.php?SearchPrice=08">Sim Đẹp Trên 50 Triệu</a></li>
+					</ul>
+				</div>
+				<div id="tieude1" style="margin-top: 10px;">Đơn đặt hàng mới</div>
+				<div class="margin">
+					<marquee height="168" style="overflow: hide" onmouseout="this.start();" onmouseover="this.stop();" scrollamount="1" scrolldelay="1" behavior="SCROLL" direction="down">
+						<table id="slidee" width="100%" cellpadding="5" bordercolor="#C0C0C0" border="1" style="border-collapse: collapse;background:#FFFFFF">
+							<tr  tal:repeat='order ListOrder'>
+							<td align="center">								
+								<div tal:content="order/idcustomer"/>								
+								<div tal:content="order/getTitleOrder"/>								
+							</td>
+						</tr>					
+						</table>
+					</marquee>
+				</div> 
+		<div id="tieude1" style="margin-top: 10px;">Thống kê</div>
+				<div class="margin">
+					<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="padding-left: 5px;">
+						<tr>
+							<td height="30">
+								<font size="2" color="#800000">
+									<img width="11" src="../Template/images/tree_main_plus_active.gif" />&nbsp;Trực tuyến
+								</font>
+							</td>
+							<td>
+								<font size="2" face="Arial" color="#FF3399">
+									<b>
+										<script language="Javascript" src="http://www.freeusersonline.com/?action=track&siteurl=http://www.thegioisim24h.com"></script>
+									</b>
+								</font>
+							</td>
+						</tr>
+						<tr>
+							<td height="30">
+								<font size="2" color="#800000">
+									<img width="11" src="../Template/images/tree_main_plus_active.gif" />&nbsp;Lượt truy cập
+								</font>
+							</td>
+							<td>							
+									<div align='right'>									
+										<img src='http://www.hit-counts.com/counter.php?t=13&digits=6&ic=1&cid=944518' border='0' alt='hit counters'/>											
+									</div>							
+							</td>
+						</tr>
+					</table>
+				</div>
+	</div>
+	<div metal:define-macro="Main3of3Admin11">
+		<div id="tieude1">Quản trị hệ thống</div>
+				<div class="margin_hethong" style="padding: 5px 0 5px 0; height: 200px;font-size:15px">							
+					<div style="padding:5px 0px 5px 20px;">	
+						<a style="padding:0px 15px 0px 0px;" href="../hai_sim24h/Command/edituser.php">
+							<b id="buttonAdmin2" tal:content="UserName"></b></a>
+						<a href="../hai_sim24h/Command/logout.php"><b id="buttonAdmin2">Thoát</b></a>
+					</div>
+					<div id="buttonAdmin" align="center" style="font-weight:bold;padding:2px 0 2px;color:black" class="RightButton">
+						<a href="../hai_sim24h/Command/themsim.php">Thêm sim số mới</a>
+					</div>
+					<div id="buttonAdmin" align="center" style="font-weight:bold;padding:2px 0 2px;color:black" class="RightButton">
+						<a href="../hai_sim24h/Command/themsimformexcel.php">Thêm sim từ Excel</a>
+					</div>
+					<div id="buttonAdmin" align="center" style="font-weight:bold;padding:2px 0 2px;color:black" class="RightButton">
+						<a href="../hai_sim24h/Command/vieworder.php">Xem Đơn hàng mua</a>
+					</div>
+					<div id="buttonAdmin" align="center" style="font-weight:bold;padding:2px 0 2px;color:black" class="RightButton">
+						<a href="../hai_sim24h/Command/vieworderother.php">Xem Đơn hàng đặt</a>
+					</div>					
+					<div id="buttonAdmin" align="center" style="font-weight:bold;padding:2px 0 2px;color:black" class="RightButton">
+						<a href="../hai_sim24h/Command/totalincome.php">Thống kê Doanh thu</a>
+					</div>
+					<div id="buttonAdmin" align="center" style="font-weight:bold;padding:2px 0 2px;color:black" class="RightButton">
+						<a href="../hai_sim24h/Command/editsimbyprice.php">Thay đổi giá Sim</a>
+					</div>
+					<div id="buttonAdmin" align="center" style="font-weight:bold;padding:2px 0 2px;color:black" class="RightButton">
+						<a href="../hai_sim24h/Command/viewhotnumber.php">Xem Sim Mới về</a>
+					</div>
+				</div>  
+				<div id="tieude1" style="margin-top: 10px;">Sim đẹp theo giá</div>
+				<div class="margin" style="height: 390px;">
+					<ul id="menu_left" border="1">
+						<li class="odd"><a href="../../hai_sim24h/index.php?SearchPrice=01">Sim Đẹp < 500 Nghìn</a></li>
+						<li class="even"><a href="../../hai_sim24h/index.php?SearchPrice=02">Sim Đẹp 500 ~ 1 Triệu</a></li>
+						<li class="odd"><a href="../../hai_sim24h/index.php?SearchPrice=03">Sim Đẹp 1 ~ 3 Triệu</a></li>
+						<li class="even"><a href="../../hai_sim24h/index.php?SearchPrice=04">Sim Đẹp 3 ~ 5 Triệu</a></li>
+						<li class="odd"><a href="../../hai_sim24h/index.php?SearchPrice=05">Sim Đẹp 5 ~ 10 Triệu</a></li>
+						<li class="even"><a href="../../hai_sim24h/index.php?SearchPrice=06">Sim Đẹp 10 ~ 30 Triệu</a></li>
+						<li class="odd"><a href="../../hai_sim24h/index.php?SearchPrice=07">Sim Đẹp 30 ~ 50 Triệu</a></li>
+						<li class="even"><a href="../../hai_sim24h/index.php?SearchPrice=08">Sim Đẹp Trên 50 Triệu</a></li>
+					</ul>
+				</div>
+				<div id="tieude1" style="margin-top: 10px;">Đơn đặt hàng mới</div>
+				<div class="margin">
+					<marquee height="168" style="overflow: hide" onmouseout="this.start();" onmouseover="this.stop();" scrollamount="1" scrolldelay="1" behavior="SCROLL" direction="down">
+						<table id="slidee" width="100%" cellpadding="5" bordercolor="#C0C0C0" border="1" style="border-collapse: collapse;background:#FFFFFF">
+							<tr  tal:repeat='order ListOrder'>
+							<td align="center">								
+								<div tal:content="order/idcustomer"/>								
+								<div tal:content="order/getTitleOrder"/>								
+							</td>
+						</tr>					
+						</table>
+					</marquee>
+				</div> 
+		<div id="tieude1" style="margin-top: 10px;">Thống kê</div>
+				<div class="margin">
+					<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="padding-left: 5px;">
+						<tr>
+							<td height="30">
+								<font size="2" color="#800000">
+									<img width="11" src="../Template/images/tree_main_plus_active.gif" />&nbsp;Trực tuyến
+								</font>
+							</td>
+							<td>
+								<font size="2" face="Arial" color="#FF3399">
+									<b>
+										<script language="Javascript" src="http://www.freeusersonline.com/?action=track&siteurl=http://www.thegioisim24h.com"></script>
+									</b>
+								</font>
+							</td>
+						</tr>
+						<tr>
+							<td height="30">
+								<font size="2" color="#800000">
+									<img width="11" src="../Template/images/tree_main_plus_active.gif" />&nbsp;Lượt truy cập
+								</font>
+							</td>
+							<td>							
+									<div align='right'>									
+										<img src='http://www.hit-counts.com/counter.php?t=13&digits=6&ic=1&cid=944518' border='0' alt='hit counters'/>											
+									</div>							
+							</td>
+						</tr>
+					</table>
+				</div>
+	</div>
+	<div metal:define-macro="MenuXemThem" style="border-top: 1px solid #63AFE0; padding: 0 5px 0 5px;">
+						<div id="tieude_main2">Xem Thêm:</div>
+						<p style="text-indent:30px;">- <a href="/hai_sim24h/Command/Ynghiasim_2.php"> Ý nghĩa của các con số.</a></p><br/>
+						<p style="text-indent:30px;">- <a href="/hai_sim24h/Command/Ynghiasim_3.php"> Ý nghĩa các con số theo quan niệm Dân Gian.</a></p><br/>
+	</div>
+	<div metal:define-macro="page">
+		<div class="Menupage">
+		<a tal:attributes="href firstpage">< Trang đầu</a>
+		<span tal:repeat="page LinkPage">			
+			<a tal:attributes="href page/getLinked; id page/id" tal:content="page/id"></a>				
+		</span>
+		<a tal:attributes="href lastpage">Trang cuối > </a>
+		</div>		
+	</div>
+		
+</body>
+</html>
