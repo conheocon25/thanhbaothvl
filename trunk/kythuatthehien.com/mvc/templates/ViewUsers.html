@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />		
+		<span metal:use-macro="macros.xhtml/Include"/>
+		<script>
+			/*<![CDATA[*/
+				$(document).ready(function() {			
+					$('#DataTable').find('tbody tr').hover(
+						function(){ $(this).find('td').addClass('table_highlighted');}, 
+						function(){	$(this).find('td').removeClass('table_highlighted');}
+					);
+				
+					var oTable = $('#DataTable').dataTable({				
+						"bScrollCollapse": true,
+						"bStateSave": false,
+						"bFilter": false,
+						"bInfo": false,
+						"bSort": true,
+						"bPaginate": false,
+						"fnDrawCallback": function(oSettings ){
+							if ( oSettings.bSorted || oSettings.bFiltered ){
+								for ( var i=0, iLen=oSettings.aiDisplay.length ; i<iLen ; i++ ){
+									$('td:eq(0)', oSettings.aoData[ oSettings.aiDisplay[i] ].nTr ).html( i+1 );
+								}
+							}
+						}
+					});
+					
+					new FixedHeader( oTable, { "top": true, "zTop": 105 } );
+				});	
+			/*]]>*/	
+		</script>
+	</head>	
+	<body onLoad="Clock()">	
+		<div id="frame">
+			<span metal:use-macro="macros.xhtml/Header"/>
+			<span metal:use-macro="macros.xhtml/Navigation"/>	
+			<div class="sub_title" tal:content="Title" />
+			<div class="icon_button_header">
+				<a href='?cmd=InsertUser' title="Thêm mới" class="Button StateDefault ButtonIconSolo CornerAll">
+					<span class="ButtonIcon ButtonIconPlus"/>
+				</a>
+			</div>	
+			<div id="main">
+				<div class="col2of1a">
+					<table cellpadding="0" cellspacing="0" border="0" class="display" id="DataTable">
+						<thead>					
+							<tr>				
+								<th align='center' width="20px">STT</th>
+								<th align='center' width="20px"/>
+								<th align='left'>Tên Đăng Nhập</th>
+								<th align='center'>Giới Tính</th>								
+								<th align='center'>Mật Khẩu</th>
+								<th align='right' width="32px" />
+							</tr>
+						</thead>
+						<tbody>
+							<tr tal:repeat="User Users">
+								<td align='center'/>
+								<td align='center'><img width="24px" tal:attributes="src User/getPictureLinked"/></td>
+								<td align='left'><a tal:attributes="href User/getURLUpdate" tal:content="User/getUser"/></td>
+								<td align='center' tal:content="User/getGenderPrint"/>
+								<td align='center' tal:content="string: ***********" />
+								<td align='center'>
+									<a tal:attributes="href User/getURLDelete" title="Xóa chi tiết"  class="Button StateDefault ButtonIconSolo CornerAll">
+										<span class="ButtonIcon ButtonIconClose"/>
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<span metal:use-macro="macros.xhtml/Footer"/>
+		</div>
+	</body>
+</html>

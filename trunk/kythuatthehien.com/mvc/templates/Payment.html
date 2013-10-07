@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />		
+		<span metal:use-macro="macros.xhtml/Include"/>
+		<script>
+			/*<![CDATA[*/
+				$(document).ready(function() {			
+					$('#DataTable').find('tbody tr').hover(
+						function(){ $(this).find('td').addClass('table_highlighted');}, 
+						function(){	$(this).find('td').removeClass('table_highlighted');}
+					);
+				
+					var oTable = $('#DataTable').dataTable({				
+						"bScrollCollapse": true,
+						"bStateSave": false,
+						"bFilter": false,
+						"bInfo": false,
+						"bSort": true,
+						"bPaginate": false,
+						"fnDrawCallback": function(oSettings ){
+							if ( oSettings.bSorted || oSettings.bFiltered ){
+								for ( var i=0, iLen=oSettings.aiDisplay.length ; i<iLen ; i++ ){
+									$('td:eq(0)', oSettings.aoData[ oSettings.aiDisplay[i] ].nTr ).html( i+1 );
+								}
+							}
+						}
+					});
+					
+					new FixedHeader( oTable, { "top": true, "zTop": 105 } );
+				});	
+			/*]]>*/	
+		</script>
+	</head>	
+	<body>	
+		<div id="frame">
+			<span metal:use-macro="macros.xhtml/Header"/>
+			<span metal:use-macro="macros.xhtml/MenuIndex"/>
+			<div id="main">
+				<span metal:use-macro="macros.xhtml/main3_of1"/>
+					<div id="main3_of2_height">
+						<div id="tieude_main">Phương thức thanh toán và nhận sim</div>
+						<div style="padding: 0 20px 0 20px; text-align: left; color: black;">							
+							<font size="4" style="line-height:30px;"><b>Thanh toán bằng thẻ ATM  hoặc qua ngân hàng:</b></font><br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Qúi khách vui lòng chuyển tiền vào một trong các tài  khoản dưới đây sau đó SMS cho chúng tôi địa chỉ nhận sim.<br/>
+							
+							<table border="0" width="100%" style="float: left; background: #DCE8FC; margin: 5px 0 5px 0; padding:  5px 0 5px 0;">
+							<tr>
+								<td>
+									<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Ngân Hàng Công Thương Việt Nam - VietinBank , Tp HCM<br/>
+									<span style="padding-left: 90px;"><b>STK : </b><font color="red"> 711A.0650.3748 </font><br/></span>
+									<span style="padding-left: 90px;">Chủ TK : Nguyễn Phước Hải<br/></span>
+
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Ngân Hàng Đông Á  - DongABank  ,CN Q 10,Tp HCM<br/>
+									<span style="padding-left: 90px;"><b>STK  : </b><font color="red"> 0107.5933.27 </font><br/></span>
+									<span style="padding-left: 90px;">Chủ TK : Nguyễn Phước Hải<br/></span>
+
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ Ngân Hàng Xuất Nhập Khẩu Việt Nam – EXIMBANK – SGD 1<br/>
+									<span style="padding-left: 90px;"><b>STK  : </b><font color="red"> 2000.14949.2454.62 </font><br/></span>
+									<span style="padding-left: 90px;">Chủ TK : Nguyễn Phước Hải<br/></span></i>
+								</td>
+							</tr>
+							</table>
+							
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Quí khách sẽ nhận được sim trong vòng 24h – 48h tại nhà từ khi chuyển tiền xong, mọi thất lạc trong quá trình chuyển sim chúng tôi hoàn toàn chịu trách nhiệm.<br/>
+							<font color="blue" size="4">Lưu ý: Quý khách nên chuyển tiền trong cùng hệ thống ngân hàng để tránh mất thời gian chờ đợi.<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Rất hân hạnh được phục vụ quí khách!<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Quý khách cần được biết thêm thông tin, cánh thức mua <b><i>số đẹp</i></b>, cách thức thanh toán và nhận sim...<br/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Đừng ngần ngại hãy gọi qua số hỗ trợ khách hàng cho chúng tôi.</font><br/>
+							<center><font color="blue"><b>SỐ MÁY HỖ TRỢ KHÁCH HÀNG</b></font><br/>
+							<font color="red" size="4"><b>0989.88.78.78 – 0977.666.098</b></font></center>							
+						</div>
+				</div>
+				<span metal:use-macro="macros.xhtml/main3_of3"/>
+				<div class="vide"></div>
+			</div>
+			<div id="line"></div>
+			<span metal:use-macro="macros.xhtml/Footer"/>
+			<div class="vide"></div>
+		</div>
+	</body>
+</html>

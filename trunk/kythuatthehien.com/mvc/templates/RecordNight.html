@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />		
+		<span metal:use-macro="macros.xhtml/Include"/>
+		<script>
+			/*<![CDATA[*/
+				$(document).ready(function() {			
+					$('#DataTable').find('tbody tr').hover(
+						function(){ $(this).find('td').addClass('table_highlighted');}, 
+						function(){	$(this).find('td').removeClass('table_highlighted');}
+					);
+				
+					var oTable = $('#DataTable').dataTable({				
+						"bScrollCollapse": true,
+						"bStateSave": false,
+						"bFilter": false,
+						"bInfo": false,
+						"bSort": true,
+						"bPaginate": false,
+						"fnDrawCallback": function(oSettings ){
+							if ( oSettings.bSorted || oSettings.bFiltered ){
+								for ( var i=0, iLen=oSettings.aiDisplay.length ; i<iLen ; i++ ){
+									$('td:eq(0)', oSettings.aoData[ oSettings.aiDisplay[i] ].nTr ).html( i+1 );
+								}
+							}
+						}
+					});
+					
+					new FixedHeader( oTable, { "top": true, "zTop": 105 } );
+				});	
+			/*]]>*/	
+		</script>
+	</head>	
+	<body>	
+		<div id="frame">
+			<span metal:use-macro="macros.xhtml/Header"/>
+			<span metal:use-macro="macros.xhtml/MenuIndex"/>
+			<div id="main">
+				<span metal:use-macro="macros.xhtml/main3_of1"/>
+				<div id="main3_of2" style="height: 1220px;">
+					<div id="tieude_main">Chấm điểm cho sim</div>
+					<div align="center" style="text-align: center; padding-top: 5px;">
+						<embed type="application/x-shockwave-flash" src="http://www.vanmenh.com/flash/canhan/CaNhan-SDT.swf" allowscriptaccess="none" height="400" width="400" />						
+					</div>
+				</div>
+				<span metal:use-macro="macros.xhtml/main3_of3"/>
+				<div class="vide"></div>
+			</div>
+			<div id="line"></div>
+			<span metal:use-macro="macros.xhtml/Footer"/>
+			<div class="vide"></div>
+		</div>
+	</body>
+</html>
