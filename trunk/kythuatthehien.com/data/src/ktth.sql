@@ -26,123 +26,127 @@ SET time_zone = "+00:00";
 -- Table structure for table `tblcategory`
 --
 
-CREATE TABLE IF NOT EXISTS `tblcategory` (
+CREATE TABLE IF NOT EXISTS `ktth_positions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(25) CHARACTER SET ucs2 COLLATE ucs2_unicode_ci NOT NULL,
+  `count` int(11),
+  `note` varchar(200) CHARACTER SET ucs2 COLLATE ucs2_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `tblcategory`
 --
 
-INSERT INTO `24h_category` (`id`, `name`) VALUES
-(1, 'Sim Bình Thường'),
-(2, 'Sim Ngũ Lục Quý'),
-(3, 'Sim Đẹp Tứ Quý'),
-(4, 'Sim Đẹp taxi'),
-(5, 'Sim Đẹp Tam Hoa'),
-(6, 'Sim Đẹp Số Tiến'),
-(7, 'Sim Đẹp Lộc Tiến'),
-(8, 'Sim Đẹp Thần Tài'),
-(9, 'Sim Đẹp Gánh Lập Kép'),
-(10, 'Sim Đẹp Năm Sinh'),
-(11, 'Sim Đẹp Dễ nhớ độc đáo'),
-(12, 'Sim Đẹp Thổ Địa'),
-(13, 'Sim Số Cặp');
+INSERT INTO `ktth_positions` (`id`, `name`,  `count` , `note`) VALUES
+(1, 'Tổ Kỹ Thuật Dựng', 12, ''),
+(2, 'Tổ Kỹ Thuật AT& AS', 8, ''),
+(3, 'Tổ Đồ họa', 8, ''),
+(4, 'Tổ Trưởng', 3, ''),
+(5, 'Lãnh Đạo Phòng'. 2, '');
 
--- --------------------------------------------------------
 
---
--- Table structure for table `sim24h_customer`
---
-
-CREATE TABLE IF NOT EXISTS `sim24h_customer` (
+CREATE TABLE IF NOT EXISTS `ktth_category` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `phone` varchar(15) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `address` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `note` varchar(150) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=56 ;
-
---
--- Dumping data for table `sim24h_customer`
---
-
-INSERT INTO `sim24h_customer` (`id`, `name`, `password`, `phone`, `address`, `note`) VALUES
-(12, 'Phuoc Hai', '', '0977666098', '5/15 Vo Tru,9, 8, Hồ Chí Minh', ''),
-(13, 'Thanh Tuan', '', '0972901181', '887,Cai Tau Ha, Chau Thanh, Hồ Chí Minh', ''),
-(14, 'thanh bảo', '', '0903062068', 'Số 256, p 5, tp vinh long, Vĩnh Long', 'thanhbao@gmail.comco goi dt '),
-(17, 'Hoang Tuan', '', '0909.188.887', 'Số 7/61 Thành Thái, 14, 10, Hồ Chí Minh', ''),
-(18, 'Thanh Tuan', '', '0972.90.11.81', 'Số 817, Thị Trấn Cái tàu Hạ, Châu Thành, Đồng Tháp', 'Tìm số cặp'),
-(19, 'Hoang Son', '', '0907.779.773', 'Số 1223, 10, 10, Hồ Chí Minh', ''),
-(21, 'Ngoc Dung', '', '0123456789', 'Số 1234, 12, 12, Hồ Chí Minh', ''),
-(22, 'Duy Tam', '', '0123456789', 'Số 817, Cai Tau Ha, Chau Thanh, Hồ Chí Minh', ''),
-(25, 'Thanh Bảo', '', '0903062068', 'Số phường 5, Tp.Trà Vinh, Trà Vinh', 'thanhbao2007vl@gmail.com'),
-(27, 'nguyen duy khanh', '', '0987413738', 'Số huyen vung liem, Huyện Vũng Liêm, Vĩnh Long', 'khanhnd1989@gmail.comthong bao gia cho em biet nha may anh chj'),
-(29, 'Ngoc Dung', '', '0972345673', 'Số 213 3/2, Q10, Hồ Chí Minh', ''),
-(33, 'Le Nguyen Dong Khoa', '', '0945.03.07.09', 'Số Cai Tau Ha, Chau Thanh, Đồng Tháp', 'Le Nguyen Dong Khoa 23/07/1982  340.992.441 Dong Thap'),
-(35, 'Nguyễn Thanh Bảo', '', '0903062068', 'Số 258/15 Đường 14-9 phường 5, p5, Vĩnh Long', 'thanhbao2007vl@gmail.comgoi ngay'),
-(36, 'Bui thanh Tan', '', '0972.90.11.81', 'Số 817 cai tau ha, Chau thanh, Đồng Tháp', ''),
-(37, 'Nguyen Thi Thu Thao', '', '0908407486', 'Số 200/6 Duong Dinh Hoi, 9, Hồ Chí Minh', ''),
-(38, 'Anh Hai', '', '0912345678', 'Số 1234 3/2, 1, Hồ Chí Minh', 'gia qua re'),
-(40, 'Nguyen van dung', '', '0903879739', 'Số 550/3le hong phong, 10, Hồ Chí Minh', 'dung_dermal75@yahoo.com  co so nay lien lac voi Minh nha'),
-(43, 'nguyenthanhtuan', '', '01682625401', 'Số 585/15hohoclam, binhtan, Hồ Chí Minh', 'nguyenthanhtuan_1989@yahoo.com.vnbao nhieu tien vay anh'),
-(44, 'hoc', '', '01682625401', 'Số 585/15, binh tan, Hồ Chí Minh', 'nguyenthanhtuan_@yahoo.com.vnchung nao co cho em hay dum cam on!'),
-(45, 'm trong chung', '', '01266222622', 'Số 107 hoang van thai, tp thai binh, Thái Bình', 'chungpham0101@gmail.com'),
-(46, 'nguyen van hanh', '', '01654424810', 'Số duong tua hai, thi xa tay ninh huyen tay ninh, Tây Ninh', 'gui nhanh cho toi toi rat can'),
-(47, 'Bùi Thanh Tuấn', '', '0972901181', 'Số Cái Tàu Hạ, Châu Thành, Đồng Tháp', 'tuanbuithanh@gmail.comđặt cho Nguyễn Chí Hiếu, 331503254, ngày cấp 19/08/2002, Vĩnh Long'),
-(48, 'đinh thùy dương', '', '0978307279', 'Số 81/2/8 Lạc long quân, Cầu giấy, Hà Nội', 'dinhthduong@gmail.com'),
-(49, 'Binh', '', '0983799454', 'Số 585/9 nguyen dinh chieu, 3, Hồ Chí Minh', 'tranquanvu2000@yahoo.comsim 10 so cua vina'),
-(51, 'a', '', '01244335445', 'Số 12, Hàng Mai, Hà Nội', 'trung@gmail.com.vncần gắp'),
-(53, 'Lệ Hà', '', '0939037134', 'Số 476 Đường 3/2, P.14, Q.10, 10, Hồ Chí Minh', 'haa92003@yahoo.com'),
-(54, 'vo nguyen bao minh', '', '0908700476', 'Số ap 3 xa hiep phuoc, nhon trach, Đồng Nai', 'cntt_vnbm@yahoo.com'),
-(55, 'nguyễn hoàn tú', '', '0909809088', 'Số 88/12 phamm5 hùng f4 , q8, Hồ Chí Minh', 'majcotu@yahoo.comlam duoc 1 trong cac so nay k\r\n090*030.886\r\n093*030.886\r\n091*030.886\r\n094*030.886\r\n098*030.886\r\n097*030.886');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `sim24h_headnumber`
---
-
-CREATE TABLE IF NOT EXISTS `sim24h_headnumber` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `idnetwork` int(11) NOT NULL,
+  `id_position` int(11) NOT NULL,
   `name` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `factory` double(5) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=24 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=89 ;
 
 --
 -- Dumping data for table `sim24h_headnumber`
 --
 
-INSERT INTO `sim24h_headnumber` (`id`, `idnetwork`, `name`) VALUES
-(1, 2, '090'),
-(2, 2, '093'),
-(3, 2, '0120'),
-(4, 2, '0121'),
-(5, 2, '0122'),
-(6, 2, '0126'),
-(7, 2, '0128'),
-(8, 3, '091'),
-(9, 3, '094'),
-(10, 3, '0123'),
-(11, 3, '0124'),
-(12, 3, '0125'),
-(13, 3, '0127'),
-(14, 3, '0129'),
-(15, 1, '097'),
-(16, 1, '098'),
-(17, 1, '016'),
-(18, 4, '0188'),
-(19, 4, '092'),
-(20, 6, '095'),
-(21, 5, '099'),
-(22, 5, '0199'),
-(23, 7, '096');
-
+INSERT INTO `ktth_caterory` (`id`, `id_position`, `name`, `factory`) VALUES
+(1,1,'Bản tin TSQT - (22h)',0.5),
+(2,1,'Bản tin TS Địa Phương - (Trưa)',0.5),
+(3,1,'Bản tin TS Địa Phương 18h30 K1- (Dựng tin)',0.3),
+(4,1,'Bản tin TS Địa phuong - (Tối-K2)',0.5),
+(5,1,'Vinh Long Ngày Mới',0.5),
+(6,1,'Dựng PLại Bạn Nhà nông, Nhịp cầu Y tế',0.5),
+(7,1,'Phóng sự ngắn',0.4),
+(8,1,'Bản tin TSQT - (Chiều)',0.6),
+(9,1,'Phóng sự Địa Chỉ Nhân Đạo',0.5),
+(10,1,'Thế giới Quanh ta',0.4),
+(11,1,'Bài khoa giáo Vệ Tinh',0.5),
+(12,1,'Nhân vật sự kiện',0.4),
+(13,1,'Thế Giới Tuần qua',0.4),
+(14,1,'VLNM : TSQT & Thể Thao',0.5),
+(15,1,'Chuyên mục',1),
+(16,1,'Danh sách địa chỉ Nhân Đạo',0.5),
+(17,1,'Phóng Sự dài, Chuyên đề',1),
+(18,1,'Ngôi Nhà Thân Ái',2.5),
+(19,1,'Bản tin TSQT - (Trưa)',0.4),
+(20,1,'Vợ Tôi Số 1',2.5),
+(21,1,'Miền Tây Miến Yêu',2),
+(22,1,'Bản tin TS Địa phương 18h30 K1 - (Chạy Trực Tiếp)',0.3),
+(23,1,'Chấp cánh ước mơ',2),
+(24,1,'Trái tim Nhân Ái',2),
+(25,1,'Chuyến xe Nhân Ái',2.5),
+(26,1,'Vượt Qua Thử Thách',2.5),
+(27,1,'Thần Tài Gõ Cửa',2),
+(28,1,'Thấp Sáng Niềm Tin',2.5),
+(29,1,'Phim Tài Liệu',2),
+(30,1,'Ký sự Truyền Hình',2),
+(31,1,'Người Miền Tây',2),
+(32,1,'Trực Dựng Chủ Nhật Hàng Tuần',0.5),
+(33,1,'Nhịp Sống Đồng Bằng',2),
+(34,2,'Trực Studio TSQT (7h30ph - 11h)',0.5),
+(35,2,'Camera VLNM',0.25),
+(36,2,'Thu Dựng Thời tiết Chủ nhật',0.5),
+(37,2,'Âm Thanh VLNM',0.5),
+(38,2,'Trực Phòng thu Discovery L4',0.5),
+(39,2,'Trực Phòng thu Vệ tinh',0.5),
+(40,2,'Trực Studio DBTT & Phóng Sự',0.5),
+(41,2,'Trực Studio TSQT (19h30ph - 22h)',0.5),
+(42,2,'Trực Studio Thời sự (7h30ph - 11h)',0.5),
+(43,2,'Trực Studio TSQT (13h30ph -16h)',0.5),
+(44,2,'Đạo diễn VLNM',0.5),
+(45,2,'Trực Studio Thời sự (16h - 19h)',0.4),
+(46,2,'Trực Studio Thời sự (13h30ph - 16h)',0.5),
+(47,2,'Ca nhạc Sân Khấu (setup Âm thanh - Ánh sáng)',1.5),
+(48,2,'Trực Studio TSQT (16h -18h30ph)',0.4),
+(49,2,'Trực tiếp Thời Sự Địa Phương',0.4),
+(50,2,'Nhạc Phim NSĐB, Người Miền Tây',0.2),
+(51,2,'Dự báo thời tiết',0.4),
+(52,2,'Thu Vợ tôi là số 1',0.5),
+(53,2,'Thu Thần Tài Gõ Cửa',0.5),
+(54,2,'Đạo diễn BTCT',0.25),
+(55,2,'Camera BTCT',0.12),
+(56,2,'Nhạc phim Tài Liệu, Ký sự',0.4),
+(57,2,'Thu Vượt Qua Thử Thách',0.5),
+(58,2,'Thu 24h',0.4),
+(59,2,'Trực tiếp BNN, Ytế',0.4),
+(60,2,'Âm Thanh BTCT',0.25),
+(61,2,'Ca nhạc sân khấu (Âm thanh - ánh sáng SK /1 đêm)',1),
+(62,2,'Thu Chấp cánh ước mơ',0.5),
+(63,2,'Thu Chuyến xe nhân ái',0.5),
+(64,2,'Thu Thắp sáng niềm tin',0.5),
+(65,3,'Xử lý cắt QC, CH Trình, GameShow, Phim',0.2),
+(66,3,'Hình hiệu chương trình (Loại 03)',3),
+(67,3,'Dựng Dự báo nhiệt độ',0.1),
+(68,3,'Dựng cắt Cải Lương Gốc',1),
+(69,3,'Trực tiếp XSKT Vĩnh Long',0.25),
+(70,3,'Hình hiệu chương trình (Loại 02)',4),
+(71,3,'Giới thiệu CT Vệ tinh',0.25),
+(72,3,'Hình hiệu chương trình (Loại 01)',5),
+(73,3,'Hình hiệu Tiểu mục, Cổ động',1.5),
+(74,3,'Backdrop',4),
+(75,3,'Background',1),
+(76,3,'Banner, Logo',1),
+(77,3,'Trailer Phim, Chuong Trình',1),
+(78,3,'Dựng Thế giới 24H',0.4),
+(79,3,'Trailer Chuyên mục',0.75),
+(80,3,'Dựng Thể thao 24H',0.2),
+(81,3,'Dựng và xử lý CT GameShow',1),
+(82,3,'Chạy chữ GTCT - K2',0.1),
+(83,3,'Ca nhạc chủ đề, giai điệu QH',0.25),
+(84,3,'Ca nhạc Giải trí, Giai điệu trẻ',0.5),
+(85,3,'Dựng Bản tin thị trường',0.4),
+(86,3,'Dựng Dự báo Sâu Bệnh',0.4),
+(87,3,'Key Chuong Trình, In DVD',0.08),
+(88,3,'Trailer Phim tuần',0.5);
 -- --------------------------------------------------------
 
 --
@@ -8162,23 +8166,53 @@ INSERT INTO `sim24h_order` (`id`, `idcustomer`, `idsim`, `type`, `date`, `note`,
 -- Table structure for table `sim24h_user`
 --
 
-CREATE TABLE IF NOT EXISTS `sim24h_user` (
+CREATE TABLE IF NOT EXISTS `ktth_user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user` varchar(50) NOT NULL,
   `pass` varchar(255) NOT NULL,
   `gender` tinyint(1) NOT NULL,
   `note` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=34 ;
 
 --
 -- Dumping data for table `sim24h_user`
 --
 
-INSERT INTO `sim24h_user` (`id`, `user`, `pass`, `gender`, `note`) VALUES
-(1, 'thanhbao', '09cd36c860dd1d9da04463e717c70e4cdd3da99d3796696ad2f5bad3a270772869418fc065addbe0156ae6d009fbc0f40c81866a51503871376f1e24e5a9ddb8', 1, 'Nguyễn Thanh Bảo'),
-(2, 'tuan', '4eeb05a1087cc2a71595750c9be21565233b7c7bc1a7beffb5aace39a751e0d68585c8a71a730686b979495340e3a23d7ec99056fd214879bea472ace17d8f8d', 0, 'Bùi Thanh Tuấn'),
-(6, 'hai_hns', 'c12602d8408eeedf77f3bd83c63d9cebcb2d109b37e3e70bc3ee83db75acd1452dc6c8a15ed0129ccb6838dad48dcb5bcd93439af52cb963e4ff037d81146686', 1, 'NguyenPhuocHai');
+INSERT INTO `ktth_user` (`id`, `user`, `pass`, `gender`, `note`) VALUES
+(1,'huugiao','0c4e6389ba7066f691e6c5aaa754c167fbb870f8',1,''),
+(2,'tronghuynh','a59d9446a99e4693602579add60b7e542c54caa4',1,''),
+(3,'quangphuong','c8113dcceb1fd6e8fd5094f015f0388499baba9e',1,''),
+(4,'thanhhung','68b215677b6740eed9289b9c56efd48173d8fbb4',1,''),
+(5,'minhphuong','05b7a3d7efb514064a62ec3dc0ad0df80b3419d8',0,''),
+(6,'vanteo','85bcf2722a70fc105e663e95f6fdbd74e62af4ce',1,''),
+(7,'haiho','d802060b7657bec1815646ef3364eff28bf47b5c',1,''),
+(8,'thanhnhan','86c3ed6d0d37585a5edde2f22459ad0ed0497b90',1,''),
+(9,'thenhan','74a871acbf060dda5fc7260d05a5924a34e4c0e7',1,''),
+(10,'hoangphong','e68b072303e1c28c4073630daeb803737a761e06',1,''),
+(11,'tuhieu','1fb83e5927307ba0f4110bdebbbd1e14a3ba7271',1,''),
+(12,'phiyen','aa2431cdc69b7709afc94c9eb10de6297cd53236',0,''),
+(13,'quangnhut','99772a1e938a1f1094df42418b593c68567db381',1,''),
+(14,'giaqui','86128e4ae2b4c67c8ab84a87f5b498fa45996cc2',1,''),
+(15,'minhduc','fd962d92b10d80b2fa71eac1d20a56a10dca6da6',1,''),
+(16,'thanhphong','265a0c9ded9eda44986eea638377ca3e41552ed6',1,''),
+(17,'minhkhoa','495e0435067b88f01bc5904d2cf7ab159ee3c240',1,''),
+(18,'dangkhoa','c527db5f58893203fc3ba8822c8a07d42b6fd2cd',1,''),
+(19,'haidang','2a86d73c7ce33e0604c152612b35c7a396c00edb',1,''),
+(20,'kinhluan','834c7df0c039477b49c639ee4453c6588f8481e3',1,''),
+(21,'hoanglam','c2d9fd63d120deaf1226d796e09b05f143a7a183',1,''),
+(22,'bichkieu','1cb60271a04e1475343daf46c7ec979d0379d016',0,''),
+(23,'quochuy','80e126659c008667cb626baef0c86e7b7dd00e20',1,''),
+(24,'quocviet','fcd061f440af2f07c9014f9c31a7ad78df8fadbf',1,''),
+(25,'ngochai','7c4a8d09ca3762af61e59520943dc26494f8941b',1,''),
+(26,'thanhdo','ee67f2435ffb242a807aa9d93a73ef62b5032f9c',1,''),
+(27,'tiendung','a100ee52fcc60623274f106e7ebeebee7bbe7785',1,''),
+(28,'nguyenduc','232df2068d944318921a2968122fb75dc6c0f035',1,''),
+(29,'nguyenphuong','3b3a4e12fbd1eb35faf8f1e38f949b5901df1167',0,''),
+(30,'conheocon25','5b8431020080d3846225e9a1a3c4a6d85d3e183b',1,''),
+(31,'ngoctho','28c9e61bf2947566c2258d86610f033f2ad673f6',1,''),
+(32,'nhattan','b0728611c94e5b85ec6e4e1f335cfd6a262abe2a',1,''),
+(33,'tolan','42c44f19acc66d4a65580c04e75140bc4e5c29da',0,'');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
