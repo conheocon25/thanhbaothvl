@@ -2,49 +2,53 @@
 namespace MVC\Mapper;
 
 require_once( "mvc/base/Mapper.php" );
-class Customer extends Mapper implements \MVC\Domain\CustomerFinder {
+class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
 
     function __construct() {
         parent::__construct();
         $this->selectAllStmt = self::$PDO->prepare( 
-                            "select id, name, password, phone, address, note from sim24h_customer");
+                            "select id, id_caterory, id_employee, content, count, date_work, date_note, note from ktth_salarydaily");
         $this->selectStmt = self::$PDO->prepare( 
-                            "select id, name, password, phone, address, note from sim24h_customer where id=?");
+                            "select id, id_caterory, id_employee, content, count, date_work, date_note, note from ktth_salarydaily where id=?");
         $this->updateStmt = self::$PDO->prepare( 
-                            "update sim24h_customer set name=?, password=?, phone=?, address=?, note=? where id=?");
+                            "update ktth_salarydaily set id_caterory=?, id_employee=?, content=?, count=?, date_work=?, date_note=?, note=? where id=?");
         $this->insertStmt = self::$PDO->prepare( 
-                            "insert into sim24h_customer (name, password, phone, address, note ) 
-							values( ?, ?, ?, ?, ?)");
+                            "insert into ktth_salarydaily ( id_caterory, id_employee, content, count, date_work, date_note, note ) 
+							values( ?, ?, ?, ?, ?, ? , ?)");
 		$this->deleteStmt = self::$PDO->prepare( 
-                            "delete from sim24h_customer where id=?");
+                            "delete from ktth_salarydaily where id=?");
     } 
     function getCollection( array $raw ) {
-        return new CustomerCollection( $raw, $this );
+        return new SalarydailyCollection( $raw, $this );
     }
 
     protected function doCreateObject( array $array ) {		
-        $obj = new \MVC\Domain\Customer( 
+        $obj = new \MVC\Domain\Salarydaily( 
 			$array['id'],  
-			$array['name'],
-			$array['password'],
-			$array['phone'],
-			$array['address'],
+			$array['id_caterory'],
+			$array['id_employee'],
+			$array['content'],
+			$array['count'],
+			$array['date_work'],
+			$array['date_note'],
 			$array['note']
 			);
         return $obj;
     }
 	
     protected function targetClass() {        
-		return "Customer";
+		return "Salarydaily";
     }
 
     protected function doInsert( \MVC\Domain\Object $object ) {
         $values = array(  
-			$object->getName(),
-			$object->getPassWord(),
-			$object->getPhone(),
-			$object->getAddress(),
+			$object->getId_caterory(),
+			$object->getId_employee(),
+			$object->getContent(),
+			$object->getDate_work(),
+			$object->getDate_note(),
 			$object->getNote()
+			
 		); 
         $this->insertStmt->execute( $values );
         $id = self::$PDO->lastInsertId();
@@ -53,10 +57,11 @@ class Customer extends Mapper implements \MVC\Domain\CustomerFinder {
     
     protected function doUpdate( \MVC\Domain\Object $object ) {
         $values = array( 
-			$object->getName(),
-			$object->getPassWord(),
-			$object->getPhone(),
-			$object->getAddress(),
+			$object->getId_caterory(),
+			$object->getId_employee(),
+			$object->getContent(),
+			$object->getDate_work(),
+			$object->getDate_note(),
 			$object->getNote(),
 			$object->getId()
 		);		

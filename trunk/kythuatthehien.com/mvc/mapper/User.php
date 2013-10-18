@@ -7,18 +7,18 @@ class User extends Mapper implements \MVC\Domain\UserFinder {
     function __construct() {
         parent::__construct();
         $this->selectAllStmt = self::$PDO->prepare( 
-                            "select id, user, pass, type, gender, note from sim24h_user");
+                            "select id, user, pass, gender, note from ktth_user");
         $this->selectStmt = self::$PDO->prepare( 
-                            "select id, user, pass, type, gender, note from sim24h_user where id=?");
+                            "select id, user, pass, gender, note from ktth_user where id=?");
         $this->updateStmt = self::$PDO->prepare( 
-                            "update sim24h_user set user=?, pass=?, type=?, gender=?, note=? where id=?");
+                            "update ktth_user set user=?, pass=?,gender=?, note=? where id=?");
         $this->insertStmt = self::$PDO->prepare( 
-                            "insert into sim24h_user (user, pass, gender, note ) 
+                            "insert into ktth_user (user, pass, gender, note ) 
 							values( ?, ?, ?, ?)");
 		$this->deleteStmt = self::$PDO->prepare( 
-                            "delete from sim24h_user where id=?");
+                            "delete from ktth_user where id=?");
 		$this->checkStmt = self::$PDO->prepare( 
-                            "select id from sim24h_user where user=? and pass=?");
+                            "select id from ktth_user where user=? and pass=?");
     } 
     function getCollection( array $raw ) {
         return new UserCollection( $raw, $this );
@@ -28,8 +28,7 @@ class User extends Mapper implements \MVC\Domain\UserFinder {
         $obj = new \MVC\Domain\User( 
 			$array['id'],  
 			$array['user'], 
-			$array['pass'],	
-			$array['type'],	
+			$array['pass'],				
 			$array['gender'],	
 			$array['note'] );
         return $obj;
@@ -54,8 +53,7 @@ class User extends Mapper implements \MVC\Domain\UserFinder {
     protected function doUpdate( \MVC\Domain\Object $object ) {
         $values = array( 
 			$object->getUser(), 
-			$object->getPass(),
-			$object->getType(),
+			$object->getPass(),			
 			$object->getGender(),			
 			$object->getNote(),
 			$object->getId()
@@ -75,14 +73,14 @@ class User extends Mapper implements \MVC\Domain\UserFinder {
     }
 		
 	function check($name, $pass) {
-		$repass = hash("sha512", "54321saophuongnamcompany12345".$pass,false);
+		$repass = hash("sha512", "54321ktth.com12345".$pass,false);
 		$values = array( $name, $repass);	
         $this->checkStmt->execute( $values );
         $result = $this->checkStmt->fetchAll();
 		return $result[0]['id'];
     }
 	function createPass($pass) {
-		return hash("sha512", "54321saophuongnamcompany12345".$pass,false);
+		return hash("sha512", "54321ktth.com12345".$pass,false);
 	}
 }
 ?>

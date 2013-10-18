@@ -2,42 +2,47 @@
 namespace MVC\Mapper;
 
 require_once( "mvc/base/Mapper.php" );
-class HotNumber extends Mapper implements \MVC\Domain\HotNumberFinder {
+class Positions extends Mapper implements \MVC\Domain\PositionsFinder {
 
     function __construct() {
         parent::__construct();
         $this->selectAllStmt = self::$PDO->prepare( 
-                            "select id, idnumber, date from sim24h_hotnumber");
+                            "select id, name, count, note from ktth_positions");
         $this->selectStmt = self::$PDO->prepare( 
-                            "select id, idnumber, date from sim24h_hotnumber where id=?");
+                            "select id, name, count, note from ktth_positions where id=?");
+		$this->findByStmt = self::$PDO->prepare( 
+                            "select id, name, count, note from ktth_positions where name=?");
         $this->updateStmt = self::$PDO->prepare( 
-                            "update sim24h_hotnumber set idnumber=?, date=? where id=?");
+							"insert into ktth_positions (name, count, note ) 
+							values( ?, ?, ?)");
         $this->insertStmt = self::$PDO->prepare( 
-                            "insert into sim24h_hotnumber (idnumber, date ) 
-							values( ?, ?)");
+                             "update ktth_positions set name=?, count=?, note=? where id=?");
 		$this->deleteStmt = self::$PDO->prepare( 
-                            "delete from sim24h_hotnumber where id=?");
+                            "delete from ktth_positions where id=?");
     } 
     function getCollection( array $raw ) {
-        return new HotNumberCollection( $raw, $this );
+        return new PositionsCollection( $raw, $this );
     }
 
     protected function doCreateObject( array $array ) {		
-        $obj = new \MVC\Domain\HotNumber( 
+        $obj = new \MVC\Domain\Positions( 
 			$array['id'],  
-			$array['idnumber'],  
-			$array['date'] );
+			$array['name'], 
+			$array['count'], 
+			$array['note']		
+		);
         return $obj;
     }
 	
     protected function targetClass() {        
-		return "HotNumber";
+		return "Positions";
     }
 
     protected function doInsert( \MVC\Domain\Object $object ) {
-        $values = array(  
-			$object->getIdNumber(),
-			$object->getDate()
+        $values = array(
+			$object->getName(),
+			$object->getCount(),		
+			$object->getNote()			
 		); 
         $this->insertStmt->execute( $values );
         $id = self::$PDO->lastInsertId();
@@ -45,9 +50,10 @@ class HotNumber extends Mapper implements \MVC\Domain\HotNumberFinder {
     }
     
     protected function doUpdate( \MVC\Domain\Object $object ) {
-        $values = array( 
-			$object->getIdNumber(),
-			$object->getDate(),
+        $values = array(
+			$object->getName(),
+			$object->getCount(),
+			$object->getNote(),
 			$object->getId()
 		);		
         $this->updateStmt->execute( $values );
@@ -57,9 +63,14 @@ class HotNumber extends Mapper implements \MVC\Domain\HotNumberFinder {
         return $this->deleteStmt->execute( $values );
     }
 	
+	function findBy($values) {
+		$this->findByStmt->execute($values);
+        return new HeadNetworkCollection( $this->findByStmt->fetchAll(), $this );
+    }
     function selectStmt() {
         return $this->selectStmt;
-    }	
+    }
+	
     function selectAllStmt() {
         return $this->selectAllStmt;
     }

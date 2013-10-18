@@ -7,16 +7,16 @@ class Category extends Mapper implements \MVC\Domain\CategoryFinder {
     function __construct() {
         parent::__construct();
         $this->selectAllStmt = self::$PDO->prepare( 
-                            "select id, name from sim24h_category");
+                            "select id, id_position, name, factory from ktth_category");
         $this->selectStmt = self::$PDO->prepare( 
-                            "select id, name from sim24h_category where id=?");
+                            "select id, id_position, name, factory from ktth_category where id=?");
         $this->updateStmt = self::$PDO->prepare( 
-                            "update sim24h_category set name=? where id=?");
+                            "update ktth_category set id_position=?, name=?, factory=? where id=?");
         $this->insertStmt = self::$PDO->prepare( 
-                            "insert into sim24h_category (name ) 
-							values( ?)");
+                            "insert into ktth_category ( id_position, name, factory ) 
+							values( ?,  ? , ?)");
 		$this->deleteStmt = self::$PDO->prepare( 
-                            "delete from sim24h_category where id=?");
+                            "delete from ktth_category where id=?");
     } 
     function getCollection( array $raw ) {
         return new CategoryCollection( $raw, $this );
@@ -25,7 +25,10 @@ class Category extends Mapper implements \MVC\Domain\CategoryFinder {
     protected function doCreateObject( array $array ) {		
         $obj = new \MVC\Domain\Category( 
 			$array['id'],  
-			$array['name'] );
+			$array['id_position'],
+			$array['name'],
+			$array['factory'] 
+		);
         return $obj;
     }
 	
@@ -35,7 +38,9 @@ class Category extends Mapper implements \MVC\Domain\CategoryFinder {
 
     protected function doInsert( \MVC\Domain\Object $object ) {
         $values = array(  
-			$object->getName()
+			$object->getId_position(),
+			$object->getName(),
+			$object->getFactory()
 		); 
         $this->insertStmt->execute( $values );
         $id = self::$PDO->lastInsertId();
@@ -44,7 +49,9 @@ class Category extends Mapper implements \MVC\Domain\CategoryFinder {
     
     protected function doUpdate( \MVC\Domain\Object $object ) {
         $values = array( 
+			$object->getId_position(),
 			$object->getName(),
+			$object->getFactory(),
 			$object->getId()
 		);		
         $this->updateStmt->execute( $values );

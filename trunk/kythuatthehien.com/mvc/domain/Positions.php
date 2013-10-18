@@ -2,15 +2,17 @@
 Namespace MVC\Domain;
 require_once( "mvc/base/domain/DomainObject.php" );
 
-class HeadNetwork extends Object{
+class Positions extends Object{
 	private $Id;
 	private $Name;
-	private $IdNetwork;
+	private $Count;
+	private $Note;
 	
-	function __construct( $Id=null, $IdNetwork=null, $Name=Null) {
+	function __construct( $Id=null, $Name=null, $Count=Null, $Note=Null) {
 		$this->Id = $Id;
-		$this->IdNetwork = $IdNetwork;
-		$this->Name = $Name;		
+		$this->Name = $Name;
+		$this->Count = $Count;		
+		$this->Note = $Note;		
 		parent::__construct( $Id );
 	}
 
@@ -18,12 +20,12 @@ class HeadNetwork extends Object{
 		return $this->Id;
 	}
 
-	function getIdNetwork() {
-	return $this->IdNetwork;
+	function getCount() {
+	return $this->Count;
 	}
 
-	function setIdNetwork( $IdNetwork ) {
-		$this->IdNetwork = $IdNetwork;
+	function setCount( $Count ) {
+		$this->Count = $Count;
 		$this->markDirty();
 	}
 
@@ -36,24 +38,15 @@ class HeadNetwork extends Object{
 		$this->markDirty();
 	}
 	
-	function getNumbers(){
-		$mNumber = new \MVC\Mapper\Number();
-		$Numbers = $mNumber->findBy(array($this->Name));
-		return $Numbers;
+	function getNote( ) {
+		return $this->Note;
 	}
-	
-	function getNumbersByPage($CurrentPage, $RowsPage ){
-		$mNumber = new \MVC\Mapper\Number();
-		$Numbers = $mNumber->findByPage(array($this->Name, $CurrentPage, $RowsPage));
-		return $Numbers;
-	}
-	
-	function getNotInPageNumbers(){
-		$mNumber = new \MVC\Mapper\Number();
-		$Numbers = $mNumber->findNotInPage(array($this->Name));
-		return $Numbers;
-	}
-	
+
+	function setNote( $Note ) {
+		$this->Note = $Note;
+		$this->markDirty();
+	}	
+		
 	function getURLUpdate(){
 		return "?cmd=UpdateHeadNetwork&IdHeadNetwork=".$this->Id;
 	}

@@ -6,11 +6,15 @@ class Category extends Object{
 
     private $Id;
 	private $Name;
+	private $Id_position;
+	private $Factory;
 	
 	/*Hàm khởi tạo và thiết lập các thuộc tính*/
-    function __construct( $Id=null, $Name=null ) {
+    function __construct( $Id=null, $Id_position=null, $Name=null, Factory=null ) {
         $this->Id = $Id;
+		$this->Id_position = $Id_position;
 		$this->Name = $Name;
+		$this->Factory = $Factory;		
         parent::__construct( $Id );
     }
     function getId( ) {
@@ -28,20 +32,24 @@ class Category extends Object{
         $this->Name = $Name;
         $this->markDirty();
     }
-	function getNumbers(){
-		$mNumber = new \MVC\Mapper\Number();
-		$Numbers = $mNumber->findByCategory($this->Id);
-		//print_r($Numbers);
-		return $Numbers;
-	}
-	function getNumbersByPage($CurrentPage, $RowsPage ){
-		$mNumber = new \MVC\Mapper\Number();
-		$Numbers = $mNumber->findByCategoryPage(array($this->Id, $CurrentPage, $RowsPage));
-		return $Numbers;
-	}
-	function getURLNumber( ) {
-        return "?cmd=ViewNumberByCategory&Id=".$this->Id;
-    }	
+	
+	function getId_position( ) {
+        return $this->Id_position;
+    }
+    function setId_position( $Id_position ) {
+        $this->Id_position = $Id_position;
+        $this->markDirty();
+    }
+	
+	function getFactory( ) {
+        return $this->Factory;
+    }
+    function setFactory( $Factory ) {
+        $this->Factory = $Factory;
+        $this->markDirty();
+    }
+	
+	
     static function findAll() {
         $finder = self::getFinder( __CLASS__ ); 
         return $finder->findAll();
