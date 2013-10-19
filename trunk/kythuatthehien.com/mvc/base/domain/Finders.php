@@ -12,12 +12,7 @@ interface Finder {
 
 interface UserFinder  extends Finder {}
 interface CategoryFinder  extends Finder {}
-interface CustomerFinder  extends Finder {}
-interface HotNumberFinder  extends Finder {}
-interface NetworkFinder  extends Finder {}
-interface NumberFinder  extends Finder {}
-interface OrderFinder  extends Finder {}
+interface PositionsFinder  extends Finder {}
+interface SalarydailyFinder  extends Finder {}
 interface PageFinder  extends Finder {}
-interface HeadNetworkFinder  extends Finder {}
-
 ?>

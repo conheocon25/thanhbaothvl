@@ -15,10 +15,10 @@ class PageCollection extends Collection
 				return "\MVC\Domain\Page";
 			}
 		}
-class HeadNetworkCollection extends Collection
-        implements \MVC\Domain\HeadNetworkCollection {
+class SalarydailyCollection extends Collection
+        implements \MVC\Domain\SalarydailyCollection {
 			function targetClass( ) {
-				return "\MVC\Domain\HeadNetwork";
+				return "\MVC\Domain\Salarydaily";
 			}
 		}
 class CategoryCollection extends Collection
@@ -27,34 +27,10 @@ class CategoryCollection extends Collection
 				return "\MVC\Domain\Category";
 			}
 		}
-class CustomerCollection extends Collection
-        implements \MVC\Domain\CustomerCollection {
+class PositionsCollection extends Collection
+        implements \MVC\Domain\PositionsCollection {
 			function targetClass( ) {
-				return "\MVC\Domain\Customer";
-			}
-		}
-class HotNumberCollection extends Collection
-        implements \MVC\Domain\HotNumberCollection {
-			function targetClass( ) {
-				return "\MVC\Domain\HotNumber";
-			}
-		}
-class NetworkCollection extends Collection
-        implements \MVC\Domain\NetworkCollection {
-			function targetClass( ) {
-				return "\MVC\Domain\Network";
-			}
-		}
-class NumberCollection extends Collection
-        implements \MVC\Domain\NumberCollection {
-			function targetClass( ) {
-				return "\MVC\Domain\Number";
-			}
-		}
-class OrderCollection extends Collection
-        implements \MVC\Domain\OrderCollection {
-			function targetClass( ) {
-				return "\MVC\Domain\Order";
+				return "\MVC\Domain\Positions";
 			}
 		}
 ?>

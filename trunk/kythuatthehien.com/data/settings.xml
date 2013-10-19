@@ -6,7 +6,7 @@
 		<command name="DefaultCommand">
 			<view>DefaultCommand</view>
 			<status value="CMD_OK">
-				<forward>ViewNumbers</forward>
+				<forward>Home</forward>
 			</status>
 		</command>
 		
@@ -14,7 +14,7 @@
 		<command name="Signout">
 			<view>Signout</view>
 			<status value="CMD_OK">
-				<forward>ViewNumbers</forward>
+				<forward>Home</forward>
 			</status>
 		</command>
 				
@@ -75,8 +75,8 @@
 			<view>ViewNumberByCategory</view>
 		</command>
 		<!-- ====================== Number ====================== -->
-		<command name="ViewNumbers">
-			<view>ViewNumbers</view>
+		<command name="Home">
+			<view>Home</view>
 		</command>
 		<command name="ViewHotNumbers">
 			<view>ViewHotNumbers</view>
@@ -94,7 +94,7 @@
 		<command name="InsertOrder">
 			<view>InsertOrder</view>
 			<status value="CMD_OK">
-				<forward>ViewNumbers</forward>
+				<forward>Home</forward>
 			</status>
 		</command>
 		<!-- ====================== Cart ====================== -->
@@ -107,13 +107,13 @@
 				<forward>ViewCart</forward>
 			</status>
 			<status value="CMD_ERROR">
-				<forward>ViewNumbers</forward>
+				<forward>Home</forward>
 			</status>
 		</command>
 		<command name="ClearCart">
 			<view>ClearCart</view>
 			<status value="CMD_OK">
-				<forward>ViewNumbers</forward>
+				<forward>Home</forward>
 			</status>
 		</command>
 		<command name="CashCart">
@@ -129,7 +129,7 @@
 		<command name="PutSimOnDemand">
 			<view>PutSimOnDemand</view>
 			<status value="CMD_OK">
-				<forward>ViewNumbers</forward>
+				<forward>Home</forward>
 			</status>
 		</command>
 		<!-- ====================== User ====================== -->

@@ -4,14 +4,9 @@ if ( ! isset( $EG_DISABLE_INCLUDES ) ) {
     		
 	require_once( "mvc/mapper/User.php" );
 	require_once( "mvc/mapper/Category.php" );
-	require_once( "mvc/mapper/Customer.php" );
-	require_once( "mvc/mapper/HotNumber.php" );
-	require_once( "mvc/mapper/Network.php" );
-	require_once( "mvc/mapper/Number.php" );
-	require_once( "mvc/mapper/Order.php" );
-	require_once( "mvc/mapper/Page.php" );
-	require_once( "mvc/mapper/HeadNetwork.php" );
-	
+	require_once( "mvc/mapper/Positions.php" );
+	require_once( "mvc/mapper/Salarydaily.php" );	
+	require_once( "mvc/mapper/Page.php" );	
 }
 
 class HelperFactory {

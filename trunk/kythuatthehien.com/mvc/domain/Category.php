@@ -10,7 +10,7 @@ class Category extends Object{
 	private $Factory;
 	
 	/*Hàm khởi tạo và thiết lập các thuộc tính*/
-    function __construct( $Id=null, $Id_position=null, $Name=null, Factory=null ) {
+    function __construct( $Id=null, $Id_position=null, $Name=null, $Factory=null ) {
         $this->Id = $Id;
 		$this->Id_position = $Id_position;
 		$this->Name = $Name;

@@ -6,7 +6,7 @@ body{
 }
 #frame {	
 	margin: auto;
-	width: 960px;
+	width: 1000px;
 	height: auto;
 	-moz-box-shadow: 0 0 5px 5px #888;
 	-webkit-box-shadow: 0 0 5px 5px#888;
@@ -14,9 +14,9 @@ body{
 }
 /*===header===*/
 #frame #header {
-	background: url("images/app/banner2.jpg");
-	width: 960px;
-	height: 120px;;
+	background: url("images/app/Web_Banner.gif");
+	width: 1000px;
+	height: 99px;;
 }
 /*===menu ngang==*/
 #nav {
@@ -178,7 +178,7 @@ clear:both;
 	background: -webkit-gradient(linear, left top, left bottom, from(#D2E3EC), to(#006BB3)) repeat scroll 0 0 transparent;
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#D2E3EC', endColorstr='#006BB3') repeat scroll 0 0 transparent;
 	float: left;
-	width: 960px;
+	width: 1000px;
 	height: 80px;
 	text-align: center;
 	padding-top: 20px;

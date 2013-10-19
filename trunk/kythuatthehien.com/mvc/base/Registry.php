@@ -33,89 +33,68 @@
 		} 
 		//Quản lí Page
 		function setCurrentPage( $value ) { 
-			self::instance()->set('Sio_CurrentPage', $value); 
+			self::instance()->set('ktth_CurrentPage', $value); 
 		}
 		function getCurrentPage( ) { 
-			return self::instance()->get('Sio_CurrentPage');
+			return self::instance()->get('ktth_CurrentPage');
 		}
-		//Quản lí HeadNetwork
-		function setCurrentHeadNetwork( $value ) { 
-			self::instance()->set('Sio_HeadNetwork', $value); 
-		}
-		function getCurrentHeadNetwork( ) { 
-			return self::instance()->get('Sio_HeadNetwork');
-		}
-		
-		function setCurrentNetwork( $value ) { 
-			self::instance()->set('Sio_CurrentNetwork', $value); 
-		}
-		function getCurrentNetwork( ) { 
-			return self::instance()->get('Sio_CurrentNetwork');
-		}
-		
+				
 		//Quản lí IdDomain
 		function setCurrentDomain( $value ) { 
-			self::instance()->set('Sio_IdDomain', $value); 
+			self::instance()->set('ktth_IdDomain', $value); 
 		}
 		function getCurrentDomain( ) { 
-			return self::instance()->get('Sio_IdDomain');
+			return self::instance()->get('ktth_IdDomain');
 		}
 				
 		//Quản lí ngày tháng lọc thông tin
 		function setCurrentDate( $value ) { 
-			self::instance()->set('Sio_CurrentDate', $value ); 
+			self::instance()->set('ktth_CurrentDate', $value ); 
 		}
 		function getCurrentDate( ) { 
-			return self::instance()->get('Sio_CurrentDate');
+			return self::instance()->get('ktth_CurrentDate');
 		}
 		function setCurrentMonth( $value ) { 
-			self::instance()->set('Sio_CurrentMonth', $value ); 
+			self::instance()->set('ktth_CurrentMonth', $value ); 
 		}
 		function getCurrentMonth( ) { 
-			return self::instance()->get('Sio_CurrentMonth');
+			return self::instance()->get('ktth_CurrentMonth');
 		}
 		
 		function setCurrentYear( $value ) { 
-			self::instance()->set('Sio_CurrentYear', $value ); 
+			self::instance()->set('ktth_CurrentYear', $value ); 
 		}
 		function getCurrentYear( ) { 
-			return self::instance()->get('Sio_CurrentYear');
+			return self::instance()->get('ktth_CurrentYear');
 		}
 		
 		//Quản lí User
 		function setCurrentUser( $user ) {
-			return self::instance()->set('Sio_CurrentUser', $user);
+			return self::instance()->set('ktth_CurrentUser', $user);
 		}
 		function getCurrentUser() {
-			return self::instance()->get('Sio_CurrentUser');
+			return self::instance()->get('ktth_CurrentUser');
 		}
 		
 		function setCurrentIdUser( $user ) {
-			return self::instance()->set('Sio_CurrentIdUser', $user);
+			return self::instance()->set('ktth_CurrentIdUser', $user);
 		}
 		function getCurrentIdUser() {
-			return self::instance()->get('Sio_CurrentIdUser');
+			return self::instance()->get('ktth_CurrentIdUser');
 		}
 		
 		function setCurrentPermission( $permission ) {
-			return self::instance()->set('Sio_CurrentPermission', $permission);
+			return self::instance()->set('ktth_CurrentPermission', $permission);
 		}
 		function getCurrentPermission() {
-			return self::instance()->get('Sio_CurrentPermission');
-		}
-		
-		function setCurrentCart( $Cart ) {
-			return self::instance()->set('Sio_CurrentCart', $Cart);
-		}
-		function getCurrentCart() {
-			return self::instance()->get('Sio_CurrentCart');
+			return self::instance()->get('ktth_CurrentPermission');
 		}
 		
 		function setCurrentCaptchaCode( $CaptchaCode ) {
-			return self::instance()->set('Sio_CurrentCaptchaCode', $CaptchaCode);
+			return self::instance()->set('ktth_CurrentCaptchaCode', $CaptchaCode);
 		}
 		function getCurrentCaptchaCode() {
-			return self::instance()->get('Sio_CurrentCaptchaCode');
+			return self::instance()->get('ktth_CurrentCaptchaCode');
 		}
 	}
 	/*--------------------------------------------------------------------------------*/
