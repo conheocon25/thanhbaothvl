@@ -1,26 +1,34 @@
 <?php
 namespace MVC\Mapper;
+use MVC\Library\Encrypted;
 require_once("mvc/base/Registry.php");
 require_once("mvc/base/Exceptions.php");
 require_once("mvc/base/domain/Finders.php");
 require_once("mvc/domain.php" );
+date_default_timezone_set('Asia/Ho_Chi_Minh');		
+error_reporting ('E_ALL | ~E_NOTICE');
+
 //Default Value: E_ALL & ~E_NOTICE
 //Development Value: E_ALL | E_STRICT
 //Production Value: E_ALL & ~E_DEPRECATED
-//error_reporting (E_ALL & E_DEPRECATED);
+//error_reporting ('E_ALL & ~E_DEPRECATED');
+
 abstract class Mapper implements \MVC\Domain\Finder {
     protected static $PDO;
     function __construct() { 
         if ( ! isset(self::$PDO) ) { 
-            $dsn = "mysql:host=localhost;dbname=ktth";
+            						
+			$dsn = "mysql:host=localhost;";
+			$dbname = "dbname=ktth";			
 			$user = "root";
 			$pass = "admin123456";
 			
             if ( is_null( $dsn ) ) {
                 throw new \MVC\Base\AppException( "No DSN" );
             }
-            self::$PDO = new \PDO( $dsn, $user, $pass, array(\PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8") );
+            self::$PDO = new \PDO( $dsn . $dbname, $user, $pass, array(\PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8", \PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true) );
             self::$PDO->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+			
         }
     }
 
@@ -32,8 +40,7 @@ abstract class Mapper implements \MVC\Domain\Finder {
     private function addToMap( \MVC\Domain\Object $obj ) {
         return \MVC\Domain\ObjectWatcher::add( $obj );
     }
-	
-	
+				
     function find( $id ) {
         $old = $this->getFromMap( $id );
         if ( $old ) { return $old; }

@@ -1,31 +1,57 @@
 <?php
-	namespace MVC\Command;
-	require_once("mvc/base/Command.php");
+	namespace MVC\Command;	
 	class Introduction extends Command {
 		function doExecute( \MVC\Controller\Request $request ) {
+			require_once("mvc/base/domain/HelperFactory.php");			
+			//-------------------------------------------------------------
+			//THAM SỐ TOÀN CỤC
+			//-------------------------------------------------------------						
+			$Session = \MVC\Base\SessionRegistry::instance();
+									
+			//-------------------------------------------------------------
+			//THAM SỐ GỬI ĐẾN
+			//-------------------------------------------------------------
 						
-			$mNetwork = new \MVC\Mapper\Network();
-			$Networks = $mNetwork->findAll();
-			$request->setObject("Networks", $Networks);
+			//-------------------------------------------------------------
+			//MAPPER DỮ LIỆU
+			//-------------------------------------------------------------			
+			require_once("mvc/base/mapper/MapperDefault.php");
 			
-			$mOrder = new \MVC\Mapper\Order();
-			$Orders = $mOrder->findAll();
-			$request->setObject("Orders", $Orders);
+			//-------------------------------------------------------------
+			//XỬ LÝ CHÍNH
+			//-------------------------------------------------------------															
+			$Categories = $mCategoryNews->findAll();
+			$CategoryBTypeAll = $mCategoryBType->findAll();
+			$CategoryNewsAll = $mCategoryNews->findAll();
+			$CategoryAskAll = $mCategoryAsk->findAll();			
+			$PagodaAll = $mPagoda->findAll();
+			$SponsorAll = $mSponsor->findAll();
+						
+			$Course = $mCourse->findByNear(null)->current();
 			
-			$mCategory = new \MVC\Mapper\Category();
-			$Categorys = $mCategory->findAll();
-			$request->setObject("Categorys", $Categorys);
+			$PanelNewsAll = $mPanelNews->findAll();
+			$PanelCategoryVideoAll = $mPanelCategoryVideo->findAll();
+			$MonkAll = $mMonk->findVIP(null);
+			$EventAll = $mEvent->findAll();
+			$Popup = $mPopup->findByName("gioi-thieu");
 			
-			$mNumber = new \MVC\Mapper\Number();
-			$HotNumbers = $mNumber->findHotNumber();
-			$request->setObject("HotNumbers", $HotNumbers);
+			//-------------------------------------------------------------
+			//THAM SỐ GỬI ĐI
+			//-------------------------------------------------------------			
+			$request->setObject("EventAll", $EventAll);
+			$request->setObject("CategoryBTypeAll", $CategoryBTypeAll);
+			$request->setObject("CategoryNewsAll", $CategoryNewsAll);
+			$request->setObject("CategoryAskAll", $CategoryAskAll);
+			$request->setObject('PagodaAll', $PagodaAll);
+			$request->setObject('SponsorAll', $SponsorAll);
+			$request->setObject("Course", $Course);
+			$request->setObject("PanelNewsAll", $PanelNewsAll);
+			$request->setObject("PanelCategoryVideoAll", $PanelCategoryVideoAll);
+			$request->setObject("MonkAll", $MonkAll);
+			$request->setObject("Popup", $Popup);
 			
-			$Title_Network = "Danh sách nhà mạng";
-			$request->setProperty("Title_Network", $Title_Network);
-			
-			$Title_Category = "Sim đẹp phân loại";
-			$request->setProperty("Title_Category", $Title_Category);
-
+			$request->setProperty("ActiveItem", 'Introduction');
+						
 			return self::statuses('CMD_DEFAULT');
 		}
 	}

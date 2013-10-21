@@ -7,9 +7,8 @@
  * @category HTML
  * @package  PHPTAL
  * @author   Laurent Bedubourg <lbedubourg@motion-twin.com>
- * @author   Kornel Lesiński <kornel@aardvarkmedia.co.uk>
  * @license  http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License
- * @version  SVN: $Id: Trigger.php 576 2009-04-24 10:11:33Z kornel $
+ * @version  SVN: $Id: Trigger.php 805 2009-12-06 01:24:28Z kornel $
  * @link     http://phptal.org/
  */
 

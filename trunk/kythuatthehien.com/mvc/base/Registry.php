@@ -13,8 +13,10 @@
 	class SessionRegistry extends Registry { 
 		private static $instance; 
 		
+		//Sử dụng App và User lưu trữ như là một  Object trong Session
 		private function __construct() { 
-			session_start(); 
+			require_once 'mvc/domain/User.php';			
+			session_start();
 		}
 		
  		static function instance() { 
@@ -31,70 +33,20 @@
 		protected function set( $key, $val ) { 
 			$_SESSION[__CLASS__][$key] = $val; 
 		} 
-		//Quản lí Page
-		function setCurrentPage( $value ) { 
-			self::instance()->set('ktth_CurrentPage', $value); 
-		}
-		function getCurrentPage( ) { 
-			return self::instance()->get('ktth_CurrentPage');
-		}
-				
-		//Quản lí IdDomain
-		function setCurrentDomain( $value ) { 
-			self::instance()->set('ktth_IdDomain', $value); 
-		}
-		function getCurrentDomain( ) { 
-			return self::instance()->get('ktth_IdDomain');
-		}
-				
-		//Quản lí ngày tháng lọc thông tin
-		function setCurrentDate( $value ) { 
-			self::instance()->set('ktth_CurrentDate', $value ); 
-		}
-		function getCurrentDate( ) { 
-			return self::instance()->get('ktth_CurrentDate');
-		}
-		function setCurrentMonth( $value ) { 
-			self::instance()->set('ktth_CurrentMonth', $value ); 
-		}
-		function getCurrentMonth( ) { 
-			return self::instance()->get('ktth_CurrentMonth');
-		}
-		
-		function setCurrentYear( $value ) { 
-			self::instance()->set('ktth_CurrentYear', $value ); 
-		}
-		function getCurrentYear( ) { 
-			return self::instance()->get('ktth_CurrentYear');
-		}
-		
+										
 		//Quản lí User
-		function setCurrentUser( $user ) {
-			return self::instance()->set('ktth_CurrentUser', $user);
+		function setCurrentUser( \MVC\Domain\User $user ) {
+			return self::instance()->set('pagoda_giacquang_current_user', $user);
 		}
 		function getCurrentUser() {
-			return self::instance()->get('ktth_CurrentUser');
+			return self::instance()->get('pagoda_giacquang_current_user');
 		}
 		
-		function setCurrentIdUser( $user ) {
-			return self::instance()->set('ktth_CurrentIdUser', $user);
+		function setCurrentCaptcha( $CurrentCaptcha ) { 
+			self::instance()->set('pagoda_giacquang_CurrentCaptcha', $CurrentCaptcha); 
 		}
-		function getCurrentIdUser() {
-			return self::instance()->get('ktth_CurrentIdUser');
-		}
-		
-		function setCurrentPermission( $permission ) {
-			return self::instance()->set('ktth_CurrentPermission', $permission);
-		}
-		function getCurrentPermission() {
-			return self::instance()->get('ktth_CurrentPermission');
-		}
-		
-		function setCurrentCaptchaCode( $CaptchaCode ) {
-			return self::instance()->set('ktth_CurrentCaptchaCode', $CaptchaCode);
-		}
-		function getCurrentCaptchaCode() {
-			return self::instance()->get('ktth_CurrentCaptchaCode');
+		function getCurrentCaptcha( ){
+			return self::instance()->get('pagoda_giacquang_CurrentCaptcha');
 		}
 	}
 	/*--------------------------------------------------------------------------------*/
@@ -134,6 +86,8 @@
 		private $freezedir = "data";
 		private $values = array();
 		private $mtimes = array();
+		private $base;
+		private $user;
 
 		private function __construct() { }
 
@@ -173,21 +127,21 @@
 		static function getInfo() {
 			return self::instance()->get('info');
 		}
-			
+						
+		//---------------------------------------------------------------------
+		// Thông tin App của hệ thống
+		//---------------------------------------------------------------------
+				
+		//---------------------------------------------------------------------
+		// Thông tin DNS của hệ thống
+		//---------------------------------------------------------------------		
 		static function getDSN() {
 			return self::instance()->get('dsn');
 		}
 		static function setDSN( $dsn ) {
 			return self::instance()->set('dsn', $dsn);
 		}
-		/*
-		static function setUser( \MVC\Domain\User $user ) {
-			return self::instance()->set('user', $user);
-		}
-		static function getUser() {
-			return self::instance()->get('user');
-		}
-		*/
+		
 		static function setControllerMap( \MVC\Controller\ControllerMap $map  ) {
 			self::instance()->set( 'cmap', $map );
 		}
@@ -204,6 +158,10 @@
 				$obj->appController = new \MVC\Controller\AppController( $cmap );
 			}
 			return $obj->appController;
+		}
+		
+		static function getLimit(){			
+			return false;
 		}
 	}
 	

@@ -136,7 +136,6 @@
  * @author Nicola Asuni
  * @version 5.9.084
  */
-
 // Main configuration file. Define the K_TCPDF_EXTERNAL_CONFIG constant to skip this file.
 require_once(dirname(__FILE__).'/config/tcpdf_config.php');
 require_once(dirname(__FILE__).'/connect.php');

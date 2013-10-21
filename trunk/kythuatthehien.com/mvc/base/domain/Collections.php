@@ -1,19 +1,11 @@
 <?php
 namespace MVC\Domain;
 
-interface UserCollection extends \Iterator {
-    function add( Object $user );	
-}
-interface PageCollection extends \Iterator {
-    function add( Object $Page );	
-}
-interface PositionsCollection extends \Iterator {
-    function add( Object $Positions );	
-}
-interface CategoryCollection extends \Iterator {
-    function add( Object $Category );	
-}
-interface SalarydailyCollection extends \Iterator {
-    function add( Object $Salarydaily );	
-}
+interface AppCollection extends \Iterator {function add( Object $App );}
+interface UserCollection extends \Iterator {function add( Object $user );}
+interface CategoryCollection extends \Iterator {function add( Object $Category );}
+interface SalaryDailyCollection extends \Iterator {function add( Object $SalaryDaily );}
+interface PositionsCollection extends \Iterator {function add( Object $Positions );}
+interface NewsCollection extends \Iterator {function add( Object $News );}
+
 ?>
