@@ -1,4 +1,5 @@
 <?php
+	/*
 	require_once("Encrypted.php" );
 	//require_once("smtp.php" );
 	$Encrypted = new Encrypted();	
@@ -10,5 +11,6 @@
 	echo $Encrypted->decryptData($tt[2]);
 	echo $Encrypted->decryptData($tt[3]);
 	
-	//SendMail("admin@123app.net","thanhbao2007vl@gmail.com","Test Thu nghiem","Chúng ta thanh cong");
+	*///SendMail("admin@123app.net","thanhbao2007vl@gmail.com","Test Thu nghiem","Chúng ta thanh cong");
+	echo base64_encode('thanhbao2007vl@gmail.com');
 ?>
