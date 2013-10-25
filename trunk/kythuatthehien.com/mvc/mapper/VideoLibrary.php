@@ -7,8 +7,8 @@ class VideoLibrary extends Mapper implements \MVC\Domain\VideoLibraryFinder {
     function __construct() {
         parent::__construct();
 				
-		$tblVideoLibrary = "chuakhaituong_video_library";
-		$tblVideo = "chuakhaituong_video";
+		$tblVideoLibrary = "ktth_video_library";
+		$tblVideo = "ktth_video";
 				
 		$selectAllStmt = sprintf("select * from %s", $tblVideoLibrary);
 		$selectStmt = sprintf("select *  from %s where id=?", $tblVideoLibrary);

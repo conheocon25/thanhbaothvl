@@ -7,7 +7,7 @@ class CategoryBType extends Mapper implements \MVC\Domain\CategoryBTypeFinder {
     function __construct() {
         parent::__construct();
 				
-		$tblCategory = "chuakhaituong_btype";
+		$tblCategory = "ktth_btype";
 		
 		$selectAllStmt = sprintf("select * from %s ORDER BY name", $tblCategory);
 		$selectStmt = sprintf("select *  from %s where id=?", $tblCategory);

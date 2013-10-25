@@ -73,8 +73,8 @@ class User extends Mapper implements \MVC\Domain\UserFinder {
     }
 		
 	function check($name, $pass) {
-		$repass = hash("sha512", "54321ktth.com12345".$pass,false);
-		$values = array( $name, $repass);	
+		//$repass = hash("sha512", "54321ktth.com12345".$pass,false);
+		$values = array( $name, $pass);	
         $this->checkStmt->execute( $values );
         $result = $this->checkStmt->fetchAll();
 		return $result[0]['id'];

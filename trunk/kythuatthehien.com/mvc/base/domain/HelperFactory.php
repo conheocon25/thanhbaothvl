@@ -7,6 +7,8 @@ if ( ! isset( $EG_DISABLE_INCLUDES ) ) {
 	require_once( "mvc/mapper/SalaryDaily.php" );
 	require_once( "mvc/mapper/Positions.php" );	
 	require_once( "mvc/mapper/News.php" );
+	require_once( "mvc/mapper/Config.php" );
+	require_once( "mvc/mapper/Guest.php" );
 	
 }
 

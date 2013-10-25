@@ -4,13 +4,15 @@ RewriteEngine on
 #---------------------------------------------------------------------------------------------------------------------------
 # APP
 #---------------------------------------------------------------------------------------------------------------------------
-RewriteRule ^$ 											?cmd=Home [L]
-RewriteRule ^trang-chu$ 											?cmd=Home [L]
+
+
 
 RewriteRule ^signin/load$ 											?cmd=SigninLoad [L]
 RewriteRule ^signin/exe$ 											?cmd=SigninExe [L]
 RewriteRule ^signout/load$ 											?cmd=SignoutLoad [L]
 RewriteRule ^signout/exe$ 											?cmd=SignoutExe [L]
+
+RewriteRule ^trang-chu$ 											?cmd=Home [L]
 
 RewriteRule ^gioi-thieu$ 											?cmd=Introduction [L]
 RewriteRule ^gioi-thieu/0$ 											?cmd=Introduction0 [L]

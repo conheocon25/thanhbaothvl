@@ -22,7 +22,7 @@
 			//-------------------------------------------------------------			
 			$Title = "WEBSITE PHÒNG KỸ THUẬT THUẬT THỂ HIỆN";
 						
-			$request->setObject("CategoryNewsAll", null);
+			
 			
 			$request->setProperty("ActiveItem", 'Home');
 			

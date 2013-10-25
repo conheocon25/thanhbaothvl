@@ -15,4 +15,6 @@ interface CategoryFinder  extends Finder {}
 interface SalaryDailyFinder  extends Finder {}
 interface PositionsFinder  extends Finder {}
 interface NewsFinder  extends Finder {}
+interface ConfigFinder  extends Finder {}
+interface GuestFinder  extends Finder {}
 ?>

@@ -7,7 +7,7 @@ class CategoryVideo extends Mapper implements \MVC\Domain\CategoryVideoFinder {
     function __construct() {
         parent::__construct();
 				
-		$tblCategory = "chuakhaituong_category_video";
+		$tblCategory = "ktth_category_video";
 		
 		$selectAllStmt = sprintf("select * from %s ORDER BY type DESC, `order` DESC", $tblCategory);
 		$selectStmt = sprintf("select *  from %s where id=?", $tblCategory);

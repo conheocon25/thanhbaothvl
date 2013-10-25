@@ -7,7 +7,7 @@ class News extends Mapper implements \MVC\Domain\NewsFinder {
     function __construct() {
         parent::__construct();
 				
-		$tblNews = "chuakhaituong_news";
+		$tblNews = "ktth_news";
 		
 		$selectAllStmt = sprintf("select * from %s ORDER BY type DESC, date DESC", $tblNews);
 		$selectStmt = sprintf("select *  from %s where id=?", $tblNews);

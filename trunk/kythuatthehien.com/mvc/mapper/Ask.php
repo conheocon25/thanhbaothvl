@@ -5,7 +5,7 @@ class Ask extends Mapper implements \MVC\Domain\AskFinder{
     function __construct() {
         parent::__construct();
 				
-		$tblAsk = "chuakhaituong_ask";
+		$tblAsk = "ktth_ask";
 				
 		$selectAllStmt = sprintf("select * from %s ORDER BY time DESC", $tblAsk);
 		$selectStmt = sprintf("select *  from %s where id=?", $tblAsk);

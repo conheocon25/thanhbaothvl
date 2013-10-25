@@ -7,5 +7,7 @@ interface CategoryCollection extends \Iterator {function add( Object $Category )
 interface SalaryDailyCollection extends \Iterator {function add( Object $SalaryDaily );}
 interface PositionsCollection extends \Iterator {function add( Object $Positions );}
 interface NewsCollection extends \Iterator {function add( Object $News );}
+interface ConfigCollection extends \Iterator {function add( Object $Config );}
+interface GuestCollection extends \Iterator {function add( Object $Guest );}
 
 ?>

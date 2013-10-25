@@ -7,7 +7,7 @@
 		<title tal:content="string:Website Phòng Kỹ Thuật Thể Hiện - Đài Phát Thanh Truyền Hình Vĩnh Long"/>
 		<base href="http://kythuatthehien.com/"/>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>		
-		<link rel="shortcut icon" href="/data/images/logo/favicon.ico" type="image/x-icon"/>
+		<link rel="icon" type="image/png" href="/data/images/icon.png" />
 	</span>
 	
 	<!-- ======================================================================== -->
@@ -241,7 +241,7 @@
 	<!-- FIXED FUNCTION															  -->
 	<!-- ======================================================================== -->
 	<div metal:define-macro="FixedFunction" class="fixed-function">
-		<div class="fb-like fb_edge_widget_with_comment fb_iframe_widget" data-href="https://www.facebook.com/ChuaKhaiTuong" data-send="false" data-layout="box_count" data-width="450" data-show-faces="false" data-font="tahoma" fb-xfbml-state="rendered"></div>
+		
 		<div class="bubble" tal:content="php:@\MVC\Library\Statistic::getCountPrint()"/>
 		<p class="bubble-item">Truy cập</p>
 		<div class="bubble">
@@ -266,8 +266,7 @@
 		<div class="b-title">
 			<div class="b-t-icon-content">Lịch</div>
 		</div>
-		<div class="b-content padding-content">
-			
+		<div class="b-content padding-content">			
 			<script language="JavaScript">
 			<!--
 				setOutputSize("small");

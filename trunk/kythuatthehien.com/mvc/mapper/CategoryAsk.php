@@ -7,7 +7,7 @@ class CategoryAsk extends Mapper implements \MVC\Domain\CategoryAskFinder {
     function __construct() {
         parent::__construct();
 				
-		$tblCategory = "chuakhaituong_category_ask";
+		$tblCategory = "ktth_category_ask";
 		
 		$selectAllStmt = sprintf("select * from %s ORDER BY name", $tblCategory);
 		$selectStmt = sprintf("select *  from %s where id=?", $tblCategory);
