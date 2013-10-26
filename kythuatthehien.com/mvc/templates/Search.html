@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />		
+		<span metal:use-macro="macros.xhtml/Include"/>
+		<script>
+			/*<![CDATA[*/
+				$(document).ready(function() {			
+					$('#DataTable').find('tbody tr').hover(
+						function(){ $(this).find('td').addClass('table_highlighted');}, 
+						function(){	$(this).find('td').removeClass('table_highlighted');}
+					);
+				
+					var oTable = $('#DataTable').dataTable({				
+						"bScrollCollapse": true,
+						"bStateSave": false,
+						"bFilter": false,
+						"bInfo": false,
+						"bSort": true,
+						"bPaginate": false,
+						"fnDrawCallback": function(oSettings ){
+							if ( oSettings.bSorted || oSettings.bFiltered ){
+								for ( var i=0, iLen=oSettings.aiDisplay.length ; i<iLen ; i++ ){
+									$('td:eq(0)', oSettings.aoData[ oSettings.aiDisplay[i] ].nTr ).html( i+1 );
+								}
+							}
+						}
+					});
+					
+					new FixedHeader( oTable, { "top": true, "zTop": 105 } );
+				});	
+			/*]]>*/	
+		</script>
+	</head>	
+	<body>	
+		<div id="frame">
+			<span metal:use-macro="macros.xhtml/Header"/>
+			<span metal:use-macro="macros.xhtml/MenuIndex"/>
+			<div id="main">
+				<span metal:use-macro="macros.xhtml/main3_of1"/>
+				<div id="main3_of2">
+					<div metal:use-macro="macros.xhtml/MenuSearch"/>
+					<span id='error'></span>
+					<div id="tieude_main" >Danh sách sim</div>
+					<div id="Table">
+						<table cellpadding="0" cellspacing="0" border="0" class="display" id="DataTable">
+							<thead>					
+								<tr>				
+									<th align='center' width="20px">STT</th>
+									<th align='left'>SĐT</th>
+									<th align='left'>Mạng</th>
+									<th align='center'>Giá</th>																																			
+									<th align='center'>Đặt Hàng</th>																																			
+								</tr>
+							</thead>
+							<tbody>
+								<tr tal:repeat="Number Numbers">
+									<td align='center' width="20px"></td>
+									<td align='center' tal:content="Number/getFormatNumber"></td>
+									<td align='center'>
+										<img tal:attributes="src Number/getURLImage"></img>
+									</td>
+									<td align='center' tal:content="Number/getPrice"></td>
+									<td align='left'>
+											<a align='center' title="Đặt hàng" tal:attributes="href Number/getNumberCart">
+												<img width="35px" src="mvc/templates/theme/base/images/app/cart.png"/>
+											</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div metal:use-macro="macros.xhtml/page" />
+				</div>
+				<span metal:use-macro="macros.xhtml/main3_of3"/>
+				<div class="vide"></div>
+			</div>
+			<div id="line"></div>
+			<span metal:use-macro="macros.xhtml/Footer"/>
+			<div class="vide"></div>
+		</div>
+	</body>
+</html>

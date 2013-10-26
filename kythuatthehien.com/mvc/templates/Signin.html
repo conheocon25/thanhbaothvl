@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<span metal:use-macro="macros.xhtml/Include"/>
+		<script>
+			/*<![CDATA[*/			
+			$(document).ready(function() {
+				$.fx.speeds._default = 1000;
+				$( "#loginForm" ).dialog({
+					autoOpen: true,
+					show: "blind",
+					hide: "explode",
+					width: 350,
+					height: 230,
+					modal: true,
+					buttons: {
+						"Đăng Nhập": function() {
+							if (($('#user').val() != "") && ($('#pass').val() != ""))
+							{
+								document.getElementById('infoUser').submit();
+							}
+							$(this).dialog("close");
+						}
+					}
+				});
+				$('#pass').keydown(function(event) {
+				  if (event.keyCode == '13') {
+					document.getElementById('infoUser').submit();
+				  }
+				 });
+			});	
+		/*]]>*/	
+	</script>
+	</head>
+	<body>
+		<div id="frame">
+			<span metal:use-macro="macros.xhtml/Header"/>
+			<span metal:use-macro="macros.xhtml/Navigation"/>	
+			<div id="main">
+				<div id="loginForm" tal:attributes="title string:Đăng nhập hệ thống">
+					<form id="infoUser" name="infoUser" action="?cmd=Signin" method="POST">
+						<table align="left">
+							<tr>
+								<td>Tên đăng nhập </td>
+								<td><input type="text" name="UserName" id="user"/></td>
+							</tr>
+							<tr>
+								<td>Mật khẩu </td>
+								<td><input type="password" name="Pass" id="pass"/></td>
+							</tr>							
+						</table>
+					</form>
+				</div>
+				<br /><div id="message" align="center" tal:content="Alert" />
+			</div>
+			<span metal:use-macro="macros.xhtml/Footer"/>
+		</div>
+		
+	</body>
+</html>

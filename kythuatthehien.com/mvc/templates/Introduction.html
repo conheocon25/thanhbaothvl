@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<span metal:use-macro="base.xhtml/IncludeMETA"/>
+		<span metal:use-macro="base.xhtml/IncludeCSS"/>
+		<span metal:use-macro="base.xhtml/IncludeJS"/>
+		<script>/*<![CDATA[*/$(document).ready(function(){ $(".hidden-control").click(function(){ ($(this).hasClass("icon-chevron-down")==false) ? $(this).addClass("icon-chevron-down") : $(this).removeClass("icon-chevron-down") }); });/*]]>*/</script>
+	</head>
+
+	<body>
+		<div class="container">
+			<div metal:use-macro="base.xhtml/Header"/>
+			<div class="row reset-margin main">				
+				<div class="span8 fix-width">					
+					<div class="history-box">
+						<div class="history-top">
+							<h1>GIỚI THIỆU</h1>
+							<h4>SƠ LƯỢC LỊCH SỬ PHÒNG KỸ THUẬT THỂ HIỆN</h4>
+						</div>
+						<div class="history-mid">
+							<p align="center">________________</p><br/>
+							<p align="justify" style="text-indent:40px;"><i>Là Phòng Chuyên môn trực thuộc Đài PT-TH Vĩnh Long.</i></p>
+							<p align="justify" style="text-indent:40px;"><i>Thực hiện các công việc thu dựng các chương trình hằng ngày.</i></p>
+							<p align="justify" style="text-indent:40px;"><i>Mục đích thực hiện website.</i></p><br/>
+							<p align="justify">Đây là trang thông tin nội bộ : Giới thiệu một số Văn bản, Qui chế, Qui định và Nội qui của Cơ quan và của phòng Kỹ Thuật Thể Hiện. Dùng để tham khảo nội bộ.</p><br/>
+							<p align="justify">Tất cả mọi thành viên của Phòng Kỹ Thuật Thể Hiện đều có thể vào xem các văn bản để hiểu thêm về qui chế qui trình hoạt động của cơ quan và của phòng, tham khảo chế độ chính sách về lao động tiền lương và thù lao của các nhân....</p><br/>							
+						</div>
+						<div class="history-bot">
+							<b><p align="right">THAY MẶT TRƯỞNG PHÒNG</p>
+							<p align="right">TRƯỞNG PHÒNG: NGUYỄN QUANG PHƯƠNG</p></b>
+						</div>
+					</div>
+					
+					<div class="box no-border">
+						<div class="b-content">
+							<ul class="nav nav-tabs nav-stacked reset-margin">
+								<li class="active news-list-title"><a>Các bài giới thiệu khác</a></li>
+								<li class="news-list-item"><a href="/gioi-thieu/0">Giới thiệu số 1 <i class="icon-chevron-right pull-right"/></a></li>
+								<li class="news-list-item"><a href="/gioi-thieu/1">Giới thiệu số 1 <i class="icon-chevron-right pull-right"/></a></li>
+								<li class="news-list-item"><a href="/gioi-thieu/2">Giới thiệu số 1<i class="icon-chevron-right pull-right"/></a></li>
+								<li class="news-list-item"><a href="/gioi-thieu/3">Giới thiệu số 1 <i class="icon-chevron-right pull-right"/></a></li>
+								<li class="news-list-item"><a href="/gioi-thieu/4">Giới thiệu số 1 <i class="icon-chevron-right pull-right"/></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="span4 fix-width">
+					<div metal:use-macro="base.xhtml/PictureBox"/>
+					<!-- <div metal:use-macro="base.xhtml/TopNewsBox"/> 
+					<div metal:use-macro="base.xhtml/TopVideoBox"/>		-->			
+				</div>
+			</div>
+			<div metal:use-macro="base.xhtml/Footer"/>			
+			<div metal:use-macro="base.xhtml/FixedFunction"/>
+			<div metal:use-macro="base.xhtml/Backontop"/>
+			<div id="fb-root"/>
+		</div>
+	</body>
+</html>
