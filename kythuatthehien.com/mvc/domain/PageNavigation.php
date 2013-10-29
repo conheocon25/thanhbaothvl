@@ -43,12 +43,38 @@ class PageNavigation extends Object{
         return $this->URL;
     }
 	
+	function getURLNext( ) {
+		if ($this->Current == $this->getPages()->count())
+			return $this->URL."&Page=".($this->Current)."#";
+        return $this->URL."&Page=".($this->Current+1);
+    }
+	
+	function getURLPrevious( ) {
+		if ($this->Current == 1)
+			return $this->URL."&Page=1#";
+        return $this->URL."&Page=".($this->Current-1);
+    }
+	
+	function getURLFirst( ) {
+        return $this->URL."&Page=1";
+    }
+	
+	function getURLLast( ) {
+        return $this->URL."&Page=".$this->getPages()->count();
+    }
+	function IsPaging(){
+		$Pages = $this->getPages();
+		if ($Pages->count()>1)
+			return true;
+			
+		return false;
+	}
 	function getPages(){
 		if (!isset($this->Pages)){
 			$N = ceil($this->Rows/$this->Size);
 			$this->Pages = new \MVC\Mapper\PageCollection();
-			for ($i=0; $i<$N; $i++){
-				$P = new Page($i, $i, $this->URL."&Page=".$i);
+			for ($i=1; $i<=$N; $i++){
+				$P = new Page($i, $i, $this->URL."/trang/".$i);
 				$this->Pages->add($P);
 			}
 		}

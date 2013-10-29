@@ -33,10 +33,10 @@
 	}
 	
 	/* BOX */
-	.box { border: 1px solid #ff9f00; }
+	.box { border: 1px solid #000000; }
 		.box .b-title {
 			background: url("/data/images/bg/title.jpg") repeat-x top left transparent;
-			border-bottom: 1px solid #ff9f00;
+			border-bottom: 1px solid #000000;
 		}
 			.b-title .b-t-icon-content {
 				background: url("/data/images/bg/title_icon.png") no-repeat 5px 1px transparent;

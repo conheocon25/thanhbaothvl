@@ -2,15 +2,15 @@
 	var map ;
 	
     $.GoogleMapObjectDefaults = {        
-        zoomLevel: 10,
+        zoomLevel: 20,
 		imagewidth: 50,
 		imageheight: 50,
-		center: 'Chua Khai Tuong, Cai Be, Tien Giang, Viet Nam',		
+		center: 'Dai Phat Thanh Truyen Hinh, tp. Vinh Long, Vinh Long, Viet Nam',		
 		start: '#start',		
         end: '#end',
 		directions: 'directions',
         submit: '#getdirections',      	
-		tooltip: 'Chùa Khải Tường, ấp Mỹ Phú, xã Mỹ Đức Đông, huyện Cái Bè, tỉnh Tiền Giang, Việt Nam',
+		tooltip: 'Phòng Kỹ Thuật Thể Hiện - Đài Phát Thanh Truyền Hình Vĩnh Long - 50 Phạm Thái Bường - Phường 4 - TP Vĩnh Long - tỉnh Vĩnh Long - Việt Nam',
 		image: 'false'
     };
 
@@ -24,10 +24,10 @@
     }
 	
 	function showMaker() {					
-		var center = new GLatLng(10.335565,105.917631);		
+		var center = new GLatLng(10.246618,105.976516);		
 		var marker = new GMarker(center, {draggable: false}); 
 		map.addOverlay(marker);		
-		marker.openInfoWindowHtml('Chùa Khải Tường, ấp Mỹ Phú, xã Mỹ Đức Đông, huyện Cái Bè, tỉnh Tiền Giang, Việt Nam');	
+		marker.openInfoWindowHtml('Phòng Kỹ Thuật Thể Hiện - Đài Phát Thanh Truyền Hình Vĩnh Long - 50 Phạm Thái Bường - Phường 4 - TP Vĩnh Long - tỉnh Vĩnh Long - Việt Nam');	
 	}
 	
     $.extend(GoogleMapObject.prototype, {
@@ -65,16 +65,16 @@
 				}		
                 this._geocoder.getLatLng(center, function(point) {
 				
-                    center = new GLatLng(10.335565,105.917631);
+                    center = new GLatLng(10.246618,105.976516);
 					
 					if (!point) { alert(center + " not found"); }
                     else {
                         //set center on the map
-                        map.setCenter(center, zoom);
+                        map.setCenter(center, 20);
 			
 						if (customimage == true) {
 							//add the marker
-							var customiconsize = new GSize(width, height);
+							var customiconsize = new GSize(15, 15);
 							var customicon = new GIcon(G_DEFAULT_ICON, imageurl);
 							customicon.iconSize = customiconsize;
 							var marker = new GMarker(center, { icon: customicon });

@@ -20,5 +20,7 @@
 	$mGuest = new \MVC\Mapper\Guest();
 	$mConfig = new \MVC\Mapper\Config();
 	
+	$mPage = new \MVC\Mapper\Page();
+	
 	
 ?>
