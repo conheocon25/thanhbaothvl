@@ -61,33 +61,67 @@
 							</div>
 						</div>
 					</div>
+					
+					<div tal:repeat="Category CategoryNewsAll" class="accordion accordion-fix" tal:attributes="id Category/getIdPrint">
+						<div class="accordion-group box radius">
+							<div class="accordion-heading b-title clearfix">
+								<div tal:content="Category/getName" class="b-t-icon-content"/>
+								<a class="accordion-toggle pull-right hidden-accordion icon-chevron-up icon-white hidden-control" data-toggle="collapse" tal:attributes="data-parent Category/getIdPrint; href php: '#collapse' . Category->getIdPrint()"/>
+							</div>
+							<div tal:attributes="id php: 'collapse' . Category->getIdPrint()" class="accordion-body collapse in b-content">
+								<div class="row reset-margin">
+									<div class="span4 reset-margin">
+										<div class="carousel slide carousel-fade img-polaroid news-slide">
+											<div class="carousel-inner">
+												<div class="active item" tal:condition="Category/getNewsLimit1/current">													
+													<a tal:attributes="href Category/getNewsLimit1/current/getURLRead">
+														<img tal:attributes="src Category/getNewsLimit1/current/getImage"/>
+														<div class="carousel-caption">
+															<p tal:content="Category/getNewsLimit1/current/getTitleReduce" />
+														</div>
+													</a>
+												</div>
+												<div tal:repeat="News Category/getNewsLimit1" class="item" tal:condition="Category/getNewsLimit1">
+													<a tal:attributes="href News/getURLRead">
+														<img tal:attributes="src News/getImage"/>
+														<div class="carousel-caption">
+															<p tal:content="News/getTitleReduce" />
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="span4 reset-margin pull-right news-list">
+										<ul class="nav nav-tabs nav-stacked">
+											<li class="active news-list-title"><a>MỚI CẬP NHẬT</a></li>
+											<li class="news-list-item" tal:repeat="News Category/getNewsLimit1">
+												<a tal:attributes="href News/getURLRead" tal:content="News/getTitleReduce"/>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="span4 fix-width">
-					<div metal:use-macro="base.xhtml/PictureBox"/>
-					
+					<div metal:use-macro="base.xhtml/PictureBox"/>					
 					<div metal:use-macro="base.xhtml/CallendarBox"/>
 					<div metal:use-macro="base.xhtml/AskBox"/>
 					<div metal:use-macro="base.xhtml/BuddhaBox"/>
 					<!-- <div metal:use-macro="base.xhtml/TaskBox"/>
 					<div metal:use-macro="base.xhtml/EventBox"/>
 					<div metal:use-macro="base.xhtml/CourseBox"/>
-					
-					
 					<div metal:use-macro="base.xhtml/TopNewsBox"/>
 					<div metal:use-macro="base.xhtml/TopVideoBox"/>
-					<div metal:use-macro="base.xhtml/TopMonkBox"/>
-										
+					<div metal:use-macro="base.xhtml/TopMonkBox"/>										
 					-->
 				</div>
 			</div>
 			<div metal:use-macro="base.xhtml/Footer"/>
 			<div metal:use-macro="base.xhtml/FixedFunction"/>
-			<div metal:use-macro="base.xhtml/Backontop"/>
-			<!--
-			<div metal:use-macro="base.xhtml/Popup"/>
-			
-			
-			-->
+			<div metal:use-macro="base.xhtml/Backontop"/>			
 			<div id="fb-root"/>
 		</div>
 		<script type="text/javascript" language="javascript" src="/mvc/templates/script/user/swfobject.js"/>	

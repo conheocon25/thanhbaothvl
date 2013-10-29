@@ -9,10 +9,8 @@
 	<body>
 		<div class="container">
 			<div metal:use-macro="base.xhtml/Header"/>
-			<div class="row reset-margin main">
-				<div metal:use-macro="base.xhtml/CallendarBar"/>
-				<div class="span8 fix-width">
-					
+			<div class="row reset-margin main">				
+				<div class="span8 fix-width">					
 					<div class="box radius">
 						<div class="page-header pg-header pg-header-news reset-margin">
 							<h4 class="reset-margin" tal:content="Title"/>
@@ -22,8 +20,8 @@
 							<div class="news-main" tal:content="structure News/getContent"/>
 							<div class="news-author">
 								<div class="news-tools">
-									<a class="btn btn-success pull-right" href="https://www.facebook.com/sharer/sharer.php?u=http://chuakhaituong.com/tin-tuc/phong-kham-dong-y" target="_blank"><i class="icon-share icon-white"/> Chia sẻ</a>
-									<a class="btn btn-primary pull-right" href="https://www.facebook.com/sharer/sharer.php?u=http://chuakhaituong.com/tin-tuc/phong-kham-dong-y" target="_blank"><i class="icon-thumbs-up icon-white"/> Thích</a>
+									<a class="btn btn-success pull-right" href="https://www.facebook.com/sharer/sharer.php?u=http://www.ktthehien.com/tin-tuc/tin-dai-thvl" target="_blank"><i class="icon-share icon-white"/> Chia sẻ</a>
+									<a class="btn btn-primary pull-right" href="https://www.facebook.com/sharer/sharer.php?u=http://www.ktthehien.com/tin-tuc/tin-dai-thvl" target="_blank"><i class="icon-thumbs-up icon-white"/> Thích</a>
 								</div>
 								<p tal:content="News/getAuthor"/>
 							</div>
@@ -43,21 +41,20 @@
 
 				</div>
 				<div class="span4 fix-width">
-					<div metal:use-macro="base.xhtml/TaskBox"/>
-					<div metal:use-macro="base.xhtml/EventBox"/>					
+					<div metal:use-macro="base.xhtml/PictureBox"/>					
+					<div metal:use-macro="base.xhtml/CallendarBox"/>
+					<div metal:use-macro="base.xhtml/AskBox"/>
 					<div metal:use-macro="base.xhtml/BuddhaBox"/>
-					<div metal:use-macro="base.xhtml/PictureBox"/>
+					<!-- <div metal:use-macro="base.xhtml/TaskBox"/>
+					<div metal:use-macro="base.xhtml/EventBox"/>
+					<div metal:use-macro="base.xhtml/CourseBox"/>
 					<div metal:use-macro="base.xhtml/TopNewsBox"/>
 					<div metal:use-macro="base.xhtml/TopVideoBox"/>
-					<div metal:use-macro="base.xhtml/TopMonkBox"/>
-					<div metal:use-macro="base.xhtml/AskBox"/>
-					<div metal:use-macro="base.xhtml/SponsorBox"/>
-					<div metal:use-macro="base.xhtml/ContactBox"/>
-					<div metal:use-macro="base.xhtml/CallendarBox"/>
+					<div metal:use-macro="base.xhtml/TopMonkBox"/>										
+					-->
 				</div>
 			</div>
-			<div metal:use-macro="base.xhtml/Footer"/>
-			<div metal:use-macro="base.xhtml/Popup"/>
+			<div metal:use-macro="base.xhtml/Footer"/>			
 			<div metal:use-macro="base.xhtml/FixedFunction"/>
 			<div metal:use-macro="base.xhtml/Backontop"/>
 			<div id="fb-root"/>

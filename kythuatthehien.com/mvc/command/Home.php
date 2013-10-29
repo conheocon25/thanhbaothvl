@@ -18,6 +18,7 @@
 			require_once("mvc/base/mapper/MapperDefault.php");
 			
 			$VL8 = $mVideoLibrary->findByTopLocal(array(2));
+			$CategoryNewsAll = $mCategoryNews->findAll();
 			//-------------------------------------------------------------
 			//XỬ LÝ CHÍNH
 			//-------------------------------------------------------------			
@@ -25,6 +26,7 @@
 			
 			$request->setProperty("Title", $Title);
 			$request->setObject("VL8", $VL8);
+			$request->setObject("CategoryNewsAll", $CategoryNewsAll);
 			
 			$request->setProperty("ActiveItem", 'Home');
 			
