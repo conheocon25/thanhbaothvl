@@ -16,24 +16,19 @@
 			//-------------------------------------------------------------
 			//MAPPER DỮ LIỆU
 			//-------------------------------------------------------------			
-			$mCategoryBType = new \MVC\Mapper\CategoryBType();			
+			
 			$mCategoryNews = new \MVC\Mapper\CategoryNews();
-			$mCategoryAsk = new \MVC\Mapper\CategoryAsk();
 			
 			$mAlbum = new \MVC\Mapper\Album();			
-			$mPagoda = new \MVC\Mapper\Pagoda();
-			$mSponsor = new \MVC\Mapper\Sponsor();
 			
 			//-------------------------------------------------------------
 			//XỬ LÝ CHÍNH
 			//-------------------------------------------------------------							
-			$CategoryBTypeAll = $mCategoryBType->findAll();
+			
 			$CategoryNewsAll = $mCategoryNews->findAll();
-			$CategoryAskAll = $mCategoryAsk->findAll();
-			$SponsorAll = $mSponsor->findAll();
 			
 			$Album = $mAlbum->find($IdAlbum);			
-			$PagodaAll = $mPagoda->findAll();
+			
 			$Title = mb_strtoupper($Album->getName(), 'UTF8');
 			$Navigation = array(
 				array("TRANG CHỦ", "/trang-chu"),
@@ -43,14 +38,10 @@
 			//-------------------------------------------------------------
 			//THAM SỐ GỬI ĐI
 			//-------------------------------------------------------------			
-			$request->setObject("CategoryBTypeAll", $CategoryBTypeAll);
-			$request->setObject("CategoryNewsAll", $CategoryNewsAll);
-			$request->setObject("CategoryAskAll", $CategoryAskAll);
-			$request->setObject('SponsorAll', $SponsorAll);	
+			$request->setObject("CategoryNewsAll", $CategoryNewsAll);			
 			$request->setObject('Album', $Album);
 			$request->setProperty('Title', $Title);			
-			$request->setObject('Navigation', $Navigation);
-			$request->setObject('PagodaAll', $PagodaAll);
+			$request->setObject('Navigation', $Navigation);		
 			$request->setProperty('ActiveItem', 'Home');
 		}
 	}

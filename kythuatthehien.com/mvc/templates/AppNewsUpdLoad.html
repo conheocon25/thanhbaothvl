@@ -23,8 +23,7 @@
 	<body>
 		<div class="container-fluid">
 			<span metal:use-macro="mAdmin.xhtml/Header"/>
-			<div class="row-fluid">
-				<div class="span3" />
+			<div class="row-fluid">			
 				<div class="span9 main">
 					<span metal:use-macro="mAdmin.xhtml/LocationBar"/>
 					<form class="form-horizontal" tal:attributes="action News/getURLUpdExe" method="post">						
@@ -35,7 +34,7 @@
 							</div>
 						</div>
 						<div class="control-group">
-							<label class="control-label" for="Type">Loại tin</label>
+							<label class="control-label" for="Type">Loại tin VIP</label>
 							<div class="controls">									
 								 <input type="checkbox" id="Type" name="Type" />
 							</div>

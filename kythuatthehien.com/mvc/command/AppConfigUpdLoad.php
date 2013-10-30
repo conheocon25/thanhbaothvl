@@ -16,35 +16,27 @@
 			//-------------------------------------------------------------
 			//MAPPER DỮ LIỆU
 			//-------------------------------------------------------------			
-			$mCategoryBType = new \MVC\Mapper\CategoryBType();
+			
 			$mCategoryNews = new \MVC\Mapper\CategoryNews();
 			$mCategoryVideo = new \MVC\Mapper\CategoryVideo();
-			$mCategoryAsk = new \MVC\Mapper\CategoryAsk();
 			
-			$mPagoda = new \MVC\Mapper\Pagoda();
+			
 			$mAlbum = new \MVC\Mapper\Album();
-			$mEvent = new \MVC\Mapper\Event();
-			$mMonk = new \MVC\Mapper\Monk();
-			$mCourse = new \MVC\Mapper\Course();
+			
 			$mConfig = new \MVC\Mapper\Config();
-			$mSponsor = new \MVC\Mapper\Sponsor();
+			
 			
 			//-------------------------------------------------------------
 			//XỬ LÝ CHÍNH
 			//-------------------------------------------------------------			
-			$CategoryBTypeAll = $mCategoryBType->findAll();
+			
 			$CategoryNewsAll = $mCategoryNews->findAll();
 			$CategoryVideoAll = $mCategoryVideo->findAll();
-			$CategoryAskAll = $mCategoryAsk->findAll();
 			
-			$PagodaAll = $mPagoda->findAll();
-			$AlbumAll = $mAlbum->findAll();
-			$EventAll = $mEvent->findAll();
-			$MonkAll = $mMonk->findAll();
-			$CourseAll = $mCourse->findAll();
-			$ConfigAll = $mConfig->findAll();
-			$SponsorAll = $mSponsor->findAll();
 			
+			
+			$AlbumAll = $mAlbum->findAll();	
+			$ConfigAll = $mConfig->findAll();		
 			$Config = $mConfig->find($IdConfig);
 			$Title = mb_strtoupper($Config->getParam(), 'UTF8');
 			$Navigation = array(
@@ -55,18 +47,12 @@
 			//-------------------------------------------------------------
 			//THAM SỐ GỬI ĐI
 			//-------------------------------------------------------------						
-			$request->setObject("CategoryBTypeAll", $CategoryBTypeAll);
+			
 			$request->setObject("CategoryNewsAll", $CategoryNewsAll);
 			$request->setObject("CategoryVideoAll", $CategoryVideoAll);
-			$request->setObject("CategoryAskAll", $CategoryAskAll);
 			
-			$request->setObject('PagodaAll', $PagodaAll);
 			$request->setObject('AlbumAll', $AlbumAll);
-			$request->setObject('EventAll', $EventAll);
-			$request->setObject('MonkAll', $MonkAll);
-			$request->setObject('CourseAll', $CourseAll);
 			$request->setObject('ConfigAll', $ConfigAll);
-			$request->setObject('SponsorAll', $SponsorAll);
 			$request->setObject('Config', $Config);
 			$request->setObject('Navigation', $Navigation);
 			$request->setProperty("Title", $Title);
