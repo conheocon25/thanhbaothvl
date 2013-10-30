@@ -36,6 +36,9 @@ class CategoryVideo extends Object{
 	function setPicture( $Picture ) {$this->Picture = $Picture;$this->markDirty();}   
 	function getPicture( ) {return $this->Picture;}
 	
+	function setBType( $BType ) {$this->BType = $BType;$this->markDirty();}   
+	function getBType( ) {return $this->BType;}
+	
 	function setOrder( $Order ) {$this->Order = $Order;$this->markDirty();}   
 	function getOrder( ) {return $this->Order;}
 	

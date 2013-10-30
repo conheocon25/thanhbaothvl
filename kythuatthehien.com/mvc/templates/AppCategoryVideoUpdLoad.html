@@ -25,16 +25,7 @@
 								<input id="Type" type="checkbox" name="Type" tal:attributes="checked Category/getType" />Đặc biệt
 							</div>
 						</div>
-						<div class="control-group">
-							<label class="control-label" for="BType">Tông phái</label>
-							<div class="controls">
-								<select name="BType">
-									<option tal:repeat="Category1 CategoryBTypeAll" tal:attributes="value Category1/getId;selected php:Category1->getId()==Category->getBType()?true:false" >
-										<span tal:content="Category1/getName"/>
-									</option>
-								</select>
-							</div>
-						</div>
+						
 						<div class="control-group">
 							<label class="control-label" for="Picture">URL hình ảnh</label>
 							<div class="controls">
