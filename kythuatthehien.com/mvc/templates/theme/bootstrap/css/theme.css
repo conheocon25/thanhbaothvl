@@ -158,19 +158,19 @@
 		);
 	}
 	.calendar-table tr:first-child  {
-		background-color: #823918;
+		background-color: #FF9E01;
 		outline: 1px solid #823918;
 		border: 1px solid #E3E3E3;
-		color: #fff;
+		color: #05326D;
 	}
-		.calendar-table tr:first-child a { color: white; }
+		.calendar-table tr:first-child a { color: #05326D; }
 		.calendar-table .day-title td { color: #823918; }
 		.calendar-table .day-list td {
-			border-top: solid 1px #fff;
+			border-top: solid 1px #05326D;
 			border-right: solid 1px #BCBCBC;
-			color: #823918;
+			color: #05316C;
 		}
-			.calendar-table .day-list td div { color: #3B579D; }
+			.calendar-table .day-list td div { color: #FF9E01; }
 			.calendar-table .day-list td.homnay {
 				box-shadow: inset 10px 10px 20px #FFF0C4;
 				background-color: #FFDD00;
@@ -180,18 +180,18 @@
 		background-color: #E4E4E4;
 	}
 	.calendar-paper {
-		background: url("/data/images/bg/calendar.png") no-repeat top center #85440A;
-		color: #FFDD00;
-		box-shadow: 3px 3px 2px #696969;
+		background: url("/data/images/bg/calendar.png") no-repeat top center #FF9E01;
+		color: #05316C;
+		box-shadow: 3px 3px 2px #05326D;
 		border-radius: 5px;
 	}
 	
 	/* NAME CARD */
 	.name-card {
-		background: url('/data/images/bg/name_card.jpg') no-repeat bottom right #372920;
-		color: white;
-		box-shadow: 0 0 2px 2px #666;
-		border: 1px solid #FAFAFA;
+		background: #7f70d8;
+		color: #FFF;
+		box-shadow: 0 0 2px 2px #5DD2B8;
+		border: 1px solid #5DD2B8;
 	}
-		.name-card h2 { text-shadow: 0 0 5px #FFF; }
-		.name-card hr { border-color: #FAFAFA; }
+		.name-card h2 { text-shadow: 0 0 3px #5DD2B8; }
+		.name-card hr { border-color: #5DD2B8; }

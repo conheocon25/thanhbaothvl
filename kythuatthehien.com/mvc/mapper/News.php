@@ -19,6 +19,7 @@ class News extends Mapper implements \MVC\Domain\NewsFinder {
 		$findByLimitStmt = sprintf("select *  from %s where id_category=? ORDER BY type DESC, date DESC limit 5", $tblNews);
 		$findByLimit1Stmt = sprintf("select *  from %s where id_category=? ORDER BY type DESC, date DESC limit 6", $tblNews);
 		$findByLimit2Stmt = sprintf("select *  from %s where id_category=? ORDER BY type DESC, date DESC limit 12", $tblNews);
+		$findByLimit10Stmt = sprintf("select *  from %s ORDER BY type DESC, date DESC limit 10", $tblNews);
 		
 		$findByCategoryDateStmt = sprintf(
 			"select *  
@@ -49,6 +50,7 @@ class News extends Mapper implements \MVC\Domain\NewsFinder {
 		$this->findByLimitStmt = self::$PDO->prepare($findByLimitStmt);
 		$this->findByLimit1Stmt = self::$PDO->prepare($findByLimit1Stmt);
 		$this->findByLimit2Stmt = self::$PDO->prepare($findByLimit2Stmt);
+		$this->findByLimit10Stmt = self::$PDO->prepare($findByLimit10Stmt);
 		
 		$this->findByCategoryDateStmt = self::$PDO->prepare($findByCategoryDateStmt);
 		$this->findByPageStmt = self::$PDO->prepare($findByPageStmt);
@@ -133,6 +135,11 @@ class News extends Mapper implements \MVC\Domain\NewsFinder {
 	function findByLimit2( $values ){
         $this->findByLimit2Stmt->execute( $values );
         return new NewsCollection( $this->findByLimit2Stmt->fetchAll(), $this);
+    }
+	
+	function findByLimit10Stmt(){
+        $this->findByLimit10Stmt->execute( );
+        return new NewsCollection( $this->findByLimit10Stmt->fetchAll(), $this);
     }
 	
 	function findByCategoryDate( $values ){
