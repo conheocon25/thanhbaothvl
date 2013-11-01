@@ -4,24 +4,36 @@
 		.container { box-shadow: 0 0 2px 2px #000000; }
 	
 	/* MENU */
-	.top-menu { background: url("/data/images/bg/menu.jpg") repeat-x top left transparent; }
-	
-		.top-menu li a {
-			color: #FFFFFF !important;
-			text-shadow: 1px 1px 0 #000 !important;
+	.top-menu { background: #FFFFFF; }
+		.top-menu li {
+			background: #7B71DE;
+			margin-left: 1px;
+			margin-top: 1px;
+			margin-bottom: 1px;
 		}
-			.top-menu li:hover a { background: rgba(127, 112, 216, .3) !important; }
+		.top-menu li a {
+			color: #000000 !important;
+			font-weight:bold;
+			text-shadow: 2px 2px 2px #7B71DE !important;
+			
+		}
+			.top-menu li:hover a { background: #100473 !important; color: #FF9E00 !important;}
 			.top-menu li.active a {
-				background: none !important;
-				color: #ff9f00 !important;
+				background: #100473 !important;
+				color: #FF9E00 !important;
 			}
-		.top-menu .caret { border-top-color: #FFFFFF !important; }
-		.top-menu .dropdown-menu { background: url("/data/images/bg/submenu.gif") repeat top left transparent; }
+		.top-menu .caret { border-top-color: #000000 !important; }
+		.top-menu .dropdown-menu { background: #FFF ; }
+			.top-menu .dropdown-menu li {
+				margin-top: 1px;
+				margin-left: 2px;
+				margin-right: 2px;
+			}
 			.top-menu .dropdown-menu li a {
-				color: #FFFFFF !important;
-				text-shadow: 1px 1px 0 #000 !important;
+				color: #000000 !important;
+				text-shadow: 2px 2px 2px #7B71DE !important;
 			}
-		.top-menu .dropdown-menu li:hover a { background: rgba(127, 112, 216, .3) !important; }
+		.top-menu .dropdown-menu li:hover a { background: #100473 !important; color: #FF9E00 !important;}
 		
 	/* MAIN */
 	.main { background-color: rgba(255, 255, 255, .3); }
@@ -68,12 +80,12 @@
 	
 	/* HISTORY BOX */
 	.history-box {
-		color: #980707;
+		color: #00306B;
 		text-shadow: 0px 0px 3px #FFFFFF;
 	}
-		.history-top { background: url("/data/images/bg/history_top.png") no-repeat top left transparent; }
-		.history-mid { background: url("/data/images/bg/history_mid.png") repeat-y top left transparent; }
-		.history-bot { background: url("/data/images/bg/history_bot.png") no-repeat top left transparent; }
+		.history-top { background: #FFFFFF;}
+		.history-mid { background: #FFFFFF;}
+		.history-bot { background: #FFFFFF;}
 	
 	/* LIST */
 	.news-list-title { color: #A99999; }
