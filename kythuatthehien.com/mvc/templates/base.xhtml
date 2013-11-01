@@ -45,8 +45,7 @@
 				<!-- <img height="200" width="940" src="/data/images/flash/Web_Banner.gif" /> -->
 				<div class="aleoflash-gif" style="display:none;"><a href="http://www.ktthehien.com" target="_blank" ><img src="/data/images/flash/KTTH_Header.gif" border="0" /></a></div>
 				<div class="aleoflash-swf" style="display:block;"><embed src="/data/images/flash/KTTH_Header.swf" quality="high" type="application/x-shockwave-flash" wmode="transparent" width="1000" height="99" pluginspage="http://www.macromedia.com/go/getflashplayer" allowScriptAccess="always"></embed></div>
-				<div class="aleoflash">
-				<a href="http://www.aleosoft.com/flash-intro-banner-maker/index.html">Created by Aleo Flash Banner Maker</a></div>
+				
 				<script language="JavaScript">var hasFlash=false;if(window.ActiveXObject){ try { if (new ActiveXObject("ShockwaveFlash.ShockwaveFlash")) hasFlash=true;} catch(e){}} else { if(navigator.plugins["Shockwave Flash"]){hasFlash=true;}}var elems=document.getElementsByTagName("div"); for(var i in elems){if(!hasFlash && elems[i].className=="aleoflash-gif") elems[i].style.display="block"; else if ((!hasFlash && elems[i].className=="aleoflash-swf") || elems[i].className=="aleoflash") elems[i].style.display="none";}</script>
 			</a>
 		</div>
@@ -374,7 +373,7 @@
 						</li>
 					</ul>
 				</li>
-				<li tal:attributes="class php:ActiveItem=='ReadCategory'?'active dropdown':'dropdown'">
+				<li tal:attributes="class php:ActiveItem=='GroupProfessional'?'active dropdown':'dropdown'">
 					<a class="dropdown-toggle" data-toggle="dropdown">Tổ CHuyên Môn<b class="caret"/></a>
 					<ul class="dropdown-menu">
 						<li >
@@ -387,8 +386,8 @@
 							<a tal:attributes="href '/to-chuyen-mon/do-hoa'">Đồ Họa</a>
 						</li>
 					</ul>
-				</li>				
-				<li tal:attributes="class php:ActiveItem=='LibraryVideo'?'active dropdown':'dropdown'">
+				</li>
+				<li tal:attributes="class php:ActiveItem=='GroupAplication'?'active dropdown':'dropdown'">
 					<a class="dropdown-toggle" data-toggle="dropdown">Ứng Dụng<b class="caret"/></a>
 						<ul class="dropdown-menu">
 						<li>
@@ -400,8 +399,8 @@
 					</ul>
 				</li>				
 				<li tal:attributes="class php:ActiveItem=='LibraryAlbum'?'active':'?'"><a href="/thu-vien-anh">Ảnh hoạt động</a></li>							
-				<li tal:attributes="class php:ActiveItem=='Contact'?'active':'?'"><a href="/lien-he">Liên hệ</a></li>
-				<li id="last"><a href="/signin/load">Quản trị</a></li>				
+				<li tal:attributes="class php:ActiveItem=='Contact'?'active':'?'"><a href="/lien-he">Liên hệ</a></li>							
+				<li tal:attributes="class php:ActiveItem=='Admin'?'active':'?'"><a href="/signin/load">Quản trị</a></li>							
 			</ul>
 		</div>
 		<div class="row reset-margin">			
