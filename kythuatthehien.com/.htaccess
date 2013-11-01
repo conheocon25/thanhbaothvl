@@ -15,9 +15,9 @@ RewriteRule ^signout/exe$ 											?cmd=SignoutExe [L]
 RewriteRule ^trang-chu$ 											?cmd=Home [L]
 
 RewriteRule ^gioi-thieu$ 											?cmd=Introduction [L]
-RewriteRule ^gioi-thieu/0$ 											?cmd=Introduction0 [L]
-RewriteRule ^gioi-thieu/1$ 											?cmd=Introduction1 [L]
-RewriteRule ^gioi-thieu/2$ 											?cmd=Introduction2 [L]
+RewriteRule ^to-chuyen-mon/kt-dung$ 								?cmd=Introduction0 [L]
+RewriteRule ^to-chuyen-mon/kt-am-thanh$ 							?cmd=Introduction1 [L]
+RewriteRule ^to-chuyen-mon/do-hoa$ 									?cmd=Introduction2 [L]
 RewriteRule ^gioi-thieu/3$ 											?cmd=Introduction3 [L]
 RewriteRule ^gioi-thieu/4$ 											?cmd=Introduction4 [L]
 
@@ -31,8 +31,8 @@ RewriteRule ^report/([a-z0-9_-]+)$ 									?cmd=Report&IdTracking=$1 [L]
 
 RewriteRule ^psn-hay/1$											?cmd=LibraryVideo&KBType=$1 [L]
 RewriteRule ^psn-hay/danh-muc/([a-z0-9_-]+)$					?cmd=LibraryVideoCategory&KCategory=$1 [L]
-RewriteRule ^psn-hay/danh-muc/([a-z0-9_-]+)/trang/([0-9]+)$	?cmd=LibraryVideoCategory&KCategory=$1&Page=$2 [L]
-RewriteRule ^psn-hay/danh-muc/([a-z0-9_-]+)/([a-z0-9_-]+)$	?cmd=LibraryVideoCategoryPlay&KCategory=$1&KVideoLibrary=$2 [L]
+RewriteRule ^psn-hay/danh-muc/([a-z0-9_-]+)/trang/([0-9]+)$		?cmd=LibraryVideoCategory&KCategory=$1&Page=$2 [L]
+RewriteRule ^psn-hay/danh-muc/([a-z0-9_-]+)/([a-z0-9_-]+)$		?cmd=LibraryVideoCategoryPlay&KCategory=$1&KVideoLibrary=$2 [L]
 
 RewriteRule ^psn-hay/([a-z0-9_-]+)/giang-su/([a-z0-9_-]+)$					?cmd=LibraryVideoMonk&KBType=$1&KMonk=$2 [L]
 RewriteRule ^psn-hay/([a-z0-9_-]+)/giang-su/([a-z0-9_-]+)/trang/([0-9]+)$	?cmd=LibraryVideoMonk&KBType=$1&KMonk=$2&Page=$3 [L]

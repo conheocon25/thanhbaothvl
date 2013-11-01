@@ -65,8 +65,21 @@
 						</li>
 					</ul>
 				</li>
-				<li tal:attributes="class php:ActiveItem=='Professional'?'active':'?'" ><a href="/chuyen-mon">Góc Chuyên môn</a></li>				
-				<li tal:attributes="class php:ActiveItem=='LibraryVideo'?'active dropdown':'dropdown'">
+				<li tal:attributes="class php:ActiveItem=='GroupProfessional'?'active dropdown':'dropdown'">
+					<a class="dropdown-toggle" data-toggle="dropdown">Tổ CHuyên Môn<b class="caret"/></a>
+					<ul class="dropdown-menu">
+						<li >
+							<a tal:attributes="href '/to-chuyen-mon/kt-dung'">Kỹ Thuật Dựng</a>							
+						</li>
+						<li>
+							<a tal:attributes="href '/to-chuyen-mon/kt-am-thanh'">Kỹ Thuật Âm Thanh</a>
+						</li>
+						<li>
+							<a tal:attributes="href '/to-chuyen-mon/do-hoa'">Đồ Họa</a>
+						</li>
+					</ul>
+				</li>
+				<li tal:attributes="class php:ActiveItem=='GroupAplication'?'active dropdown':'dropdown'">
 					<a class="dropdown-toggle" data-toggle="dropdown">Ứng Dụng<b class="caret"/></a>
 						<ul class="dropdown-menu">
 						<li>
@@ -101,7 +114,7 @@
 	<!-- ======================================================================== -->
 	<div metal:define-macro="BuddhaBox" class="box radius">
 		<div class="b-title">
-			<div class="b-t-icon-content">Chuyên Môn</div>
+			<div class="b-t-icon-content">Tổ Chuyên Môn</div>
 		</div>
 		<div class="b-content">
 			<div id="BuddhaCarousel" class="carousel slide carousel-fade sidebar-slide reset-margin">
@@ -112,13 +125,13 @@
 				</ol>
 				<div class="carousel-inner">
 					<div class="active item">
-						<a href="/phat-am/bac-tong"><img src="/data/images/logo/bac_tong.jpg" /></a>
+						<a href="/to-chuyen-mon/kt-dung"><img src="/data/images/logo/kt_dung.jpg" /></a>
 					</div>
 					<div class="item">
-						<a href="/phat-am/nam-tong"><img src="/data/images/logo/nam_tong.jpg" /></a>
+						<a href="/to-chuyen-mon/kt-am-thanh"><img src="/data/images/logo/kt_amthanh.jpg" /></a>
 					</div>
 					<div class="item">
-						<a href="/phat-am/tong-hop"><img src="/data/images/logo/tong_hop.jpg" /></a>
+						<a href="/to-chuyen-mon/do-hoa"><img src="/data/images/logo/dohoa.jpg" /></a>
 					</div>
 				</div>
 				<a class="carousel-control left" href="#BuddhaCarousel" data-slide="prev">&lsaquo;</a>
@@ -348,13 +361,47 @@
 	<div metal:define-macro="Footer" class="row reset-margin footer">
 		<div class="top-menu">
 			<ul class="nav nav-pills">
-				<li><a href="/trang-chu">Trang chủ</a></li>								
-				<li><a href="/tin-tuc/tin-dai-thvl">Tin tức nội bộ</a></li>
-				<li><a href="/chuyen-mon">Góc Chuyên môn</a></li>							
-				<li><a href="/thu-lao">Ứng Dụng</a></li>				
-				<li><a href="/thu-vien-anh">Ảnh hoạt động</a></li>				
-				<li><a href="/lien-he">Ảnh hoạt động</a></li>				
-				<li id="last"><a href="/signin/load">Quản trị</a></li>
+				<li tal:attributes="class php:ActiveItem=='Home'?'active':'?'"><a href="/trang-chu">Trang chủ</a></li>
+				<li tal:attributes="class php:ActiveItem=='Introduction'?'active':'?'" ><a href="/gioi-thieu">Giới thiệu</a></li>
+				<li tal:attributes="class php:ActiveItem=='ReadCategory'?'active dropdown':'dropdown'">
+					<a class="dropdown-toggle" data-toggle="dropdown">Tin tức<b class="caret"/></a>
+					<ul class="dropdown-menu">
+						<li >
+							<a tal:attributes="href '/tin-tuc/tin-dai-thvl'">Cơ Quan</a>							
+						</li>
+						<li>
+							<a tal:attributes="href '/tin-tuc/tin-noi-bo'">Nội bộ</a>
+						</li>
+					</ul>
+				</li>
+				<li tal:attributes="class php:ActiveItem=='ReadCategory'?'active dropdown':'dropdown'">
+					<a class="dropdown-toggle" data-toggle="dropdown">Tổ CHuyên Môn<b class="caret"/></a>
+					<ul class="dropdown-menu">
+						<li >
+							<a tal:attributes="href '/to-chuyen-mon/kt-dung'">Kỹ Thuật Dựng</a>							
+						</li>
+						<li>
+							<a tal:attributes="href '/to-chuyen-mon/kt-am-thanh'">Kỹ Thuật Âm Thanh</a>
+						</li>
+						<li>
+							<a tal:attributes="href '/to-chuyen-mon/do-hoa'">Đồ Họa</a>
+						</li>
+					</ul>
+				</li>				
+				<li tal:attributes="class php:ActiveItem=='LibraryVideo'?'active dropdown':'dropdown'">
+					<a class="dropdown-toggle" data-toggle="dropdown">Ứng Dụng<b class="caret"/></a>
+						<ul class="dropdown-menu">
+						<li>
+							<a tal:attributes="href '/thu-lao'">Quản lý Điểm Thù Lao</a>
+						</li>		
+						<li>
+							<a tal:attributes="href '/nhan-su'">Quản lý Nhân Sự</a>
+						</li>	
+					</ul>
+				</li>				
+				<li tal:attributes="class php:ActiveItem=='LibraryAlbum'?'active':'?'"><a href="/thu-vien-anh">Ảnh hoạt động</a></li>							
+				<li tal:attributes="class php:ActiveItem=='Contact'?'active':'?'"><a href="/lien-he">Liên hệ</a></li>
+				<li id="last"><a href="/signin/load">Quản trị</a></li>				
 			</ul>
 		</div>
 		<div class="row reset-margin">			
