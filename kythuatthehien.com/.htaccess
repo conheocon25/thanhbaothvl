@@ -66,6 +66,15 @@ RewriteRule ^dao-tao/([a-z0-9_-]+)$ 								?cmd=CourseDetail&KCourse=$1 [L]
 RewriteRule ^dao-tao/([a-z0-9_-]+)/([a-z0-9_-]+)$ 					?cmd=CourseLession&KCourse=$1&KLession=$2 [L]
 
 #---------------------------------------------------------------------------------------------------------------------------
+# APLICATION
+#---------------------------------------------------------------------------------------------------------------------------
+RewriteRule ^thu-lao$ 												?cmd=AplSigninLoad [L]
+RewriteRule ^thu-lao/signin/exe$ 									?cmd=AplSigninExe [L]
+RewriteRule ^thu-lao/signout/load$ 									?cmd=AplSignoutLoad [L]
+RewriteRule ^thu-lao/signout/exe$ 									?cmd=AplSignoutExe [L]
+
+RewriteRule ^thu-lao/app$ 											?cmd=AplApp [L]
+#---------------------------------------------------------------------------------------------------------------------------
 # APP
 #---------------------------------------------------------------------------------------------------------------------------
 RewriteRule ^app$ 													?cmd=App [L]

@@ -49,7 +49,18 @@
 		<command name="Course" type="public"><view>Course</view></command>
 		<command name="CourseDetail" type="public"><view>CourseDetail</view></command>
 		<command name="CourseLession" type="public"><view>CourseLession</view></command>
+		<!-- ============================================================================== -->
+		<!-- APLICATION - THU LAO			 																-->
+		<!-- ============================================================================== -->
+		<command name="AplSigninLoad" type="public"><view>AplSigninLoad</view></command>
+		<command name="AplSigninExe" type="public">
+			<view>AplSigninExe</view>
+			<status value="CMD_OK"><forward>AplApp</forward></status>
+			<status value="CMD_NO_AUTHOR"><forward>Home</forward></status>
+		</command>
+		<command name="SignoutLoad"><view>AplSignoutLoad</view></command>
 		
+		<command name="AplApp"><view>AplApp</view></command>
 		<!-- ============================================================================== -->
 		<!-- GLOBAL			 																-->
 		<!-- ============================================================================== -->

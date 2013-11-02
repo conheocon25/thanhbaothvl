@@ -6,23 +6,23 @@
 	/* MENU */
 	.top-menu { background: #FFFFFF; }
 		.top-menu li {
-			background: #7B71DE;
+			background: #084DAD;
 			margin-left: 1px;
 			margin-top: 1px;
 			margin-bottom: 1px;
 		}
 		.top-menu li a {
-			color: #000000 !important;
+			color: #FFF !important;
 			font-weight:bold;
-			text-shadow: 2px 2px 2px #7B71DE !important;
+			text-shadow: 1px 1px 0px #0052B9 !important;
 			
 		}
-			.top-menu li:hover a { background: #100473 !important; color: #FF9E00 !important;}
+			.top-menu li:hover a { background: #5AD3BD !important; color: #000 !important;}
 			.top-menu li.active a {
-				background: #100473 !important;
-				color: #FF9E00 !important;
+				background: #5AD3BD !important;
+				color: #000 !important;
 			}
-		.top-menu .caret { border-top-color: #000000 !important; }
+		.top-menu .caret { border-top-color: #084DAD !important; }
 		.top-menu .dropdown-menu { background: #FFF ; }
 			.top-menu .dropdown-menu li {
 				margin-top: 1px;
@@ -30,10 +30,10 @@
 				margin-right: 2px;
 			}
 			.top-menu .dropdown-menu li a {
-				color: #000000 !important;
-				text-shadow: 2px 2px 2px #7B71DE !important;
+				color: #FFF !important;
+				text-shadow: 1px 1px 0px #0052B9 !important;
 			}
-		.top-menu .dropdown-menu li:hover a { background: #100473 !important; color: #FF9E00 !important;}
+		.top-menu .dropdown-menu li:hover a { background: #5AD3BD !important; color: #000 !important;}
 		
 	/* MAIN */
 	.main { background-color: rgba(255, 255, 255, .3); }
@@ -41,13 +41,13 @@
 	/* FOOTER */
 	.footer {
 		background: url("/data/images/bg/footer.jpg") no-repeat top left transparent;
-		color: white;
+		color: black;
 	}
 	
 	/* BOX */
 	.box { border: 1px solid #000000; }
 		.box .b-title {
-			background: url("/data/images/bg/title.jpg") repeat-x top left transparent;
+			background: #084DAD;
 			border-bottom: 1px solid #000000;
 		}
 			.b-title .b-t-icon-content {
