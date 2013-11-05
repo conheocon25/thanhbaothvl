@@ -36,17 +36,24 @@
 										
 		//Quản lí User
 		function setCurrentUser( \MVC\Domain\User $user ) {
-			return self::instance()->set('pagoda_giacquang_current_user', $user);
+			return self::instance()->set('ktth_current_user', $user);
 		}
 		function getCurrentUser() {
-			return self::instance()->get('pagoda_giacquang_current_user');
+			return self::instance()->get('ktth_current_user');
 		}
 		
 		function setCurrentCaptcha( $CurrentCaptcha ) { 
-			self::instance()->set('pagoda_giacquang_CurrentCaptcha', $CurrentCaptcha); 
+			self::instance()->set('ktth_CurrentCaptcha', $CurrentCaptcha); 
 		}
 		function getCurrentCaptcha( ){
-			return self::instance()->get('pagoda_giacquang_CurrentCaptcha');
+			return self::instance()->get('ktth_CurrentCaptcha');
+		}
+		
+		function setCurrentTheme( $CurrentTheme ) { 
+			self::instance()->set('ktth_CurrentTheme', $CurrentTheme); 
+		}
+		function getCurrentTheme( ){
+			return self::instance()->get('ktth_CurrentTheme');
 		}
 	}
 	/*--------------------------------------------------------------------------------*/

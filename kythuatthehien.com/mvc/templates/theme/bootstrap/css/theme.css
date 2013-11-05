@@ -7,13 +7,12 @@
 	.top-menu { background: #FFFFFF; }
 		.top-menu li {
 			background: #084DAD;
-			margin-left: 1px;
-			margin-top: 1px;
-			margin-bottom: 1px;
+			margin-right: 2px;
+			margin-top: 2px;
+			
 		}
 		.top-menu li a {
-			color: #FFF !important;
-			font-weight:bold;
+			color: #FFF !important;			
 			text-shadow: 1px 1px 0px #0052B9 !important;
 			
 		}
@@ -25,7 +24,7 @@
 		.top-menu .caret { border-top-color: #084DAD !important; }
 		.top-menu .dropdown-menu { background: #FFF ; }
 			.top-menu .dropdown-menu li {
-				margin-top: 1px;
+				margin-bottom: 2px;
 				margin-left: 2px;
 				margin-right: 2px;
 			}
@@ -45,14 +44,15 @@
 	}
 	
 	/* BOX */
-	.box { border: 1px solid #000000; }
+	.box { border: 1px solid #FF9E00; }
 		.box .b-title {
-			background: #084DAD;
-			border-bottom: 1px solid #000000;
+			background: #5AD3BD;					
 		}
 			.b-title .b-t-icon-content {
 				background: url("/data/images/bg/title_icon.png") no-repeat 5px 1px transparent;
-				color: white;
+				color: black;
+				font-weight:bold;
+				text-shadow: 1px 1px 1px #FFF !important;
 			}
 		.box .b-content { background-color: white; }
 	

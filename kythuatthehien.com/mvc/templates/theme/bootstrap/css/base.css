@@ -4,7 +4,7 @@
 	
 	body {
 		font-family: Arial, sans-serif !important;
-		font-size: 15px !important;
+		font-size: 13px !important;
 	}
 
 	.reset-margin {
@@ -27,7 +27,7 @@
 	/* HEADER																	*/
 	/* ======================================================================== */
 	.header {
-		height: 94px;
+		height: 95px;
 		overflow: hidden;
 	}
 

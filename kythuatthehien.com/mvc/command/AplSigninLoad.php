@@ -40,7 +40,7 @@
 			$request->setObject('Navigation', $Navigation);
 			*/
 			$request->setProperty("Title", $Title);
-			$request->setProperty("ActiveItem", 'Home');
+			$request->setProperty("ActiveApplication", 'Home');
 		}
 	}
 ?>

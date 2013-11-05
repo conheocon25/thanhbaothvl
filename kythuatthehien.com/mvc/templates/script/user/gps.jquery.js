@@ -10,7 +10,7 @@
         end: '#end',
 		directions: 'directions',
         submit: '#getdirections',      	
-		tooltip: 'Phòng Kỹ Thuật Thể Hiện - Đài Phát Thanh Truyền Hình Vĩnh Long - 50 Phạm Thái Bường - Phường 4 - TP Vĩnh Long - tỉnh Vĩnh Long - Việt Nam',
+		tooltip: 'Phòng Kỹ Thuật Thể Hiện - Đài Phát Thanh Truyền Hình Vĩnh Long',
 		image: 'false'
     };
 
@@ -27,7 +27,7 @@
 		var center = new GLatLng(10.246618,105.976516);		
 		var marker = new GMarker(center, {draggable: false}); 
 		map.addOverlay(marker);		
-		marker.openInfoWindowHtml('Phòng Kỹ Thuật Thể Hiện - Đài Phát Thanh Truyền Hình Vĩnh Long - 50 Phạm Thái Bường - Phường 4 - TP Vĩnh Long - tỉnh Vĩnh Long - Việt Nam');	
+		marker.openInfoWindowHtml('Phòng Kỹ Thuật Thể Hiện - Đài Phát Thanh Truyền Hình Vĩnh Long');	
 	}
 	
     $.extend(GoogleMapObject.prototype, {
