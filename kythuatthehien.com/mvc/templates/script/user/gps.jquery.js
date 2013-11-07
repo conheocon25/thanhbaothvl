@@ -2,15 +2,15 @@
 	var map ;
 	
     $.GoogleMapObjectDefaults = {        
-        zoomLevel: 20,
+        zoomLevel: 10,
 		imagewidth: 50,
 		imageheight: 50,
-		center: 'Dai Phat Thanh Truyen Hinh, tp. Vinh Long, Vinh Long, Viet Nam',		
+		center: 'Chua Long Vien, Phuong 4, tp. Vinh Long, Vinh Long, Viet Nam',		
 		start: '#start',		
         end: '#end',
 		directions: 'directions',
         submit: '#getdirections',      	
-		tooltip: 'Phòng Kỹ Thuật Thể Hiện - Đài Phát Thanh Truyền Hình Vĩnh Long',
+		tooltip: 'Chùa Long Viễn, Phường 4, TP. Vĩnh Long, tỉnh Vĩnh Long, Việt Nam',
 		image: 'false'
     };
 
@@ -24,10 +24,10 @@
     }
 	
 	function showMaker() {					
-		var center = new GLatLng(10.246618,105.976516);		
+		var center = new GLatLng(10.244739,105.983477);		
 		var marker = new GMarker(center, {draggable: false}); 
 		map.addOverlay(marker);		
-		marker.openInfoWindowHtml('Phòng Kỹ Thuật Thể Hiện - Đài Phát Thanh Truyền Hình Vĩnh Long');	
+		marker.openInfoWindowHtml('Chùa Long Viễn, Phường 4, TP. Vĩnh Long, tỉnh Vĩnh Long, Việt Nam');	
 	}
 	
     $.extend(GoogleMapObject.prototype, {
@@ -65,16 +65,16 @@
 				}		
                 this._geocoder.getLatLng(center, function(point) {
 				
-                    center = new GLatLng(10.246618,105.976516);
+                    center = new GLatLng(10.244739,105.983477);
 					
 					if (!point) { alert(center + " not found"); }
                     else {
                         //set center on the map
-                        map.setCenter(center, 20);
+                        map.setCenter(center, zoom);
 			
 						if (customimage == true) {
 							//add the marker
-							var customiconsize = new GSize(15, 15);
+							var customiconsize = new GSize(width, height);
 							var customicon = new GIcon(G_DEFAULT_ICON, imageurl);
 							customicon.iconSize = customiconsize;
 							var marker = new GMarker(center, { icon: customicon });

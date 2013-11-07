@@ -9,7 +9,6 @@
 	}(document, 'script', 'facebook-jssdk'));
 	
 	$(document).ready(function() {
-				
 		$(".dropdown").hover(function(){
 			$(this).find("ul").slideDown();
 		}, function(){

@@ -32,7 +32,7 @@
 
         _generatePrefix: function()
         {
-            return 'pagoda_session:' + this._id + ':';
+            return 'cafe_session:' + this._id + ':';
         },
 
         _initCache: function()
