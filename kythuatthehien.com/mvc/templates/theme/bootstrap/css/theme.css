@@ -192,10 +192,15 @@
 		background-color: #E4E4E4;
 	}
 	.calendar-paper {
-		background: url("/data/images/bg/calendar.png") no-repeat top center #FF9E01;
+		background: #FF9E01;
 		color: #05316C;
 		box-shadow: 3px 3px 2px #05326D;
 		border-radius: 5px;
+	}
+	.calendar-paper .thangduong {
+		background: #5AD3BD;		
+		box-shadow: 3px 0px 2px #05326D;
+		border-radius: 5px 5px 0px 0px;
 	}
 	
 	/* NAME CARD */

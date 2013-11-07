@@ -7,14 +7,14 @@ class User extends Mapper implements \MVC\Domain\UserFinder {
     function __construct() {
         parent::__construct();
         $this->selectAllStmt = self::$PDO->prepare( 
-                            "select id, user, pass, gender, note from ktth_user");
+                            "select id, user, pass, gender, note, type from ktth_user");
         $this->selectStmt = self::$PDO->prepare( 
                             "select id, user, pass, gender, note from ktth_user where id=?");
         $this->updateStmt = self::$PDO->prepare( 
-                            "update ktth_user set user=?, pass=?,gender=?, note=? where id=?");
+                            "update ktth_user set user=?, pass=?,gender=?, note=?, type=? where id=?");
         $this->insertStmt = self::$PDO->prepare( 
-                            "insert into ktth_user (user, pass, gender, note ) 
-							values( ?, ?, ?, ?)");
+                            "insert into ktth_user (user, pass, gender, note, type ) 
+							values( ?, ?, ?, ?, ?)");
 		$this->deleteStmt = self::$PDO->prepare( 
                             "delete from ktth_user where id=?");
 		$this->checkStmt = self::$PDO->prepare( 
@@ -30,7 +30,9 @@ class User extends Mapper implements \MVC\Domain\UserFinder {
 			$array['user'], 
 			$array['pass'],				
 			$array['gender'],	
-			$array['note'] );
+			$array['note'],
+			$array['type']
+		);
         return $obj;
     }
 	
@@ -43,7 +45,8 @@ class User extends Mapper implements \MVC\Domain\UserFinder {
 			$object->getUser(), 
 			$object->getPass(),	
 			$object->getGender(),	
-			$object->getNote()
+			$object->getNote(),
+			$object->getType()
 		); 
         $this->insertStmt->execute( $values );
         $id = self::$PDO->lastInsertId();
@@ -56,6 +59,7 @@ class User extends Mapper implements \MVC\Domain\UserFinder {
 			$object->getPass(),			
 			$object->getGender(),			
 			$object->getNote(),
+			$object->getType(),
 			$object->getId()
 		);		
         $this->updateStmt->execute( $values );

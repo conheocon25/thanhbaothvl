@@ -9,14 +9,15 @@ class User extends Object{
     private $Pass;
 	private $Gender;
 	private $Note;
-	
+	private $Type;
 	/*Hàm khởi tạo và thiết lập các thuộc tính*/
-    function __construct( $Id=null, $User=null, $Pass=null, $Gender=null, $Note=null ) {
+    function __construct( $Id=null, $User=null, $Pass=null, $Gender=null, $Note=null, $Type=null ) {
         $this->Id = $Id;
 		$this->User = $User;
 		$this->Pass = $Pass;		
 		$this->Gender = $Gender;
 		$this->Note = $Note;
+		$this->Type = $Type;
         parent::__construct( $Id );
     }
     function getId( ) {
@@ -29,6 +30,14 @@ class User extends Object{
     }
     function getPass( ) {
         return $this->Pass;
+    }
+	
+	function setType( $Type ) {
+        $this->Type = $Type;
+        $this->markDirty();
+    }
+    function getType( ) {
+        return $this->Type;
     }
 	
     function setGender( $Gender ) {
@@ -70,6 +79,10 @@ class User extends Object{
 		}
 		return false;
     }
+	function isAdmin(){if ($this->getType()==4)return true;return false;}	
+	function isViewer(){if ($this->getType()==3)return true;return false;}	
+	function isManager(){if ($this->getType()==2)return true;return false;}	
+	function isSeller(){	if ($this->getType()==1)return true;return false;}
 	
 	function setApp( $App ){$this->App = $App;$this->markDirty();}
 	function getApp($IdApp=null){return $this->App;}	
@@ -89,9 +102,7 @@ class User extends Object{
 	function setDateActivity( $DateActivity){$this->DateActivity = $DateActivity;$this->markDirty();}
 	
 	function getDateActivity(){return $this->DateActivity;}	
-	function setType( $Type){$this->Type = $Type;$this->markDirty();}
-	function getType(){return $this->Type;}
-	function getTypePrint(){$Arr = array("", "Truyen Hinh", "Ti vi", "KTTH", "Quản trị");return $Arr[$this->Type];}
+	
 	
 	//Chứng thực quyền người dùng
 	function authorize($Command){
@@ -102,7 +113,7 @@ class User extends Object{
 	
 	//Lấy địa chỉ
 		
-	function getURLViewSystem(){return "/quan_tri/".$this->Id;}			
+	function getURLViewSystem(){return "/thu_lao/".$this->Id;}			
 	function getURLViewIndex(){$Prefix = $this->getApp()->getAlias();return $Prefix;}
 		
     static function findAll() {
