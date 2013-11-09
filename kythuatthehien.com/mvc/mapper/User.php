@@ -9,7 +9,7 @@ class User extends Mapper implements \MVC\Domain\UserFinder {
         $this->selectAllStmt = self::$PDO->prepare( 
                             "select id, user, pass, gender, note, type from ktth_user");
         $this->selectStmt = self::$PDO->prepare( 
-                            "select id, user, pass, gender, note from ktth_user where id=?");
+                            "select id, user, pass, gender, note, type from ktth_user where id=?");
         $this->updateStmt = self::$PDO->prepare( 
                             "update ktth_user set user=?, pass=?,gender=?, note=?, type=? where id=?");
         $this->insertStmt = self::$PDO->prepare( 

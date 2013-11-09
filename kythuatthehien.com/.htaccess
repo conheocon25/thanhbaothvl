@@ -74,6 +74,26 @@ RewriteRule ^thu-lao/signout/load$ 									?cmd=AplSignoutLoad [L]
 RewriteRule ^thu-lao/signout/exe$ 									?cmd=AplSignoutExe [L]
 
 RewriteRule ^thu-lao/app$ 											?cmd=AplApp [L]
+
+RewriteRule ^thu-lao/reward$ 										?cmd=AplReward [L]
+RewriteRule ^thu-lao/reward/trang/([0-9]+)$ 						?cmd=AplReward&Page=$1 [L]
+RewriteRule ^thu-lao/reward/update/all$ 							?cmd=AplRewardUpdateAll [L]
+RewriteRule ^thu-lao/reward/ins/load$ 								?cmd=AplRewardInsLoad [L]
+RewriteRule ^thu-lao/reward/ins/exe$ 								?cmd=AplRewardInsExe [L]
+
+RewriteRule ^thu-lao/report$ 										?cmd=AplReport [L]
+RewriteRule ^thu-lao/report/count$ 									?cmd=AplReportCount [L]
+RewriteRule ^thu-lao/report/abc$ 									?cmd=AplReportCountABC [L]
+
+RewriteRule ^thu-lao/manager$ 										?cmd=AplManager [L]
+RewriteRule ^thu-lao/manager/video$ 								?cmd=AplManagerVideo [L]
+RewriteRule ^thu-lao/manager/abc$ 									?cmd=AplManagerABC [L]
+
+RewriteRule ^thu-lao/config$ 										?cmd=AplConfig [L]
+RewriteRule ^thu-lao/config/video$ 									?cmd=AplConfigVideo [L]
+RewriteRule ^thu-lao/config/abc$ 									?cmd=AplConfigABC [L]
+
+
 #---------------------------------------------------------------------------------------------------------------------------
 # APP
 #---------------------------------------------------------------------------------------------------------------------------

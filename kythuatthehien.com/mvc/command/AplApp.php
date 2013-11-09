@@ -47,7 +47,7 @@
 			
 			$request->setObject('Navigation', $Navigation);
 			$request->setProperty("Title", $Title);			
-			$request->setProperty("ActiveApplication", 'Admin');
+			$request->setProperty("ActiveAdmin", 'Admin');
 		}
 	}
 ?>

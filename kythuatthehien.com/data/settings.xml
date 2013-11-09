@@ -61,6 +61,11 @@
 		<command name="SignoutLoad"><view>AplSignoutLoad</view></command>
 		
 		<command name="AplApp"><view>AplApp</view></command>
+		<command name="AplReward"><view>AplReward</view></command>
+		<command name="AplReport"><view>AplReport</view></command>
+		<command name="AplManager"><view>AplManager</view></command>
+		<command name="AplConfig"><view>AplConfig</view></command>
+		
 		<!-- ============================================================================== -->
 		<!-- GLOBAL			 																-->
 		<!-- ============================================================================== -->

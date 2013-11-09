@@ -1,5 +1,5 @@
 	
-	body { background: url("/data/images/bg/body.jpg") no-repeat fixed center bottom #033594 !important; }
+	body { background: url("/data/images/bg/ktth_movie_bg.jpg") repeat top left #033594 !important; }
 	
 	.container { box-shadow: 0 0 2px 2px #000000; }
 	
@@ -10,7 +10,7 @@
 			text-shadow: 1px 1px 0 #696969 !important;
 		}
 		
-		.top-menu li:hover a { background: rgba(255, 255, 255, .3) !important; }
+		.top-menu li:hover a { background: rgba(0, 164, 128, .3) !important; }
 		
 		.top-menu li.active a {
 			background: none !important;
@@ -19,14 +19,19 @@
 		
 		.top-menu .caret { border-top-color: #FFFFFF !important; }
 		
-		.top-menu .dropdown-menu { background: url("/data/images/bg/submenu.jpg") repeat top left transparent; }
-		
-		.top-menu .dropdown-menu li a {
-			color: #980707 !important;
-			text-shadow: none !important;
+		.top-menu .dropdown-menu { background: #ff9f00;	 }
+				
+		.top-menu .dropdown-menu li {
+			background: url("/data/images/bg/submenu.jpg") repeat top left transparent;
+		}
+		.top-menu .dropdown-menu li a {			
+			color: #FFFFFF !important;
+			text-shadow: 1px 1px 0 #696969 !important;
+			margin-top: -4px  !important;
+			margin-bottom: 6px  !important;
 		}
 		
-		.top-menu .dropdown-menu li:hover a { background: rgba(255, 255, 255, .3) !important; }
+		.top-menu .dropdown-menu li:hover a { background: rgba(0, 164, 128, .3) !important; }
 		
 	/* ======================================================================== */
 	/* MAIN																		*/
@@ -44,9 +49,9 @@
 	.box { border: 1px solid #7CA324; }
 	
 		.box .b-title {
-			background-color: #0D8700;
+			background-color: #00a480;
 			*background: url("/data/images/bg/menu.jpg") repeat-x top left transparent;
-			border-bottom: 1px solid #0D8700;
+			border-bottom: 1px solid #00a480;
 		}
 		
 		.b-title .b-t-icon-content {
@@ -93,7 +98,7 @@
 		
 	.news-list-title { color: #A99999; }
 	
-		.news-list-item a { color: #0D8700 !important; }
+		.news-list-item a { color: #2c17b1 !important; }
 		
 		.new-list-polaroid .media-time { color: #696969; }
 
