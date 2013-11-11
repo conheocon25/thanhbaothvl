@@ -29,7 +29,48 @@
 					<div class="span9">
 						<div class="content">
 							<span metal:use-macro="mApplication.xhtml/LocationBar"/>
-							<center><img src="/data/images/bg_manager.png" width="50%" style="opacity:.25;"/></center>
+							<form class="form-horizontal" tal:attributes="action string:''" method="post">						
+								
+								<div class="control-group">
+									<label class="control-label" for="CategoryProgrameName">Tên Chương trình</label>
+									<div class="controls">
+										<select name="CategoryProgrameName">
+											<option tal:repeat="CategoryPrograme CategoryProgrameAll" tal:attributes="value CategoryPrograme/getId" >
+												<span tal:content="CategoryPrograme/getName"/>
+											</option>
+										</select>
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="DateStart">Ngày làm</label>
+									<div class="controls">
+										<input id="DateStart" name="DateStart" type="text" />
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="Count">Số lượng</label>
+									<div class="controls">
+										<input id="Count" name="Count" type="text" />
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="Content">Nội dung</label>
+									<div class="controls">
+										<textarea class="ckeditor" name="Content" />
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="Note">Ghi chú</label>
+									<div class="controls">
+										<input id="Note" name="Note" type="text" />
+									</div>
+								</div>
+								<div class="control-group">
+									<div class="controls">
+										<button type="submit" class="btn" value="submit-value">Thêm mới</button>
+									</div>
+								</div>						
+							</form>
 						</div>
 					</div>
 				</div>

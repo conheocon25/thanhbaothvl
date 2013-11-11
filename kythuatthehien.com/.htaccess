@@ -77,7 +77,8 @@ RewriteRule ^thu-lao/app$ 											?cmd=AplApp [L]
 
 RewriteRule ^thu-lao/reward$ 										?cmd=AplReward [L]
 RewriteRule ^thu-lao/reward/trang/([0-9]+)$ 						?cmd=AplReward&Page=$1 [L]
-RewriteRule ^thu-lao/reward/update/all$ 							?cmd=AplRewardUpdateAll [L]
+RewriteRule ^thu-lao/reward/update/([0-9]+)$						?cmd=AplRewardUpdate&IdReward=$1 [L]
+RewriteRule ^thu-lao/reward/update/([0-9]+)/exe$					?cmd=AplRewardUpdateExe&IdReward=$1 [L]
 RewriteRule ^thu-lao/reward/ins/load$ 								?cmd=AplRewardInsLoad [L]
 RewriteRule ^thu-lao/reward/ins/exe$ 								?cmd=AplRewardInsExe [L]
 
