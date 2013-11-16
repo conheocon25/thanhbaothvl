@@ -64,10 +64,16 @@ class Salarydaily extends Object{
     function getDate_work( ) {
         return $this->Date_work;
     }
+	
     function setDate_work( $Date_work ) {
         $this->Date_work = $Date_work;
         $this->markDirty();
     }
+	
+	function getDateWorkPrint( ){
+		$D = new \MVC\Library\Date($this->Date_work);
+		return $D->getDateFormat();
+	}
 	
 	function getDate_note( ) {
         return $this->Date_note;
@@ -84,8 +90,18 @@ class Salarydaily extends Object{
         $this->markDirty();
     }
 	
+	function getURLRewardUpdateLoad(){return "/thu-lao/reward/update/".$this->getId();}
+	function getURLRewardUpdateExe(){return "/thu-lao/reward/update/".$this->getId()."/exe";}
+	function getURLRewardDeleteLoad(){return "/thu-lao/reward/delete/".$this->getId();}
+	function getURLRewardDeleteExe(){return "/thu-lao/reward/delete/".$this->getId()."/exe";}
 	
-		
+	
+	function getCategory(){
+		$mCategory = new \MVC\Mapper\Category();
+		$Category = $mCategory->find( array($this->Id_caterory) );
+		return $Category;
+	}	
+	
     static function findAll() {
         $finder = self::getFinder( __CLASS__ ); 
         return $finder->findAll();

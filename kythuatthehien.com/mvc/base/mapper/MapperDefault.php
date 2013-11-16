@@ -17,8 +17,8 @@
 	
 	$mVideo = new \MVC\Mapper\Video();
 	$mNews = new \MVC\Mapper\News();
-	$mGuest = new \MVC\Mapper\Guest();
-	$mConfig = new \MVC\Mapper\Config();
+	$mSalarydaily = new \MVC\Mapper\Salarydaily();
+	
 	
 	$mPage = new \MVC\Mapper\Page();
 	

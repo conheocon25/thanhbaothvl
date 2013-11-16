@@ -17,6 +17,19 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
 							values( ?, ?, ?, ?, ?, ? , ?)");
 		$this->deleteStmt = self::$PDO->prepare( 
                             "delete from ktth_salarydaily where id=?");
+							
+		$this->findByCateroryStmt = self::$PDO->prepare(
+			"SELECT * FROM ktth_salarydaily			
+			WHERE id_caterory=:id_caterory
+			ORDER BY date_work desc			
+			LIMIT :start,:max" );
+			
+		$this->findByEmployeePageStmt = self::$PDO->prepare(
+			"SELECT * FROM ktth_salarydaily			
+			WHERE id_employee=:id_employee
+			ORDER BY date_work desc			
+			LIMIT :start,:max" );					
+		
     } 
     function getCollection( array $raw ) {
         return new SalarydailyCollection( $raw, $this );
@@ -71,6 +84,23 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
 	protected function doDelete(array $values) {
         return $this->deleteStmt->execute( $values );
     }
+	
+	function findByEmployeePage( $values ) {
+		$this->findByEmployeePageStmt->bindValue(':id_employee', $values[0], \PDO::PARAM_INT);
+		$this->findByEmployeePageStmt->bindValue(':start', ((int)($values[1])-1)*(int)($values[2]), \PDO::PARAM_INT);
+		$this->findByEmployeePageStmt->bindValue(':max', (int)($values[2]), \PDO::PARAM_INT);
+		$this->findByEmployeePageStmt->execute();
+        return new NewsCollection( $this->findByEmployeePageStmt->fetchAll(), $this );
+    }
+	
+	function findByCateroryPage( $values ) {
+		$this->findByCateroryStmt->bindValue(':id_caterory', $values[0], \PDO::PARAM_INT);
+		$this->findByCateroryStmt->bindValue(':start', ((int)($values[1])-1)*(int)($values[2]), \PDO::PARAM_INT);
+		$this->findByCateroryStmt->bindValue(':max', (int)($values[2]), \PDO::PARAM_INT);
+		$this->findByCateroryStmt->execute();
+        return new NewsCollection( $this->findByCateroryStmt->fetchAll(), $this );
+    }
+	
 	
     function selectStmt() {
         return $this->selectStmt;

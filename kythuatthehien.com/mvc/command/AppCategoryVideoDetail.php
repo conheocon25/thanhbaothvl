@@ -24,6 +24,7 @@
 			//-------------------------------------------------------------						
 			$CategoryVideoAll = $mCategoryVideo->findAll();						
 			$Category = $mCategoryVideo->find($IdCategory);
+			
 			if (!isset($Page)) $Page = 1;
 			$Config = $mConfig->findByName("ROW_PER_PAGE");
 			$VLAll = $mVideoLibrary->findByPage(array($IdCategory, $Page, $Config->getValue() ));
