@@ -61,10 +61,14 @@
 		<command name="SignoutLoad"><view>AplSignoutLoad</view></command>
 		
 		<command name="AplApp"><view>AplApp</view></command>
+		<command name="AplAppChangeTime">
+			<view>AplAppChangeTime</view>
+			<status value="CMD_OK"><forward>AplApp</forward></status>			
+		</command>
 		
 		<command name="AplReward"><view>AplReward</view></command>
 		<command name="AplRewardInsLoad"><view>AplRewardInsLoad</view></command>
-		<command name="AplRewardUpdate"><view>AplRewardUpdate</view></command>
+		<command name="AplRewardUpdate"><view>AplRewardUpdate</view></command>		
 		<command name="AplRewardInsExe">
 			<view>AplRewardInsExe</view>
 			<status value="CMD_OK"><forward>AplReward</forward></status>
@@ -75,6 +79,8 @@
 			<status value="CMD_OK"><forward>AplReward</forward></status>
 			<status value="CMD_NO_AUTHOR"><forward>Home</forward></status>
 		</command>
+		
+		
 		
 		<command name="AplReport"><view>AplReport</view></command>
 		<command name="AplManager"><view>AplManager</view></command>

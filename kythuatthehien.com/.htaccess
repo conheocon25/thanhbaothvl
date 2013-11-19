@@ -74,6 +74,7 @@ RewriteRule ^thu-lao/signout/load$ 									?cmd=AplSignoutLoad [L]
 RewriteRule ^thu-lao/signout/exe$ 									?cmd=AplSignoutExe [L]
 
 RewriteRule ^thu-lao/app$ 											?cmd=AplApp [L]
+RewriteRule ^thu-lao/app/changetime$								?cmd=AplAppChangeTime [L]
 
 RewriteRule ^thu-lao/reward$ 										?cmd=AplReward [L]
 RewriteRule ^thu-lao/reward/trang/([0-9]+)$ 						?cmd=AplReward&Page=$1 [L]

@@ -55,6 +55,20 @@
 		function getCurrentTheme( ){
 			return self::instance()->get('ktth_CurrentTheme');
 		}
+		
+		function setCurrentMonth( $CurrentMonth ) { 
+			self::instance()->set('ktth_CurrentMonth', $CurrentMonth); 
+		}
+		function getCurrentMonth( ){
+			return self::instance()->get('ktth_CurrentMonth');
+		}
+		
+		function setCurrentYear( $CurrentYear ) { 
+			self::instance()->set('ktth_CurrentYear', $CurrentYear); 
+		}
+		function getCurrentYear( ){
+			return self::instance()->get('ktth_CurrentYear');
+		}
 	}
 	/*--------------------------------------------------------------------------------*/
 	class RequestRegistry extends Registry { 

@@ -27,8 +27,12 @@
 			$CategoryAskAll = $mCategoryAsk->findAll();	
 			
 			$User = $Session->getCurrentUser();
+			$mCurrentMonth = $Session->getCurrentMonth();			
+			$mCurrentYear = $Session->getCurrentYear();	
 			
-				
+			//$mCurrentMonth = 9;
+			
+			//echo $mCurrentMonth;
 			
 			$AlbumAll = $mAlbum->findAll();
 			$ConfigAll = $mConfig->findAll();		
@@ -36,7 +40,7 @@
 			$Title = "QUẢN LÝ";
 			$Navigation = array(
 				array("TRANG CHỦ", "/trang-chu"),
-				array("QUẢN LÝ THÙ LAO", "/thu-lao"),
+				array("QUẢN LÝ THÙ LAO", "/thu-lao/app"),
 				array("NHẬP ĐIỂM", "/thu-lao/reward")
 			);
 			
@@ -45,10 +49,10 @@
 			//-------------------------------------------------------------			
 			if (!isset($Page)) $Page = 1;
 			$Config = $mConfig->findByName("ROW_PER_PAGE");
-			$id_User = 30;
-			$SalarydailyAlls = $mSalarydaily->findByEmployee(array($id_User, 9, 2013));	
-			$SalarydailyAll = $mSalarydaily->findByEmployeePage(array($id_User, 9, 2013, $Page, 10));	
-			$PN = new \MVC\Domain\PageNavigation($SalarydailyAlls->count(), 10, 'thu-lao/reward');			
+		
+			$SalarydailyAlls = $mSalarydaily->findByEmployee(array($User->getId(), $mCurrentMonth, $mCurrentYear));	
+			$SalarydailyAll = $mSalarydaily->findByEmployeePage(array($User->getId(), $mCurrentMonth, $mCurrentYear, $Page, $Config->getValue()));	
+			$PN = new \MVC\Domain\PageNavigation($SalarydailyAlls->count(), $Config->getValue(), 'thu-lao/reward');			
 			
 			$request->setObject("CategoryNewsAll", $CategoryNewsAll);
 			$request->setObject("CategoryVideoAll", $CategoryVideoAll);
