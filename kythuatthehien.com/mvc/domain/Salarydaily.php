@@ -5,7 +5,7 @@ require_once( "mvc/base/domain/DomainObject.php" );
 class Salarydaily extends Object{
 
     private $Id;
-	private $Id_caterory;
+	private $Id_category;
 	private $Id_employee;
 	private $Content;
 	private $Count;
@@ -14,9 +14,9 @@ class Salarydaily extends Object{
 	private $Note;
 	
 	/*Hàm khởi tạo và thiết lập các thuộc tính*/
-    function __construct( $Id=null, $Id_caterory=null, $Id_employee=null, $Content=null, $Count=null, $Date_work=null, $Date_note=null, $Note=null ) {
+    function __construct( $Id=null, $Id_category=null, $Id_employee=null, $Content=null, $Count=null, $Date_work=null, $Date_note=null, $Note=null ) {
         $this->Id = $Id;
-		$this->Id_caterory = $Id_caterory;
+		$this->Id_category = $Id_category;
 		$this->Id_employee = $Id_employee;
 		$this->Content = $Content;
 		$this->Count = $Count;
@@ -33,11 +33,11 @@ class Salarydaily extends Object{
         $this->Id = $Id;
         $this->markDirty();
     }
-    function getName( ) {
-        return $this->Name;
+    function getId_category( ) {
+        return $this->Id_category;
     }
-    function setName( $Name ) {
-        $this->Name = $Name;
+    function setId_category( $Id_category ) {
+        $this->Id_category = $Id_category;
         $this->markDirty();
     }
     function getId_employee( ) {
@@ -98,7 +98,7 @@ class Salarydaily extends Object{
 	
 	function getCategory(){
 		$mCategory = new \MVC\Mapper\Category();
-		$Category = $mCategory->find( array($this->Id_caterory) );
+		$Category = $mCategory->find( $this->Id_category );
 		return $Category;
 	}	
 	
