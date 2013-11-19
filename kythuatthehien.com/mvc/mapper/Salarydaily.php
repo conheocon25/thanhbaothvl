@@ -18,11 +18,16 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
 		$this->deleteStmt = self::$PDO->prepare( 
                             "delete from ktth_salarydaily where id=?");
 							
-		$this->findByCateroryStmt = self::$PDO->prepare(
+		$this->findByCateroryPageStmt = self::$PDO->prepare(
 			"SELECT * FROM ktth_salarydaily			
 			WHERE Id_category=:id_category and month(date_work) =:mMonth and year(date_work) =:mYear
 			ORDER BY date_work desc			
 			LIMIT :start,:max" );
+			
+		$this->findByCateroryStmt = self::$PDO->prepare(
+			"SELECT * FROM ktth_salarydaily			
+			WHERE Id_category=:id_category and month(date_work) =:mMonth and year(date_work) =:mYear
+			ORDER BY date_work desc" );
 			
 		$this->findByEmployeePageStmt = self::$PDO->prepare(
 			"SELECT * FROM ktth_salarydaily			
@@ -109,15 +114,22 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
     }
 	
 	function findByCateroryPage( $values ) {
+		$this->findByCateroryPageStmt->bindValue(':id_category', $values[0], \PDO::PARAM_INT);
+		$this->findByCateroryPageStmt->bindValue(':mMonth', $values[1], \PDO::PARAM_INT);
+		$this->findByCateroryPageStmt->bindValue(':mYear', $values[2], \PDO::PARAM_INT);
+		$this->findByCateroryPageStmt->bindValue(':start', ((int)($values[3])-1)*(int)($values[4]), \PDO::PARAM_INT);
+		$this->findByCateroryPageStmt->bindValue(':max', (int)($values[4]), \PDO::PARAM_INT);
+		$this->findByCateroryPageStmt->execute();
+        return new NewsCollection( $this->findByCateroryPageStmt->fetchAll(), $this );
+    }
+	
+	function findByCaterory( $values ) {
 		$this->findByCateroryStmt->bindValue(':id_category', $values[0], \PDO::PARAM_INT);
-		$this->findByEmployeePageStmt->bindValue(':mMonth', $values[1], \PDO::PARAM_INT);
-		$this->findByEmployeePageStmt->bindValue(':mYear', $values[2], \PDO::PARAM_INT);
-		$this->findByCateroryStmt->bindValue(':start', ((int)($values[3])-1)*(int)($values[4]), \PDO::PARAM_INT);
-		$this->findByCateroryStmt->bindValue(':max', (int)($values[4]), \PDO::PARAM_INT);
+		$this->findByCateroryStmt->bindValue(':mMonth', $values[1], \PDO::PARAM_INT);
+		$this->findByCateroryStmt->bindValue(':mYear', $values[2], \PDO::PARAM_INT);		
 		$this->findByCateroryStmt->execute();
         return new NewsCollection( $this->findByCateroryStmt->fetchAll(), $this );
     }
-	
 	
     function selectStmt() {
         return $this->selectStmt;

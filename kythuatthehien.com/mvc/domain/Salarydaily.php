@@ -82,6 +82,12 @@ class Salarydaily extends Object{
         $this->Date_note = $Date_note;
         $this->markDirty();
     }
+	
+	function getDateNotePrint( ){
+		$D = new \MVC\Library\Date($this->Date_note);
+		return $D->getDateFormat();
+	}
+	
 	function getNote( ) {
         return $this->Note;
     }

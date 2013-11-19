@@ -11,7 +11,7 @@
 			//-------------------------------------------------------------
 			//THAM SỐ GỬI ĐẾN
 			//-------------------------------------------------------------
-									
+			$Page = $request->getProperty('Page');						
 			//-------------------------------------------------------------
 			//MAPPER DỮ LIỆU
 			//-------------------------------------------------------------	
@@ -20,7 +20,7 @@
 			//-------------------------------------------------------------
 			//XỬ LÝ CHÍNH
 			//-------------------------------------------------------------			
-			//$CategoryBTypeAll = $mCategoryBType->findAll();
+			
 			$CategoryProgrameAll = $mCategory->findAll();
 			$CategoryNewsAll = $mCategoryNews->findAll();
 			$CategoryVideoAll = $mCategoryVideo->findAll();			
@@ -46,11 +46,9 @@
 			if (!isset($Page)) $Page = 1;
 			$Config = $mConfig->findByName("ROW_PER_PAGE");
 			$id_User = 30;
-			$SalarydailyAll = $mSalarydaily->findByEmployee(array($id_User, 9, 2013));	
-		
-			
-			//$PN = new \MVC\Domain\PageNavigation($SalarydailyAll->count(), 5, '');
-			
+			$SalarydailyAlls = $mSalarydaily->findByEmployee(array($id_User, 9, 2013));	
+			$SalarydailyAll = $mSalarydaily->findByEmployeePage(array($id_User, 9, 2013, $Page, 10));	
+			$PN = new \MVC\Domain\PageNavigation($SalarydailyAlls->count(), 10, 'thu-lao/reward');			
 			
 			$request->setObject("CategoryNewsAll", $CategoryNewsAll);
 			$request->setObject("CategoryVideoAll", $CategoryVideoAll);
@@ -59,9 +57,10 @@
 			$request->setObject("SalarydailyAll", $SalarydailyAll);
 			
 			$request->setObject('AlbumAll', $AlbumAll);
-			
+			$request->setProperty("Page", $Page);
 			$request->setObject('ConfigAll', $ConfigAll); 
-			//$request->setObject('PN', $PN); 
+			$request->setProperty("Page", $Page);
+			$request->setObject('PN', $PN); 
 			
 			$request->setObject('Navigation', $Navigation);
 			$request->setProperty("Title", $Title);			
