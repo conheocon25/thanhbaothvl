@@ -44,7 +44,7 @@
 								<div class="control-group">
 									<label class="control-label" for="IdCategory">Tên Chương trình</label>
 									<div class="controls">
-										<select name="IdCategory">
+										<select name="IdCategory" width="100%">
 											<option tal:repeat="CategoryPrograme CategoryProgrameAll" tal:attributes="value CategoryPrograme/getId" >
 												<span tal:content="CategoryPrograme/getName"/>
 											</option>
@@ -121,7 +121,7 @@
 										</td>
 										<td tal:content="Salarydaily/getDateWorkPrint" />
 										<td tal:content="Salarydaily/getCount" />
-										<td tal:content="Salarydaily/getContent" />
+										<td tal:content="structure Salarydaily/getContent" />
 										<td>
 											<a tal:attributes="href Salarydaily/getURLRewardDeleteLoad"><span class="icon-remove"/></a>
 										</td>
