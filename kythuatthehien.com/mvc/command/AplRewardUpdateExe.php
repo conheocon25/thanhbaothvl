@@ -1,7 +1,7 @@
 <?php
 	namespace MVC\Command;	
 	use MVC\Library\Encrypted;
-	class AplRewardInsExe extends Command {
+	class AplRewardUpdateExe extends Command {
 		function doExecute( \MVC\Controller\Request $request ) {
 			require_once("mvc/base/domain/HelperFactory.php");			
 			//-------------------------------------------------------------
@@ -12,12 +12,12 @@
 			//-------------------------------------------------------------
 			//THAM SỐ GỬI ĐẾN
 			//-------------------------------------------------------------
+			$IdReward = $request->getProperty('IdReward');		
 			$IdCategory = $request->getProperty('IdCategory');
 			$DateStart = $request->getProperty('DateStart');
 			$Count = $request->getProperty('Count');
 			$Content = $request->getProperty('Content');
-			$Note = $request->getProperty('Note');
-						
+			$Note = $request->getProperty('Note');			
 			//-------------------------------------------------------------
 			//MAPPER DỮ LIỆU
 			//-------------------------------------------------------------			
@@ -26,21 +26,18 @@
 			//-------------------------------------------------------------
 			//XỬ LÝ CHÍNH
 			//-------------------------------------------------------------
-			if (!isset($IdCategory)||$DateStart=="")
+			if (!isset($IdReward)||$DateStart=="")
 				return self::statuses('CMD_NO_AUTHOR');
 				
-			$dSalarydaily = new \MVC\Domain\Salarydaily(
-				null,
-				$IdCategory,
-				$User->getId(),
-				$Content,
-				$Count,
-				$DateStart,
-				null,
-				$Note				
-			);
+			$CurSalarydaily = $mSalarydaily->find($IdReward);
 			
-			$mSalarydaily->insert($dSalarydaily);
+			$CurSalarydaily->setId_category($IdCategory);
+			$CurSalarydaily->setDate_work($DateStart);
+			$CurSalarydaily->setCount($Count);
+			$CurSalarydaily->setContent($Content);
+			$CurSalarydaily->setNote($Note);
+			
+			$mSalarydaily->update($CurSalarydaily);
 			//-------------------------------------------------------------
 			//THAM SỐ GỬI ĐI
 			//-------------------------------------------------------------

@@ -7,9 +7,9 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
     function __construct() {
         parent::__construct();
         $this->selectAllStmt = self::$PDO->prepare( 
-                            "select id, Id_category, id_employee, content, count, date_work, date_note, note from ktth_salarydaily");
+                            "select * from ktth_salarydaily");
         $this->selectStmt = self::$PDO->prepare( 
-                            "select id, Id_category, id_employee, content, count, date_work, date_note, note from ktth_salarydaily where id=?");
+                            "select * from ktth_salarydaily where id=?");
         $this->updateStmt = self::$PDO->prepare( 
                             "update ktth_salarydaily set Id_category=?, id_employee=?, content=?, count=?, date_work=?, date_note=?, note=? where id=?");
         $this->insertStmt = self::$PDO->prepare( 
@@ -68,6 +68,7 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
 			$object->getId_category(),
 			$object->getId_employee(),
 			$object->getContent(),
+			$object->getCount(),
 			$object->getDate_work(),
 			$object->getDate_note(),
 			$object->getNote()
@@ -83,6 +84,7 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
 			$object->getId_category(),
 			$object->getId_employee(),
 			$object->getContent(),
+			$object->getCount(),
 			$object->getDate_work(),
 			$object->getDate_note(),
 			$object->getNote(),
