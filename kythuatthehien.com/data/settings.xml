@@ -63,7 +63,7 @@
 		<command name="AplApp"><view>AplApp</view></command>
 		<command name="AplAppChangeTime">
 			<view>AplAppChangeTime</view>
-			<status value="CMD_OK"><forward>AplApp</forward></status>			
+			<status value="CMD_OK"><forward>AplReward</forward></status>			
 		</command>
 		
 		<command name="AplReward"><view>AplReward</view></command>

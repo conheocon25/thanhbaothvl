@@ -44,9 +44,9 @@
 								<div class="control-group">
 									<label class="control-label" for="IdCategory">Tên Chương trình</label>
 									<div class="controls">
-										<select name="IdCategory" width="100%">
+										<select name="IdCategory" >
 											<option tal:repeat="CategoryPrograme CategoryProgrameAll" tal:attributes="value CategoryPrograme/getId" >
-												<span tal:content="CategoryPrograme/getName"/>
+												<span style="width:100%;" tal:content="CategoryPrograme/getName"/>
 											</option>
 										</select>
 									</div>
