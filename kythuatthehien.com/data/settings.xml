@@ -58,7 +58,13 @@
 			<status value="CMD_OK"><forward>AplApp</forward></status>
 			<status value="CMD_NO_AUTHOR"><forward>Home</forward></status>
 		</command>
-		<command name="SignoutLoad"><view>AplSignoutLoad</view></command>
+		
+		<command name="AplSignoutExe" type="public">
+			<view>AplSignoutExe</view>
+			<status value="CMD_OK"><forward>AplSigninLoad</forward></status>
+			<status value="CMD_NO_AUTHOR"><forward>Home</forward></status>
+		</command>
+		<command name="AplSignoutLoad"><view>AplSignoutLoad</view></command>
 		
 		<command name="AplApp"><view>AplApp</view></command>
 		<command name="AplAppChangeTime">
@@ -79,17 +85,42 @@
 			<view>AplRewardUpdateExe</view>
 			<status value="CMD_OK"><forward>AplReward</forward></status>
 			<status value="CMD_NO_AUTHOR"><forward>Home</forward></status>
-		</command>
-		
+		</command>		
 		<command name="AplRewardDeleteExe">
 			<view>AplRewardDeleteExe</view>
 			<status value="CMD_OK"><forward>AplReward</forward></status>
 			<status value="CMD_NO_AUTHOR"><forward>Home</forward></status>
-		</command>
+		</command>		
 		
-		<command name="AplReport"><view>AplReport</view></command>
-		<command name="AplManager"><view>AplManager</view></command>
+		<command name="AplManager"><view>AplManager</view></command>	
+		
+		<command name="AplChangePass"><view>AplChangePass</view></command>		
+		<command name="AplChangePassExe">
+			<view>AplChangePassExe</view>
+			<status value="CMD_OK"><forward>AplSigninLoad</forward></status>
+			<status value="CMD_NO_AUTHOR"><forward>Home</forward></status>
+		</command>
+		<!-- ============================================================================== -->
+		<!-- APL.CONDIG																-->
+		<!-- ============================================================================== -->
 		<command name="AplConfig"><view>AplConfig</view></command>
+		<command name="AplConfigInsLoad"><view>AplConfigInsLoad</view></command>
+		<command name="AplConfigInsExe"><view>AplConfigInsExe</view><status value="CMD_OK"><forward>AplConfig</forward></status></command>		
+		<command name="AplConfigUpdLoad"><view>AplConfigUpdLoad</view></command>
+		<command name="AplConfigUpdExe"><view>AplConfigUpdExe</view><status value="CMD_OK"><forward>AplConfig</forward></status></command>		
+		<command name="AplConfigDelLoad"><view>AplConfigDelLoad</view></command>
+		<command name="AplConfigDelExe"><view>AplConfigDelExe</view><status value="CMD_OK"><forward>AplConfig</forward></status></command>
+		
+		<!-- ============================================================================== -->
+		<!-- APL.REPORT																-->
+		<!-- ============================================================================== -->
+		<command name="AplReport"><view>AplReport</view></command>
+		<command name="AplReportInsLoad"><view>AplReportInsLoad</view></command>
+		<command name="AplReportInsExe"><view>AplReportInsExe</view><status value="CMD_OK"><forward>AplReport</forward></status></command>		
+		<command name="AplReportUpdLoad"><view>AplReportUpdLoad</view></command>
+		<command name="AplReportUpdExe"><view>AplReportUpdExe</view><status value="CMD_OK"><forward>AplReport</forward></status></command>		
+		<command name="AplReportDelLoad"><view>AplReportDelLoad</view></command>
+		<command name="AplReportDelExe"><view>AplReportDelExe</view><status value="CMD_OK"><forward>AplReport</forward></status></command>
 		
 		<!-- ============================================================================== -->
 		<!-- GLOBAL			 																-->

@@ -17,6 +17,7 @@ if ( ! isset( $EG_DISABLE_INCLUDES ) ) {
 	require_once( "mvc/mapper/Config.php" );
 	require_once( "mvc/mapper/Guest.php" );
 	require_once( "mvc/mapper/Page.php" );
+	require_once( "mvc/mapper/Report.php" );
 	
 }
 

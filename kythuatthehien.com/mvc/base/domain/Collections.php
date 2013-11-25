@@ -20,5 +20,6 @@ interface NewsCollection extends \Iterator {function add( Object $News );}
 interface ConfigCollection extends \Iterator {function add( Object $Config );}
 interface GuestCollection extends \Iterator {function add( Object $Guest );}
 interface PageCollection extends \Iterator {function add( Object $Page );}
+interface ReportCollection extends \Iterator {function add( Object $Report );}
 interface PageNavigationCollection extends \Iterator {function add( Object $PageNavigation );}
 ?>
