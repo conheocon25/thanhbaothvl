@@ -50,7 +50,7 @@
 			<div class="navbar-inner">
 				<a class="brand" href="/app">www.ktthehien.com</a>
 				<p class="navbar-text pull-right">
-					<a class="navbar-link" href="/signout/load"><span tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()" tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->getUser()"/></a>
+					<a class="navbar-link" href="/signout/load"><span tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()" tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->getUser()"/></a> Đăng xuất
 				</p>
 			</div>
 		</div>
@@ -83,7 +83,7 @@
 							
 	<div metal:define-macro="Menu" class="menu">
 		<ul class="nav nav-list config-number">
-			<li class="nav-header">DANH MỤC</li>
+			<li class="nav-header">CHỨC NĂNG</li>
 			<li tal:attributes="class php:ActiveAdmin=='News'?'active':'disable'">
 				<a tal:attributes="href '/app/category/news'">TIN TỨC <span class="badge badge-info pull-right" tal:content="CategoryNewsAll/count"/></a>
 			</li>				
@@ -96,7 +96,10 @@
 			<li tal:attributes="class php:ActiveAdmin=='Statistic'?'active':'disable'">
 				<a tal:attributes="href '/app/config'">CẤU HÌNH <span class="badge badge-info pull-right" tal:content="ConfigAll/count"/></a>
 			</li>
-			<li class="nav-header">Support: 0903 062 068</li>
+			<li tal:attributes="class php:ActiveAdmin=='Reward'?'active':'disable'">
+				<a tal:attributes="href '/thu-lao/app'">QUẢN LÝ THÙ LAO</a>
+			</li>
+			<li class="nav-header">Hỗ trợ: THANH BẢO - 0903 062 068</li>
 		</ul>
 	</div>
 	

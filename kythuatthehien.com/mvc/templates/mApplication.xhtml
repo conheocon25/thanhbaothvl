@@ -51,7 +51,7 @@
 				<a class="brand" href="/thu-lao">Ứng dụng Quản lý thù lao - www.ktthehien.com</a> 
 				<a class="brand" href="/thu-lao/app">Đang Chọn Tháng <span tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentMonth()"/> Năm: <span tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentYear()"/></a>
 				<p class="navbar-text pull-right">				
-					<a class="navbar-link" href="thu-lao/signout/load"><span tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()" tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->getUser()"/></a>
+					<a class="navbar-link" href="thu-lao/signout/load"><span tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()" tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->getUser()"/></a> Đăng xuất
 				</p>
 			</div>
 		</div>
@@ -84,7 +84,7 @@
 							
 	<div metal:define-macro="Menu" class="menu">
 		<ul class="nav nav-list config-number" ><!-- tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isAdmin()"> -->
-			<li class="nav-header">DANH MỤC</li>
+			<li class="nav-header">CHỨC NĂNG</li>
 			<li tal:attributes="class php:ActiveAdmin=='Reward'?'active':'disable'">
 				<a tal:attributes="href '/thu-lao/reward'">NHẬP ĐIỂM <span class="badge badge-info pull-right" tal:content="''"/></a>
 			</li>				
@@ -98,9 +98,9 @@
 				<a tal:attributes="href '/thu-lao/changepass'">ĐỔI MẬT KHẨU <span class="badge badge-info pull-right" /></a>
 			</li>
 			<li tal:attributes="class php:ActiveAdmin=='Statistic'?'active':'disable'" tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isAdmin()">
-				<a tal:attributes="href '/thu-lao/config'">CẤU HÌNH <span class="badge badge-info pull-right" tal:content="ConfigAll/count"/></a>
+				<a tal:attributes="href '/app'">QUẢN TRỊ WEB</a>
 			</li>
-			<li class="nav-header">Support: 0903 062 068</li>
+			<li class="nav-header">Hỗ trợ: THANH BẢO - 0903 062 068</li>
 		</ul>
 	</div>
 	
