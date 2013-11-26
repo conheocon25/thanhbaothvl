@@ -1,6 +1,6 @@
 <?php
 namespace MVC\Mapper;
-
+use MVC\Library\Encrypted;
 require_once( "mvc/base/Mapper.php" );
 class User extends Mapper implements \MVC\Domain\UserFinder {
 
@@ -43,7 +43,7 @@ class User extends Mapper implements \MVC\Domain\UserFinder {
     protected function doInsert( \MVC\Domain\Object $object ) {
         $values = array(  
 			$object->getUser(), 
-			$object->getPass(),	
+			$this->createPass($object->getPass()),	
 			$object->getGender(),	
 			$object->getNote(),
 			$object->getType()
@@ -55,8 +55,8 @@ class User extends Mapper implements \MVC\Domain\UserFinder {
     
     protected function doUpdate( \MVC\Domain\Object $object ) {
         $values = array( 
-			$object->getUser(), 
-			$object->getPass(),			
+			$object->getUser(), 			
+			$this->createPass($object->getPass()),
 			$object->getGender(),			
 			$object->getNote(),
 			$object->getType(),
@@ -76,15 +76,17 @@ class User extends Mapper implements \MVC\Domain\UserFinder {
         return $this->selectAllStmt;
     }
 		
+	function createPass($pass) {
+		$mEncrypt = new Encrypted();	
+		return $mEncrypt->setData($pass);		
+	}
+	
 	function check($name, $pass) {
-		//$repass = hash("sha512", "54321ktth.com12345".$pass,false);
-		$values = array( $name, $pass);	
+		$repass = $this->createPass($pass);
+		$values = array( $name, $repass);	
         $this->checkStmt->execute( $values );
         $result = $this->checkStmt->fetchAll();
 		return $result[0]['id'];
     }
-	function createPass($pass) {
-		return hash("sha512", "54321ktth.com12345".$pass,false);
-	}
 }
 ?>

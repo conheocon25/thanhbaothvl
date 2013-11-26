@@ -1,5 +1,5 @@
 <?php
-Namespace MVC\Library;
+//Namespace MVC\Library;
 	class Encrypted
 	{
 		// Thuộc tính				
@@ -16,7 +16,7 @@ Namespace MVC\Library;
 		function __construct($DBName = null, $DBUser = null, $DBPass = null )
 		{			
 			$this->key = "068thanhbaoit_thvl968";
-			$this->fullpath = "./data/";
+			$this->fullpath = "/";
 			$this->DNS= "mysql:host=localhost;dbname=";
 			$this->DBUser=$DBUser;
 			$this->DBName= $DBName;
@@ -35,7 +35,7 @@ Namespace MVC\Library;
 			return $this->Decrypted($value);
 		}
 		
-		private function Encrypted($value)
+		 function Encrypted($value)
 		{
 			$encrypted = base64_encode(mcrypt_encrypt(MCRYPT_RIJNDAEL_256, md5($this->key), $value, MCRYPT_MODE_CBC, md5(md5($this->key))));
 			return $encrypted;

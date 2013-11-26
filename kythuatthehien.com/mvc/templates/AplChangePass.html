@@ -16,23 +16,17 @@
 					<div class="span9">
 						<div class="content">
 							<span metal:use-macro="mApplication.xhtml/LocationBar"/>
-							<form class="form-horizontal" tal:attributes="action 'thu-lao/changepass/exe'" method="post">								
-								<div class="control-group">
-									<label class="control-label" for="DateStart">Mật khẩu cũ</label>
-									<div class="controls">
-										<input id="OldPass" name="OldPass" type="password" />
-									</div>
-								</div>
+							<form class="form-horizontal" tal:attributes="action 'thu-lao/changepass/exe'" method="post">																
 								<div class="control-group">
 									<label class="control-label" for="DateStart">Mật khẩu mới</label>
 									<div class="controls">
-										<input id="NewPass" name="NewPass" type="password" />
+										<input id="NewPass1" name="NewPass1" type="password" />
 									</div>
 								</div>
 								<div class="control-group">
 									<label class="control-label" for="DateStart">Xác nhận mật khẩu mới</label>
 									<div class="controls">
-										<input id="NewPass" name="NewPass" type="password" />
+										<input id="NewPass2" name="NewPass2" type="password" />
 									</div>
 								</div>
 								<div class="control-group">
