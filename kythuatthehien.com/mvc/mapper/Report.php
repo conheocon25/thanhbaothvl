@@ -82,15 +82,15 @@ class Report extends Mapper implements \MVC\Domain\ReportFinder{
 	
 	function findTop( $values ){
         $this->findTopStmt->execute( $values );
-        return new CourseCollection( $this->findTopStmt->fetchAll(), $this);
+        return new ReportCollection( $this->findTopStmt->fetchAll(), $this);
     }
 	function findByYear( $values ){
         $this->findByYearStmt->execute( $values );
-        return new CourseCollection( $this->findByYearStmt->fetchAll(), $this);
+        return new ReportCollection( $this->findByYearStmt->fetchAll(), $this);
     }
 	function findByNear( $values ){
         $this->findByNearStmt->execute( $values );
-        return new CourseCollection( $this->findByNearStmt->fetchAll(), $this);
+        return new ReportCollection( $this->findByNearStmt->fetchAll(), $this);
     }
 	
 		
@@ -99,7 +99,7 @@ class Report extends Mapper implements \MVC\Domain\ReportFinder{
 		$this->findByPageStmt->bindValue(':start', ((int)($values[1])-1)*(int)($values[2]), \PDO::PARAM_INT);
 		$this->findByPageStmt->bindValue(':max', (int)($values[2]), \PDO::PARAM_INT);
 		$this->findByPageStmt->execute();
-        return new CourseCollection( $this->findByPageStmt->fetchAll(), $this );
+        return new ReportCollection( $this->findByPageStmt->fetchAll(), $this );
     }
 }
 ?>

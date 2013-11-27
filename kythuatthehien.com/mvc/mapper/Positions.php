@@ -10,7 +10,7 @@ class Positions extends Mapper implements \MVC\Domain\PositionsFinder {
                             "select id, name, count, note from ktth_positions");
         $this->selectStmt = self::$PDO->prepare( 
                             "select id, name, count, note from ktth_positions where id=?");
-		$this->findByStmt = self::$PDO->prepare( 
+		$this->findByNameStmt = self::$PDO->prepare( 
                             "select id, name, count, note from ktth_positions where name=?");
         $this->updateStmt = self::$PDO->prepare( 
 							"insert into ktth_positions (name, count, note ) 
@@ -63,9 +63,9 @@ class Positions extends Mapper implements \MVC\Domain\PositionsFinder {
         return $this->deleteStmt->execute( $values );
     }
 	
-	function findBy($values) {
-		$this->findByStmt->execute($values);
-        return new HeadNetworkCollection( $this->findByStmt->fetchAll(), $this );
+	function findByName($values) {
+		$this->findByNameStmt->execute($values);
+        return new PositionsCollection( $this->findByNameStmt->fetchAll(), $this );
     }
     function selectStmt() {
         return $this->selectStmt;

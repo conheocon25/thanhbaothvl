@@ -104,15 +104,23 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
 		$this->findByEmployeePageStmt->bindValue(':start', ((int)($values[3])-1)*(int)($values[4]), \PDO::PARAM_INT);
 		$this->findByEmployeePageStmt->bindValue(':max', (int)($values[4]), \PDO::PARAM_INT);
 		$this->findByEmployeePageStmt->execute();
-        return new NewsCollection( $this->findByEmployeePageStmt->fetchAll(), $this );
+        return new SalarydailyCollection( $this->findByEmployeePageStmt->fetchAll(), $this );
     }
-	
+	//$statement->bindParam (":date", strtotime (date ("Y-m-d H:i:s")), PDO::PARAM_STR);
 	function findByEmployee( $values ) {
 		$this->findByEmployeeStmt->bindValue(':id_employee', $values[0], \PDO::PARAM_INT);
 		$this->findByEmployeeStmt->bindValue(':mMonth', $values[1], \PDO::PARAM_INT);
 		$this->findByEmployeeStmt->bindValue(':mYear', $values[2], \PDO::PARAM_INT);
 		$this->findByEmployeeStmt->execute();
-        return new NewsCollection( $this->findByEmployeeStmt->fetchAll(), $this );
+        return new SalarydailyCollection( $this->findByEmployeeStmt->fetchAll(), $this );
+    }
+	
+	function findByEmployeeByTime( $values ) {
+		$this->findByEmployeeByTimeStmt->bindValue(':id_employee', $values[0], \PDO::PARAM_INT);
+		$this->findByEmployeeByTimeStmt->bindValue(':mDateStart', strtotime ( $values[1] ("Y-m-d H:i:s")) , \PDO::PARAM_STR);
+		$this->findByEmployeeByTimeStmt->bindValue(':mDateEnd', strtotime ( $values[2] ("Y-m-d H:i:s"))  , \PDO::PARAM_INT);
+		$this->findByEmployeeByTimeStmt->execute();
+        return new SalarydailyCollection( $this->findByEmployeeByTimeStmt->fetchAll(), $this );
     }
 	
 	function findByCateroryPage( $values ) {
@@ -122,7 +130,7 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
 		$this->findByCateroryPageStmt->bindValue(':start', ((int)($values[3])-1)*(int)($values[4]), \PDO::PARAM_INT);
 		$this->findByCateroryPageStmt->bindValue(':max', (int)($values[4]), \PDO::PARAM_INT);
 		$this->findByCateroryPageStmt->execute();
-        return new NewsCollection( $this->findByCateroryPageStmt->fetchAll(), $this );
+        return new SalarydailyCollection( $this->findByCateroryPageStmt->fetchAll(), $this );
     }
 	
 	function findByCaterory( $values ) {
@@ -130,7 +138,7 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
 		$this->findByCateroryStmt->bindValue(':mMonth', $values[1], \PDO::PARAM_INT);
 		$this->findByCateroryStmt->bindValue(':mYear', $values[2], \PDO::PARAM_INT);		
 		$this->findByCateroryStmt->execute();
-        return new NewsCollection( $this->findByCateroryStmt->fetchAll(), $this );
+        return new SalarydailyCollection( $this->findByCateroryStmt->fetchAll(), $this );
     }
 	
     function selectStmt() {
