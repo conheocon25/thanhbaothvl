@@ -5,6 +5,7 @@ require_once( "mvc/base/domain/DomainObject.php" );
 class Report extends Object{
 
     private $Id;
+    private $IdUser;
 	private $Name;
 	private $DateStart;
 	private $DateEnd;
@@ -13,16 +14,21 @@ class Report extends Object{
 	//-------------------------------------------------------------------------------
 	//ACCESSING MEMBER PROPERTY
 	//-------------------------------------------------------------------------------
-    function __construct( $Id=null, $Name=Null, $DateStart=null, $DateEnd=null, $Description=null ){
-		$this->Id = $Id;$this->Name = $Name;
+    function __construct( $Id=null, $IdUser=Null, $Name=Null, $DateStart=null, $DateEnd=null, $Description=null ){
+		$this->Id = $Id;
+		$this->IdUser = $IdUser;
+		$this->Name = $Name;
 		$this->DateStart = $DateStart;
 		$this->DateEnd = $DateEnd;
 		$this->Description = $Description;
 		parent::__construct( $Id );
 	}
-    function getId() {return $this->Id;}	
-	function getIdPrint(){return "e" . $this->getId();}	
-		
+    function getId() {return $this->Id;}	   	
+	function getIdPrint(){return "e" . $this->getId();}
+	
+	function getIdUser() {return $this->IdUser;}	
+	function setIdUser( $IdUser ){$this->IdUser = $IdUser;$this->markDirty();}  
+	
 	function setName( $Name ){$this->Name = $Name;$this->markDirty();}   
 	function getName( ) {return $this->Name;}
 		
@@ -55,8 +61,8 @@ class Report extends Object{
 	//-------------------------------------------------------------------------------
 	//GET LISTs
 	//-------------------------------------------------------------------------------
-	function getLessions(){
-		$mCL = new \MVC\Mthu-laoer\reportLession();
+	function getDepartment(){
+		$mCL = new \MVC\thu-lao\reportLession();
 		$CLs = $mCL->findByreport( array($this->getId()) );
 		return $CLs;
 	}
@@ -67,6 +73,10 @@ class Report extends Object{
 	//DEFINE URL
 	//-------------------------------------------------------------------------------
 	
+	
+	function getURLReportUser(){return "/thu-lao/report/".$this->getId()."/print/user";}
+	function getURLReportDepartment(){return "/thu-lao/report/".$this->getId()."/print/department";}
+	function getURLReportAll(){return "/thu-lao/report/".$this->getId()."/print/all";}
 	
 	function getURLUpdLoad(){return "/thu-lao/report/".$this->getId()."/upd/load";}
 	function getURLUpdExe(){return "/thu-lao/report/".$this->getId()."/upd/exe";}

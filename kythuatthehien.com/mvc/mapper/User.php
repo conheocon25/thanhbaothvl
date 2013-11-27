@@ -7,14 +7,14 @@ class User extends Mapper implements \MVC\Domain\UserFinder {
     function __construct() {
         parent::__construct();
         $this->selectAllStmt = self::$PDO->prepare( 
-                            "select id, user, pass, gender, note, type from ktth_user");
+                            "select id, id_position, user, pass, gender, note, type from ktth_user");
         $this->selectStmt = self::$PDO->prepare( 
-                            "select id, user, pass, gender, note, type from ktth_user where id=?");
+                            "select id, id_position, user, pass, gender, note, type from ktth_user where id=?");
         $this->updateStmt = self::$PDO->prepare( 
-                            "update ktth_user set user=?, pass=?,gender=?, note=?, type=? where id=?");
+                            "update ktth_user set id_position=? , user=?, pass=?,gender=?, note=?, type=? where id=?");
         $this->insertStmt = self::$PDO->prepare( 
-                            "insert into ktth_user (user, pass, gender, note, type ) 
-							values( ?, ?, ?, ?, ?)");
+                            "insert into ktth_user (id_position, user, pass, gender, note, type ) 
+							values( ?, ?, ?, ?, ?, ?)");
 		$this->deleteStmt = self::$PDO->prepare( 
                             "delete from ktth_user where id=?");
 		$this->checkStmt = self::$PDO->prepare( 
@@ -27,6 +27,7 @@ class User extends Mapper implements \MVC\Domain\UserFinder {
     protected function doCreateObject( array $array ) {		
         $obj = new \MVC\Domain\User( 
 			$array['id'],  
+			$array['id_position'], 
 			$array['user'], 
 			$array['pass'],				
 			$array['gender'],	
@@ -42,6 +43,7 @@ class User extends Mapper implements \MVC\Domain\UserFinder {
 
     protected function doInsert( \MVC\Domain\Object $object ) {
         $values = array(  
+			$object->getIdPosition(), 
 			$object->getUser(), 
 			$this->createPass($object->getPass()),	
 			$object->getGender(),	
@@ -55,6 +57,7 @@ class User extends Mapper implements \MVC\Domain\UserFinder {
     
     protected function doUpdate( \MVC\Domain\Object $object ) {
         $values = array( 
+			$object->getIdPosition(), 
 			$object->getUser(), 			
 			$this->createPass($object->getPass()),
 			$object->getGender(),			

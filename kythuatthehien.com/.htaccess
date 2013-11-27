@@ -102,6 +102,9 @@ RewriteRule ^thu-lao/report/([a-z0-9]+)/upd/load$ 					?cmd=AplReportUpdLoad&IdR
 RewriteRule ^thu-lao/report/([a-z0-9]+)/upd/exe$ 					?cmd=AplReportUpdExe&IdReport=$1 [L]
 RewriteRule ^thu-lao/report/([a-z0-9]+)/del/load$ 					?cmd=AplReportDelLoad&IdReport=$1 [L]
 RewriteRule ^thu-lao/report/([a-z0-9]+)/del/exe$ 					?cmd=AplReportDelExe&IdReport=$1 [L]
+RewriteRule ^thu-lao/report/([a-z0-9]+)/print/user$ 				?cmd=AplReportUser&IdReport=$1 [L]
+RewriteRule ^thu-lao/report/([a-z0-9]+)/print/department$ 			?cmd=AplReportDepartment&IdReport=$1 [L]
+RewriteRule ^thu-lao/report/([a-z0-9]+)/print/all$ 					?cmd=AplReportAll&IdReport=$1 [L]
 
 RewriteRule ^thu-lao/manager$ 										?cmd=AplManager [L]
 RewriteRule ^thu-lao/manager/video$ 								?cmd=AplManagerVideo [L]

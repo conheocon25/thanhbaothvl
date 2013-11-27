@@ -39,7 +39,9 @@
 										</td>
 										<td tal:content="Report/getDateStartPrint" />
 										<td tal:content="Report/getDateEndPrint" />
-										<td tal:content="" />
+										<td >
+											<a tal:attributes="href Report/getURLReportUser"><span class="icon-remove"/></a>	
+										</td>
 										<td>
 											<a tal:attributes="href Report/getURLDelLoad"><span class="icon-remove"/></a>
 										</td>
@@ -48,7 +50,7 @@
 								<tfoot>
 									<tr>
 										<td colspan="2">
-											<a class="btn" tal:attributes="href string:thu-lao/">
+											<a class="btn" tal:attributes="href 'thu-lao/report/ins/load'">
 												<span class="icon-plus"/> Thêm mới
 											</a>
 										</td>										

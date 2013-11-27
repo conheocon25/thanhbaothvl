@@ -86,13 +86,13 @@
 		<ul class="nav nav-list config-number" ><!-- tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isAdmin()"> -->
 			<li class="nav-header">CHỨC NĂNG</li>
 			<li tal:attributes="class php:ActiveAdmin=='Reward'?'active':'disable'">
-				<a tal:attributes="href '/thu-lao/reward'">NHẬP ĐIỂM <span class="badge badge-info pull-right" tal:content="''"/></a>
+				<a tal:attributes="href '/thu-lao/reward'">NHẬP ĐIỂM THÙ LAO<span class="badge badge-info pull-right" tal:content="''"/></a>
 			</li>				
 			<li tal:attributes="class php:ActiveAdmin=='Report'?'active':'disable'">
-				<a tal:attributes="href '/thu-lao/report'">THÔNG KÊ <span class="badge badge-info pull-right" tal:content="''"/></a>
+				<a tal:attributes="href '/thu-lao/report'">THÔNG KÊ ĐIỂM THÙ LAO<span class="badge badge-info pull-right" tal:content="''"/></a>
 			</li>			
 			<li tal:attributes="class php:ActiveAdmin=='Manager'?'active':'disable'">
-				<a tal:attributes="href '/thu-lao/manager'">QUẢN LÝ<span class="badge badge-info pull-right" tal:content="''"/></a>
+				<a tal:attributes="href '/thu-lao/manager'">QUẢN LÝ DANH MỤC<span class="badge badge-info pull-right" tal:content="''"/></a>
 			</li>
 			<li tal:attributes="class php:ActiveAdmin=='ChangePass'?'active':'disable'">
 				<a tal:attributes="href '/thu-lao/changepass'">ĐỔI MẬT KHẨU <span class="badge badge-info pull-right" /></a>

@@ -5,14 +5,16 @@ require_once( "mvc/base/domain/DomainObject.php" );
 class User extends Object{
 
     private $Id;
+    private $IdPosition;
 	private $User;	
     private $Pass;
 	private $Gender;
 	private $Note;
 	private $Type;
 	/*Hàm khởi tạo và thiết lập các thuộc tính*/
-    function __construct( $Id=null, $User=null, $Pass=null, $Gender=null, $Note=null, $Type=null ) {
+    function __construct( $Id=null, $IdPosition=null, $User=null, $Pass=null, $Gender=null, $Note=null, $Type=null ) {
         $this->Id = $Id;
+        $this->IdPosition = $IdPosition;
 		$this->User = $User;
 		$this->Pass = $Pass;		
 		$this->Gender = $Gender;
@@ -30,6 +32,14 @@ class User extends Object{
     }
     function getPass( ) {
         return $this->Pass;
+    } 
+	
+	function setIdPosition( $IdPosition ) {
+        $this->IdPosition = $IdPosition;
+        $this->markDirty();
+    }
+    function getIdPosition( ) {
+        return $this->IdPosition;
     }
 	
 	function setType( $Type ) {
@@ -79,10 +89,9 @@ class User extends Object{
 		}
 		return false;
     }
-	function isAdmin(){if ($this->getType()==4)return true;return false;}	
-	function isViewer(){if ($this->getType()==3)return true;return false;}	
-	function isManager(){if ($this->getType()==2)return true;return false;}	
-	function isSeller(){	if ($this->getType()==1)return true;return false;}
+	function isAdmin(){if ($this->getType()==4)return true;return false;}		
+	function isManager(){if ($this->getType()>=3)return true;return false;}	
+	function isUser(){	if ($this->getType()==0)return true;return false;}
 	
 	function setApp( $App ){$this->App = $App;$this->markDirty();}
 	function getApp($IdApp=null){return $this->App;}	

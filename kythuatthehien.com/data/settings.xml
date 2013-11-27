@@ -115,6 +115,11 @@
 		<!-- APL.REPORT																-->
 		<!-- ============================================================================== -->
 		<command name="AplReport"><view>AplReport</view></command>
+		
+		<command name="AplReportUser"><view>AplReportUser</view></command>
+		<command name="AplReportDepartment"><view>AplReportDepartment</view></command>
+		<command name="AplReportAll"><view>AplReportAll</view></command>
+		
 		<command name="AplReportInsLoad"><view>AplReportInsLoad</view></command>
 		<command name="AplReportInsExe"><view>AplReportInsExe</view><status value="CMD_OK"><forward>AplReport</forward></status></command>		
 		<command name="AplReportUpdLoad"><view>AplReportUpdLoad</view></command>

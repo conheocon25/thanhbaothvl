@@ -10,14 +10,14 @@ class Report extends Mapper implements \MVC\Domain\ReportFinder{
 		
 		$selectAllStmt = sprintf("select * from %s ORDER BY date_start DESC", $tblReport);
 		$selectStmt = sprintf("select *  from %s where id=?", $tblReport);
-		$updateStmt = sprintf("update %s set name=?, date_start=?, date_end=?, description=? where id=?", $tblReport);
-		$insertStmt = sprintf("insert into %s ( name, date_start, date_end, description) values(?, ?, ?, ?)", $tblReport);
+		$updateStmt = sprintf("update %s set iduser=?, name=?, date_start=?, date_end=?, description=? where id=?", $tblReport);
+		$insertStmt = sprintf("insert into %s ( iduser, name, date_start, date_end, description) values(?, ?, ?, ?, ?)", $tblReport);
 		$deleteStmt = sprintf("delete from %s where id=?", $tblReport);
 		$findTopStmt = sprintf("select *  from %s order by date_end desc limit 1", $tblReport);
 		$findByYearStmt = sprintf("select *  from %s where year(date_end)=? order by date_end desc", $tblReport);
 		$findByNearStmt = sprintf("select *  from %s where date_end >= NOW( ) AND date_start <= NOW( )", $tblReport);
 		
-		$findByPageStmt = sprintf("SELECT * FROM  %s LIMIT :start,:max", $tblReport);
+		$findByPageStmt = sprintf("SELECT * FROM  %s where iduser=:IdUser LIMIT :start,:max", $tblReport);
 				
         $this->selectAllStmt = self::$PDO->prepare($selectAllStmt);
         $this->selectStmt = self::$PDO->prepare($selectStmt);
@@ -37,6 +37,7 @@ class Report extends Mapper implements \MVC\Domain\ReportFinder{
     protected function doCreateObject( array $array ) {
         $obj = new \MVC\Domain\Report( 
 			$array['id'],			
+			$array['iduser'],
 			$array['name'],
 			$array['date_start'],
 			$array['date_end'],
@@ -51,7 +52,8 @@ class Report extends Mapper implements \MVC\Domain\ReportFinder{
 
     protected function doInsert( \MVC\Domain\Object $object ) {
         $values = array(
-			$object->getName(),
+			$object->getIdUser(),
+			$object->getName(),			
 			$object->getDateStart(),
 			$object->getDateEnd(),
 			$object->getDescription()
@@ -62,7 +64,8 @@ class Report extends Mapper implements \MVC\Domain\ReportFinder{
     }
     
     protected function doUpdate( \MVC\Domain\Object $object ) {
-        $values = array( 			
+        $values = array( 		
+			$object->getIdUser(),		
 			$object->getName(),
 			$object->getDateStart(),
 			$object->getDateEnd(),
@@ -92,8 +95,9 @@ class Report extends Mapper implements \MVC\Domain\ReportFinder{
 	
 		
 	function findByPage( $values ){
-		$this->findByPageStmt->bindValue(':start', ((int)($values[0])-1)*(int)($values[1]), \PDO::PARAM_INT);
-		$this->findByPageStmt->bindValue(':max', (int)($values[1]), \PDO::PARAM_INT);
+		$this->findByPageStmt->bindValue(':IdUser', (int)($values[0]), \PDO::PARAM_INT);
+		$this->findByPageStmt->bindValue(':start', ((int)($values[1])-1)*(int)($values[2]), \PDO::PARAM_INT);
+		$this->findByPageStmt->bindValue(':max', (int)($values[2]), \PDO::PARAM_INT);
 		$this->findByPageStmt->execute();
         return new CourseCollection( $this->findByPageStmt->fetchAll(), $this );
     }
