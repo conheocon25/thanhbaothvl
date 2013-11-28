@@ -19,32 +19,38 @@
 							<table class="table table-striped table-hover">
 								<thead>
 									<tr>
-										<th width="32px">STT</th>										
-										<th align="left">Báo cáo</th>
-										<th align="left">Từ ngày</th>
-										<th width="left">Đến Ngày</th>
-										<th align="left">Xuất In</th>										
-										<th width="30px">XÓA</th>
+										<th width="35px">STT</th>										
+										<th align="center">Báo cáo</th>
+										<th align="center">Từ ngày</th>
+										<th width="center">Đến Ngày</th>										
+										<th align="center" >Tồ CM</th>											
+										<th align="center" >Cá Nhân</th>																													
+										<th align="center" width="35px">XÓA</th>																		
 									</tr>
 								</thead>
 								<tbody>
 									<tr tal:repeat="Report Reports">
-										<td width="32" align="center">
+										<td width="35px" align="center">
 											<div tal:content="repeat/Report/number" />
 										</td>
-										<td>
+										<td align="left">
 											<a tal:attributes="href Report/getURLUpdLoad">
 												<div tal:content="Report/getName" />
 											</a>
 										</td>
-										<td tal:content="Report/getDateStartPrint" />
-										<td tal:content="Report/getDateEndPrint" />
-										<td >
-											<a tal:attributes="href Report/getURLReportUser"><span class="icon-print"/></a>	
+										<td align="center" tal:content="Report/getDateStartPrint" />
+										<td align="center" tal:content="Report/getDateEndPrint" />
+										
+										<td align="center">
+											<a tal:attributes="href Report/getURLReportDepartment" target="blank"><span  class="icon-print"/></a>	
 										</td>
-										<td>
+										<td align="center">
+											<a tal:attributes="href Report/getURLReportUser" target="blank"><span  class="icon-print"/></a>	
+										</td>
+										
+										<td align="center" width="35px">
 											<a tal:attributes="href Report/getURLDelLoad"><span class="icon-remove"/></a>
-										</td>
+										</td>										
 									</tr>
 								</tbody>
 								<tfoot>
@@ -54,7 +60,7 @@
 												<span class="icon-plus"/> Thêm mới
 											</a>
 										</td>										
-									</tr>
+									</tr>									
 								</tfoot>
 							</table>					
 							

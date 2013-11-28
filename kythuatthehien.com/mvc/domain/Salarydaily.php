@@ -107,6 +107,11 @@ class Salarydaily extends Object{
 		$Category = $mCategory->find( $this->Id_category );
 		return $Category;
 	}	
+
+	function getCountTechnique(){		
+		$Value = (($this->getCategory()->getFactory()) * $this->getCount());
+		return $Value;
+	}	
 	
     static function findAll() {
         $finder = self::getFinder( __CLASS__ ); 

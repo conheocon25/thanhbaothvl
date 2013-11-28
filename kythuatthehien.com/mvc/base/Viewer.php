@@ -40,22 +40,20 @@ class Viewer {
 	//Hỗ trợ template xuất ra dưới dạng HTML    
 	//-------------------------------------------------
 	function pdf(){
-				
-		$html = $this->html();
-		$pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
-				
-		$pdf->SetMargins(5, 15, 5);
-		$pdf->SetHeaderMargin(1);
+		$html = $this->html();		
+		$pdf = new \TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+		$pdf->SetMargins(5, 12, 5);
+		$pdf->SetHeaderMargin(1);	
 		$pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
-		$pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);	
+		$pdf->SetPrintHeader(false);
+		$pdf->SetPrintFooter(false);		
+		//$pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);			
 		$pdf->AddPage();
-		$pdf->SetFont('freeserif', 'N', 10);
-					
+		$pdf->SetFont('arial', 'N', 10);					
 		$pdf->writeHTML($html, true, false, true, false, '');
-		
-		$arr = split('[/\]', $this->Path);
-		
-		$pdf->Output(end($arr).".pdf", 'I');
+		$Out = $pdf->Output("BaocaoDiemTHuLao_Canhan.pdf", 'I');
+		unset($pdf);
+		return $Out;
 	}
 	function pdf1(){
 				

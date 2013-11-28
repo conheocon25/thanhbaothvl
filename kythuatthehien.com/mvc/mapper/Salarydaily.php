@@ -38,6 +38,11 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
 		$this->findByEmployeeStmt = self::$PDO->prepare(
 			"SELECT * FROM ktth_salarydaily			
 			WHERE id_employee=:id_employee and month(date_work) =:mMonth and year(date_work) =:mYear
+			ORDER BY date_work desc" );	
+		
+		$this->findByEmployeeByTimeStmt = self::$PDO->prepare(
+			"SELECT * FROM ktth_salarydaily			
+			WHERE id_employee=:id_employee and date_work between :mDateStart and :mDateEnd
 			ORDER BY date_work desc" );					
 		
     } 
@@ -117,8 +122,8 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
 	
 	function findByEmployeeByTime( $values ) {
 		$this->findByEmployeeByTimeStmt->bindValue(':id_employee', $values[0], \PDO::PARAM_INT);
-		$this->findByEmployeeByTimeStmt->bindValue(':mDateStart', strtotime ( $values[1] ("Y-m-d H:i:s")) , \PDO::PARAM_STR);
-		$this->findByEmployeeByTimeStmt->bindValue(':mDateEnd', strtotime ( $values[2] ("Y-m-d H:i:s"))  , \PDO::PARAM_INT);
+		$this->findByEmployeeByTimeStmt->bindValue(':mDateStart', $values[1] , \PDO::PARAM_STR);
+		$this->findByEmployeeByTimeStmt->bindValue(':mDateEnd', $values[2] , \PDO::PARAM_STR);
 		$this->findByEmployeeByTimeStmt->execute();
         return new SalarydailyCollection( $this->findByEmployeeByTimeStmt->fetchAll(), $this );
     }
