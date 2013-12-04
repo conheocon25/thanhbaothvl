@@ -27,6 +27,7 @@
 			//-------------------------------------------------------------			
 			
 				$CategoryProgrameAll = $mCategory->findAll();
+				
 				$CategoryNewsAll = $mCategoryNews->findAll();
 				$CategoryVideoAll = $mCategoryVideo->findAll();			
 				

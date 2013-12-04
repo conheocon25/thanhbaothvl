@@ -1,0 +1,5 @@
+[30-Oct-2013 16:29:40 Asia/Ho_Chi_Minh] Attempt to read property 'getURLUpdLoad' from NULL value in /home/spnsoft/public_html/minhtai/mvc/templates/SellingCustomerOrder.html line 20
+[30-Oct-2013 16:30:06 Asia/Ho_Chi_Minh] Attempt to read property 'getURLUpdLoad' from NULL value in /home/spnsoft/public_html/minhtai/mvc/templates/SellingCustomerOrder.html line 20
+[30-Oct-2013 16:38:35 Asia/Ho_Chi_Minh] Attempt to read property 'getURLUpdLoad' from NULL value in /home/spnsoft/public_html/minhtai/mvc/templates/SellingCustomerOrder.html line 20
+[06-Nov-2013 10:48:27 Asia/Ho_Chi_Minh] Attempt to read property 'getURLUpdLoad' from NULL value in /home/spnsoft/public_html/minhtai/mvc/templates/SellingCustomerOrder.html line 20
+[02-Dec-2013 15:44:10 Asia/Ho_Chi_Minh] Attempt to read property 'getURLUpdLoad' from NULL value in /home/spnsoft/public_html/minhtai/mvc/templates/SellingCustomerOrder.html line 20
