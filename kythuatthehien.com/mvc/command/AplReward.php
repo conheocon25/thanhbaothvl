@@ -7,7 +7,7 @@
 			//THAM SỐ TOÀN CỤC
 			//-------------------------------------------------------------						
 			$Session = \MVC\Base\SessionRegistry::instance();
-									
+			$User = $Session->getCurrentUser();								
 			//-------------------------------------------------------------
 			//THAM SỐ GỬI ĐẾN
 			//-------------------------------------------------------------
@@ -26,7 +26,7 @@
 			//XỬ LÝ CHÍNH
 			//-------------------------------------------------------------			
 			
-				$CategoryProgrameAll = $mCategory->findAll();
+				$CategoryProgrameAll = $mCategory->findByPosition($User->getIdPosition());
 				
 				$CategoryNewsAll = $mCategoryNews->findAll();
 				$CategoryVideoAll = $mCategoryVideo->findAll();			

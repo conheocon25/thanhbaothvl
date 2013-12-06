@@ -11,22 +11,22 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
         $this->selectStmt = self::$PDO->prepare( 
                             "select * from ktth_salarydaily where id=?");
         $this->updateStmt = self::$PDO->prepare( 
-                            "update ktth_salarydaily set Id_category=?, id_employee=?, content=?, count=?, date_work=?, date_note=?, note=? where id=?");
+                            "update ktth_salarydaily set id_category=?, id_employee=?, content=?, count=?, date_work=?, date_note=?, note=? where id=?");
         $this->insertStmt = self::$PDO->prepare( 
-                            "insert into ktth_salarydaily ( Id_category, id_employee, content, count, date_work, date_note, note ) 
+                            "insert into ktth_salarydaily ( id_category, id_employee, content, count, date_work, date_note, note ) 
 							values( ?, ?, ?, ?, ?, ? , ?)");
 		$this->deleteStmt = self::$PDO->prepare( 
                             "delete from ktth_salarydaily where id=?");
 							
 		$this->findByCateroryPageStmt = self::$PDO->prepare(
 			"SELECT * FROM ktth_salarydaily			
-			WHERE Id_category=:id_category and month(date_work) =:mMonth and year(date_work) =:mYear
+			WHERE id_category=:id_category and month(date_work) =:mMonth and year(date_work) =:mYear
 			ORDER BY date_work desc			
 			LIMIT :start,:max" );
 			
 		$this->findByCateroryStmt = self::$PDO->prepare(
 			"SELECT * FROM ktth_salarydaily			
-			WHERE Id_category=:id_category and month(date_work) =:mMonth and year(date_work) =:mYear
+			WHERE id_category=:id_category and month(date_work) =:mMonth and year(date_work) =:mYear
 			ORDER BY date_work desc" );
 			
 		$this->findByEmployeePageStmt = self::$PDO->prepare(
@@ -40,10 +40,15 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
 			WHERE id_employee=:id_employee and month(date_work) =:mMonth and year(date_work) =:mYear
 			ORDER BY date_work desc" );	
 		
-		$this->findByEmployeeByTimeStmt = self::$PDO->prepare(
+		$this->findEmployeeByTimeStmt = self::$PDO->prepare(
 			"SELECT * FROM ktth_salarydaily			
 			WHERE id_employee=:id_employee and date_work between :mDateStart and :mDateEnd
-			ORDER BY date_work desc" );					
+			ORDER BY date_work desc" );	
+			
+		$this->findByPositionStmt = self::$PDO->prepare(
+			"SELECT ktth_salarydaily.id, ktth_salarydaily.id_category, ktth_salarydaily.id_employee, ktth_salarydaily.content, ktth_salarydaily.count, ktth_salarydaily.date_work, ktth_salarydaily.date_note, ktth_salarydaily.note FROM ktth_salarydaily , ktth_category			
+			WHERE ktth_salarydaily.id_category=ktth_category.id and ktth_category.id_position=:id_position and ktth_salarydaily.id_employee=:id_employee and date_work between :mDateStart and :mDateEnd"
+			);					
 		
     } 
     function getCollection( array $raw ) {
@@ -70,7 +75,7 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
 
     protected function doInsert( \MVC\Domain\Object $object ) {
         $values = array(  
-			$object->getId_category(),
+			$object->getid_category(),
 			$object->getId_employee(),
 			$object->getContent(),
 			$object->getCount(),
@@ -86,7 +91,7 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
     
     protected function doUpdate( \MVC\Domain\Object $object ) {
         $values = array( 
-			$object->getId_category(),
+			$object->getid_category(),
 			$object->getId_employee(),
 			$object->getContent(),
 			$object->getCount(),
@@ -121,11 +126,20 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
     }
 	
 	function findByEmployeeByTime( $values ) {
-		$this->findByEmployeeByTimeStmt->bindValue(':id_employee', $values[0], \PDO::PARAM_INT);
-		$this->findByEmployeeByTimeStmt->bindValue(':mDateStart', $values[1] , \PDO::PARAM_STR);
-		$this->findByEmployeeByTimeStmt->bindValue(':mDateEnd', $values[2] , \PDO::PARAM_STR);
-		$this->findByEmployeeByTimeStmt->execute();
-        return new SalarydailyCollection( $this->findByEmployeeByTimeStmt->fetchAll(), $this );
+		$this->findEmployeeByTimeStmt->bindValue(':id_employee', $values[0], \PDO::PARAM_INT);
+		$this->findEmployeeByTimeStmt->bindValue(':mDateStart', $values[1] , \PDO::PARAM_STR);
+		$this->findEmployeeByTimeStmt->bindValue(':mDateEnd', $values[2] , \PDO::PARAM_STR);
+		$this->findEmployeeByTimeStmt->execute();
+        return new SalarydailyCollection( $this->findEmployeeByTimeStmt->fetchAll(), $this );
+    }
+	
+	function findByPosition( $values ) {
+		$this->findByPositionStmt->bindValue(':id_position', $values[0], \PDO::PARAM_INT);
+		$this->findByPositionStmt->bindValue(':id_employee', $values[1], \PDO::PARAM_INT);
+		$this->findByPositionStmt->bindValue(':mDateStart', $values[2] , \PDO::PARAM_STR);
+		$this->findByPositionStmt->bindValue(':mDateEnd', $values[3] , \PDO::PARAM_STR);
+		$this->findByPositionStmt->execute();
+        return new SalarydailyCollection( $this->findByPositionStmt->fetchAll(), $this );
     }
 	
 	function findByCateroryPage( $values ) {

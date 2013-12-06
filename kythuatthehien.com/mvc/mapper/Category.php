@@ -17,6 +17,8 @@ class Category extends Mapper implements \MVC\Domain\CategoryFinder {
 							values( ?,  ? , ?)");
 		$this->deleteStmt = self::$PDO->prepare( 
                             "delete from ktth_category where id=?");
+		$this->selectByPositionStmt = self::$PDO->prepare( 
+                            "select id, id_position, name, factory from ktth_category where id_position=:id_position");
     } 
     function getCollection( array $raw ) {
         return new CategoryCollection( $raw, $this );
@@ -59,6 +61,12 @@ class Category extends Mapper implements \MVC\Domain\CategoryFinder {
 
 	protected function doDelete(array $values) {
         return $this->deleteStmt->execute( $values );
+    }
+	
+	function findByPosition( $values ) {
+		$this->selectByPositionStmt->bindValue(':id_position', $values, \PDO::PARAM_INT);			
+		$this->selectByPositionStmt->execute();
+        return new CategoryCollection( $this->selectByPositionStmt->fetchAll(), $this );
     }
 	
     function selectStmt() {

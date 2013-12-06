@@ -11,6 +11,10 @@ class User extends Object{
 	private $Gender;
 	private $Note;
 	private $Type;
+	
+	private $Apps;
+	private $Position;
+	
 	/*Hàm khởi tạo và thiết lập các thuộc tính*/
     function __construct( $Id=null, $IdPosition=null, $User=null, $Pass=null, $Gender=null, $Note=null, $Type=null ) {
         $this->Id = $Id;
@@ -92,16 +96,26 @@ class User extends Object{
 	function isAdmin(){if ($this->getType()==4)return true;return false;}		
 	function isManager(){if ($this->getType()>=3)return true;return false;}	
 	function isUser(){	if ($this->getType()==0)return true;return false;}
+	function getPosition(){
+		if (!isset($this->IdPosition)){
+			$mPositions = new \MVC\Mapper\Positions();
+			$this->Position = $mPositions->find(array($this->IdPosition));
+		}
+		return $this->Position;
+	}	
 	
-	function setApp( $App ){$this->App = $App;$this->markDirty();}
-	function getApp($IdApp=null){return $this->App;}	
 	function getApps(){
 		if (!isset($this->Apps)){
 			$mUserApp = new \MVC\Mapper\UserApp();
 			$this->Apps = $mUserApp->findBy(array($this->Id));
 		}
 		return $this->Apps;
-	}		
+	}
+	
+	
+	function setApp( $App ){$this->App = $App;$this->markDirty();}
+	function getApp($IdApp=null){return $this->App;}	
+		
 	function getNotSigned(){$mApp = new \MVC\Mapper\App();$Apps = $mApp->notSigned(array($this->Id));return $Apps;}
 		
 	function setDateCreate( $DateCreate){$this->DateCreate = $DateCreate;$this->markDirty();}	
