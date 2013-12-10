@@ -102,13 +102,6 @@ class User extends Object{
 		return $this->Position;
 	}
 	
-	function getPosition(){
-		if (!isset($this->IdPosition)){
-			$mPositions = new \MVC\Mapper\Positions();
-			$this->Position = $mPositions->find(array($this->IdPosition));
-		}
-		return $this->Position;
-	}	
 	
 	function isAdmin(){if ($this->getType()==4)return true;return false;}		
 	function isManager(){if ($this->getType()>=3)return true;return false;}	
