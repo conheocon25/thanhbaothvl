@@ -101,6 +101,11 @@ class Salarydaily extends Object{
 	function getURLRewardDeleteLoad(){return "/thu-lao/reward/delete/".$this->getId();}
 	function getURLRewardDeleteExe(){return "/thu-lao/reward/delete/".$this->getId()."/exe";}
 	
+	function getEmployee(){
+		$mEmployee = new \MVC\Mapper\User();
+		$Employee = $mEmployee->find( $this->Id_employee );
+		return $Employee;
+	}
 	
 	function getCategory(){
 		$mCategory = new \MVC\Mapper\Category();
