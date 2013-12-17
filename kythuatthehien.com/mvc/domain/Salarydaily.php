@@ -114,7 +114,7 @@ class Salarydaily extends Object{
 	}	
 
 	function getCountTechnique(){		
-		$Value = (($this->getCategory()->getFactory()) * $this->getCount());
+		$Value = (($this->getCategory()->getFactory()) * $this->getCount() * $this->getEmployee()->getRule());
 		return $Value;
 	}	
 	

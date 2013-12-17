@@ -1,7 +1,7 @@
 <?php
 namespace MVC\Domain;
 require_once( "mvc/base/domain/DomainObject.php" );
-
+use MVC\Library\Number;
 class User extends Object{
 
     private $Id;
@@ -11,12 +11,14 @@ class User extends Object{
 	private $Gender;
 	private $Note;
 	private $Type;
+	private $Rule;
 	
 	private $Apps;
 	private $Position;
+	private $NTotal;
 	
 	/*Hàm khởi tạo và thiết lập các thuộc tính*/
-    function __construct( $Id=null, $IdPosition=null, $User=null, $Pass=null, $Gender=null, $Note=null, $Type=null ) {
+    function __construct( $Id=null, $IdPosition=null, $User=null, $Pass=null, $Gender=null, $Note=null, $Type=null, $Rule=null ) {
         $this->Id = $Id;
         $this->IdPosition = $IdPosition;
 		$this->User = $User;
@@ -24,6 +26,7 @@ class User extends Object{
 		$this->Gender = $Gender;
 		$this->Note = $Note;
 		$this->Type = $Type;
+		$this->Rule = $Rule;
         parent::__construct( $Id );
     }
     function getId( ) {
@@ -83,6 +86,47 @@ class User extends Object{
         return $this->User;
     }
 	
+	function setRule( $Rule ) {
+        $this->Rule = $Rule;
+        $this->markDirty();
+    }
+	function getRule( ) {
+        return $this->Rule;
+    }
+	
+	function getRulePrint( ) {
+		if ($this->Rule == 5){
+			return 120;
+		}
+		if ($this->Rule == 4){
+			return 80;
+		}
+		if ($this->Rule == 2){
+			return 45;
+		}
+        return 120;
+    }
+	
+	function setNTotal( $NTotal ) {
+        $this->NTotal = $NTotal;
+        $this->markDirty();
+    }
+	function getNTotal( ) {		
+        return $this->NTotal;
+    }
+	
+	function getNTotalPrint( ) {
+		$Total = new \MVC\Library\Number($this->getNTotal());
+        return $Total;
+    }
+	
+	function getNTotalABC() {
+	
+		$Value = round((($this->getNTotal() / $this->getRulePrint() ) * 50), 2);
+		$Total1 = new \MVC\Library\Number($Value);
+        return $Total1;
+    }
+	
 	function getEmail( ) {
         return $this->User;
     }
@@ -94,11 +138,9 @@ class User extends Object{
 		return false;
     }
 	
-	function getPosition(){
-		if (!isset($this->IdPosition)){
+	function getPosition(){		
 			$mPositions = new \MVC\Mapper\Positions();
-			$this->Position = $mPositions->find(array($this->IdPosition));
-		}
+			$this->Position = $mPositions->find($this->IdPosition);		
 		return $this->Position;
 	}
 	

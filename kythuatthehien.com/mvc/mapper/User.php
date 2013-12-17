@@ -7,18 +7,21 @@ class User extends Mapper implements \MVC\Domain\UserFinder {
     function __construct() {
         parent::__construct();
         $this->selectAllStmt = self::$PDO->prepare( 
-                            "select id, id_position, user, pass, gender, note, type from ktth_user");
+                            "select id, id_position, user, pass, gender, note, type, rule from ktth_user");
         $this->selectStmt = self::$PDO->prepare( 
-                            "select id, id_position, user, pass, gender, note, type from ktth_user where id=?");
+                            "select id, id_position, user, pass, gender, note, type , rule from ktth_user where id=?");
         $this->updateStmt = self::$PDO->prepare( 
-                            "update ktth_user set id_position=? , user=?, pass=?,gender=?, note=?, type=? where id=?");
+                            "update ktth_user set id_position=? , user=?, pass=?,gender=?, note=?, type=?, rule=? where id=?");
         $this->insertStmt = self::$PDO->prepare( 
-                            "insert into ktth_user (id_position, user, pass, gender, note, type ) 
-							values( ?, ?, ?, ?, ?, ?)");
+                            "insert into ktth_user (id_position, user, pass, gender, note, type, rule ) 
+							values( ?, ?, ?, ?, ?, ?, ?)");
 		$this->deleteStmt = self::$PDO->prepare( 
                             "delete from ktth_user where id=?");
 		$this->checkStmt = self::$PDO->prepare( 
                             "select id from ktth_user where user=? and pass=?");
+							
+		$this->selectByPositionStmt = self::$PDO->prepare( 
+                            "select * from ktth_user where id_position=?");
     } 
     function getCollection( array $raw ) {
         return new UserCollection( $raw, $this );
@@ -32,7 +35,8 @@ class User extends Mapper implements \MVC\Domain\UserFinder {
 			$array['pass'],				
 			$array['gender'],	
 			$array['note'],
-			$array['type']
+			$array['type'],
+			$array['rule']
 		);
         return $obj;
     }
@@ -48,7 +52,8 @@ class User extends Mapper implements \MVC\Domain\UserFinder {
 			$this->createPass($object->getPass()),	
 			$object->getGender(),	
 			$object->getNote(),
-			$object->getType()
+			$object->getType(),
+			$object->getRule()
 		); 
         $this->insertStmt->execute( $values );
         $id = self::$PDO->lastInsertId();
@@ -63,6 +68,7 @@ class User extends Mapper implements \MVC\Domain\UserFinder {
 			$object->getGender(),			
 			$object->getNote(),
 			$object->getType(),
+			$object->getRule(),
 			$object->getId()
 		);		
         $this->updateStmt->execute( $values );
@@ -90,6 +96,11 @@ class User extends Mapper implements \MVC\Domain\UserFinder {
         $this->checkStmt->execute( $values );
         $result = $this->checkStmt->fetchAll();
 		return $result[0]['id'];
+    }
+	
+	function findByPosition( $values ){
+        $this->selectByPositionStmt->execute( $values );
+        return new UserCollection( $this->selectByPositionStmt->fetchAll(), $this);
     }
 }
 ?>

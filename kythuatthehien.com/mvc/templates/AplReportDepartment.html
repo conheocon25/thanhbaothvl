@@ -4,40 +4,27 @@
 			<td width="100%" align="center"><B>PHÒNG KỸ THUẬT THỀ HIỆN</B></td>
 		</tr>
 		<tr>			
-			<td width="100%" align="center"><B align="center" tal:content="Title" /></td>
+			<td width="100%" align="center"><B tal:content="User/getPosition/getName" /></td>
 		</tr>
 		<tr>			
 			<td width="100%" align="center">Từ <span  tal:content="Report/getDateStartPrint" /> đến <span  tal:content="Report/getDateEndPrint" /></td>
 		</tr>
-		<tr>			
-			<td width="100%" align="left">Họ và tên: <B align="left" tal:content="User/getNote" /></td>
-		</tr>
-		<tr>			
-			<td width="100%" align="left">ĐIỂM CM: <B align="left" tal:content="php:NTotal->formatCurrency()" /></td>
-		</tr>
-		<tr>			
-			<td width="100%" align="left">ĐIỂM ABC: <B align="left" tal:content="php:round(NTotal->formatCurrency()/240,2)" /></td>
-		</tr>		
-	</table>
-	<h5>BẢNG CHI TIẾT TỔ CHUYÊN MÔN</h5>
+						
+	</table>	
 	<table width="100%" border="1" cellpadding="2" style="border-style:solid;">
 		<tr >
-			<th width="5%"><B>STT</B></th>
-			<th width="10%" align="center"><B>NGÀY</B></th>
-			<th width="22%" align="center"><B>TÊN CHƯƠNG TRÌNH</B></th>
-			<th width="45%" align="center" ><B>NỘI DUNG</B></th>
-			<th width="5%" align="center"><B>SL</B></th>
-			<th width="5%" align="center"><B>HS</B></th>
-			<th width="8%" align="center"><B>ĐIỂM</B></th>
+			<th width="5%"><B>STT</B></th>			
+			<th width="60%" align="center"><B>HỌ VÀ TÊN</B></th>
+			<th width="10%" align="center" ><B>ĐIỂM CM</B></th>
+			<th width="10%" align="center"><B>ĐIỂM ABC</B></th>
+			<th width="10%" align="center"><B>ĐỊNH MỨC</B></th>			
 		</tr>
-		<tr tal:repeat="Salarydaily SalarydailyByTimes">
-			<td align="center" 	tal:content="repeat/Salarydaily/number" />
-			<td align="center" 	tal:content="Salarydaily/getDateWorkPrint" />
-			<td align="left" 	tal:content="Salarydaily/getCategory/getName" />
-			<td align="left" 	tal:content="structure Salarydaily/getContent" />
-			<td align="center" 	tal:content="Salarydaily/getCount" />
-			<td align="center" 	tal:content="Salarydaily/getCategory/getFactory" />
-			<td align="right" 	tal:content="Salarydaily/getCountTechnique" />
+		<tr tal:repeat="User Users">
+			<td align="center" 	tal:content="repeat/User/number" />
+			<td align="left" 	tal:content="User/getNote" />
+			<td align="right" 	tal:content="User/getNTotalPrint/formatCurrency" />			
+			<td align="right" 	tal:content="User/getNTotalABC/formatCurrency" />
+			<td align="right" 	tal:content="User/getRulePrint" />
 		</tr>		
 	</table>	
 </body>

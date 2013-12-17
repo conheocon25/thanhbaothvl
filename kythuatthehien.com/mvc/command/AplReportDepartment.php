@@ -14,27 +14,34 @@
 			//-------------------------------------------------------------
 			//MAPPER DỮ LIỆU
 			//-------------------------------------------------------------			
+			$mUser = new \MVC\Mapper\User();
 			$mReport = new \MVC\Mapper\Report();
 			$mSalarydaily = new \MVC\Mapper\Salarydaily();
+			
 			$Report = $mReport->find($IdReport);
-			$SalarydailyByTimes = $mSalarydaily->findByPosition(array($User->getIdPosition(), $User->getId(), $Report->getDateStart(), $Report->getDateEnd()));
+			$Users = $mUser->findByPosition(array($User->getIdPosition()));
+			
+			
 			//-------------------------------------------------------------
 			//XỬ LÝ CHÍNH
 			//-------------------------------------------------------------			
 			$Title = "TỔNG KẾT ĐIỂM THÙ LAO";
 						
 			
-				$Value = 0;				
-				
-				while ($SalarydailyByTimes->valid()){
-					$Salarydaily = $SalarydailyByTimes->current();															
+			$Value = 0;				
+			$CurUser = null;
+			$SalarydailyByTimes = null;
+			while ($Users->valid()){
+			
+					$CurUser = $Users->current();	
+					$Value = $mSalarydaily->SumPointEmployeeTime(array( $CurUser->getId(), $Report->getDateStart(), $Report->getDateEnd()));
+					//$Value = 45;
+					$CurUser->setNTotal($Value);
 					
-						$Value += $Salarydaily->getCountTechnique();
-										
-					$SalarydailyByTimes->next();
-				}
-		
-			$NTotal = new \MVC\Library\Number($Value);
+				$Users->next();
+			}
+			//$NTotal = new \MVC\Library\Number($Value);
+			
 			
 			$DateCurrent = "Vĩnh Long, ngày ".\date("d")." tháng ".\date("m")." năm ".\date("Y");
 			
@@ -45,8 +52,8 @@
 			$request->setProperty('SalarydailyByTimes', $SalarydailyByTimes);
 			$request->setProperty('DateCurrent', $DateCurrent);
 			$request->setProperty('User', $User);
-			$request->setProperty('Report', $Report);
-			$request->setObject('NTotal', $NTotal);			
+			$request->setProperty('Users', $Users);
+			$request->setProperty('Report', $Report);			
 		}
 	}
 ?>

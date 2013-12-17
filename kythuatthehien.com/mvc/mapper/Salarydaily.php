@@ -46,8 +46,15 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
 			ORDER BY date_work desc" );	
 			
 		$this->findByPositionStmt = self::$PDO->prepare(
-			"SELECT ktth_salarydaily.id, ktth_salarydaily.id_category, ktth_salarydaily.id_employee, ktth_salarydaily.content, ktth_salarydaily.count, ktth_salarydaily.date_work, ktth_salarydaily.date_note, ktth_salarydaily.note FROM ktth_salarydaily , ktth_category			
+			"SELECT ktth_salarydaily.id, ktth_salarydaily.id_category, ktth_salarydaily.id_employee, ktth_salarydaily.content, ktth_salarydaily.count, ktth_salarydaily.date_work, ktth_salarydaily.date_note, ktth_salarydaily.note 
+			FROM ktth_salarydaily , ktth_category			
 			WHERE ktth_salarydaily.id_category=ktth_category.id and ktth_category.id_position=:id_position and ktth_salarydaily.id_employee=:id_employee and date_work between :mDateStart and :mDateEnd"
+			);
+		
+		$this->findBySumPointEmployeeTimeStmt = self::$PDO->prepare(
+			"SELECT sum((select factory from ktth_category where id = `id_category`)* count * (select rule from ktth_user where id = `id_employee`))  
+			FROM `ktth_salarydaily` 
+			WHERE id_employee=:id_employee and date_work between :mDateStart and :mDateEnd"
 			);					
 		
     } 
@@ -131,6 +138,15 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
 		$this->findEmployeeByTimeStmt->bindValue(':mDateEnd', $values[2] , \PDO::PARAM_STR);
 		$this->findEmployeeByTimeStmt->execute();
         return new SalarydailyCollection( $this->findEmployeeByTimeStmt->fetchAll(), $this );
+    }
+	
+	function SumPointEmployeeTime( $values ) {
+		$this->findBySumPointEmployeeTimeStmt->bindValue(':id_employee', $values[0], \PDO::PARAM_INT);
+		$this->findBySumPointEmployeeTimeStmt->bindValue(':mDateStart', $values[1] , \PDO::PARAM_STR);
+		$this->findBySumPointEmployeeTimeStmt->bindValue(':mDateEnd', $values[2] , \PDO::PARAM_STR);
+		$this->findBySumPointEmployeeTimeStmt->execute();
+		$result = $this->findBySumPointEmployeeTimeStmt->fetchAll();
+		return $result[0][0];        
     }
 	
 	function findByPosition( $values ) {

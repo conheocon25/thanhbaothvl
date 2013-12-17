@@ -22,18 +22,8 @@
 			//XỬ LÝ CHÍNH
 			//-------------------------------------------------------------			
 			$Title = "TỔNG KẾT ĐIỂM THÙ LAO";
-						
 			
-				$Value = 0;				
-				
-				while ($SalarydailyByTimes->valid()){
-					$Salarydaily = $SalarydailyByTimes->current();															
-					
-						$Value += $Salarydaily->getCountTechnique();
-										
-					$SalarydailyByTimes->next();
-				}
-		
+			$Value = $mSalarydaily->SumPointEmployeeTime(array($User->getId(), $Report->getDateStart(), $Report->getDateEnd()));
 			$NTotal = new \MVC\Library\Number($Value);
 			
 			$DateCurrent = "Vĩnh Long, ngày ".\date("d")." tháng ".\date("m")." năm ".\date("Y");
