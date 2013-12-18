@@ -36,10 +36,10 @@
 					<div class="span9">
 						<div class="content">
 							<span metal:use-macro="mApplication.xhtml/LocationBar"/>								
-							<div class="control-group"> <b tal:content="User/getNote"/>						
-							 Điểm CM: <span tal:content="php:NTotal->formatCurrency()"/>							
-							 Điểm ABC: <span tal:content="php:NTotalABC->formatCurrency()"/>
-							 </div>							
+							<div style="color:blue;font-weight:36;" align="center" class="control-label"> <b tal:content="User/getNote"/> - Điểm CM: <b style="color:red;" tal:content="php:NTotal->formatCurrency()"/>							
+							  - Điểm ABC: <b style="color:red;" tal:content="php:NTotalABC->formatCurrency()"/>
+							</div>	
+							<hr />
 							<form class="form-horizontal" tal:attributes="action 'thu-lao/reward/ins/exe'" method="post">														
 								<div class="control-group">
 									<label class="control-label" for="IdCategory">Tên Chương trình</label>

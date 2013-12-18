@@ -21,7 +21,7 @@
 			//-------------------------------------------------------------
 			//XỬ LÝ CHÍNH
 			//-------------------------------------------------------------			
-			$Title = "TỔNG KẾT ĐIỂM THÙ LAO";
+			$Title = "TỔNG KẾT ĐIỂM CHUYÊN MÔN";
 			
 			$Value = $mSalarydaily->SumPointEmployeeTime(array($User->getId(), $Report->getDateStart(), $Report->getDateEnd()));
 			
@@ -30,7 +30,7 @@
 			$NTotal = new \MVC\Library\Number($Value);
 			$NTotalABC = new \MVC\Library\Number($ValueABC);
 			
-			$DateCurrent = "Vĩnh Long, ngày ".\date("d")." tháng ".\date("m")." năm ".\date("Y");
+			$DateCurrent = "TP Vĩnh Long, ngày ".\date("d")." tháng ".\date("m")." năm ".\date("Y");
 			
 			//-------------------------------------------------------------
 			//THAM SỐ GỬI ĐI
