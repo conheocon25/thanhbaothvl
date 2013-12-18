@@ -7,7 +7,9 @@
 			//THAM SỐ TOÀN CỤC
 			//-------------------------------------------------------------						
 			$Session = \MVC\Base\SessionRegistry::instance();
-			$User = $Session->getCurrentUser();								
+			$User = $Session->getCurrentUser();
+			$mCurrentMonth = $Session->getCurrentMonth();			
+			$mCurrentYear = $Session->getCurrentYear();				
 			//-------------------------------------------------------------
 			//THAM SỐ GỬI ĐẾN
 			//-------------------------------------------------------------
@@ -25,6 +27,13 @@
 			//-------------------------------------------------------------
 			//XỬ LÝ CHÍNH
 			//-------------------------------------------------------------			
+						
+				$SumPointEmployeeCurMonth = $mSalarydaily->SumPointEmployeeMonth(array($User->getId(), $mCurrentMonth, $mCurrentYear));
+				
+				$ValueABC = round((($SumPointEmployeeCurMonth /$User->getRulePrint() ) * 50 ) , 2);
+				
+				$NTotal = new \MVC\Library\Number($SumPointEmployeeCurMonth);
+				$NTotalABC = new \MVC\Library\Number($ValueABC);
 			
 				$CategoryProgrameAll = $mCategory->findByPosition($User->getIdPosition());
 				
@@ -32,18 +41,15 @@
 				$CategoryVideoAll = $mCategoryVideo->findAll();			
 				
 				
-				$User = $Session->getCurrentUser();
-				$mCurrentMonth = $Session->getCurrentMonth();			
-				$mCurrentYear = $Session->getCurrentYear();			
+					
 				
 				$AlbumAll = $mAlbum->findAll();
 				$ConfigAll = $mConfig->findAll();		
 				
-				$Title = "QUẢN LÝ";
+				$Title = "NHẬP ĐIỂM";
 				$Navigation = array(
 					array("TRANG CHỦ", "/trang-chu"),
-					array("QUẢN LÝ THÙ LAO", "/thu-lao/app"),
-					array("NHẬP ĐIỂM", "/thu-lao/reward")
+					array("QUẢN LÝ THÙ LAO", "/thu-lao/app")
 				);
 			
 			//-------------------------------------------------------------
@@ -62,9 +68,12 @@
 				$request->setObject("CategoryProgrameAll", $CategoryProgrameAll);
 				$request->setObject("SalarydailyAll", $SalarydailyAll);
 				
+				$request->setObject('User', $User);
 				$request->setObject('AlbumAll', $AlbumAll);
 				$request->setProperty("Page", $Page);
 				$request->setObject('ConfigAll', $ConfigAll); 
+				$request->setProperty("NTotal", $NTotal);
+				$request->setProperty("NTotalABC", $NTotalABC);
 				$request->setProperty("Page", $Page);
 				$request->setObject('PN', $PN); 
 				

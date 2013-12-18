@@ -38,7 +38,8 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
 		$this->findByEmployeeStmt = self::$PDO->prepare(
 			"SELECT * FROM ktth_salarydaily			
 			WHERE id_employee=:id_employee and month(date_work) =:mMonth and year(date_work) =:mYear
-			ORDER BY date_work desc" );	
+			ORDER BY date_work desc" );				
+		
 		
 		$this->findEmployeeByTimeStmt = self::$PDO->prepare(
 			"SELECT * FROM ktth_salarydaily			
@@ -55,6 +56,12 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
 			"SELECT sum((select factory from ktth_category where id = `id_category`)* count * (select rule from ktth_user where id = `id_employee`))  
 			FROM `ktth_salarydaily` 
 			WHERE id_employee=:id_employee and date_work between :mDateStart and :mDateEnd"
+			);	
+						
+		$this->findBySumPointEmployeeMonthStmt = self::$PDO->prepare(
+			"SELECT sum((select factory from ktth_category where id = `id_category`)* count * (select rule from ktth_user where id = `id_employee`))  
+			FROM `ktth_salarydaily` 
+			WHERE id_employee=:id_employee and month(date_work) =:mMonth and year(date_work) =:mYear"
 			);					
 		
     } 
@@ -138,6 +145,15 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
 		$this->findEmployeeByTimeStmt->bindValue(':mDateEnd', $values[2] , \PDO::PARAM_STR);
 		$this->findEmployeeByTimeStmt->execute();
         return new SalarydailyCollection( $this->findEmployeeByTimeStmt->fetchAll(), $this );
+    }
+	
+	function SumPointEmployeeMonth( $values ) {
+		$this->findBySumPointEmployeeMonthStmt->bindValue(':id_employee', $values[0], \PDO::PARAM_INT);
+		$this->findBySumPointEmployeeMonthStmt->bindValue(':mMonth', $values[1] , \PDO::PARAM_STR);
+		$this->findBySumPointEmployeeMonthStmt->bindValue(':mYear', $values[2] , \PDO::PARAM_STR);
+		$this->findBySumPointEmployeeMonthStmt->execute();
+		$result = $this->findBySumPointEmployeeMonthStmt->fetchAll();
+		return $result[0][0];        
     }
 	
 	function SumPointEmployeeTime( $values ) {
