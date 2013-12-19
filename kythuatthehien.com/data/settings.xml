@@ -94,7 +94,7 @@
 		
 		<command name="AplManager"><view>AplManager</view></command>	
 		
-		<command name="AplManagerInsLoad"><view>AplRewardInsLoad</view></command>
+		<command name="AplManagerInsLoad"><view>AplManagerInsLoad</view></command>
 		<command name="AplManagerUpdLoad"><view>AplManagerUpdLoad</view></command>		
 		<command name="AplManagerDelLoad"><view>AplManagerDelLoad</view></command>		
 		<command name="AplManagerInsExe">
