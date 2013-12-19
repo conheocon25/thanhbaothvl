@@ -94,6 +94,25 @@
 		
 		<command name="AplManager"><view>AplManager</view></command>	
 		
+		<command name="AplManagerInsLoad"><view>AplRewardInsLoad</view></command>
+		<command name="AplManagerUpdLoad"><view>AplManagerUpdLoad</view></command>		
+		<command name="AplManagerDelLoad"><view>AplManagerDelLoad</view></command>		
+		<command name="AplManagerInsExe">
+			<view>AplManagerInsExe</view>
+			<status value="CMD_OK"><forward>AplManager</forward></status>
+			<status value="CMD_NO_AUTHOR"><forward>Home</forward></status>
+		</command>
+		<command name="AplManagerUpdExe">
+			<view>AplManagerUpdExe</view>
+			<status value="CMD_OK"><forward>AplManager</forward></status>
+			<status value="CMD_NO_AUTHOR"><forward>Home</forward></status>
+		</command>		
+		<command name="AplManagerDelExe">
+			<view>AplManagerDelExe</view>
+			<status value="CMD_OK"><forward>AplManager</forward></status>
+			<status value="CMD_NO_AUTHOR"><forward>Home</forward></status>
+		</command>
+		
 		<command name="AplChangePass"><view>AplChangePass</view></command>		
 		<command name="AplChangePassExe">
 			<view>AplChangePassExe</view>

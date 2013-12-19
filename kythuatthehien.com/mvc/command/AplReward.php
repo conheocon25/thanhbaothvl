@@ -35,7 +35,12 @@
 				$NTotal = new \MVC\Library\Number($SumPointEmployeeCurMonth);
 				$NTotalABC = new \MVC\Library\Number($ValueABC);
 			
-				$CategoryProgrameAll = $mCategory->findByPosition($User->getIdPosition());
+				$CategoryProgrameAll = null;
+				if ( $User->getIdPosition() <= 3 ){
+					$CategoryProgrameAll = $mCategory->findByPosition($User->getIdPosition());
+				} else {
+					$CategoryProgrameAll = $mCategory->findAll();
+				}
 				
 				$CategoryNewsAll = $mCategoryNews->findAll();
 				$CategoryVideoAll = $mCategoryVideo->findAll();			

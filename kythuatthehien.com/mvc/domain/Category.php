@@ -8,6 +8,7 @@ class Category extends Object{
 	private $Name;
 	private $Id_position;
 	private $Factory;
+	private $Position;
 	
 	/*Hàm khởi tạo và thiết lập các thuộc tính*/
     function __construct( $Id=null, $Id_position=null, $Name=null, $Factory=null ) {
@@ -40,6 +41,11 @@ class Category extends Object{
         $this->Id_position = $Id_position;
         $this->markDirty();
     }
+	function getPosition(){		
+			$mPositions = new \MVC\Mapper\Positions();
+			$Position = $mPositions->find($this->getId_position());		
+		return $Position;
+	}
 	
 	function getFactory( ) {
         return $this->Factory;
@@ -48,6 +54,11 @@ class Category extends Object{
         $this->Factory = $Factory;
         $this->markDirty();
     }
+	
+	function getURLUpdLoad(){return "/thu-lao/manager/".$this->getId() ."/upd/load";}
+	function getURLUpdExe(){return "/thu-lao/manager/".$this->getId() ."/upd/exe";}
+	function getURLDelLoad(){return "/thu-lao/manager/".$this->getId()."/del/load";}
+	function getURLDelExe(){return "/thu-lao/manager/".$this->getId()."/del/exe";}
 	
 	
     static function findAll() {

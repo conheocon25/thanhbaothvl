@@ -7,7 +7,7 @@
 			//THAM SỐ TOÀN CỤC
 			//-------------------------------------------------------------						
 			$Session = \MVC\Base\SessionRegistry::instance();
-									
+			$User = $Session->getCurrentUser();						
 			//-------------------------------------------------------------
 			//THAM SỐ GỬI ĐẾN
 			//-------------------------------------------------------------
@@ -16,6 +16,14 @@
 			//MAPPER DỮ LIỆU
 			//-------------------------------------------------------------	
 			require_once("mvc/base/mapper/MapperDefault.php");
+			$mCategory = new \MVC\Mapper\Category();
+			$CategoryProgrameAll = null;
+			if ( $User->getIdPosition() <= 3 ){
+				$CategoryProgrameAll = $mCategory->findByPosition($User->getIdPosition());
+			} else {
+				$CategoryProgrameAll = $mCategory->findAll();
+			}
+			
 			
 			//-------------------------------------------------------------
 			//XỬ LÝ CHÍNH
@@ -28,7 +36,7 @@
 			$AlbumAll = $mAlbum->findAll();
 			$ConfigAll = $mConfig->findAll();		
 			
-			$Title = "QUẢN LÝ";
+			$Title = "CẬP NHẬT DANH MỤC CHƯƠNG TRÌNH";
 			$Navigation = array(
 				array("TRANG CHỦ", "/trang-chu")
 			);
@@ -40,6 +48,7 @@
 			$request->setObject("CategoryNewsAll", $CategoryNewsAll);
 			$request->setObject("CategoryVideoAll", $CategoryVideoAll);
 			$request->setObject("CategoryAskAll", $CategoryAskAll);
+			$request->setObject("CategoryProgrameAll", $CategoryProgrameAll);
 			
 			$request->setObject('AlbumAll', $AlbumAll);
 			

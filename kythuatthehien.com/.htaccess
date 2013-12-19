@@ -107,8 +107,16 @@ RewriteRule ^thu-lao/report/([a-z0-9]+)/print/department$ 			?cmd=AplReportDepar
 RewriteRule ^thu-lao/report/([a-z0-9]+)/print/all$ 					?cmd=AplReportAll&IdReport=$1 [L]
 
 RewriteRule ^thu-lao/manager$ 										?cmd=AplManager [L]
-RewriteRule ^thu-lao/manager/video$ 								?cmd=AplManagerVideo [L]
-RewriteRule ^thu-lao/manager/abc$ 									?cmd=AplManagerABC [L]
+RewriteRule ^thu-lao/manager/ins/load$ 								?cmd=AplManagerInsLoad [L]
+RewriteRule ^thu-lao/manager/ins/exe$ 								?cmd=AplManagerInsExe [L]
+RewriteRule ^thu-lao/manager([a-z0-9]+)/upd/load$ 					?cmd=AplManagerUpdLoad&IdCategory=$1 [L]
+RewriteRule ^thu-lao/manager([a-z0-9]+)/upd/exe$ 					?cmd=AplManagerUpdExe&IdCategory=$1 [L]
+RewriteRule ^thu-lao/manager([a-z0-9]+)/del/load$ 					?cmd=AplManagerDelLoad&IdCategory=$1 [L]
+RewriteRule ^thu-lao/manager([a-z0-9]+)/del/exe$ 					?cmd=AplManagerDelExe&IdCategory=$1 [L]
+
+RewriteRule ^thu-lao/search$ 										?cmd=AplSearch [L]
+RewriteRule ^thu-lao/search/category$ 								?cmd=AplSearchCategory [L]
+
 
 RewriteRule ^thu-lao/changepass$ 									?cmd=AplChangePass [L]
 RewriteRule ^thu-lao/changepass/exe$ 								?cmd=AplChangePassExe [L]
