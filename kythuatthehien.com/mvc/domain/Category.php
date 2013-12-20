@@ -55,6 +55,7 @@ class Category extends Object{
         $this->markDirty();
     }
 	
+	
 	function getURLUpdLoad(){return "/thu-lao/manager/".$this->getId() ."/upd/load";}
 	function getURLUpdExe(){return "/thu-lao/manager/".$this->getId() ."/upd/exe";}
 	function getURLDelLoad(){return "/thu-lao/manager/".$this->getId()."/del/load";}

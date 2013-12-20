@@ -36,7 +36,7 @@
 					<div class="span9">
 						<div class="content">
 							<span metal:use-macro="mApplication.xhtml/LocationBar"/>								
-							<div style="color:blue;font-weight:36;" align="center" class="control-label"> <b tal:content="User/getNote"/> - Điểm CM: <b style="color:red;" tal:content="php:NTotal->formatCurrency()"/>							
+							<div  style="color:blue;font-weight:36;" align="center" > <b class="brand" tal:content="User/getNote"/> - Điểm CM: <b style="color:red;" tal:content="php:NTotal->formatCurrency()"/>							
 							  - Điểm ABC: <b style="color:red;" tal:content="php:NTotalABC->formatCurrency()"/>
 							</div>	
 							<hr />

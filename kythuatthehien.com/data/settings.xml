@@ -119,6 +119,9 @@
 			<status value="CMD_OK"><forward>AplSigninLoad</forward></status>
 			<status value="CMD_NO_AUTHOR"><forward>Home</forward></status>
 		</command>
+		
+		
+		<command name="AplSearch"><view>AplManager</view></command>	
 		<!-- ============================================================================== -->
 		<!-- APL.CONDIG																-->
 		<!-- ============================================================================== -->

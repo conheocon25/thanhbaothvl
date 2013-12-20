@@ -48,11 +48,10 @@
 	<div metal:define-macro="Header">
 		<div class="navbar navbar-inverse">
 			<div class="navbar-inner">
-				<a class="brand" href="/thu-lao">Ứng dụng Quản lý thù lao - www.ktthehien.com</a> 
-				<a class="brand" href="/thu-lao/app">Đang Chọn Tháng <span tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentMonth()"/> Năm: <span tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentYear()"/></a>
+				<a class="brand" href="/thu-lao">QUẢN LÝ THÙ LAO</a> 
+				<a class="brand" href="/thu-lao/app"> Tháng <span tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentMonth()"/> Năm: <span tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentYear()"/></a>
 				<p class="navbar-text pull-right">				
-					<a class="navbar-link" href="thu-lao/signout/load"><span tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()" tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->getUser()"/></a> Đăng xuất
-				</p>
+					<a class="navbar-link" href="thu-lao/signout/load"><span tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()" tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->getUser()"/></a></p>
 			</div>
 		</div>
 	</div>
@@ -93,6 +92,9 @@
 			</li>			
 			<li tal:attributes="class php:ActiveAdmin=='Manager'?'active':'disable'">
 				<a tal:attributes="href '/thu-lao/manager'">QUẢN LÝ DANH MỤC<span class="badge badge-info pull-right" tal:content="''"/></a>
+			</li>
+			<li tal:attributes="class php:ActiveAdmin=='Search'?'active':'disable'">
+				<a tal:attributes="href '/thu-lao/search'">TÌM KIẾM<span class="badge badge-info pull-right" tal:content="''"/></a>
 			</li>
 			<li tal:attributes="class php:ActiveAdmin=='ChangePass'?'active':'disable'">
 				<a tal:attributes="href '/thu-lao/changepass'">ĐỔI MẬT KHẨU <span class="badge badge-info pull-right" /></a>

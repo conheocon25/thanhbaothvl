@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<span metal:use-macro="mApplication.xhtml/IncludeMETA"/>
+		<span metal:use-macro="mApplication.xhtml/IncludeCSS"/>
+		<link rel="stylesheet" type="text/css" href="/mvc/templates/theme/base/jquery-ui-1.8.11.custom.css" />
+		<link rel="stylesheet" type="text/css" href="/mvc/templates/theme/base/jquery-ui-timepicker-addon.css" />
+		
+		<script type="text/javascript" language="javascript" src="/mvc/templates/script/library/jquery-1.7.1.min.js"/>
+		<script type="text/javascript" language="javascript" src="/mvc/templates/script/library/jquery.countdown.js"/>
+		<script type="text/javascript" language="javascript" src="/mvc/templates/theme/bootstrap/js/bootstrap.js"/>
+		<script type="text/javascript" language="javascript" src="/mvc/templates/script/user/base.js"/>
+		
+		<script type="text/javascript" language="javascript" src="/mvc/templates/script/library/jquery-ui-1.8.11.custom.min.js" />
+		<script type="text/javascript" language="javascript" src="/mvc/templates/script/library/jquery-ui-timepicker-addon.js" />
+		<script type="text/javascript" language="javascript" src="/mvc/templates/script/library/jquery.ui.datepicker-vi.js" />
+		<script type="text/javascript" language="javascript" src="/mvc/templates/script/library/jquery-ui-timepicker-vi.js" />	
+		<script type="text/javascript">
+		/*<![CDATA[*/
+				$(document).ready(function() {
+					$(function() {
+						
+				});
+				
+		/*]]>*/
+		</script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<span metal:use-macro="mApplication.xhtml/Header"/>
+			<div class="row-fluid">
+				<div class="row-fluid">
+					<div class="span3">
+						<span metal:use-macro="mApplication.xhtml/Menu"/>
+					</div>
+					<div class="span9">
+						<div class="content">
+							<span metal:use-macro="mApplication.xhtml/LocationBar"/>
+							
+							<form class="form-horizontal" tal:attributes="action Category/getURLUpdExe" method="post">
+								<div class="control-group">
+									<label class="control-label" for="IdPosition">Thuộc Tổ</label>									
+									<div class="controls">
+										<select name="IdPosition">
+											<option tal:repeat="Position PositionAll"  tal:attributes="value Position/getId; selected php:Position->getId()==Category->getId_Position()?true:false" >
+												<span tal:content="Position/getName"/>
+											</option>
+										</select>
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="Name">Tên Chương trình</label>
+									<div class="controls">
+										<input id="Name" name="Name" type="text" tal:attributes="value Category/getName"/>
+									</div>
+								</div>
+								
+								<div class="control-group">
+									<label class="control-label" for="Factory">Ghi Chú</label>
+									<div class="controls">
+										<input id="Factory" name="Factory" type="text" tal:attributes="value Category/getFactory"/>
+									</div>
+								</div>	
+															
+								<div class="control-group">
+									<div class="controls">
+										<button type="submit" class="btn" value="submit-value">Cập nhật</button>
+									</div>
+								</div>						
+							</form>							
+						</div>
+					</div>
+				</div>
+			</div>
+			<span metal:use-macro="mApplication.xhtml/Footer"/>
+		</div>		
+	</body>
+</html>

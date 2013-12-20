@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<span metal:use-macro="mApplication.xhtml/IncludeMETA"/>
+		<span metal:use-macro="mApplication.xhtml/IncludeCSS"/>
+		<span metal:use-macro="mApplication.xhtml/IncludeJS"/>
+	
+	</head>
+	<body>
+		<div class="container-fluid">
+			<span metal:use-macro="mApplication.xhtml/Header"/>
+			<div class="row-fluid">
+				<div class="row-fluid">
+					<div class="span3">
+						<span metal:use-macro="mApplication.xhtml/Menu"/>
+					</div>
+					<div class="span9">
+						<div class="content">
+							<span metal:use-macro="mApplication.xhtml/LocationBar"/>
+							
+							<form class="form-horizontal" tal:attributes="action 'thu-lao/manager/ins/exe'" method="post">
+								<div class="control-group">
+									<label class="control-label" for="IdPosition">Thuộc Tổ</label>									
+									<div class="controls">
+										<select name="IdPosition">
+											<option tal:repeat="Position PositionAll"  tal:attributes="value Position/getId" >
+												<span tal:content="Position/getName"/>
+											</option>
+										</select>
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="Name">Tên Chương trình</label>
+									<div class="controls">
+										<input id="Name" name="Name" type="text" />
+									</div>
+								</div>
+								
+								<div class="control-group">
+									<label class="control-label" for="Factory">Hệ số</label>
+									<div class="controls">
+										<input id="Factory" name="Factory" type="text" />
+									</div>
+								</div>	
+															
+								<div class="control-group">
+									<div class="controls">
+										<button type="submit" class="btn" value="submit-value">Thêm mới</button>
+									</div>
+								</div>						
+							</form>							
+						</div>
+					</div>
+				</div>
+			</div>
+			<span metal:use-macro="mApplication.xhtml/Footer"/>
+		</div>		
+	</body>
+</html>
