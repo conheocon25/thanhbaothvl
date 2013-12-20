@@ -121,7 +121,11 @@
 		</command>
 		
 		
-		<command name="AplSearch"><view>AplManager</view></command>	
+		<command name="AplSearch"><view>AplSearch</view></command>	
+		<command name="AplSearchCategory"><view>AplSearchCategory</view></command>	
+		
+		
+		
 		<!-- ============================================================================== -->
 		<!-- APL.CONDIG																-->
 		<!-- ============================================================================== -->
@@ -149,6 +153,7 @@
 		<command name="AplReportDelLoad"><view>AplReportDelLoad</view></command>
 		<command name="AplReportDelExe"><view>AplReportDelExe</view><status value="CMD_OK"><forward>AplReport</forward></status></command>
 		
+		<command name="AplReportSummary"><view>AplReportSummary</view></command>	
 		<!-- ============================================================================== -->
 		<!-- GLOBAL			 																-->
 		<!-- ============================================================================== -->

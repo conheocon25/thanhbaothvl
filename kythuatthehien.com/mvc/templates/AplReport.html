@@ -23,8 +23,9 @@
 										<th align="center">Báo cáo</th>
 										<th align="center">Từ ngày</th>
 										<th width="center">Đến Ngày</th>										
-										<th align="center" >Tồ CM</th>											
+										<th align="center" >Tất cả</th>											
 										<th align="center" >Cá Nhân</th>																													
+										<th align="center" >Tổng kết</th>																													
 										<th align="center" width="35px">XÓA</th>																		
 									</tr>
 								</thead>
@@ -46,8 +47,9 @@
 										</td>
 										<td align="center">
 											<a tal:attributes="href Report/getURLReportUser" target="blank"><span  class="icon-print"/></a>	
-										</td>
-										
+										</td><td align="center">
+											<a tal:attributes="href Report/getURLReportSummary" target="blank"><span  class="icon-print"/></a>	
+										</td>										
 										<td align="center" width="35px">
 											<a tal:attributes="href Report/getURLDelLoad"><span class="icon-remove"/></a>
 										</td>										

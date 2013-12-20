@@ -10,6 +10,8 @@ class User extends Mapper implements \MVC\Domain\UserFinder {
                             "select id, id_position, user, pass, gender, note, type, rule from ktth_user");
         $this->selectStmt = self::$PDO->prepare( 
                             "select id, id_position, user, pass, gender, note, type , rule from ktth_user where id=?");
+    	$this->selectAllStmt = self::$PDO->prepare( 
+                            "select id, id_position, user, pass, gender, note, type , rule from ktth_user where id > 2");
         $this->updateStmt = self::$PDO->prepare( 
                             "update ktth_user set id_position=? , user=?, pass=?,gender=?, note=?, type=?, rule=? where id=?");
         $this->insertStmt = self::$PDO->prepare( 
@@ -101,6 +103,11 @@ class User extends Mapper implements \MVC\Domain\UserFinder {
 	function findByPosition( $values ){
         $this->selectByPositionStmt->execute( $values );
         return new UserCollection( $this->selectByPositionStmt->fetchAll(), $this);
+    }
+	
+	function findByID(){
+        $this->selectAllStmt->execute( );
+        return new UserCollection( $this->selectAllStmt->fetchAll(), $this);
     }
 }
 ?>

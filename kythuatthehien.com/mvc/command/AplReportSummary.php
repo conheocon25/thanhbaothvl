@@ -1,6 +1,6 @@
 <?php		
 	namespace MVC\Command;	
-	class AplReportDepartment extends Command {
+	class AplReportSummary extends Command {
 		function doExecute( \MVC\Controller\Request $request ){
 			require_once("mvc/base/domain/HelperFactory.php");			
 			//-------------------------------------------------------------
@@ -14,36 +14,21 @@
 			//-------------------------------------------------------------
 			//MAPPER DỮ LIỆU
 			//-------------------------------------------------------------			
-			$mUser = new \MVC\Mapper\User();
+		
 			$mReport = new \MVC\Mapper\Report();
 			$mSalarydaily = new \MVC\Mapper\Salarydaily();
 			
 			$Report = $mReport->find($IdReport);
-			$Users = null;
-			if ($User->isAdmin() == true) {
-				$Users = $mUser->findByID();
-			}else {		$Users = $mUser->findByPosition(array($User->getIdPosition()));
-			}
+			
 			
 			
 			//-------------------------------------------------------------
 			//XỬ LÝ CHÍNH
 			//-------------------------------------------------------------			
-			$Title = "TỔNG KẾT ĐIỂM CHUYÊN MÔN";
-						
+			$Title = "TỔNG KẾT SỐ LƯỢNG THỰC HIỆN CHƯƠNG TRÌNH";
 			
-			$Value = 0;				
-			$CurUser = null;
-			$SalarydailyByTimes = null;
-			while ($Users->valid()){
-			
-					$CurUser = $Users->current();	
-					$Value = $mSalarydaily->SumPointEmployeeTime(array( $CurUser->getId(), $Report->getDateStart(), $Report->getDateEnd()));
-					//$Value = 45;
-					$CurUser->setNTotal($Value);
-					
-				$Users->next();
-			}
+			$SalarydailyAll = $mSalarydaily->findGroupBy(array( $Report->getDateStart(), $Report->getDateEnd()));
+				
 			//$NTotal = new \MVC\Library\Number($Value);
 			
 			
@@ -53,10 +38,8 @@
 			//THAM SỐ GỬI ĐI
 			//-------------------------------------------------------------						
 			$request->setProperty('Title', $Title);
-			$request->setProperty('SalarydailyByTimes', $SalarydailyByTimes);
-			$request->setProperty('DateCurrent', $DateCurrent);
-			$request->setProperty('User', $User);
-			$request->setProperty('Users', $Users);
+			$request->setProperty('SalarydailyAll', $SalarydailyAll);
+			$request->setProperty('DateCurrent', $DateCurrent);			
 			$request->setProperty('Report', $Report);			
 		}
 	}

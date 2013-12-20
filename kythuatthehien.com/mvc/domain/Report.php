@@ -77,6 +77,7 @@ class Report extends Object{
 	function getURLReportUser(){return "/thu-lao/report/".$this->getId()."/print/user";}
 	function getURLReportDepartment(){return "/thu-lao/report/".$this->getId()."/print/department";}
 	function getURLReportAll(){return "/thu-lao/report/".$this->getId()."/print/all";}
+	function getURLReportSummary(){return "/thu-lao/report/".$this->getId()."/print/summary";}
 	
 	function getURLUpdLoad(){return "/thu-lao/report/".$this->getId()."/upd/load";}
 	function getURLUpdExe(){return "/thu-lao/report/".$this->getId()."/upd/exe";}

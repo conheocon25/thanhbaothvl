@@ -16,6 +16,7 @@
 			//MAPPER DỮ LIỆU
 			//-------------------------------------------------------------	
 			require_once("mvc/base/mapper/MapperDefault.php");
+			
 			$mCategory = new \MVC\Mapper\Category();
 			$CategoryProgrameAll = null;
 			if ( $User->getIdPosition() <= 3 ){
@@ -36,7 +37,7 @@
 			$AlbumAll = $mAlbum->findAll();
 			$ConfigAll = $mConfig->findAll();		
 			
-			$Title = "CẬP NHẬT DANH MỤC CHƯƠNG TRÌNH";
+			$Title = "NHẬT KÝ CHƯƠNG TRÌNH";
 			$Navigation = array(
 				array("TRANG CHỦ", "/trang-chu"),
 				array("QUẢN LÝ", "/thu-lao")

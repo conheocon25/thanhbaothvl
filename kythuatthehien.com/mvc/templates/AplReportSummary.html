@@ -18,11 +18,7 @@
 		</tr>
 		<tr>			
 			<td width="100%" align="center"><h4 align="center" tal:content="Title" /></td>
-		</tr>
-		<tr>			
-			<td width="100%" align="center" tal:condition="not:User/isAdmin" ><B tal:content="User/getPosition/getName" /></td>
-			<td width="100%" align="center" tal:condition="User/isAdmin" ><b>Phòng Kỹ Thuật Thể Hiện</b></td>
-		</tr>
+		</tr>		
 		<tr>			
 			<td width="100%" align="center">Từ <span  tal:content="Report/getDateStartPrint" /> đến <span  tal:content="Report/getDateEndPrint" /></td>
 		</tr>				
@@ -30,17 +26,13 @@
 	<table class="hor-minimalist-a" width="100%" cellpadding="2">
 		<tr >
 			<th width="5%"><B>STT</B></th>			
-			<th width="60%" align="center"><B>HỌ VÀ TÊN</B></th>
-			<th width="10%" align="center" ><B>ĐIỂM CM</B></th>
-			<th width="10%" align="center"><B>ĐIỂM ABC</B></th>
-			<th width="10%" align="center"><B>ĐỊNH MỨC</B></th>			
+			<th width="85%" align="center"><B>TÊN CHƯƠNG TRÌNH</B></th>
+			<th width="10%" align="center" ><B>SL</B></th>					
 		</tr>
-		<tr tal:repeat="User Users">
-			<td align="center" 	tal:content="repeat/User/number" />
-			<td align="left" 	tal:content="User/getNote" />
-			<td align="right" 	tal:content="User/getNTotalPrint/formatCurrency" />			
-			<td align="right" 	tal:content="User/getNTotalABC/formatCurrency" />
-			<td align="right" 	tal:content="User/getRulePrint" />
+		<tr tal:repeat="Salarydaily SalarydailyAll">
+			<td align="center" 	tal:content="repeat/Salarydaily/number" />
+			<td align="left" 	tal:content="Salarydaily/getCategory/getName" />
+			<td align="center" 	tal:content="Salarydaily/getCount" />		
 		</tr>		
 	</table>	
 </body>

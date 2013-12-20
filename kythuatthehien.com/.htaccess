@@ -104,6 +104,7 @@ RewriteRule ^thu-lao/report/([a-z0-9]+)/del/load$ 					?cmd=AplReportDelLoad&IdR
 RewriteRule ^thu-lao/report/([a-z0-9]+)/del/exe$ 					?cmd=AplReportDelExe&IdReport=$1 [L]
 RewriteRule ^thu-lao/report/([a-z0-9]+)/print/user$ 				?cmd=AplReportUser&IdReport=$1 [L]
 RewriteRule ^thu-lao/report/([a-z0-9]+)/print/department$ 			?cmd=AplReportDepartment&IdReport=$1 [L]
+RewriteRule ^thu-lao/report/([a-z0-9]+)/print/summary$ 			    ?cmd=AplReportSummary&IdReport=$1 [L]
 RewriteRule ^thu-lao/report/([a-z0-9]+)/print/all$ 					?cmd=AplReportAll&IdReport=$1 [L]
 
 RewriteRule ^thu-lao/manager$ 										?cmd=AplManager [L]
@@ -115,7 +116,7 @@ RewriteRule ^thu-lao/manager/([a-z0-9]+)/del/load$ 					?cmd=AplManagerDelLoad&I
 RewriteRule ^thu-lao/manager/([a-z0-9]+)/del/exe$ 					?cmd=AplManagerDelExe&IdCategory=$1 [L]
 
 RewriteRule ^thu-lao/search$ 										?cmd=AplSearch [L]
-RewriteRule ^thu-lao/search/category$ 								?cmd=AplSearchCategory [L]
+RewriteRule ^thu-lao/search/category/([a-z0-9]+)/([a-z0-9]+)$ 		?cmd=AplSearchCategory&IdCategory=$1&Month=$2 [L]
 
 
 RewriteRule ^thu-lao/changepass$ 									?cmd=AplChangePass [L]
