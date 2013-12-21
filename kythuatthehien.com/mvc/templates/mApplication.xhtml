@@ -49,9 +49,12 @@
 		<div class="navbar navbar-inverse">
 			<div class="navbar-inner">
 				<a class="brand" href="/thu-lao">QUẢN LÝ THÙ LAO</a> 
-				<a class="brand" href="/thu-lao/app"> Tháng <span tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentMonth()"/> Năm: <span tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentYear()"/></a>
+				<span class="brand">_______</span>
 				<p class="navbar-text pull-right">				
 					<a class="navbar-link" href="thu-lao/signout/load"><span tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()" tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->getUser()"/></a></p>
+										
+				<a align="center" class="brand" href="/thu-lao/app"> Tháng <span tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentMonth()"/> Năm <span tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentYear()"/></a>
+				
 			</div>
 		</div>
 	</div>

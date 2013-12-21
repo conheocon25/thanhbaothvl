@@ -30,7 +30,7 @@
 			
 			$Title = "QUẢN LÝ";
 			$Navigation = array(
-				array("TRANG CHỦ", "/trang-chu")
+				array("TRANG CHỦ", "/thu-lao")
 			);
 			
 			//-------------------------------------------------------------
