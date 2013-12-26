@@ -72,7 +72,7 @@ class Printer
 			"capabilities" => "",
 			"contentType" => "dataUrl",
 			"title" => $title,
-			"content" => 'data:application/pdf;base64,'. base64_encode($docBytes)
+			"content" => $docBytes
 		);
 
 		$ret = $this->processRequest($url, $post, "");
@@ -88,7 +88,7 @@ class Printer
 	$fileType = "application/pdf";
 	// Open the original file and base64 encode it:
 	$dataHandle = fopen('d:\\In.pdf', "rb");
-	$dataContent = fread($dataHandle, filesize('D:\\ec22ed167763a15e8591a3776f3c65c3.pdf'));
+	$dataContent = fread($dataHandle, filesize('D:\\cuibap.pdf'));
 	fclose($dataHandle);
 	$b64data = $fileType.base64_encode($dataContent);
 	// Store the base64 encoded file:
@@ -103,11 +103,10 @@ class Printer
 	// URL encode the file contents:
 	$file = urlencode($fileContent);
 	
-	$Printed = new Printer( "bao", "thanhbao2007vl@gmail.com", "nhatkyty25", "admin123456");	
-	$Printed->printDocument("safasdfas",$file);
+	$Printed = new Printer( "bao", "thanhbao2007vl@gmail.com", "nhatkyty25", "c222b16e-9e31-58f3-fcd9-67640bc7b7bd");	
+	
 	// Add the file and send to the printer:
-	//$client->setParameterPost('content', $file);
-	//$client->setParameterPost('contentType', $fileType);
+	$Printed->printDocument("safasdfas","Nguyễn Thanh Bảo");
 	//$client->request(Zend_Http_Client::POST);
 ?>
 
