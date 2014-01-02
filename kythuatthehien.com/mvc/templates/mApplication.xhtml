@@ -93,7 +93,7 @@
 			<li tal:attributes="class php:ActiveAdmin=='Report'?'active':'disable'">
 				<a tal:attributes="href '/thu-lao/report'">BÁO CÁO ĐIỂM THÙ LAO<span class="badge badge-info pull-right" tal:content="''"/></a>
 			</li>			
-			<li tal:attributes="class php:ActiveAdmin=='Manager'?'active':'disable'">
+			<li tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isManager()" tal:attributes="class php:ActiveAdmin=='Manager'?'active':'disable'">
 				<a tal:attributes="href '/thu-lao/manager'">QUẢN LÝ DANH MỤC<span class="badge badge-info pull-right" tal:content="''"/></a>
 			</li>
 			<li tal:attributes="class php:ActiveAdmin=='Search'?'active':'disable'">
