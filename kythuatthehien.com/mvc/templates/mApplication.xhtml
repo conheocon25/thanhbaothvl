@@ -21,101 +21,123 @@
 	<!-- ======================================================================== -->
 	<!-- CASCADING STYLE SHEETS INCLUDE											  -->
 	<!-- ======================================================================== -->
-	<span metal:define-macro="IncludeCSS">
-		<link rel="stylesheet" type="text/css" href="/mvc/templates/theme/base/jquery.countdown.css"/> 
-		<link rel="stylesheet" type="text/css" href="/mvc/templates/theme/base/eventCalendar.css"/>
-		<link rel="stylesheet" type="text/css" href="/mvc/templates/theme/base/eventCalendar_theme.css"/>	
-		<link rel="stylesheet" type="text/css" href="/mvc/templates/theme/bootstrap/css/bootstrap.css" media="screen"/>
-		<link rel="stylesheet" type="text/css" href="/mvc/templates/theme/bootstrap/css/handle.css"/>
+	<span metal:define-macro="IncludeCSS">		
+		<link rel="stylesheet" href="/mvc/templates/theme/cms/css/icheck/flat/blue.css"/>
+		<link rel="stylesheet" href="/mvc/templates/theme/cms/css/select2.css"/>
+		<link rel="stylesheet" href="/mvc/templates/theme/cms/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="/mvc/templates/theme/cms/css/bootstrap-glyphicons.css"/>
+		<link rel="stylesheet" href="/mvc/templates/theme/cms/css/glyphicons-regular.css"/>
+		<link rel="stylesheet" href="/mvc/templates/theme/cms/css/jquery-ui.css"/>
+		<link rel="stylesheet" href="/mvc/templates/theme/cms/css/unicorn.main.css"/>
+		<link rel="stylesheet" href="/mvc/templates/theme/cms/css/datepicker.css"/>
+		<link rel="stylesheet" href="/mvc/templates/theme/cms/css/datetimepicker.css"/>
+		<link rel="stylesheet" href="/mvc/templates/theme/cms/css/custom.css"/>
+		<link rel="stylesheet" href="/mvc/templates/theme/cms/css/grid-menu.css"/>
+		<link rel="stylesheet" href="/mvc/templates/theme/cms/css/jquery.gritter.css"/>
+		<link rel="stylesheet" href="/mvc/templates/theme/cms/css/gritter.css"/>
+		<link rel="stylesheet" tal:attributes="href php:'/mvc/templates/theme/cms/css/unicorn.grey.css'" class="skin-color"/>		
+		
+		<!-- <link rel="stylesheet" type="text/css" href="/mvc/templates/theme/base/eventCalendar.css"/>
+		<link rel="stylesheet" type="text/css" href="/mvc/templates/theme/base/eventCalendar_theme.css"/>	-->
 	</span>
 	
 	<!-- ======================================================================== -->
 	<!-- JAVASCRIPT INCLUDE														  -->
 	<!-- ======================================================================== -->
-	<span metal:define-macro="IncludeJS">
-		<script type="text/javascript" language="javascript" src="/mvc/templates/script/library/jquery-1.7.1.min.js"/>
-		<script type="text/javascript" language="javascript" src="/mvc/templates/script/library/jquery.countdown.js"/>
+	<span metal:define-macro="IncludeJS">		
+		<script src="/mvc/templates/theme/cms/js/jquery.min.js"></script>
+		<script src="/mvc/templates/theme/cms/js/jquery-ui.custom.js"></script>
+		<script src="/mvc/templates/theme/cms/js/bootstrap.min.js"></script>
+		<script src="/mvc/templates/theme/cms/js/unicorn.js"></script>
+		<script src="/mvc/templates/theme/cms/js/jquery.jpanelmenu.min.js"></script>
+		<script src="/mvc/templates/theme/cms/js/jquery.icheck.min.js"></script>
+		<script src="/mvc/templates/theme/cms/js/select2.min.js"></script>
+		<script src="/mvc/templates/theme/cms/js/jquery.dataTables.min.js"></script>
+		<script src="/mvc/templates/theme/cms/js/unicorn.tables.js"></script>
+		<script src="/mvc/templates/theme/cms/js/jquery.gritter.min.js"></script>
+		<script src="/mvc/templates/theme/cms/js/bootstrap-datepicker.js"></script>
+		<script src="/mvc/templates/theme/cms/js/bootstrap-datepicker.vi.js"></script>
+        <script src="/mvc/templates/theme/cms/js/jquery.masonry.min.js"></script>
+		<script src="/mvc/templates/theme/cms/js/bootstrap-datetimepicker.js"></script>
+		<script src="/mvc/templates/theme/cms/js/bootstrap-datetimepicker.vi.js"></script>
+		<script src="/mvc/templates/theme/cms/js/jquery.jplayer.min.js"/>
+		<script src="/mvc/templates/theme/cms/js/jquery.validate.js"/>
+		<script src="/mvc/templates/theme/cms/js/pdfobject.js"/>
+		<!--
 		<script type="text/javascript" language="javascript" src="/mvc/templates/script/library/amlich-hnd.js"/>
 		<script type="text/javascript" language="javascript" src="/mvc/templates/script/library/jquery.eventCalendar.js"/>
-		<script type="text/javascript" language="javascript" src="/mvc/templates/script/library/jquery.timeago.js"/>		
-		<script type="text/javascript" language="javascript" src="/mvc/templates/theme/bootstrap/js/bootstrap.js"/>
-		<script type="text/javascript" language="javascript" src="/mvc/templates/script/user/base.js"/>
+		<script type="text/javascript" language="javascript" src="/mvc/templates/script/library/jquery.timeago.js"/>	-->	
 	</span>
 	
 	<!-- ======================================================================== -->
 	<!-- HEADER																	  -->
 	<!-- ======================================================================== -->
 	<div metal:define-macro="Header">
-		<div class="navbar navbar-inverse">
-			<div class="navbar-inner">
-				<a class="brand" href="/thu-lao">QUẢN LÝ THÙ LAO</a> 
-				<span class="brand">_______</span>
-				<p class="navbar-text pull-right">				
-					<a class="navbar-link" href="thu-lao/signout/load"><span tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()" tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->getUser()"/></a></p>
-										
-				<a align="center" class="brand" href="/thu-lao/app"> Tháng <span tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentMonth()"/> Năm <span tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentYear()"/></a>
-				
-			</div>
+		<div id="header">
+			<h1><a>QUẢN LÝ THÙ LAO</a></h1>
+			<a id="menu-trigger" href="/thu-lao"><i class="glyphicon glyphicon-align-justify"/></a>	
 		</div>
-	</div>
-	
-	<!-- ======================================================================== -->
-	<!-- LOCATION BAR															  -->
-	<!-- ======================================================================== -->
-	<div metal:define-macro="LocationBar">
-		<div class="row-fluid">			
-			<ul class="span12 breadcrumb">
-				<li tal:repeat="Item Navigation">
-					<a tal:attributes="href php:Item[1]" tal:content="php:Item[0]" /> <span class="divider">/</span>
+		<div id="user-nav">			
+            <ul class="btn-group">
+				<li class="btn">					
+					<a align="center" class="brand" href="/thu-lao/app"> <i class="glyphicons-wifi" style="margin-top:-5px;margin-right:5px;"/> Tháng <span tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentMonth()"/> Năm <span tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentYear()"/></a>
 				</li>
-				<li class="active" tal:content="Title"/>
-			</ul>
-		</div>
+                <li class="btn"><a class="tip-bottom" data-original-title="Click để đăng xuất" href="/signout/exe">
+					<i class="glyphicon glyphicon-user"></i> <span class="text" tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()" tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->getUser()"/>
+				</a></li>
+            </ul>
+        </div>
 	</div>
-	
 	<!-- ======================================================================== -->
 	<!-- LOCATION BAR															  -->
 	<!-- ======================================================================== -->
-	<div metal:define-macro="PageBar" class="pagination">
-		<ul>
-			<li tal:repeat="P PN/getPages" tal:attributes="class php:Page==P->getId()?'disabled':'active'">
-				<a tal:attributes="href P/getURL" tal:content="P/getName" />
-			</li>
-		</ul>
+	
+	<div metal:define-macro="LocationBar" id="breadcrumb">
+		<a class="tip-bottom" title="" href="/thu-lao" data-original-title="Về trang chủ"><i class="glyphicons-shop"></i> Hệ thống</a>
+		<a tal:repeat="Item Navigation" tal:attributes="href php:Item[1]" tal:content="php:Item[0]" data-original-title="Về trang này" class="tip-bottom"/>
+		<a tal:content="Title" class="current"/>
 	</div>
-							
-	<div metal:define-macro="Menu" class="menu">
-		<ul class="nav nav-list config-number" ><!-- tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isAdmin()"> -->
-			<li class="nav-header">CHỨC NĂNG</li>
+	
+	<div metal:define-macro="ContentHeader" id="content-header"><h1>HỆ THỐNG QUẢN LÝ THÙ LAO</h1></div>
+	<!-- ======================================================================== -->
+	<!-- LOCATION BAR															  -->
+	<!-- ======================================================================== -->
+	<ul metal:define-macro="PageBar" class="pagination alternate pull-right page-bar">
+		<li tal:repeat="P PN/getPages" tal:attributes="class php:Page==P->getId()?'active':'disable'">
+			<a tal:attributes="href P/getURL" tal:content="P/getName"/>
+		</li>
+	</ul>	
+	
+	<div metal:define-macro="Menu" id="sidebar">
+		<ul >
 			<li tal:attributes="class php:ActiveAdmin=='Reward'?'active':'disable'">
-				<a tal:attributes="href '/thu-lao/reward'">NHẬP ĐIỂM THÙ LAO<span class="badge badge-info pull-right" tal:content="''"/></a>
-			</li>				
-			<li tal:attributes="class php:ActiveAdmin=='Report'?'active':'disable'">
-				<a tal:attributes="href '/thu-lao/report'">BÁO CÁO ĐIỂM THÙ LAO<span class="badge badge-info pull-right" tal:content="''"/></a>
-			</li>			
-			<li tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isManager()" tal:attributes="class php:ActiveAdmin=='Manager'?'active':'disable'">
-				<a tal:attributes="href '/thu-lao/manager'">QUẢN LÝ DANH MỤC<span class="badge badge-info pull-right" tal:content="''"/></a>
+				<a tal:attributes="href '/thu-lao/reward'"><i class="glyphicons-drink" />NHẬP ĐIỂM THÙ LAO</a>
 			</li>
+			<li tal:attributes="class php:ActiveAdmin=='Import'?'active':'disable'">
+				<a tal:attributes="href '/thu-lao/report'"><i class="glyphicons-truck" />BÁO CÁO ĐIỂM THÙ LAO</a>
+			</li>
+			<li tal:attributes="class php:ActiveAdmin=='Manager'?'active':'disable'" tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isManager()">
+				<a tal:attributes="href '/thu-lao/manager'"><i class="glyphicons-table" />QUẢN LÝ DANH MỤC</a>
+			</li>			
 			<li tal:attributes="class php:ActiveAdmin=='Search'?'active':'disable'">
-				<a tal:attributes="href '/thu-lao/search'">NHẬT KÝ CHƯƠNG TRÌNH<span class="badge badge-info pull-right" tal:content="''"/></a>
+				<a tal:attributes="href '/thu-lao/search'"><i class="glyphicons-transfer" />NHẬT KÝ CHƯƠNG TRÌNH</a>
 			</li>
 			<li tal:attributes="class php:ActiveAdmin=='ChangePass'?'active':'disable'">
-				<a tal:attributes="href '/thu-lao/changepass'">ĐỔI MẬT KHẨU <span class="badge badge-info pull-right" /></a>
+				<a tal:attributes="href '/thu-lao/changepass'"><i class="glyphicons-fax" />ĐỔI MẬT KHẨU</a>
 			</li>
-			<li tal:attributes="class php:ActiveAdmin=='Statistic'?'active':'disable'" tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isAdmin()">
-				<a tal:attributes="href '/app'">QUẢN TRỊ WEB</a>
-			</li>
-			<li class="nav-header">Hỗ trợ: THANH BẢO - 0903 062 068</li>
-		</ul>
+			<li tal:attributes="class php:ActiveAdmin=='App'?'active':'disable'" tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isAdmin()">
+				<a tal:attributes="href '/app'"><i class="glyphicons-cogwheels" />QUẢN TRỊ WEB</a>
+			</li>			
+		</ul>		
 	</div>
-	
 	<!-- ======================================================================== -->
 	<!-- FOOTER																	  -->
 	<!-- ======================================================================== -->
-	<div metal:define-macro="Footer">
-		<div class="row-fluid footer">
-			<span class="label pull-right copyright">&#169; 2013 KTTH - THVL</span>
+		
+	<div metal:define-macro="Footer" class="row">
+		<div id="footer" class="col-12" style="text-align:right; padding-right:20px;">
+			2013 &copy; <a href="https://www.ktthehien.com">&#169;KTTH - THVL</a>
 		</div>
-	</div>	
+	</div>
 </body>
 </html>
