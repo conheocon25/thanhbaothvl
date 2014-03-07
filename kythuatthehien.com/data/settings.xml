@@ -49,6 +49,15 @@
 		<command name="Course" type="public"><view>Course</view></command>
 		<command name="CourseDetail" type="public"><view>CourseDetail</view></command>
 		<command name="CourseLession" type="public"><view>CourseLession</view></command>
+		
+		<!-- ============================================================================== -->
+		<!-- JSON LOAD			 															-->
+		<!-- ============================================================================== -->		
+		<command name="ObjectLoad"><view>ObjectLoad</view></command>
+		<command name="ObjectDel"><view>ObjectDel</view></command>
+		<command name="ObjectIns"><view>ObjectIns</view></command>
+		<command name="ObjectUpd"><view>ObjectUpd</view></command>
+		
 		<!-- ============================================================================== -->
 		<!-- APLICATION - THU LAO			 																-->
 		<!-- ============================================================================== -->

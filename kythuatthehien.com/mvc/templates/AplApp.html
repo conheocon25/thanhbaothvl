@@ -36,7 +36,7 @@
 												<div class="form-group">
 													<label class="control-label">Chọn Tháng</label>
 													<div class="controls">
-														<select name="mMonth">
+														<select id="mMonth" name="mMonth">
 															<option value="1" >
 																<span>Tháng 01</span>
 															</option>										
@@ -79,7 +79,7 @@
 												<div class="form-group">
 													<label class="control-label">Chọn Năm</label>
 													<div class="controls">
-														<select name="mYear">
+														<select name="mYear" id="mYear">
 															<option value="2013" >
 																<span>Năm 2013</span>
 															</option>
@@ -125,6 +125,25 @@
 		</div>	
 		<span metal:use-macro="mApplication.xhtml/Footer"/>
 		<span metal:use-macro="mApplication.xhtml/IncludeJS"/>
-		
+		 <script type="text/javascript">
+		/*<![CDATA[*/
+			$('#URLChangeTimeButton').click(function(e){
+				
+				var mYear 	= $("#mYear").val();
+				var mMonth 	= $("#mMonth").val();				
+				URL = "thu-lao/app/changetime/"+mMonth+"/"+mYear;				
+				e.stopImmediatePropagation();
+				$.ajax({
+					type: "POST", 
+					async: false,
+					url: URL,
+					dataType: 'json',
+					success: function(data){
+						alert('thanh cong');
+					}
+				});
+			});
+		/*]]>*/
+		</script>
 	</body>
 </html>
