@@ -20,16 +20,13 @@ abstract class Mapper implements \MVC\Domain\Finder {
         if ( ! isset(self::$PDO) ) { 
 		
             $mEncrypted = new Encrypted("","","");
+			$res = $mEncrypted->readStrConnection();
+			$StrConnection = explode(" ", $res);			
 			
-			$dsn = $mEncrypted->readDNS() ;
-			$dbname = $mEncrypted->readDBName();			
-			$user = $mEncrypted->readDBUser();
-			$pass = $mEncrypted->readDBPass();
-			
-            if ( is_null( $dsn ) ) {
+            if ( is_null( $StrConnection[0] ) ) {
                 throw new \MVC\Base\AppException( "No DSN" );
             }
-            self::$PDO = new \PDO( $dsn . $dbname, $user, $pass, array(\PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8", \PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true) );
+            self::$PDO = new \PDO( $StrConnection[0] . $StrConnection[1], $StrConnection[2], $StrConnection[3], array(\PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8", \PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true) );
             self::$PDO->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 			
         }

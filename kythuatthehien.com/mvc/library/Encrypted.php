@@ -101,6 +101,15 @@ Namespace MVC\Library;
 		   return trim($decrypttext); 
 		} 
 		
+		function readStrConnection()
+		{
+			$result = "";
+			$file = fopen($this->fullpath . "Security.dat","r");			
+			$result = fread( $file , 1024 );						
+			fclose($file); 
+			return $this->decryptData($result);
+		}
+		
 		function writeDNS()
 		{	
 			$file = fopen($this->fullpath . "DNS","w");
@@ -108,62 +117,6 @@ Namespace MVC\Library;
 			fclose($file); 			
 		}
 		
-		function readDNS()
-		{
-			$result = "";
-			$file = fopen($this->fullpath . "DNS","r");			
-			$result = fread( $file ,512);						
-			fclose($file); 
-			return $this->decryptData($result);
-		}
-		
-		function writeDBUser()
-		{	
-			$file = fopen($this->fullpath . "DBUser","w");
-			fwrite($file, $this->encryptData($this->DBUser) ,512);				
-			fclose($file); 			
-		}
-		
-		function readDBUser()
-		{
-			$result = "";
-			$file = fopen($this->fullpath . "DBUser","r");			
-			$result = fread( $file ,512);						
-			fclose($file); 
-			return $this->decryptData($result);
-		}
-		
-		function writeDBName()
-		{	
-			$file = fopen($this->fullpath . "DBName","w");
-			fwrite($file, $this->encryptData($this->DBName) ,512);				
-			fclose($file); 			
-		}
-		
-		function readDBName()
-		{
-			$result = "";
-			$file = fopen($this->fullpath . "DBName","r");			
-			$result = fread( $file ,512);						
-			fclose($file); 
-			return $this->decryptData($result);
-		}
-		
-		function writeDBPass()
-		{	
-			$file = fopen($this->fullpath . "DBPass","w");
-			fwrite($file, $this->encryptData($this->DBPass) ,512);				
-			fclose($file); 			
-		}
-		
-		function readDBPass()
-		{
-			$result = "";
-			$file = fopen($this->fullpath . "DBPass","r");			
-			$result = fread( $file ,512);						
-			fclose($file); 
-			return $this->decryptData($result);
-		}
 		/////////////////////////////////////////////////////
 		// Ghi dữ liệu mã hóa và giãi mã với đường dẫn và data
 		/////////////////////////////////////////////////////

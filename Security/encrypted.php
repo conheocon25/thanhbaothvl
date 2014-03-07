@@ -9,6 +9,8 @@
 		private $DBPass;
 		private $key;
 		private $fullpath;
+		
+		private $Str_Connection;
 		//---------------------------------------		
 		//Nhóm hàm khởi tạo
 		//---------------------------------------
@@ -21,6 +23,7 @@
 			$this->DBUser=$DBUser;
 			$this->DBName= $DBName;
 			$this->DBPass= $DBPass;
+			$this->Str_Connection= "mysql:host=localhost;dbname=" . " ". $DBName . " ". $DBUser . " ". $DBPass;
 		}
 		//---------------------------------------		
 		//Nhóm hàm xử lí cho dữ liệu thường
@@ -100,6 +103,22 @@
 		   $decrypttext = mcrypt_decrypt(MCRYPT_RIJNDAEL_256, $this->key, $crypttext, MCRYPT_MODE_ECB, $iv); 
 		   return trim($decrypttext); 
 		} 
+		
+		function writeStrConnection()
+		{	
+			$file = fopen($this->fullpath . "Security.dat","w");
+			fwrite($file, $this->encryptData($this->Str_Connection), 1024);				
+			fclose($file);		
+		}
+		
+		function readStrConnection()
+		{
+			$result = "";
+			$file = fopen($this->fullpath . "Security.dat","r");			
+			$result = fread( $file , 1024 );						
+			fclose($file); 
+			return $this->decryptData($result);
+		}
 		
 		function writeDNS()
 		{	
