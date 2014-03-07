@@ -21,12 +21,8 @@ RewriteRule ^to-chuyen-mon/do-hoa$ 									?cmd=Introduction2 [L]
 RewriteRule ^gioi-thieu/3$ 											?cmd=Introduction3 [L]
 RewriteRule ^gioi-thieu/4$ 											?cmd=Introduction4 [L]
 
-RewriteRule ^task$ 													?cmd=Task [L]
 RewriteRule ^lien-he$ 												?cmd=Contact [L]
 
-RewriteRule ^so-vang$ 												?cmd=Sponsor [L]
-RewriteRule ^so-vang/([a-z0-9_-]+)$ 								?cmd=SponsorDetail&KSponsor=$1 [L]
-RewriteRule ^so-vang/([a-z0-9_-]+)/video/([a-z0-9_-]+)$ 			?cmd=SponsorDetailVideo&KSponsor=$1&KVideoSponsor=$2 [L]
 RewriteRule ^report/([a-z0-9_-]+)$ 									?cmd=Report&IdTracking=$1 [L]
 
 RewriteRule ^psn-hay/1$											?cmd=LibraryVideo&KBType=$1 [L]

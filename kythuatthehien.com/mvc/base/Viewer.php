@@ -18,28 +18,26 @@ class Viewer {
 		$properties = $request->getProperties();
 		
 		//Khởi tạo template và chuyển các thuộc tính và đối tượng sang
-		$tpl = new PHPTAL($this->Path);
-		while (list($key, $val) = each($objects)){
-			$tpl->$key = $val;
+		$tpl = new PHPTAL($this->Path);				
+		while (list($key, $val) = each($objects)){			
+			if (substr($key, 0, 1)!='_')
+				$tpl->$key = $val;			
 		}
-		while (list($key, $val) = each($properties)){
-			$tpl->$key = $val;
+		while (list($key, $val) = each($properties)){			
+			if (substr($key, 0, 1)!='_')
+				$tpl->$key = $val;
 		}
-		$Html = $tpl->execute();
-		
-		//Giải phóng bộ nhớ bị rò rỉ
+		$Out = $tpl->execute();
 		unset($tpl);
-		unset($objects);
-		unset($properties);
 		
 		//Kết xuất dữ liệu ra HTML
-		return $Html;
+		return $Out;
 	}
 	
 	//-------------------------------------------------
 	//Hỗ trợ template xuất ra dưới dạng HTML    
 	//-------------------------------------------------
-	function pdf(){
+	function pdf(){		
 		$html = $this->html();		
 		$pdf = new \TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 		$pdf->SetMargins(5, 12, 5);
@@ -51,7 +49,7 @@ class Viewer {
 		$pdf->AddPage();
 		$pdf->SetFont('arial', 'N', 10);					
 		$pdf->writeHTML($html, true, false, true, false, '');
-		$Out = $pdf->Output("BaocaoDiemTHuLao_Canhan.pdf", 'I');
+		$Out = $pdf->Output("Baocao.pdf", 'I');
 		unset($pdf);
 		return $Out;
 	}

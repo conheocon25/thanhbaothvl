@@ -13,14 +13,11 @@ Namespace MVC\Library;
 		//Nhóm hàm khởi tạo
 		//---------------------------------------
 		
-		function __construct($DBName = null, $DBUser = null, $DBPass = null )
-		{			
-			$this->key = "068thanhbaoit_thvl968";
-			$this->fullpath = "./data/";
-			$this->DNS= "mysql:host=localhost;dbname=";
-			$this->DBUser=$DBUser;
-			$this->DBName= $DBName;
-			$this->DBPass= $DBPass;
+		function __construct()
+		{				
+			
+			$this->key = "123appspncompanynumberone";
+			$this->fullpath = "data/key.dat";
 		}
 		//---------------------------------------		
 		//Nhóm hàm xử lí cho dữ liệu thường
@@ -100,87 +97,46 @@ Namespace MVC\Library;
 		   $decrypttext = mcrypt_decrypt(MCRYPT_RIJNDAEL_256, $this->key, $crypttext, MCRYPT_MODE_ECB, $iv); 
 		   return trim($decrypttext); 
 		} 
-		
-		function writeDNS()
-		{	
-			$file = fopen($this->fullpath . "DNS","w");
-			fwrite($file, $this->encryptData($this->DNS) ,512);				
-			fclose($file); 			
+		function SizeFileConfig()
+		{			
+			$systemcontent[] = $this->encryptData($this->DNS);
+			$systemcontent[] = $this->encryptData($this->DBName);
+			$systemcontent[] = $this->encryptData($this->DBUser);
+			$systemcontent[] = $this->encryptData($this->DBPass);
+			for($i=0; $i < sizeof($systemcontent); $i++)
+			{
+				$systemsize[] = strlen($systemcontent[$i]);
+			}
+			return $systemsize;
 		}
-		
-		function readDNS()
+		function writeToFile()
+		{			
+			$systemcontent[] = $this->encryptData($this->DNS);
+			$systemcontent[] = $this->encryptData($this->DBName);
+			$systemcontent[] = $this->encryptData($this->DBUser);
+			$systemcontent[] = $this->encryptData($this->DBPass);
+			for($i=0; $i < sizeof($systemcontent); $i++)
+			{
+				$systemsize[] = strlen($systemcontent[$i]);
+			}
+			$file = fopen($this->fullpath,"w");
+			for($i=0; $i < sizeof($systemsize); $i++)
+			{
+				fwrite($file,$systemcontent[$i],$systemsize[$i]);
+			}			
+			fclose($file); 
+			return $systemsize;
+		}
+		function readFromFile($systemsize)
 		{
 			$result = "";
-			$file = fopen($this->fullpath . "DNS","r");			
-			$result = fread( $file ,512);						
+			$file = fopen($this->fullpath,"r");
+			for($i=0; $i < sizeof($systemsize); $i++)
+			{
+				$result[] = fread( $file ,$systemsize[$i]);
+			}				
 			fclose($file); 
-			return $this->decryptData($result);
-		}
-		
-		function writeDBUser()
-		{	
-			$file = fopen($this->fullpath . "DBUser","w");
-			fwrite($file, $this->encryptData($this->DBUser) ,512);				
-			fclose($file); 			
-		}
-		
-		function readDBUser()
-		{
-			$result = "";
-			$file = fopen($this->fullpath . "DBUser","r");			
-			$result = fread( $file ,512);						
-			fclose($file); 
-			return $this->decryptData($result);
-		}
-		
-		function writeDBName()
-		{	
-			$file = fopen($this->fullpath . "DBName","w");
-			fwrite($file, $this->encryptData($this->DBName) ,512);				
-			fclose($file); 			
-		}
-		
-		function readDBName()
-		{
-			$result = "";
-			$file = fopen($this->fullpath . "DBName","r");			
-			$result = fread( $file ,512);						
-			fclose($file); 
-			return $this->decryptData($result);
-		}
-		
-		function writeDBPass()
-		{	
-			$file = fopen($this->fullpath . "DBPass","w");
-			fwrite($file, $this->encryptData($this->DBPass) ,512);				
-			fclose($file); 			
-		}
-		
-		function readDBPass()
-		{
-			$result = "";
-			$file = fopen($this->fullpath . "DBPass","r");			
-			$result = fread( $file ,512);						
-			fclose($file); 
-			return $this->decryptData($result);
-		}
-		/////////////////////////////////////////////////////
-		// Ghi dữ liệu mã hóa và giãi mã với đường dẫn và data
-		/////////////////////////////////////////////////////
-		
-		function writeValue($filename, $value)
-		{	
-			$file = fopen($this->fullpath . $filename,"w");
-			fwrite($file, $this->encryptData($value) ,512);				
-			fclose($file); 			
-		}
-		function readValue($filename, $value)
-		{
-			$result = "";
-			$file = fopen($this->fullpath . $filename,"r");			
-			$result = fread( $file ,512);						
-			fclose($file); 
-			return $this->decryptData($result);
+			return $result;
 		}
 	}
 ?>

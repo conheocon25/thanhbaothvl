@@ -22,17 +22,17 @@
 			$request = new Request();
 			$AppController = \MVC\Base\ApplicationRegistry::appController();						
 			@$User = \MVC\Base\SessionRegistry::getCurrentUser();			
-			if (isset($User)&&$User->getEmail()!=""){				
+			
+			if (isset($User)&&$User->getEmail()!=""){
 				while( $cmd = $AppController->getCommand( $request ) ) {			
 					$cmd->execute( $request );					
 				}
-			}else{				
+			}else{
 				$Type = $AppController->getCommandType( $request);
-				$NameCommand = $request->getProperty('cmd');
-								
-				if ($Type != "public" && isset($NameCommand)){					
+				$NameCommand = $request->getProperty('cmd');				
+				if ($Type != "public" && isset($NameCommand)){
 					$request->setProperty('cmd','Home');
-				}else if (!isset($NameCommand)){					
+				}else if (!isset($NameCommand)){
 					$request->setProperty('cmd','Home');
 				}
 				
