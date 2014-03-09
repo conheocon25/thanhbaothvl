@@ -80,7 +80,7 @@
 		<div id="user-nav">			
             <ul class="btn-group">
 				<li class="btn">					
-					<a align="center" class="brand" href="/thu-lao/app"> <i class="glyphicons-wifi" style="margin-top:-5px;margin-right:5px;"/> Tháng <span tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentMonth()"/> Năm <span tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentYear()"/></a>
+					<a align="center" class="brand" data-toggle="modal" href="#DialogChangeTime" > <i class="glyphicon glyphicon-time" style="margin-top:-5px;margin-right:5px;"/> Tháng <span tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentMonth()"/> Năm <span tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentYear()"/></a>
 				</li>
                 <li class="btn"><a class="tip-bottom" data-original-title="Click để đăng xuất" href="/signout/exe">
 					<i class="glyphicon glyphicon-user"></i> <span class="text" tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()" tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->getUser()"/>
@@ -130,6 +130,103 @@
 			</li>			
 		</ul>		
 	</div>
+	
+	<!-- ======================================================================== -->
+	<!-- DIALOG ChangeTime														  -->
+	<!-- ======================================================================== -->
+	
+							<div  metal:define-macro="DialogChangeTime"  id="DialogChangeTime" class="modal fade">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h3><i class="glyphicons-film modal-icon"/>THAY ĐỔI THÁNG NHẬP THÙ LAO</h3>
+										</div>
+										<div class="form-horizontal">
+											<div class="modal-body">													
+												<div class="form-group">
+													<label class="control-label">Chọn Tháng</label>
+													<div class="controls">
+														<select id="mMonth" name="mMonth">
+															<option value="1" >
+																<span>Tháng 01</span>
+															</option>										
+															<option value="2" >
+																<span>Tháng 02</span>
+															</option>										
+															<option value="3" >
+																<span>Tháng 03</span>
+															</option>										
+															<option value="4" >
+																<span>Tháng 04</span>
+															</option>
+															<option value="5" >
+																<span>Tháng 05</span>
+															</option>
+															<option value="6" >
+																<span>Tháng 06</span>
+															</option>										
+															<option value="7" >
+																<span>Tháng 07</span>
+															</option>										
+															<option value="8" >
+																<span>Tháng 08</span>
+															</option>										
+															<option value="9" >
+																<span>Tháng 09</span>
+															</option>
+															<option value="10" >
+																<span>Tháng 10</span>
+															</option>
+															<option value="11" >
+																<span>Tháng 11</span>
+															</option>
+															<option value="12" >
+																<span>Tháng 12</span>
+															</option>
+														</select>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="control-label">Chọn Năm</label>
+													<div class="controls">
+														<select name="mYear" id="mYear">
+															<option value="2013" >
+																<span>Năm 2013</span>
+															</option>
+															<option value="2014" >
+																<span>Năm 2014</span>
+															</option>
+															<option value="2015" >
+																<span>Năm 2015</span>
+															</option>
+															<option value="2016" >
+																<span>Năm 2016</span>
+															</option>
+															<option value="2017" >
+																<span>Năm 2017</span>
+															</option>
+															<option value="2018" >
+																<span>Năm 2018</span>
+															</option>
+															<option value="2019" >
+																<span>Năm 2019</span>
+															</option>
+															<option value="2020" >
+																<span>Năm 2020</span>
+															</option>
+														</select>
+													</div>
+												</div>												
+											</div>
+											<div class="modal-footer">
+												<button id="URLChangeTimeButton" class="btn btn-primary btn-small"><i class="glyphicons-download_alt"/> Lưu</button>
+												<button data-dismiss="modal" class="btn btn-default btn-small"><i class="glyphicons-undo"/> Hủy</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
 	<!-- ======================================================================== -->
 	<!-- FOOTER																	  -->
 	<!-- ======================================================================== -->

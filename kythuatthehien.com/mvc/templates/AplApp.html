@@ -2,8 +2,7 @@
 <html lang="en">
 	<head>
 		<span metal:use-macro="mApplication.xhtml/IncludeMETA"/>
-		<span metal:use-macro="mApplication.xhtml/IncludeCSS"/>		
-				
+		<span metal:use-macro="mApplication.xhtml/IncludeCSS"/>			
 	</head>
 	<body>
 		<div class="container-fluid">
@@ -18,106 +17,6 @@
 							<a href="#DialogChangeTime" data-toggle="modal" class="btn btn-primary btn-ins">
 								<i class="glyphicons-plus"/> Thay Đổi Tháng/Năm
 							</a>
-							<div class="widget-box">
-								<div class="widget-content nopadding">
-									<!--<center><img class="bg_manager" src="/data/images/bg/bg_manager.jpg" width="50%"/></center>
-									-->
-								</div>	
-							</div>
-							<!-- INSERT DIALOG  -->
-							<div id="DialogChangeTime" class="modal fade">
-								<div class="modal-dialog">
-									<div class="modal-content">
-										<div class="modal-header">
-											<h3><i class="glyphicons-film modal-icon"/>THAY ĐỔI THÁNG NHẬP THÙ LAO</h3>
-										</div>
-										<div class="form-horizontal">
-											<div class="modal-body">													
-												<div class="form-group">
-													<label class="control-label">Chọn Tháng</label>
-													<div class="controls">
-														<select id="mMonth" name="mMonth">
-															<option value="1" >
-																<span>Tháng 01</span>
-															</option>										
-															<option value="2" >
-																<span>Tháng 02</span>
-															</option>										
-															<option value="3" >
-																<span>Tháng 03</span>
-															</option>										
-															<option value="4" >
-																<span>Tháng 04</span>
-															</option>
-															<option value="5" >
-																<span>Tháng 05</span>
-															</option>
-															<option value="6" >
-																<span>Tháng 06</span>
-															</option>										
-															<option value="7" >
-																<span>Tháng 07</span>
-															</option>										
-															<option value="8" >
-																<span>Tháng 08</span>
-															</option>										
-															<option value="9" >
-																<span>Tháng 09</span>
-															</option>
-															<option value="10" >
-																<span>Tháng 10</span>
-															</option>
-															<option value="11" >
-																<span>Tháng 11</span>
-															</option>
-															<option value="12" >
-																<span>Tháng 12</span>
-															</option>
-														</select>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="control-label">Chọn Năm</label>
-													<div class="controls">
-														<select name="mYear" id="mYear">
-															<option value="2013" >
-																<span>Năm 2013</span>
-															</option>
-															<option value="2014" >
-																<span>Năm 2014</span>
-															</option>
-															<option value="2015" >
-																<span>Năm 2015</span>
-															</option>
-															<option value="2016" >
-																<span>Năm 2016</span>
-															</option>
-															<option value="2017" >
-																<span>Năm 2017</span>
-															</option>
-															<option value="2018" >
-																<span>Năm 2018</span>
-															</option>
-															<option value="2019" >
-																<span>Năm 2019</span>
-															</option>
-															<option value="2020" >
-																<span>Năm 2020</span>
-															</option>
-														</select>
-													</div>
-												</div>												
-											</div>
-											<div class="modal-footer">
-												<button id="URLChangeTimeButton" class="btn btn-primary btn-small"><i class="glyphicons-download_alt"/> Lưu</button>
-												<button data-dismiss="modal" class="btn btn-default btn-small"><i class="glyphicons-undo"/> Hủy</button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- END INSERT DIALOG  -->
-							
 						</div>
 					</div>
 				</div>
@@ -125,6 +24,7 @@
 		</div>	
 		<span metal:use-macro="mApplication.xhtml/Footer"/>
 		<span metal:use-macro="mApplication.xhtml/IncludeJS"/>
+		<span metal:use-macro="mApplication.xhtml/DialogChangeTime"/>
 		 <script type="text/javascript">
 		/*<![CDATA[*/
 			$('#URLChangeTimeButton').click(function(e){
@@ -132,16 +32,16 @@
 				var mYear 	= $("#mYear").val();
 				var mMonth 	= $("#mMonth").val();				
 				URL = "thu-lao/app/changetime/"+mMonth+"/"+mYear;				
-				e.stopImmediatePropagation();
+				
 				$.ajax({
 					type: "POST", 
 					async: false,
 					url: URL,
 					dataType: 'json',
-					success: function(data){
-						alert('thanh cong');
+					success: function(data){						
 					}
 				});
+				location.reload(true);
 			});
 		/*]]>*/
 		</script>

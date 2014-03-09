@@ -53,10 +53,10 @@ RewriteRule ^lien-he$ 												?cmd=Contact [L]
 
 RewriteRule ^report/([a-z0-9_-]+)$ 									?cmd=Report&IdTracking=$1 [L]
 
-RewriteRule ^psn-hay/1$											?cmd=LibraryVideo&KBType=$1 [L]
-RewriteRule ^psn-hay/danh-muc/([a-z0-9_-]+)$					?cmd=LibraryVideoCategory&KCategory=$1 [L]
-RewriteRule ^psn-hay/danh-muc/([a-z0-9_-]+)/trang/([0-9]+)$		?cmd=LibraryVideoCategory&KCategory=$1&Page=$2 [L]
-RewriteRule ^psn-hay/danh-muc/([a-z0-9_-]+)/([a-z0-9_-]+)$		?cmd=LibraryVideoCategoryPlay&KCategory=$1&KVideoLibrary=$2 [L]
+RewriteRule ^psn-hay/1$												?cmd=LibraryVideo&KBType=$1 [L]
+RewriteRule ^psn-hay/danh-muc/([a-z0-9_-]+)$						?cmd=LibraryVideoCategory&KCategory=$1 [L]
+RewriteRule ^psn-hay/danh-muc/([a-z0-9_-]+)/trang/([0-9]+)$			?cmd=LibraryVideoCategory&KCategory=$1&Page=$2 [L]
+RewriteRule ^psn-hay/danh-muc/([a-z0-9_-]+)/([a-z0-9_-]+)$			?cmd=LibraryVideoCategoryPlay&KCategory=$1&KVideoLibrary=$2 [L]
 
 RewriteRule ^psn-hay/([a-z0-9_-]+)/giang-su/([a-z0-9_-]+)$					?cmd=LibraryVideoMonk&KBType=$1&KMonk=$2 [L]
 RewriteRule ^psn-hay/([a-z0-9_-]+)/giang-su/([a-z0-9_-]+)/trang/([0-9]+)$	?cmd=LibraryVideoMonk&KBType=$1&KMonk=$2&Page=$3 [L]
@@ -74,20 +74,6 @@ RewriteRule ^tin-tuc$ 												?cmd=ReadCategory [L]
 RewriteRule ^tin-tuc/([a-z0-9_-]+)$ 								?cmd=ReadCategory&Key1=$1 [L]
 RewriteRule ^tin-tuc/([a-z0-9_-]+)/trang/([a-z0-9_-]+)$ 			?cmd=ReadCategory&Key1=$1&Page=$2 [L]
 RewriteRule ^tin-tuc/([a-z0-9_-]+)/([a-z0-9_-]+)$ 					?cmd=ReadCategoryDetail&Key1=$1&Key2=$2 [L]
-
-RewriteRule ^chua-ban$ 												?cmd=Pagoda [L]
-RewriteRule ^chua-ban/([a-z0-9_-]+)$ 								?cmd=Pagoda&KPagoda=$1 [L]
-RewriteRule ^chua-ban/([a-z0-9_-]+)/video/([a-z0-9_-]+)$ 			?cmd=PagodaVideo&KPagoda=$1&KVideoPagoda=$2 [L]
-
-RewriteRule ^hoi-dap$ 												?cmd=Ask [L]
-RewriteRule ^hoi-dap/dat-cau-hoi$ 									?cmd=AskInsLoad [L]
-RewriteRule ^hoi-dap/dat-cau-hoi/exe$ 								?cmd=AskInsExe [L]
-RewriteRule ^hoi-dap/([a-z0-9_-]+)$ 								?cmd=Ask&KCategory=$1 [L]
-RewriteRule ^hoi-dap/([a-z0-9_-]+)/([a-z0-9_-]+)$ 					?cmd=Ask&KCategory=$1&KAsk=$2 [L]
-
-RewriteRule ^dao-tao$ 												?cmd=Course [L]
-RewriteRule ^dao-tao/([a-z0-9_-]+)$ 								?cmd=CourseDetail&KCourse=$1 [L]
-RewriteRule ^dao-tao/([a-z0-9_-]+)/([a-z0-9_-]+)$ 					?cmd=CourseLession&KCourse=$1&KLession=$2 [L]
 
 #---------------------------------------------------------------------------------------------------------------------------
 # APLICATION
