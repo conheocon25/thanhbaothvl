@@ -16,10 +16,11 @@
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-12">							
-							<div class="control-group">
+							<div align="center" class="control-group">
 									<label align="center" style="color:blue;" tal:content="User/getNote" >Tên Chương trình</label>
 									Điểm CM: <b style="color:red;" tal:content="php:NTotal->formatCurrency()"/>							
-							  - Điểm ABC: <b style="color:red;" tal:content="php:NTotalABC->formatCurrency()"/>
+									- Điểm ABC: <b style="color:red;" tal:content="php:NTotalABC->formatCurrency()"/>
+									 - <a align="center" class="brand" data-toggle="modal" href="#DialogChangeTime" > <i class="glyphicon glyphicon-time" style="margin-top:-5px;margin-right:5px;"/> Tháng <span tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentMonth()"/> Năm <span tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentYear()"/></a>
 							</div>				
 							<form style="color:white;" class="form-horizontal" tal:attributes="action 'thu-lao/reward/ins/exe'" method="post">														
 								<div class="control-group">
