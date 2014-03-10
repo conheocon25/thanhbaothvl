@@ -15,17 +15,17 @@
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-12">							
-							<div align="center" class="control-group">
-									<label align="center" style="color:blue;" tal:content="User/getNote" >Tên Chương trình</label>
+							<div align="center" class="well">
+									<label id="IdUser" tal:attributes="alt User/getId" align="center" tal:content="User/getNote" ></label>
 									Điểm CM: <b style="color:red;" tal:content="php:NTotal->formatCurrency()"/>							
 									- Điểm ABC: <b style="color:red;" tal:content="php:NTotalABC->formatCurrency()"/>
 									 - <a align="center" class="brand" data-toggle="modal" href="#DialogChangeTime" > <i class="glyphicon glyphicon-time" style="margin-top:-5px;margin-right:5px;"/> Tháng <span tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentMonth()"/> Năm <span tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentYear()"/></a>
 							</div>				
-							<form style="color:white;" class="form-horizontal" tal:attributes="action 'thu-lao/reward/ins/exe'" method="post">														
-								<div class="control-group">
+							
+								<div style="color:white;" class="control-group">
 									<label class="control-label">Tên Chương trình</label>
 									<div class="controls">
-										<select name="IdCategory" >
+										<select id="IdCategory" name="IdCategory" >
 											<option tal:repeat="CategoryPrograme CategoryProgrameAll" tal:attributes="value CategoryPrograme/getId" >
 												<span  tal:content="CategoryPrograme/getName"/>
 											</option>
@@ -33,12 +33,12 @@
 									</div>								
 									<label class="control-label">Ngày làm</label>									
 									<div class='controls'>
-										<input style="width:30%;" type='text' data-date-format="dd-mm-yyyy" class="form-control" name="DateStart"  id='DateStart'/>
+										<input style="width:30%;" type='text' class="form-control" name="DateStart"  id='DateStart'/>
 									</div>
 									
 									<label class="control-label">Số lượng</label>
 									<div class="controls">										
-										<select name="Count">
+										<select id="Count" name="Count">
 											<option value = "1" >
 												<span>1 Lần/ngày</span>
 											</option>
@@ -63,10 +63,10 @@
 								</div>
 								<div class="control-group">
 									<div class="controls">
-										<button type="submit" class="btn btn-primary btn-ins" value="submit-value">Thêm mới</button>
+										<button id="BtnAddReward" class="btn btn-primary btn-ins" value="submit-value">Thêm mới</button>
 									</div>
 								</div>						
-							</form>
+							
 							<div id="RewardLoad" />							
 						</div>
 					</div>
@@ -80,7 +80,8 @@
             //var Name 		= $(this).val();										
 			$("#RewardLoad").load("/thu-lao/reward/trang", { Page: 1 });
 			
-			$('#DateStart').datetimepicker();			
+			$('#DateStart').datetimepicker();
+			
 			$('#URLChangeTimeButton').click(function(e){				
 				var mYear 	= $("#mYear").val();
 				var mMonth 	= $("#mMonth").val();				
@@ -90,10 +91,58 @@
 					async: false,
 					url: URL,
 					dataType: 'json',
+					contentType:"application/json; charset=utf-8",	
 					success: function(data){						
 					}
 				});
 				location.reload(true);
+			});
+			$('#BtnAddReward').click(function(e){	
+				
+				var Data = [];
+				Data[0] 	= 'null';
+				Data[1] 	= $("#IdCategory").val();
+				Data[2] 	= $("#IdUser").attr('alt');					
+				Data[3] 	= $("#Content").val();	
+				Data[4] 	= $("#Count").val();	
+				Data[5] 	= $("#DateStart").val();	
+				Data[6] 	= 'null';	
+				Data[7] 	= '';	
+				
+				var URL = "/object/ins/Salarydaily";
+					$.ajax({
+						type: "POST",
+						data: {Data:Data},
+						url: URL,
+						contentType:"application/json; charset=utf-8",
+						success: function(msg){
+							$("#RewardLoad").load("/thu-lao/reward/trang", { Page: 1 });
+						}
+					});
+			});	
+			
+			$('#BtnAddReward1').click(function(e){	
+			
+				var Data = [];
+				Data[0] 	= $("#IdCategory").selected();
+				Data[1] 	= $("#DateStart").val();	
+				Data[2] 	= $("#Count").val();			
+				Data[3] 	= $("#Content").val();					
+				
+				URL = "thu-lao/reward/ins/exe";
+				alert(URL);
+				e.stopImmediatePropagation();
+				$.ajax({
+					type: "POST", 
+					async: false,
+					url: URL,
+					data: {Data:Data},
+					dataType: 'json',
+					contentType:"application/json; charset=utf-8",	
+					success: function(data){
+						alert ("thanh cong");
+					}
+				});				
 			});
 		/*]]>*/
 		</script>		

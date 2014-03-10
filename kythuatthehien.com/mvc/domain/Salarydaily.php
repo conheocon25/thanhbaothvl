@@ -4,117 +4,142 @@ require_once( "mvc/base/domain/DomainObject.php" );
 
 class Salarydaily extends Object{
 
-    private $Id;
-	private $Id_category;
-	private $Id_employee;
-	private $Content;
-	private $Count;
-	private $Date_work;
-	private $Date_note;
-	private $Note;
+    private $id;
+	private $id_category;
+	private $id_employee;
+	private $content;
+	private $count;
+	private $date_work;
+	private $date_note;
+	private $note;
 	
 	/*Hàm khởi tạo và thiết lập các thuộc tính*/
-    function __construct( $Id=null, $Id_category=null, $Id_employee=null, $Content=null, $Count=null, $Date_work=null, $Date_note=null, $Note=null ) {
-        $this->Id = $Id;
-		$this->Id_category = $Id_category;
-		$this->Id_employee = $Id_employee;
-		$this->Content = $Content;
-		$this->Count = $Count;
-		$this->Date_work = $Date_work;
-		$this->Date_note = $Date_note;
-		$this->Note = $Note;
-        parent::__construct( $Id );
+    function __construct( $id=null, $id_category=null, $id_employee=null, $content=null, $count=null, $date_work=null, $date_note=null, $note=null ) {
+        $this->id = $id;
+		$this->id_category = $id_category;
+		$this->id_employee = $id_employee;
+		$this->content = $content;
+		$this->count = $count;
+		$this->date_work = $date_work;
+		$this->date_note = $date_note;
+		$this->note = $note;
+        parent::__construct( $id );
     }
-    function getId( ) {
-        return $this->Id;
+	
+	public function toJSON(){
+		$json = array(
+			'id' 			=> $this->getid(),
+			'id_category'	=> $this->getid_category(),
+		 	'id_employee'	=> $this->getid_employee(),
+		 	'content'		=> $this->getcontent(),
+		 	'count'			=> $this->getcount(),
+		 	'date_work'		=> $this->getdate_work(),
+		 	'date_note'		=> $this->getdate_note(),
+		 	'note'			=> $this->getnote()
+		);
+		return json_encode($json);
+	}
+	function setArray( $Data ){
+        $this->id = 			$Data[0];
+		$this->id_category = 	$Data[1];
+		$this->id_employee = 	$Data[2];
+		$this->content = 		$Data[3];
+		$this->count =		 	$Data[4];
+		$this->date_work = 		$Data[5];
+		$this->date_note = 		$Data[6];
+		$this->note = 			$Data[7];
+    }
+	
+    function getid( ) {
+        return $this->id;
     }	
 	
-    function setId( $Id ) {
-        $this->Id = $Id;
+    function setid( $id ) {
+        $this->id = $id;
         $this->markDirty();
     }
-    function getId_category( ) {
-        return $this->Id_category;
+    function getid_category( ) {
+        return $this->id_category;
     }
-    function setId_category( $Id_category ) {
-        $this->Id_category = $Id_category;
+    function setid_category( $id_category ) {
+        $this->id_category = $id_category;
         $this->markDirty();
     }
-    function getId_employee( ) {
-        return $this->Id_employee;
+    function getid_employee( ) {
+        return $this->id_employee;
     }
-    function setId_employee( $Id_employee ) {
-        $this->Id_employee = $Id_employee;
+    function setid_employee( $id_employee ) {
+        $this->id_employee = $id_employee;
         $this->markDirty();
     }
-    function getContent( ) {
-        return $this->Content;
+    function getcontent( ) {
+        return $this->content;
     }
-    function setContent( $Content ) {
-        $this->Content = $Content;
+    function setcontent( $content ) {
+        $this->content = $content;
         $this->markDirty();
     }
-    function getCount( ) {
-        return $this->Count;
+    function getcount( ) {
+        return $this->count;
     }
-    function setCount( $Count ) {
-        $this->Count = $Count;
+    function setcount( $count ) {
+        $this->count = $count;
         $this->markDirty();
     }
-    function getDate_work( ) {
-        return $this->Date_work;
+    function getdate_work( ) {
+        return $this->date_work;
     }
 	
-    function setDate_work( $Date_work ) {
-        $this->Date_work = $Date_work;
+    function setdate_work( $date_work ) {
+        $this->date_work = $date_work;
         $this->markDirty();
     }
 	
 	function getDateWorkPrint( ){
-		$D = new \MVC\Library\Date($this->Date_work);
+		$D = new \MVC\Library\Date($this->date_work);
 		return $D->getDateFormat();
 	}
 	
-	function getDate_note( ) {
-        return $this->Date_note;
+	function getdate_note( ) {
+        return $this->date_note;
     }
-    function setDate_note( $Date_note ) {
-        $this->Date_note = $Date_note;
+    function setdate_note( $date_note ) {
+        $this->date_note = $date_note;
         $this->markDirty();
     }
 	
-	function getDateNotePrint( ){
-		$D = new \MVC\Library\Date($this->Date_note);
+	function getDatenotePrint( ){
+		$D = new \MVC\Library\Date($this->date_note);
 		return $D->getDateFormat();
 	}
 	
-	function getNote( ) {
-        return $this->Note;
+	function getnote( ) {
+        return $this->note;
     }
-    function setNote( $Note ) {
-        $this->Note = $Note;
+    function setnote( $note ) {
+        $this->note = $note;
         $this->markDirty();
     }
 	
-	function getURLRewardUpdateLoad(){return "/thu-lao/reward/update/".$this->getId();}
-	function getURLRewardUpdateExe(){return "/thu-lao/reward/update/".$this->getId()."/exe";}
-	function getURLRewardDeleteLoad(){return "/thu-lao/reward/delete/".$this->getId();}
-	function getURLRewardDeleteExe(){return "/thu-lao/reward/delete/".$this->getId()."/exe";}
+	function getURLRewardUpdateLoad(){return "/thu-lao/reward/update/".$this->getid();}
+	function getURLRewardUpdateExe(){return "/thu-lao/reward/update/".$this->getid()."/exe";}
+	function getURLRewardDeleteLoad(){return "/thu-lao/reward/delete/".$this->getid();}
+	function getURLRewardDeleteExe(){return "/thu-lao/reward/delete/".$this->getid()."/exe";}
 	
 	function getEmployee(){
 		$mEmployee = new \MVC\Mapper\User();
-		$Employee = $mEmployee->find( $this->Id_employee );
+		$Employee = $mEmployee->find( $this->id_employee );
 		return $Employee;
 	}
 	
 	function getCategory(){
 		$mCategory = new \MVC\Mapper\Category();
-		$Category = $mCategory->find( $this->Id_category );
+		$Category = $mCategory->find( $this->id_category );
 		return $Category;
 	}	
 
-	function getCountTechnique(){		
-		$Value = (($this->getCategory()->getFactory()) * $this->getCount() * $this->getEmployee()->getRule());
+	function getcountTechnique(){		
+		$Value = (($this->getCategory()->getFactory()) * $this->getcount() * $this->getEmployee()->getRule());
 		return $Value;
 	}	
 	

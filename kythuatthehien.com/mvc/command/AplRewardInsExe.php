@@ -12,12 +12,13 @@
 			//-------------------------------------------------------------
 			//THAM SỐ GỬI ĐẾN
 			//-------------------------------------------------------------
-			$IdCategory = $request->getProperty('IdCategory');
-			$DateStart = $request->getProperty('DateStart');
-			$Count = $request->getProperty('Count');
-			$Content = $request->getProperty('Content');
-			$Note = $request->getProperty('Note');
-						
+			//$IdCategory = $request->getProperty('IdCategory');
+			//$DateStart = $request->getProperty('DateStart');
+			//$Count = $request->getProperty('Count');
+			//$Content = $request->getProperty('Content');			
+			
+			$OjData = $request->getObject('Data');
+			
 			//-------------------------------------------------------------
 			//MAPPER DỮ LIỆU
 			//-------------------------------------------------------------			
@@ -26,7 +27,7 @@
 			//-------------------------------------------------------------
 			//XỬ LÝ CHÍNH
 			//-------------------------------------------------------------
-			if (!isset($IdCategory)||$DateStart=="")
+			if (!isset($OjData[0])||$OjData[1]=="")
 				return self::statuses('CMD_NO_AUTHOR');
 				
 			$dSalarydaily = new \MVC\Domain\Salarydaily(
@@ -37,7 +38,7 @@
 				$Count,
 				$DateStart,
 				null,
-				$Note				
+				''				
 			);
 			
 			$mSalarydaily->insert($dSalarydaily);

@@ -94,6 +94,7 @@ RewriteRule ^thu-lao/reward/update/([0-9]+)/exe$					?cmd=AplRewardUpdateExe&IdR
 RewriteRule ^thu-lao/reward/delete/([0-9]+)$						?cmd=AplRewardDelete&IdReward=$1 [L]
 RewriteRule ^thu-lao/reward/delete/([0-9]+)/exe$					?cmd=AplRewardDeleteExe&IdReward=$1 [L]
 RewriteRule ^thu-lao/reward/ins/load$ 								?cmd=AplRewardInsLoad [L]
+
 RewriteRule ^thu-lao/reward/ins/exe$ 								?cmd=AplRewardInsExe [L]
 
 RewriteRule ^thu-lao/config$ 										?cmd=AplConfig [L]
