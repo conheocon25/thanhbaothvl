@@ -104,7 +104,7 @@
 	<!-- ======================================================================== -->
 	<ul metal:define-macro="PageBar" class="pagination alternate pull-right page-bar">
 		<li tal:repeat="P PN/getPages" tal:attributes="class php:Page==P->getId()?'active':'disable'">
-			<a tal:attributes="href P/getURL" tal:content="P/getName"/>
+			<a class="PageClick" tal:attributes="alt P/getURL" tal:content="P/getName"/>
 		</li>
 	</ul>	
 	
@@ -116,7 +116,7 @@
 			<li tal:attributes="class php:ActiveAdmin=='Import'?'active':'disable'">
 				<a tal:attributes="href '/thu-lao/report'"><i class="glyphicons-truck" />BÁO CÁO ĐIỂM THÙ LAO</a>
 			</li>
-			<li tal:attributes="class php:ActiveAdmin=='Manager'?'active':'disable'" tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isManager()">
+			<li tal:attributes="class php:ActiveAdmin=='Manager'?'active':'disable'" tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isAdmin()">
 				<a tal:attributes="href '/thu-lao/manager'"><i class="glyphicons-table" />QUẢN LÝ DANH MỤC</a>
 			</li>			
 			<li tal:attributes="class php:ActiveAdmin=='Search'?'active':'disable'">

@@ -81,6 +81,7 @@
 		</command>
 		
 		<command name="AplReward"><view>AplReward</view></command>
+		<command name="AplRewardPageLoad"><view>AplRewardPageLoad</view></command>
 		<command name="AplRewardInsLoad"><view>AplRewardInsLoad</view></command>
 		<command name="AplRewardUpdate"><view>AplRewardUpdate</view></command>		
 		<command name="AplRewardDelete"><view>AplRewardDelete</view></command>		
