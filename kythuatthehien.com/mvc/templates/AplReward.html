@@ -74,13 +74,60 @@
 			</div>			
 		</div>
 		<span metal:use-macro="mApplication.xhtml/Footer"/>		
+		<span metal:use-macro="mDialog.xhtml/DialogDelSelected"/>
 		<span metal:use-macro="mApplication.xhtml/DialogChangeTime"/>
+		<!-- DIALOG EDIT	-->
+					<div id="DialogUpdateReward" class="modal fade">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h3><i class="glyphicons-fast_food modal-icon"/>CẬP NHẬT THÔNG TIN</h3>
+								</div>								
+								<form id="FormSDUpdate" action="#" class="form-horizontal" novalidate="novalidate">									
+									<div class="form-group">
+										<label class="control-label">Tên chương trình</label>
+										<div class="controls">
+											<select id="IdCategory1" name="IdCategory1" >
+												<option tal:repeat="CategoryPrograme CategoryProgrameAll" tal:attributes="value CategoryPrograme/getId" >
+													<span  tal:content="CategoryPrograme/getName"/>
+												</option>
+											</select>										
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label">Ngày làm</label>
+										<div class="controls">
+											<input id="DateWork" name="DateWork" type="text" class="form-control input-small"/>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label">Số lượng</label>
+										<div class="controls">
+											<input id="NCount" name="NCount" type="text" class="form-control input-small"/>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label">Nội dung</label>
+										<div class="controls">
+											<textarea id="ContentEdit" name="ContentEdit" type="text" class="form-control"/>
+										</div>
+									</div>
+									<div class="form-actions">										
+										<button id="URLUpdateReward" class="btn btn-primary btn-small" value="Validate"><i class="glyphicons-download_alt"/> Lưu</button>
+										<button data-dismiss="modal" class="btn btn-default btn-small"><i class="glyphicons-undo"/> Hủy</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<!-- END DIALOG EDIT -->
 		<script type="text/javascript">
 		/*<![CDATA[*/		
             //var Name 		= $(this).val();										
 			$("#RewardLoad").load("/thu-lao/reward/trang", { Page: 1 });
 			
 			$('#DateStart').datetimepicker();
+			$('#DateWork').datetimepicker();
 			
 			$('#URLChangeTimeButton').click(function(e){				
 				var mYear 	= $("#mYear").val();
@@ -97,8 +144,8 @@
 				});
 				location.reload(true);
 			});
-			$('#BtnAddReward').click(function(e){	
-				
+			
+			$('#BtnAddReward').click(function(e){				
 				var Data = [];
 				Data[0] 	= 'null';
 				Data[1] 	= $("#IdCategory").val();
@@ -113,37 +160,73 @@
 					$.ajax({
 						type: "POST",
 						data: {Data:Data},
-						url: URL,
-						contentType:"application/json; charset=utf-8",
+						url: URL,						
 						success: function(msg){
 							$("#RewardLoad").load("/thu-lao/reward/trang", { Page: 1 });
 						}
 					});
 			});	
 			
-			$('#BtnAddReward1').click(function(e){	
-			
-				var Data = [];
-				Data[0] 	= $("#IdCategory").selected();
-				Data[1] 	= $("#DateStart").val();	
-				Data[2] 	= $("#Count").val();			
-				Data[3] 	= $("#Content").val();					
+			$('.update-item').click(function(){
+				//Load dữ liệu JSON về
+				var url = "/object/load/Salarydaily/" + $(this).attr('data-id');
 				
-				URL = "thu-lao/reward/ins/exe";
-				alert(URL);
-				e.stopImmediatePropagation();
-				$.ajax({
-					type: "POST", 
-					async: false,
-					url: URL,
-					data: {Data:Data},
-					dataType: 'json',
-					contentType:"application/json; charset=utf-8",	
-					success: function(data){
-						alert ("thanh cong");
-					}
-				});				
+				//Load dữ liệu JSON lên FORM
+				$.getJSON(url, function(data){
+					$('#URLUpdateReward').attr('alt'	, data.id);
+					$('#IdCategory1').select2('value'		, data.id_category);					
+					$('#ContentEdit').attr('val'		, data.content);
+					$('#NCount').attr('value'		, data.count);
+					$('#DateWork').attr('value'		, data.date_work);
+				});
 			});
+			
+			$('#URLUpdateReward').click(function(e){				
+				var IdTable = $("#CurrentTable").attr('alt');
+				var Data = [];						
+				Data[0] 	= $('#URLUpdateReward').attr('alt');
+				Data[1] 	= $("#IdCategory1").val();
+				Data[2] 	= $("#IdUser").attr('alt');					
+				Data[3] 	= $("#ContentEdit").val();	
+				Data[4] 	= $("#NCount").val();	
+				Data[5] 	= $("#DateWork").val();	
+				Data[6] 	= 'null';	
+				Data[7] 	= '';
+				
+				$("#DialogSession").modal('hide');
+									
+				var URL = "/object/upd/Salarydaily";
+				$.ajax({
+					type: "POST",
+					data: {Data:Data},
+					url: URL,
+					success: function(msg){
+						$("#RewardLoad").load("/thu-lao/reward/trang", { Page: 1 });
+					}
+				});
+			});	
+			
+			$('#URLDelSelectedButton').click(function(e){				
+				var Data = [];
+				Data[0] 	= 'null';
+				Data[1] 	= $("#IdCategory").val();
+				Data[2] 	= $("#IdUser").attr('alt');					
+				Data[3] 	= $("#Content").val();	
+				Data[4] 	= $("#Count").val();	
+				Data[5] 	= $("#DateStart").val();	
+				Data[6] 	= 'null';	
+				Data[7] 	= '';	
+				
+				var URL = "/object/ins/Salarydaily";
+					$.ajax({
+						type: "POST",
+						data: {Data:Data},
+						url: URL,						
+						success: function(msg){
+							$("#RewardLoad").load("/thu-lao/reward/trang", { Page: 1 });
+						}
+					});
+			});				
 		/*]]>*/
 		</script>		
 	</body>

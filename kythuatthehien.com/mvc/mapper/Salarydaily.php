@@ -109,13 +109,12 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
     protected function doInsert( \MVC\Domain\Object $object ) {
         $values = array(  
 			$object->getid_category(),
-			$object->getId_employee(),
+			$object->getid_employee(),
 			$object->getContent(),
 			$object->getCount(),
 			$object->getDate_work(),
 			$object->getDate_note(),
-			$object->getNote()
-			
+			$object->getNote()			
 		); 
         $this->insertStmt->execute( $values );
         $id = self::$PDO->lastInsertId();
@@ -125,7 +124,7 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
     protected function doUpdate( \MVC\Domain\Object $object ) {
         $values = array( 
 			$object->getid_category(),
-			$object->getId_employee(),
+			$object->getid_employee(),
 			$object->getContent(),
 			$object->getCount(),
 			$object->getDate_work(),

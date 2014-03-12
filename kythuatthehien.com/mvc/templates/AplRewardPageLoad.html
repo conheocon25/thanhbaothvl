@@ -19,8 +19,8 @@
 						<td width="32" align="center">
 							<div tal:content="repeat/Salarydaily/number" />
 						</td>
-						<td>
-							<a tal:attributes="href Salarydaily/getURLRewardUpdateLoad">
+						<td>							  
+							<a  class="update-item" href="#DialogUpdateReward" data-toggle="modal" tal:attributes="data-id Salarydaily/getId">
 								<div tal:content="Salarydaily/getCategory/getName" />
 							</a>
 						</td>
@@ -28,7 +28,9 @@
 						<td tal:content="Salarydaily/getCount" />
 						<td tal:content="structure Salarydaily/getContent" />
 						<td>
-							<a tal:attributes="href Salarydaily/getURLRewardDeleteLoad"><span class="icon-remove"/></a>
+							<a class="remove-item" href="#DialogDelSelected" data-toggle="modal" tal:attributes="data-id Salarydaily/getId">
+								<i class="glyphicons-remove_2"/>
+							</a>							
 						</td>
 					</tr>
 				</tbody>				
