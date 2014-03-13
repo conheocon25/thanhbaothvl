@@ -3,37 +3,42 @@
 	<head>
 		<span metal:use-macro="mApplication.xhtml/IncludeMETA"/>
 		<span metal:use-macro="mApplication.xhtml/IncludeCSS"/>		
-		<span metal:use-macro="mApplication.xhtml/IncludeJS"/>
 	</head>
 	<body>
 		<div class="container-fluid">
 			<span metal:use-macro="mApplication.xhtml/Header"/>
-			<div class="row-fluid">
-				<div class="span3" />
-				<div class="span9 main">
-					<span metal:use-macro="mApplication.xhtml/LocationBar"/>
-					<form class="form-horizontal" tal:attributes="action Config/getURLUpdExe" method="post">
-						<div class="control-group">
-							<label class="control-label" for="Param">Tham số</label>
-							<div class="controls">
-								<input type="text" id="Param" name="Param" tal:attributes="value Config/getParam" />
-							</div>
+			<div metal:use-macro="mApplication.xhtml/Menu"/>
+			<div id="content">
+				<div metal:use-macro="mApplication.xhtml/ContentHeader"/>
+				<div metal:use-macro="mApplication.xhtml/LocationBar"/>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12" style="color:white;">
+							<form class="form-horizontal" tal:attributes="action Config/getURLUpdExe" method="post">
+								<div class="control-group">
+									<label class="control-label" for="Param">Tham số</label>
+									<div class="controls">
+										<input type="text" id="Param" name="Param" tal:attributes="value Config/getParam" />
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="Value">Giá trị</label>
+									<div class="controls">
+										<input type="text" id="Value" name="Value" tal:attributes="value Config/getValue" />
+									</div>
+								</div>						
+								<div class="control-group">
+									<div class="controls">
+										<button type="submit" class="btn" value="submit-value">Cập nhật</button>
+									</div>
+								</div>						
+							</form>
 						</div>
-						<div class="control-group">
-							<label class="control-label" for="Value">Giá trị</label>
-							<div class="controls">
-								<input type="text" id="Value" name="Value" tal:attributes="value Config/getValue" />
-							</div>
-						</div>						
-						<div class="control-group">
-							<div class="controls">
-								<button type="submit" class="btn" value="submit-value">Cập nhật</button>
-							</div>
-						</div>						
-					</form>
-				</div>				
-			</div>
-			<span metal:use-macro="mApplication.xhtml/Footer"/>
-		</div>
+					</div>
+				</div>
+			</div>			
+		</div>	
+		<span metal:use-macro="mApplication.xhtml/Footer"/>
+		<span metal:use-macro="mApplication.xhtml/IncludeJS"/>		
 	</body>
 </html>

@@ -30,16 +30,14 @@
 	<body>
 		<div class="container-fluid">
 			<span metal:use-macro="mApplication.xhtml/Header"/>
-			<div class="row-fluid">
-				<div class="row-fluid">
-					<div class="span3">
-						<span metal:use-macro="mApplication.xhtml/Menu"/>
-					</div>
-					<div class="span9">
-						<div class="content">
-							<span metal:use-macro="mApplication.xhtml/LocationBar"/>
-							
-							<form class="form-horizontal" tal:attributes="action Report/getURLUpdExe" method="post">
+			<div metal:use-macro="mApplication.xhtml/Menu"/>
+			<div id="content">
+				<div metal:use-macro="mApplication.xhtml/ContentHeader"/>
+				<div metal:use-macro="mApplication.xhtml/LocationBar"/>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12">
+							<form style="color:white;" class="form-horizontal" tal:attributes="action Report/getURLUpdExe" method="post">
 								<div class="control-group">
 									<label class="control-label" for="ReportName">Báo cáo</label>
 									<div class="controls">
@@ -67,8 +65,8 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<span metal:use-macro="mApplication.xhtml/Footer"/>
-		</div>		
+			</div>			
+		</div>	
+		<span metal:use-macro="mApplication.xhtml/Footer"/>	
 	</body>
 </html>
