@@ -2,20 +2,18 @@
 <html lang="en">
 	<head>
 		<span metal:use-macro="mApplication.xhtml/IncludeMETA"/>
-		<span metal:use-macro="mApplication.xhtml/IncludeCSS"/>		
-		<span metal:use-macro="mApplication.xhtml/IncludeJS"/>
+		<span metal:use-macro="mApplication.xhtml/IncludeCSS"/>			
 	</head>
 	<body>
 		<div class="container-fluid">
 			<span metal:use-macro="mApplication.xhtml/Header"/>
-			<div class="row-fluid">
-				<div class="row-fluid">
-					<div class="span3">
-						<span metal:use-macro="mApplication.xhtml/Menu"/>
-					</div>
-					<div class="span9">
-						<div class="content">
-							<span metal:use-macro="mApplication.xhtml/LocationBar"/>
+			<div metal:use-macro="mApplication.xhtml/Menu"/>
+			<div id="content">
+				<div metal:use-macro="mApplication.xhtml/ContentHeader"/>
+				<div metal:use-macro="mApplication.xhtml/LocationBar"/>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12">
 							<table class="table table-striped table-hover">
 								<thead>
 									<tr>
@@ -51,8 +49,9 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<span metal:use-macro="mApplication.xhtml/Footer"/>
-		</div>		
+			</div>			
+		</div>	
+		<span metal:use-macro="mApplication.xhtml/Footer"/>
+		<span metal:use-macro="mApplication.xhtml/IncludeJS"/>			
 	</body>
 </html>
