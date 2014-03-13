@@ -15,7 +15,7 @@
 			$ObjectName = $request->getProperty('ObjectName');
 			$Data = $request->getProperty('Data');
 			
-			print_r($Data);
+			//print_r($Data);
 			//-------------------------------------------------------------
 			//MAPPER DỮ LIỆU
 			//-------------------------------------------------------------
