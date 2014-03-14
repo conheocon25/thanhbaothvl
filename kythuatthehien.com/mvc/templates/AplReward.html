@@ -15,14 +15,14 @@
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-12">							
-							<div align="center" class="well">
+							<div align="center" class="well" style="hight:50%;font-size:18pt;padding-top:-10px;">
 									<label id="IdUser" tal:attributes="alt User/getId" align="center" tal:content="User/getNote" ></label>
-									Điểm CM: <b style="color:red;" tal:content="php:NTotal->formatCurrency()"/>							
-									- Điểm ABC: <b style="color:red;" tal:content="php:NTotalABC->formatCurrency()"/>
+									Điểm CM: <b style="color:red;" id="NTotal" tal:content="php:NTotal->formatCurrency()"/>							
+									- Điểm ABC: <b style="color:red;" id="NTotalABC" tal:content="php:NTotalABC->formatCurrency()"/>
 									 - <a align="center" class="brand" data-toggle="modal" href="#DialogChangeTime" > <i class="glyphicon glyphicon-time" style="margin-top:-5px;margin-right:5px;"/> Tháng <span tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentMonth()"/> Năm <span tal:content="php: @\MVC\Base\SessionRegistry::instance()->getCurrentYear()"/></a>
 							</div>				
 							<div class="form-horizontal">
-								<div style="color:white;" class="control-group">
+								<div style="color:white;">
 									<label class="control-label">Tên Chương trình</label>
 									<div class="controls">
 										<select id="IdCategory" name="IdCategory" >
@@ -30,12 +30,11 @@
 												<span  tal:content="CategoryPrograme/getName"/>
 											</option>
 										</select>
-									</div>								
+									</div>									
 									<label class="control-label">Ngày làm</label>									
 									<div class='controls'>
 										<input type='text' style="width:10%" class="form-control input-small" name="DateStart"  id='DateStart'/>
-									</div>
-									
+									</div>									
 									<label class="control-label">Số lượng</label>
 									<div class="controls">										
 										<select id="Count" name="Count">
@@ -56,16 +55,16 @@
 											</option>
 										</select>
 									</div>								
-									<label class="control-label" for="Content">Nội dung</label>
+									<label class="control-label">Nội dung</label>
 									<div class="controls">
 										<textarea style="width:50%;" id="Content" name="Content" />
 									</div>	
-								</div>
-								<div class="control-group">
-									<div class="controls">
-										<button id="BtnAddReward" class="btn btn-primary btn-ins" value="submit-value">Thêm mới</button>
+									<div class="control-group">
+										<div class="controls">
+											<button id="BtnAddReward" class="btn btn-primary btn-ins" value="submit-value">Thêm mới</button>
+										</div>
 									</div>
-								</div>						
+								</div>														
 							</div>	
 							<div id="RewardLoad" />							
 						</div>
@@ -110,12 +109,12 @@
 										<div class="controls">
 											<textarea id="ContentEdit" name="ContentEdit" type="text" class="form-control"/>
 										</div>
-									</div>
-									<div class="form-actions">										
+									</div>									
+								</div>
+								<div class="form-group">										
 										<button id="URLUpdateReward" class="btn btn-primary btn-small" value="Validate"><i class="glyphicons-download_alt"/> Lưu</button>
 										<button data-dismiss="modal" class="btn btn-default btn-small"><i class="glyphicons-undo"/> Hủy</button>
 									</div>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -146,6 +145,8 @@
 			var today = $.datepicker.formatDate('yy/mm/dd', new Date());
 			$('#DateStart').val(today);
 			
+				
+			
 			$('#BtnAddReward').click(function(e){				
 				var Data = [];
 				Data[0] 	= 'null';
@@ -165,7 +166,13 @@
 						success: function(msg){	
 							$("#RewardLoad").load("/thu-lao/reward/trang");	
 							$("#DialogMsgBox").modal('show');
-							$("#MsgBoxContent").html('Đã thêm thành công!');							
+							$("#MsgBoxContent").html('Đã thêm thành công!');	
+							
+							var url = "/thu-lao/reward/load";				
+							$.getJSON(url, function(data){										
+								$('#NTotal').html(data.NTotal); 
+								$('#NTotalABC').html(data.NTotalABC); 										
+							});	
 						}
 					});
 			});	

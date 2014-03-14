@@ -14,7 +14,14 @@
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-12">
-							<div class="widget-box">
+							<div class="control-group">
+								<div class="controls">							
+									<a class="btn btn-primary btn-ins" tal:attributes="href 'thu-lao/report/ins/load'">
+												<span class="icon-plus"/> Thêm mới
+									</a>
+								</div>
+							</div>
+							<div class="widget-box">							
 							<table class="table table-striped table-hover">
 								<thead>
 									<tr>
@@ -42,27 +49,18 @@
 										<td align="center" tal:content="Report/getDateEndPrint" />
 										
 										<td align="center">
-											<a tal:attributes="href Report/getURLReportDepartment" target="blank"><span  class="icon-print"/></a>	
+											<a tal:attributes="href Report/getURLReportDepartment" target="blank"><i class="glyphicons-print"/></a>	
 										</td>
 										<td align="center">
-											<a tal:attributes="href Report/getURLReportUser" target="blank"><span  class="icon-print"/></a>	
+											<a tal:attributes="href Report/getURLReportUser" target="blank"><i class="glyphicons-print"/></a>	
 										</td><td align="center">
-											<a tal:attributes="href Report/getURLReportSummary" target="blank"><span  class="icon-print"/></a>	
+											<a tal:attributes="href Report/getURLReportSummary" target="blank"><i class="glyphicons-print"/></a>	
 										</td>										
 										<td align="center" width="35px">
-											<a tal:attributes="href Report/getURLDelLoad"><span class="icon-remove"/></a>
+											<a tal:attributes="href Report/getURLDelLoad"><i class="glyphicons-remove_2"/></a>
 										</td>										
 									</tr>
-								</tbody>
-								<tfoot>
-									<tr>
-										<td colspan="2">
-											<a class="btn" tal:attributes="href 'thu-lao/report/ins/load'">
-												<span class="icon-plus"/> Thêm mới
-											</a>
-										</td>										
-									</tr>									
-								</tfoot>
+								</tbody>								
 							</table>
 							</div>
 						</div>

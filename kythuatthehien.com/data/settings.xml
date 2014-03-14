@@ -82,24 +82,8 @@
 		
 		<command name="AplReward"><view>AplReward</view></command>
 		<command name="AplRewardPageLoad"><view>AplRewardPageLoad</view></command>
-		<command name="AplRewardInsLoad"><view>AplRewardInsLoad</view></command>
-		<command name="AplRewardUpdate"><view>AplRewardUpdate</view></command>		
-		<command name="AplRewardDelete"><view>AplRewardDelete</view></command>	
-		
-		<command name="AplRewardInsExe">
-			<view>AplRewardInsExe</view>			
-		</command>
-		<command name="AplRewardUpdateExe">
-			<view>AplRewardUpdateExe</view>
-			<status value="CMD_OK"><forward>AplReward</forward></status>
-			<status value="CMD_NO_AUTHOR"><forward>Home</forward></status>
-		</command>		
-		<command name="AplRewardDeleteExe">
-			<view>AplRewardDeleteExe</view>
-			<status value="CMD_OK"><forward>AplReward</forward></status>
-			<status value="CMD_NO_AUTHOR"><forward>Home</forward></status>
-		</command>		
-		
+		<command name="AplRewardLoad"><view>AplRewardLoad</view></command>
+				
 		<command name="AplManager"><view>AplManager</view></command>	
 		
 		<command name="AplManagerInsLoad"><view>AplManagerInsLoad</view></command>

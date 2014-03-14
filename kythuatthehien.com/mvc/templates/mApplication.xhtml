@@ -119,7 +119,7 @@
 			<li tal:attributes="class php:ActiveAdmin=='Manager'?'active':'disable'" tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isAdmin()">
 				<a tal:attributes="href '/thu-lao/manager'"><i class="glyphicons-table" />QUẢN LÝ DANH MỤC</a>
 			</li>			
-			<li tal:attributes="class php:ActiveAdmin=='Search'?'active':'disable'">
+			<li tal:attributes="class php:ActiveAdmin=='Search'?'active':'disable'" tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isAdmin()">
 				<a tal:attributes="href '/thu-lao/search'"><i class="glyphicons-transfer" />NHẬT KÝ CHƯƠNG TRÌNH</a>
 			</li>
 			<li tal:attributes="class php:ActiveAdmin=='ChangePass'?'active':'disable'">
@@ -189,10 +189,7 @@
 												<div class="form-group">
 													<label class="control-label">Chọn Năm</label>
 													<div class="controls">
-														<select name="mYear" id="mYear">
-															<option value="2013" >
-																<span>Năm 2013</span>
-															</option>
+														<select name="mYear" id="mYear">															
 															<option value="2014" >
 																<span>Năm 2014</span>
 															</option>
@@ -213,6 +210,9 @@
 															</option>
 															<option value="2020" >
 																<span>Năm 2020</span>
+															</option>
+															<option value="2013" >
+																<span>Năm 2013</span>
 															</option>
 														</select>
 													</div>
