@@ -27,17 +27,10 @@
 				
 				$ValueABC = round((($SumPointEmployeeCurMonth /$User->getRulePrint() ) * 50 ) , 2);
 				
-				//$NTotal = new \MVC\Library\Number($SumPointEmployeeCurMonth);
-				//$NTotalABC = new \MVC\Library\Number($ValueABC);
-				
 				$data = array('NTotal' => $SumPointEmployeeCurMonth, 'NTotalABC' => $ValueABC);
 			
-			echo json_encode($data);	
+				echo json_encode($data);	
 			
-			//-------------------------------------------------------------
-			//THAM SỐ GỬI ĐI
-			//-------------------------------------------------------------			
-				
 		}
 	}
 ?>

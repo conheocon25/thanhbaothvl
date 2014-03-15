@@ -46,10 +46,10 @@
 			$('.update-item').click(function(){				
 				var url = "/object/load/Salarydaily/" + $(this).attr('alt');				
 				$.getJSON(url, function(data){										
-					$('#URLUpdateReward').attr('alt', data.id);
-					$('#NCount').val(data.count);
+					$('#URLUpdateReward').attr('alt', data.id);					
+					$('#NCount').select2('val', data.count);	
 					$('#DateWork').val(data.date_work);
-					$('#IdCategory1').select2('val', data.id_category);					
+					$('#IdCategory1').select2('val', data.id_category);														
 					$('#ContentEdit').text(data.content);					
 				});
 			});
@@ -76,7 +76,13 @@
 						$("#RewardLoad").load("/thu-lao/reward/trang");
 						$('#ContentEdit').text("");
 						$("#DialogMsgBox").modal('show');
-						$("#MsgBoxContent").html('Đã cập nhật thành công!');						
+						$("#MsgBoxContent").html('Đã cập nhật thành công!');	
+							
+							var url = "/thu-lao/reward/load";				
+							$.getJSON(url, function(data){										
+								$('#NTotal').html(data.NTotal); 
+								$('#NTotalABC').html(data.NTotalABC); 										
+							});
 					}
 				});
 				
