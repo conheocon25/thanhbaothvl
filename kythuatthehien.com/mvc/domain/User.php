@@ -2,6 +2,7 @@
 namespace MVC\Domain;
 require_once( "mvc/base/domain/DomainObject.php" );
 use MVC\Library\Number;
+use MVC\Library\String;
 class User extends Object{
 
     private $Id;
@@ -74,8 +75,13 @@ class User extends Object{
         $this->Note = $Note;
         $this->markDirty();
     }
-	function getNote( ) {
+	function getNote( ) {		
         return $this->Note;
+    }
+	
+	function getNoteReduce( ) {
+		$StrNoteReduce = new \MVC\Library\String($this->getNote());
+        return $StrNoteReduce->reduce(3, "-");        
     }
 	
 	function setUser( $User ) {

@@ -5,6 +5,7 @@
 				<th width="30px">STT</th>										
 				<th align="left">Tên Chương Trình</th>
 				<th align="left">Nội dung</th>			
+				<th align="left">Người làm</th>			
 				<th align="left">Ngày Làm CT</th>
 				<th width="30px">SL</th>
 			</tr>
@@ -16,6 +17,7 @@
 				</td>
 				<td tal:content="Salarydaily/getCategory/getName" />									
 				<td tal:content="structure Salarydaily/getContent" />										
+				<td tal:content="structure Salarydaily/getEmployee/getNoteReduce" />										
 				<td tal:content="Salarydaily/getDateWorkPrint" />
 				<td tal:content="Salarydaily/getCount" />										
 			</tr>
