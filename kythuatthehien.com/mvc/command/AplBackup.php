@@ -1,13 +1,15 @@
 <?php
 	namespace MVC\Command;	
-	class AplApp extends Command {
+	use MVC\Library\DBStatus;
+	use MVC\Library\Encrypted;
+	class AplBackup extends Command {
 		function doExecute( \MVC\Controller\Request $request ) {
 			require_once("mvc/base/domain/HelperFactory.php");			
 			//-------------------------------------------------------------
 			//THAM SỐ TOÀN CỤC
 			//-------------------------------------------------------------						
 			$Session = \MVC\Base\SessionRegistry::instance();
-									
+			$User = $Session->getCurrentUser();						
 			//-------------------------------------------------------------
 			//THAM SỐ GỬI ĐẾN
 			//-------------------------------------------------------------
@@ -15,39 +17,43 @@
 			//-------------------------------------------------------------
 			//MAPPER DỮ LIỆU
 			//-------------------------------------------------------------	
-			require_once("mvc/base/mapper/MapperDefault.php");
 			
+			$mEncrypted = new Encrypted("","","");
+			$res = $mEncrypted->readStrConnection();
+			$StrConnection = explode(" ", $res);
+			
+			
+			$mDBStatus =  new \MVC\Library\DBStatus( $StrConnection[0] , $StrConnection[1], $StrConnection[2], $StrConnection[3]);			
+			
+			$mDBStatus->connect();
+			$mDBStatus->getNameTables('ktth_');
+			$ScripDB = $mDBStatus->getScriptBackup();
 			//-------------------------------------------------------------
 			//XỬ LÝ CHÍNH
 			//-------------------------------------------------------------			
-			//$CategoryBTypeAll = $mCategoryBType->findAll();
-			$CategoryNewsAll = $mCategoryNews->findAll();
-			$CategoryVideoAll = $mCategoryVideo->findAll();			
-			$CategoryAskAll = $mCategoryAsk->findAll();			
 			
-			$AlbumAll = $mAlbum->findAll();
-			$ConfigAll = $mConfig->findAll();		
-			
-			$Title = "QUẢN LÝ";
+			$Title = "NHẬT KÝ CHƯƠNG TRÌNH";
 			$Navigation = array(
-				//array("TRANG CHỦ", "/thu-lao/app")
+				//array("TRANG CHỦ", "/thu-lao/app"),
+				array("SAO LƯU DỮ LIỆU", "/thu-lao/backup")
 			);
 			
 			//-------------------------------------------------------------
 			//THAM SỐ GỬI ĐI
 			//-------------------------------------------------------------			
 			
-			$request->setObject("CategoryNewsAll", $CategoryNewsAll);
-			$request->setObject("CategoryVideoAll", $CategoryVideoAll);
-			$request->setObject("CategoryAskAll", $CategoryAskAll);
 			
-			$request->setObject('AlbumAll', $AlbumAll);
+			//$request->setObject("CategoryVideoAll", $CategoryVideoAll);
+			//$request->setObject("CategoryAskAll", $CategoryAskAll);
+			//$request->setObject("CategoryProgrameAll", $CategoryProgrameAll);
 			
-			$request->setObject('ConfigAll', $ConfigAll); 
+			//$request->setObject('AlbumAll', $AlbumAll);
+			
+			$request->setObject('ScripDB', $ScripDB); 
 			
 			$request->setObject('Navigation', $Navigation);
 			$request->setProperty("Title", $Title);			
-			$request->setProperty("ActiveAdmin", 'Admin');
+			$request->setProperty("ActiveAdmin", 'Backup');
 		}
 	}
 ?>

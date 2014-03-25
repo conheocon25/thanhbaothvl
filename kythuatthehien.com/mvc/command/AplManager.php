@@ -16,14 +16,17 @@
 			//MAPPER DỮ LIỆU
 			//-------------------------------------------------------------	
 			require_once("mvc/base/mapper/MapperDefault.php");
-			$mCategory = new \MVC\Mapper\Category();
-			$CategoryProgrameAll = null;
-			if ( $User->getIdPosition() <= 3 ){
-				$CategoryProgrameAll = $mCategory->findByPosition($User->getIdPosition());
-			} else {
-				$CategoryProgrameAll = $mCategory->findAll();
-			}
 			
+			$mCategory = new \MVC\Mapper\Category();
+			
+			$CategoryProgrameAll = null;
+			
+			if ( $User->isAdmin() == true ){
+				$CategoryProgrameAll = $mCategory->findAll();
+			} else {
+				$CategoryProgrameAll = $mCategory->findByPosition($User->getIdPosition());
+				
+			}
 			
 			//-------------------------------------------------------------
 			//XỬ LÝ CHÍNH
@@ -57,7 +60,7 @@
 			
 			$request->setObject('Navigation', $Navigation);
 			$request->setProperty("Title", $Title);			
-			$request->setProperty("ActiveAdmin", 'Admin');
+			$request->setProperty("ActiveAdmin", 'Manager');
 		}
 	}
 ?>

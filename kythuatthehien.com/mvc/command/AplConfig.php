@@ -57,8 +57,8 @@
 			$request->setObject('PN', $PN);
 			$request->setProperty("Title", $Title);
 			$request->setProperty("Page", $Page);
-			$request->setProperty("ActiveItem", 'Home');
-			$request->setProperty("ActiveAdmin", 'Statistic');
+			
+			$request->setProperty("ActiveAdmin", 'ChangePass');
 			
 			return self::statuses('CMD_DEFAULT');
 		}

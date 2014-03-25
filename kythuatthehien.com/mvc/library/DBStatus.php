@@ -20,6 +20,7 @@ class DBStatus {
 	{
 		if($this->DBConnection == null)
 		{
+			echo $this->DBHost;
 			$this->DBConnection = mysql_connect($this->DBHost, $this->DBUsername, $this->DBPassword );
 			mysql_set_charset('utf8',$this->DBConnection); 
 			mysql_select_db($this->DBName,$this->DBConnection);

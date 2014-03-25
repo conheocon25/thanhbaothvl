@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<span metal:use-macro="mApplication.xhtml/IncludeMETA"/>
+		<span metal:use-macro="mApplication.xhtml/IncludeCSS"/>		
+		
+	</head>
+	<body>
+		<div class="container-fluid">
+			<span metal:use-macro="mApplication.xhtml/Header"/>
+			<div metal:use-macro="mApplication.xhtml/Menu"/>
+			<div id="content">
+				<div metal:use-macro="mApplication.xhtml/ContentHeader"/>
+				<div metal:use-macro="mApplication.xhtml/LocationBar"/>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12">
+							<textarea tal:attributes="text ScriptDB" rows="20" cols="50">
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>	
+		<span metal:use-macro="mApplication.xhtml/Footer"/>
+		<div metal:use-macro="mApplication.xhtml/IncludeJS"/>		
+		<script type="text/javascript">
+		/*<![CDATA[*/
+				$(document).ready(function() {					
+				
+				});				
+		/*]]>*/
+		</script>
+	</body>
+</html>

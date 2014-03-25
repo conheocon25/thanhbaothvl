@@ -65,7 +65,7 @@
 				$request->setObject('Reports', $Reports);
 				$request->setObject('Navigation', $Navigation);
 				$request->setProperty("Title", $Title);			
-				$request->setProperty("ActiveAdmin", 'Admin');
+				$request->setProperty("ActiveAdmin", 'Report');
 		}
 	}
 ?>

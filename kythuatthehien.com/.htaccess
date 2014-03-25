@@ -125,6 +125,9 @@ RewriteRule ^thu-lao/manager/([a-z0-9]+)/del/exe$ 					?cmd=AplManagerDelExe&IdC
 RewriteRule ^thu-lao/search$ 										?cmd=AplSearch [L]
 RewriteRule ^thu-lao/search/category/([a-z0-9]+)/([a-z0-9]+)$ 		?cmd=AplSearchCategory&IdCategory=$1&Month=$2 [L]
 
+RewriteRule ^thu-lao/backup$ 										?cmd=AplBackup [L]
+
+RewriteRule ^thu-lao/employee$ 										?cmd=AplEmployee [L]
 
 RewriteRule ^thu-lao/changepass$ 									?cmd=AplChangePass [L]
 RewriteRule ^thu-lao/changepass/exe$ 								?cmd=AplChangePassExe [L]

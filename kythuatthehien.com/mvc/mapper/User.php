@@ -109,5 +109,6 @@ class User extends Mapper implements \MVC\Domain\UserFinder {
         $this->selectAllStmt->execute( );
         return new UserCollection( $this->selectAllStmt->fetchAll(), $this);
     }
+	
 }
 ?>

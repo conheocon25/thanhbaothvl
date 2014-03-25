@@ -94,7 +94,7 @@
 	<!-- ======================================================================== -->
 	
 	<div metal:define-macro="LocationBar" id="breadcrumb">
-		<a class="tip-bottom" title="" href="/thu-lao" data-original-title="Về trang chủ"><i class="glyphicons-shop"></i> Hệ thống</a>
+		<a class="tip-bottom" title="" href="/thu-lao/app" data-original-title="Về trang chủ"><i class="glyphicons-shop"></i> Hệ thống</a>
 		<a tal:repeat="Item Navigation" tal:attributes="href php:Item[1]" tal:content="php:Item[0]" data-original-title="Về trang này" class="tip-bottom"/>
 		<a tal:content="Title" class="current"/>
 	</div>
@@ -112,19 +112,25 @@
 	<div metal:define-macro="Menu" id="sidebar">
 		<ul >
 			<li tal:attributes="class php:ActiveAdmin=='Reward'?'active':'disable'">
-				<a tal:attributes="href '/thu-lao/reward'"><i class="glyphicons-drink" />NHẬP ĐIỂM THÙ LAO</a>
+				<a tal:attributes="href '/thu-lao/reward'"><i class="glyphicons-money" />NHẬP ĐIỂM THÙ LAO</a>
 			</li>
-			<li tal:attributes="class php:ActiveAdmin=='Import'?'active':'disable'">
-				<a tal:attributes="href '/thu-lao/report'"><i class="glyphicons-truck" />BÁO CÁO ĐIỂM THÙ LAO</a>
+			<li tal:attributes="class php:ActiveAdmin=='Report'?'active':'disable'">
+				<a tal:attributes="href '/thu-lao/report'"><i class="glyphicons-notes_2" />BÁO CÁO ĐIỂM THÙ LAO</a>
 			</li>
 			<li tal:attributes="class php:ActiveAdmin=='Manager'?'active':'disable'" tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isAdmin()">
 				<a tal:attributes="href '/thu-lao/manager'"><i class="glyphicons-table" />QUẢN LÝ DANH MỤC</a>
 			</li>			
 			<li tal:attributes="class php:ActiveAdmin=='Search'?'active':'disable'" tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isAdmin()">
-				<a tal:attributes="href '/thu-lao/search'"><i class="glyphicons-transfer" />NHẬT KÝ CHƯƠNG TRÌNH</a>
+				<a tal:attributes="href '/thu-lao/search'"><i class="glyphicons-book_open" />NHẬT KÝ CHƯƠNG TRÌNH</a>
+			</li>
+			<li tal:attributes="class php:ActiveAdmin=='Backup'?'active':'disable'" tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isAdmin()">
+				<a tal:attributes="href '/thu-lao/backup'"><i class="glyphicons-database_plus" />SAO LƯU DỮ LIỆU</a>
+			</li>
+			<li tal:attributes="class php:ActiveAdmin=='Employee'?'active':'disable'" tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isAdmin()">
+				<a tal:attributes="href '/thu-lao/employee'"><i class="glyphicons-group" />QUẢN LÝ NHÂN VIÊN</a>
 			</li>
 			<li tal:attributes="class php:ActiveAdmin=='ChangePass'?'active':'disable'">
-				<a tal:attributes="href '/thu-lao/changepass'"><i class="glyphicons-fax" />ĐỔI MẬT KHẨU</a>
+				<a tal:attributes="href '/thu-lao/changepass'"><i class="glyphicons-keys" />ĐỔI MẬT KHẨU</a>
 			</li>
 			<li tal:attributes="class php:ActiveAdmin=='App'?'active':'disable'" tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isAdmin()">
 				<a tal:attributes="href '/app'"><i class="glyphicons-cogwheels" />QUẢN TRỊ WEB</a>
