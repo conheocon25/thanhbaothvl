@@ -1,6 +1,6 @@
 <?php
 	namespace MVC\Command;	
-	use MVC\Library\DBStatus;
+	use MVC\Library\DBBackup;
 	use MVC\Library\Encrypted;
 	class AplBackup extends Command {
 		function doExecute( \MVC\Controller\Request $request ) {
@@ -22,12 +22,11 @@
 			$res = $mEncrypted->readStrConnection();
 			$StrConnection = explode(" ", $res);
 			
+			$connection =new \MVC\Library\DBBackup($StrConnection[0],$StrConnection[1],$StrConnection[2], $StrConnection[3]);
+			$connection->backup_tables();			
+			$FileName = $connection->getFileNameBackup();			
+			$connection->closeConnection();
 			
-			$mDBStatus =  new \MVC\Library\DBStatus( $StrConnection[0] , $StrConnection[1], $StrConnection[2], $StrConnection[3]);			
-			
-			$mDBStatus->connect();
-			$mDBStatus->getNameTables('ktth_');
-			$ScripDB = $mDBStatus->getScriptBackup();
 			//-------------------------------------------------------------
 			//XỬ LÝ CHÍNH
 			//-------------------------------------------------------------			
@@ -42,18 +41,12 @@
 			//THAM SỐ GỬI ĐI
 			//-------------------------------------------------------------			
 			
-			
-			//$request->setObject("CategoryVideoAll", $CategoryVideoAll);
-			//$request->setObject("CategoryAskAll", $CategoryAskAll);
-			//$request->setObject("CategoryProgrameAll", $CategoryProgrameAll);
-			
-			//$request->setObject('AlbumAll', $AlbumAll);
-			
-			$request->setObject('ScripDB', $ScripDB); 
+			$request->setObject('ScriptDB', $FileName); 
 			
 			$request->setObject('Navigation', $Navigation);
 			$request->setProperty("Title", $Title);			
 			$request->setProperty("ActiveAdmin", 'Backup');
 		}
+		
 	}
 ?>

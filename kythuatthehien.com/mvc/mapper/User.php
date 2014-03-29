@@ -17,13 +17,11 @@ class User extends Mapper implements \MVC\Domain\UserFinder {
         $this->insertStmt = self::$PDO->prepare( 
                             "insert into ktth_user (id_position, user, pass, gender, note, type, rule ) 
 							values( ?, ?, ?, ?, ?, ?, ?)");
-		$this->deleteStmt = self::$PDO->prepare( 
-                            "delete from ktth_user where id=?");
-		$this->checkStmt = self::$PDO->prepare( 
-                            "select id from ktth_user where user=? and pass=?");
-							
-		$this->selectByPositionStmt = self::$PDO->prepare( 
-                            "select * from ktth_user where id_position=?");
+		$this->deleteStmt = self::$PDO->prepare("delete from ktth_user where id=?");
+		$this->checkStmt = self::$PDO->prepare("select id from ktth_user where user=? and pass=?");							
+		$this->StrSQLStmt = self::$PDO->prepare("select id from ktth_user where user=? and pass=?");	
+		
+		$this->selectByPositionStmt = self::$PDO->prepare("select * from ktth_user where id_position=?");
     } 
     function getCollection( array $raw ) {
         return new UserCollection( $raw, $this );
@@ -98,6 +96,18 @@ class User extends Mapper implements \MVC\Domain\UserFinder {
         $this->checkStmt->execute( $values );
         $result = $this->checkStmt->fetchAll();
 		return $result[0]['id'];
+    }
+	
+	function doExecuteSQL($StrMysql) {
+		$this->StrSQLStmt = self::$PDO->prepare($StrMysql);			
+        $this->StrSQLStmt->execute();       
+		return $this->StrSQLStmt->fetchAll();
+    }
+	
+	function doExecuteFetchColumnSQL($StrMysql) {
+		$this->StrSQLStmt = self::$PDO->prepare($StrMysql);			
+        $this->StrSQLStmt->execute();       
+		return $this->StrSQLStmt->fetchColumn();
     }
 	
 	function findByPosition( $values ){
