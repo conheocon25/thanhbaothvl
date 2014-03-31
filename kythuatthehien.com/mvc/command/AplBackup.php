@@ -21,11 +21,22 @@
 			$mEncrypted = new Encrypted("","","");
 			$res = $mEncrypted->readStrConnection();
 			$StrConnection = explode(" ", $res);
-			
+			/*
 			$connection =new \MVC\Library\DBBackup($StrConnection[0],$StrConnection[1],$StrConnection[2], $StrConnection[3]);
 			$connection->backup_tables();			
 			$FileName = $connection->getFileNameBackup();			
 			$connection->closeConnection();
+			*/
+			$mysqlDatabaseName ='ktth';
+			$mysqlUserName ='root';
+			$mysqlPassword ='admin123456';
+			$mysqlExportPath ='C:\\chooseFilenameForBackup.sql';
+			$backupfile = $mysqlDatabaseName . date("d-m-Y-H-i-s") . '.sql';
+			//DO NOT EDIT BELOW THIS LINE
+			$mysqlHostName ='localhost';
+			//Export the database and output the status to the page
+			$command="D:\\xampp\\mysql\\bin\\mysqldump --opt -hlocalhost -uroot -padmin123456 ". $mysqlDatabaseName ." > .\\data\\" . $backupfile;
+			$dd = exec($command);
 			
 			//-------------------------------------------------------------
 			//XỬ LÝ CHÍNH
@@ -41,7 +52,7 @@
 			//THAM SỐ GỬI ĐI
 			//-------------------------------------------------------------			
 			
-			$request->setObject('ScriptDB', $FileName); 
+			$request->setObject('ScriptDB', $backupfile); 
 			
 			$request->setObject('Navigation', $Navigation);
 			$request->setProperty("Title", $Title);			

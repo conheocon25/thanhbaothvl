@@ -55,14 +55,14 @@ class DBBackup {
             //cycle through
             foreach($tables as $table)
             {
-                $resultcount = $this->dbc->prepare('SELECT count(*) FROM '.$table);
+                $resultcount = $this->dbc->prepare("SELECT count(*) FROM information_schema.columns WHERE table_schema = 'ktth' AND table_name ='".$table."'");
                 $resultcount->execute();
                 $num_fields = $resultcount->fetch(\PDO::FETCH_NUM);
                 $num_fields = $num_fields[0];
 
                 $result = $this->dbc->prepare('SELECT * FROM '.$table);
                 $result->execute();
-                $data.= 'DROP TABLE '.$table.';';
+                $data.= 'DROP TABLE IF EXISTS '.$table.';';
 
                 $result2 = $this->dbc->prepare('SHOW CREATE TABLE '.$table);    
                 $result2->execute();                            
