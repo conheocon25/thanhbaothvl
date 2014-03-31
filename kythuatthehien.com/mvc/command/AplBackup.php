@@ -27,15 +27,16 @@
 			$FileName = $connection->getFileNameBackup();			
 			$connection->closeConnection();
 			*/
+			$mysqlHostName ='localhost';
 			$mysqlDatabaseName ='ktth';
 			$mysqlUserName ='root';
 			$mysqlPassword ='admin123456';
-			$mysqlExportPath ='C:\\chooseFilenameForBackup.sql';
-			$backupfile = $mysqlDatabaseName . date("d-m-Y-H-i-s") . '.sql';
+			$mysqlPath ="D:\\xampp\\mysql\\bin\\";
+			$backupfile = ".\\data\\". $mysqlDatabaseName . date("d-m-Y-H-i-s") . '.sql';
 			//DO NOT EDIT BELOW THIS LINE
-			$mysqlHostName ='localhost';
+			
 			//Export the database and output the status to the page
-			$command="D:\\xampp\\mysql\\bin\\mysqldump --opt -hlocalhost -uroot -padmin123456 ". $mysqlDatabaseName ." > .\\data\\" . $backupfile;
+			$command= $mysqlPath ."mysqldump --opt -h". $mysqlHostName ." -uroot -p". $mysqlPassword ." ". $mysqlDatabaseName ." > ". $backupfile ;
 			$dd = exec($command);
 			
 			//-------------------------------------------------------------
