@@ -14,8 +14,10 @@
 				<div metal:use-macro="mApplication.xhtml/LocationBar"/>
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-12">
-							<input tal:attributes="value ScriptDB"/>
+						<div class="col-12">							
+							<a tal:attributes="href PathFileName; download FileNameDB" target="blank" class="btn btn-primary btn-ins" >
+								<i class="glyphicons-circle_arrow_down"/> Click Download Tập tin sao lưu cơ sở dữ liệu về máy tính của bạn! <i class="glyphicons-circle_arrow_down"/>
+							</a>
 						</div>
 					</div>
 				</div>

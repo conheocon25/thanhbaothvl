@@ -1,6 +1,5 @@
 <?php
 	namespace MVC\Command;	
-	use MVC\Library\DBBackup;
 	use MVC\Library\Encrypted;
 	class AplBackup extends Command {
 		function doExecute( \MVC\Controller\Request $request ) {
@@ -21,29 +20,34 @@
 			$mEncrypted = new Encrypted("","","");
 			$res = $mEncrypted->readStrConnection();
 			$StrConnection = explode(" ", $res);
-			/*
-			$connection =new \MVC\Library\DBBackup($StrConnection[0],$StrConnection[1],$StrConnection[2], $StrConnection[3]);
-			$connection->backup_tables();			
-			$FileName = $connection->getFileNameBackup();			
-			$connection->closeConnection();
-			*/
+			
 			$mysqlHostName ='localhost';
-			$mysqlDatabaseName ='ktth';
-			$mysqlUserName ='root';
-			$mysqlPassword ='admin123456';
+			$mysqlDatabaseName = $StrConnection[1];
+			$mysqlUserName = $StrConnection[2];
+			$mysqlPassword = $StrConnection[3];
 			$mysqlPath ="D:\\xampp\\mysql\\bin\\";
-			$backupfile = ".\\data\\". $mysqlDatabaseName . date("d-m-Y-H-i-s") . '.sql';
+			$backupFileName = $mysqlDatabaseName . date("d-m-Y-H-i-s") . '.sql';
+			$backupPathFileName = ".\\data\\". $backupFileName ;
 			//DO NOT EDIT BELOW THIS LINE
 			
 			//Export the database and output the status to the page
-			$command= $mysqlPath ."mysqldump --opt -h". $mysqlHostName ." -uroot -p". $mysqlPassword ." ". $mysqlDatabaseName ." > ". $backupfile ;
-			$dd = exec($command);
+			$command = $mysqlPath ."mysqldump --opt -h". $mysqlHostName ." -u". $mysqlUserName ." -p". $mysqlPassword ." ". $mysqlDatabaseName ." > ". $backupPathFileName ;
+			//echo "dsfasdfs: ".$command;
 			
+			exec($command);
+			
+			/* in content html hien tai 
+			
+			header("Content-Type: application/force-download");
+			header("Content-Type:audio/mpeg");
+			header("Content-Type: application/download");;
+			header("Content-Disposition: attachment;filename=".$backupfile);
+			*/
 			//-------------------------------------------------------------
 			//XỬ LÝ CHÍNH
 			//-------------------------------------------------------------			
 			
-			$Title = "NHẬT KÝ CHƯƠNG TRÌNH";
+			$Title = "SAO LƯU CƠ SỞ DỮ LIỆU";
 			$Navigation = array(
 				//array("TRANG CHỦ", "/thu-lao/app"),
 				array("SAO LƯU DỮ LIỆU", "/thu-lao/backup")
@@ -53,7 +57,8 @@
 			//THAM SỐ GỬI ĐI
 			//-------------------------------------------------------------			
 			
-			$request->setObject('ScriptDB', $backupfile); 
+			$request->setObject('FileNameDB', $backupFileName); 
+			$request->setObject('PathFileName', $backupPathFileName); 
 			
 			$request->setObject('Navigation', $Navigation);
 			$request->setProperty("Title", $Title);			
