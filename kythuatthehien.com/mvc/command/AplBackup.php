@@ -26,23 +26,22 @@
 			$mysqlUserName = $StrConnection[2];
 			$mysqlPassword = $StrConnection[3];
 			$mysqlPath ="D:\\xampp\\mysql\\bin\\";
-			$backupFileName = $mysqlDatabaseName . date("d-m-Y-H-i-s") . '.sql';
+			
+			$backupFileName = $mysqlDatabaseName. "_" . date("d-m-Y-H-i-s") . '.sql';
 			$backupPathFileName = ".\\data\\". $backupFileName ;
-			//DO NOT EDIT BELOW THIS LINE
 			
-			//Export the database and output the status to the page
+			//$backupPathFileName = $_SERVER['DOCUMENT_ROOT'] ;			
+			
 			$command = $mysqlPath ."mysqldump --opt -h". $mysqlHostName ." -u". $mysqlUserName ." -p". $mysqlPassword ." ". $mysqlDatabaseName ." > ". $backupPathFileName ;
-			//echo "dsfasdfs: ".$command;
-			
 			exec($command);
 			
-			/* in content html hien tai 
-			
+			/* in content html hien tai 			
 			header("Content-Type: application/force-download");
 			header("Content-Type:audio/mpeg");
 			header("Content-Type: application/download");;
 			header("Content-Disposition: attachment;filename=".$backupfile);
 			*/
+			
 			//-------------------------------------------------------------
 			//XỬ LÝ CHÍNH
 			//-------------------------------------------------------------			

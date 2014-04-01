@@ -17,13 +17,9 @@
 			//-------------------------------------------------------------	
 			require_once("mvc/base/mapper/MapperDefault.php");
 			
-			$mCategory = new \MVC\Mapper\Category();
-			$CategoryProgrameAll = null;
-			if ( $User->getIdPosition() <= 3 ){
-				$CategoryProgrameAll = $mCategory->findByPosition($User->getIdPosition());
-			} else {
-				$CategoryProgrameAll = $mCategory->findAll();
-			}
+			$mCategory = new \MVC\Mapper\User();	
+			$Employees = $mCategory->findAll();
+			
 			
 			
 			//-------------------------------------------------------------
@@ -37,10 +33,9 @@
 			$AlbumAll = $mAlbum->findAll();
 			$ConfigAll = $mConfig->findAll();		
 			
-			$Title = "NHẬT KÝ CHƯƠNG TRÌNH";
-			$Navigation = array(
-				array("TRANG CHỦ", "/trang-chu"),
-				array("QUẢN LÝ", "/thu-lao")
+			$Title = "DANH SÁCH NHÂN VIÊN";
+			$Navigation = array(				
+				array("NHÂN VIÊN", "/thu-lao/Employee")
 			);
 			
 			//-------------------------------------------------------------
@@ -50,7 +45,8 @@
 			$request->setObject("CategoryNewsAll", $CategoryNewsAll);
 			$request->setObject("CategoryVideoAll", $CategoryVideoAll);
 			$request->setObject("CategoryAskAll", $CategoryAskAll);
-			$request->setObject("CategoryProgrameAll", $CategoryProgrameAll);
+			
+			$request->setObject("Employees", $Employees);
 			
 			$request->setObject('AlbumAll', $AlbumAll);
 			

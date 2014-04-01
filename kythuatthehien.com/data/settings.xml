@@ -114,6 +114,24 @@
 		
 		
 		<command name="AplEmployee"><view>AplEmployee</view></command>
+		<command name="AplEmployeeInsLoad"><view>AplEmployeeInsLoad</view></command>
+		<command name="AplEmployeeUpdLoad"><view>AplEmployeeUpdLoad</view></command>		
+		<command name="AplEmployeeDelLoad"><view>AplEmployeeDelLoad</view></command>		
+		<command name="AplEmployeeInsExe">
+			<view>AplEmployeeInsExe</view>
+			<status value="CMD_OK"><forward>AplEmployee</forward></status>
+			<status value="CMD_NO_AUTHOR"><forward>Home</forward></status>
+		</command>
+		<command name="AplEmployeeUpdExe">
+			<view>AplEmployeeUpdExe</view>
+			<status value="CMD_OK"><forward>AplEmployee</forward></status>
+			<status value="CMD_NO_AUTHOR"><forward>Home</forward></status>
+		</command>		
+		<command name="AplEmployeeDelExe">
+			<view>AplEmployeeDelExe</view>
+			<status value="CMD_OK"><forward>AplEmployee</forward></status>
+			<status value="CMD_NO_AUTHOR"><forward>Home</forward></status>
+		</command>
 		
 		<command name="AplBackup"><view>AplBackup</view></command>	
 		

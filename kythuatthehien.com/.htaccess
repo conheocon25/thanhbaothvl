@@ -128,6 +128,13 @@ RewriteRule ^thu-lao/search/category/([a-z0-9]+)/([a-z0-9]+)$ 		?cmd=AplSearchCa
 RewriteRule ^thu-lao/backup$ 										?cmd=AplBackup [L]
 
 RewriteRule ^thu-lao/employee$ 										?cmd=AplEmployee [L]
+RewriteRule ^thu-lao/employee/ins/load$ 							?cmd=AplEmployeeInsLoad [L]
+RewriteRule ^thu-lao/employee/ins/exe$ 								?cmd=AplEmployeeInsExe [L]
+RewriteRule ^thu-lao/employee/([a-z0-9]+)/upd/load$ 				?cmd=AplEmployeeUpdLoad&IdEmployee=$1 [L]
+RewriteRule ^thu-lao/employee/([a-z0-9]+)/upd/exe$ 					?cmd=AplEmployeeUpdExe&IdEmployee=$1 [L]
+RewriteRule ^thu-lao/employee/([a-z0-9]+)/del/load$ 				?cmd=AplEmployeeDelLoad&IdEmployee=$1 [L]
+RewriteRule ^thu-lao/employee/([a-z0-9]+)/del/exe$ 					?cmd=AplEmployeeDelExe&IdEmployee=$1 [L]
+
 
 RewriteRule ^thu-lao/changepass$ 									?cmd=AplChangePass [L]
 RewriteRule ^thu-lao/changepass/exe$ 								?cmd=AplChangePassExe [L]

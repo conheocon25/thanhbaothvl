@@ -189,7 +189,12 @@ class User extends Object{
 	
 	//Lấy địa chỉ
 		
-	function getURLViewSystem(){return "/thu_lao/".$this->Id;}			
+	function getURLViewSystem(){return "/thu_lao/".$this->Id;}
+	
+	function getURLUpdLoad(){return "/thu_lao/employee/".$this->Id ."/upd/load";}			
+	function getURLUpdExe(){return "/thu_lao/employee/".$this->Id ."/upd/exe";}			
+	function getURLDelLoad(){return "/thu_lao/employee/".$this->Id ."/del/load";}			
+	
 	function getURLViewIndex(){$Prefix = $this->getApp()->getAlias();return $Prefix;}
 		
     static function findAll() {

@@ -15,91 +15,47 @@
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-12">
-							<form style="color:white;" class="form-horizontal" tal:attributes="action '#'" method="post">														
-								<div class="control-group">
-									<label class="control-label" for="IdCategory">Tên Chương trình</label>
-									<div class="controls">
-										<select  name="IdCategory" id="IdCategory" >
-											<option value = "25000" >
-												<span>Tất cả Chương trình</span>
-											</option>
-											<option tal:repeat="CategoryPrograme CategoryProgrameAll" tal:attributes="value CategoryPrograme/getId" >
-												<span style="width:100%;" tal:content="CategoryPrograme/getName"/>
-											</option>
-										</select>
-									</div>
-								</div>								
-								<div class="control-group">
-									<label class="control-label" for="Month">Tháng</label>
-									<div class="controls">										
-										<select name="Month" id="Month">
-											<option value = "13" >
-												<span>Cả Năm</span>
-											</option>
-											<option value = "1" >
-												<span>Tháng 1</span>
-											</option>
-											<option value = "2" >
-												<span>Tháng 2</span>
-											</option>
-											<option value = "3" >
-												<span>Tháng 3</span>
-											</option>
-											<option value = "4" >
-												<span>Tháng 4</span>
-											</option>
-											<option value = "5" >
-												<span>Tháng 5</span>
-											</option>
-											<option value = "6" >
-												<span>Tháng 6</span>
-											</option>
-											<option value = "7" >
-												<span>Tháng 7</span>
-											</option>
-											<option value = "8" >
-												<span>Tháng 8</span>
-											</option>
-											<option value = "9" >
-												<span>Tháng 9</span>
-											</option>
-											<option value = "10" >
-												<span>Tháng 10</span>
-											</option>
-											<option value = "11" >
-												<span>Tháng 11</span>
-											</option>
-											<option value = "12" >
-												<span>Tháng 12</span>
-											</option>
-																						
-										</select>
-									</div>
+							<div class="control-group">
+								<div class="controls">							
+									<a class="btn btn-primary btn-ins" tal:attributes="href 'thu-lao/employee/ins/load'">
+												<span class="icon-plus"/> Thêm mới
+									</a>
 								</div>
-								
-								<div class="control-group">
-									<div class="controls">
-										<span  id="CmdSearch" class="btn btn-primary btn-ins" value="submit-value">Tìm kiếm</span>
-									</div>
-								</div>						
-							</form>
-							<div  class="control-group" id="CategoryAll" />
+							</div>
+							<div class="widget-box">							
+								<table class="table table-striped table-hover">
+									<thead>
+										<tr>
+											<th width="35px">STT</th>										
+											<th align="center">Họ Và Tên</th>
+											<th align="center">Tài Khoản</th>																																								
+											<th align="center" width="35px">Xóa</th>																		
+										</tr>
+									</thead>
+									<tbody>
+										<tr tal:repeat="Employee Employees">
+											<td width="35px" align="center">
+												<div tal:content="repeat/Employee/number" />
+											</td>
+											<td align="left">
+												<a tal:attributes="href Employee/getURLUpdLoad">
+													<div tal:content="Employee/getNote" />
+												</a>
+											</td>
+											<td align="center" tal:content="Employee/getUser" />													
+											<td align="center" width="35px">
+												<a tal:attributes="href Employee/getURLDelLoad"><i class="glyphicons-remove_2"/></a>
+											</td>										
+										</tr>
+									</tbody>								
+								</table>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>			
 		</div>	
 		<span metal:use-macro="mApplication.xhtml/Footer"/>
-		<div metal:use-macro="mApplication.xhtml/IncludeJS"/>		
-		<script type="text/javascript">
-		/*<![CDATA[*/
-				$(document).ready(function() {					
-					$("#CategoryAll").load("thu-lao/search/category/"+$("#IdCategory").val()+"/"+$("#Month").val());
-					$('#CmdSearch').click(function(){	
-						$("#CategoryAll").load("thu-lao/search/category/"+$("#IdCategory").val()+"/"+$("#Month").val());						
-					});				
-				});				
-		/*]]>*/
-		</script>
+		<div metal:use-macro="mApplication.xhtml/IncludeJS"/>				
 	</body>
 </html>
