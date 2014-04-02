@@ -18,8 +18,8 @@
 								<div class="control-group">
 									<label class="control-label" for="IdPosition">Thuộc Tổ</label>									
 									<div class="controls">
-										<select name="IdPosition">
-											<option tal:repeat="Position PositionAll"  tal:attributes="value Position/getId" >
+										<select name="IdPosition" >
+											<option tal:repeat="Position PositionAll" tal:attributes="value Position/getId; selected php:Position->getId()==Employee->getIdPosition()?true:false" >
 												<span tal:content="Position/getName"/>
 											</option>
 										</select>
@@ -28,13 +28,13 @@
 								<div class="control-group">
 									<label class="control-label" for="Name">Họ và Tên</label>
 									<div class="controls">
-										<input id="Note" name="Note" type="text" />
+										<input id="Note" name="Note" type="text" tal:attributes="value Employee/getNote" />
 									</div>
 								</div>
 								<div class="control-group">
 									<label class="control-label" for="User">Tài khoản</label>
 									<div class="controls">
-										<input id="User" name="User" type="text" />
+										<input id="User" name="User" type="text" tal:attributes="value Employee/getUser"/>
 									</div>
 								</div>
 								
@@ -45,32 +45,32 @@
 									</div>
 								</div>
 								<div class="control-group">
-									<label class="control-label" for="IdPosition">Giới tính</label>									
+									<label class="control-label" for="Gender">Giới tính</label>									
 									<div class="controls">
 										<select name="Gender">
-											<option value='1'>Nam</option>
-											<option value='0'>Nữ</option>
+											<option value="1" tal:attributes="selected php:1==Employee->getGender()?true:false">Nam</option>
+											<option value="0" tal:attributes="selected php:0==Employee->getGender()?true:false">Nữ</option>
 										</select>
 									</div>
 								</div>	
 								<div class="control-group">
-									<label class="control-label" for="IdPosition">Điểm ABC/ngày</label>									
+									<label class="control-label" for="Rule">Điểm ABC/ngày</label>									
 									<div class="controls">
-										<select name="Gender">
-											<option value='2'>12/12</option>											
-											<option value='3'>Trung Cấp</option>
-											<option value='4'>Cao Đẳng</option>											
-											<option value='5'>Đại Học</option>
+										<select name="Rule">
+											<option value="5" tal:attributes="selected php:5==Employee->getRule()?true:false">Đại Học</option>
+											<option value="2" tal:attributes="selected php:2==Employee->getRule()?true:false">12/12</option>											
+											<option value="3" tal:attributes="selected php:3==Employee->getRule()?true:false">Trung Cấp</option>
+											<option value="4" tal:attributes="selected php:4==Employee->getRule()?true:false">Cao Đẳng</option>
 										</select>
 									</div>
 								</div>	
 								<div class="control-group">
-									<label class="control-label" for="IdPosition">Quyền truy cập</label>									
+									<label class="control-label" for="Type">Quyền truy cập</label>									
 									<div class="controls">
 										<select name="Type">
-											<option value='0'>Người dùng</option>											
-											<option value='3'>Quản lý</option>
-											<option value='4'>Administrator</option>
+											<option value="0" tal:attributes="selected php:0==Employee->getType()?true:false">Người dùng</option>											
+											<option value="3" tal:attributes="selected php:3==Employee->getType()?true:false">Quản lý</option>
+											<option value="4" tal:attributes="selected php:4==Employee->getType()?true:false">Administrator</option>
 										</select>
 									</div>
 								</div>					

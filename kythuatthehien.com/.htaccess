@@ -139,6 +139,16 @@ RewriteRule ^thu-lao/employee/([a-z0-9]+)/del/exe$ 					?cmd=AplEmployeeDelExe&I
 RewriteRule ^thu-lao/changepass$ 									?cmd=AplChangePass [L]
 RewriteRule ^thu-lao/changepass/exe$ 								?cmd=AplChangePassExe [L]
 
+RewriteRule ^thu-lao/news$ 											?cmd=AplNews [L]
+RewriteRule ^thu-lao/news/([0-9]+)$ 								?cmd=AplNews&IdCategory=$1 [L]
+RewriteRule ^thu-lao/news/([0-9]+)/trang/([0-9]+)$ 					?cmd=AplNews&IdCategory=$1&Page=$2 [L]
+RewriteRule ^thu-lao/news/([0-9]+)/ins/load$ 						?cmd=AplNewsInsLoad&IdCategory=$1 [L]
+RewriteRule ^thu-lao/news/([0-9]+)/ins/exe$ 						?cmd=AplNewsInsExe&IdCategory=$1 [L]
+RewriteRule ^thu-lao/news/([0-9]+)/([0-9]+)/upd/load$ 				?cmd=AplNewsUpdLoad&IdCategory=$1&IdNews=$2 [L]
+RewriteRule ^thu-lao/news/([0-9]+)/([0-9]+)/upd/exe$ 				?cmd=AplNewsUpdExe&IdCategory=$1&IdNews=$2 [L]
+RewriteRule ^thu-lao/news/([0-9]+)/([0-9]+)/del/load$ 				?cmd=AplNewsDelLoad&IdCategory=$1&IdNews=$2 [L]
+RewriteRule ^thu-lao/news/([0-9]+)/([0-9]+)/del/exe$ 				?cmd=AplNewsDelExe&IdCategory=$1&IdNews=$2 [L]
+RewriteRule ^thu-lao/news/update/all$ 								?cmd=AplNewsUpdateAll [L]
 
 #---------------------------------------------------------------------------------------------------------------------------
 # APP

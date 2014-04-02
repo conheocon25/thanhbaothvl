@@ -168,6 +168,19 @@
 		<command name="AplReportDelExe"><view>AplReportDelExe</view><status value="CMD_OK"><forward>AplReport</forward></status></command>
 		
 		<command name="AplReportSummary"><view>AplReportSummary</view></command>	
+		
+		<!-- ============================================================================== -->
+		<!-- APL.NEWS																		-->
+		<!-- ============================================================================== -->
+		<command name="AplNews"><view>AplNews</view></command>
+		<command name="AplNewsInsLoad"><view>AplNewsInsLoad</view></command>
+		<command name="AplNewsInsExe"><view>AplNewsInsExe</view><status value="CMD_OK"><forward>AplNews</forward></status></command>		
+		<command name="AplNewsUpdLoad"><view>AplNewsUpdLoad</view></command>
+		<command name="AplNewsUpdExe"><view>AplNewsUpdExe</view><status value="CMD_OK"><forward>AplNews</forward></status></command>		
+		<command name="AplNewsDelLoad"><view>AplNewsDelLoad</view></command>
+		<command name="AplNewsDelExe"><view>AplNewsDelExe</view><status value="CMD_OK"><forward>AplNews</forward></status></command>
+		<command name="AplNewsUpdateAll"><view>AplNewsUpdateAll</view><status value="CMD_OK"><forward>AplNews</forward></status></command>
+		
 		<!-- ============================================================================== -->
 		<!-- GLOBAL			 																-->
 		<!-- ============================================================================== -->

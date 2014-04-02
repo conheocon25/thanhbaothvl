@@ -189,11 +189,12 @@ class User extends Object{
 	
 	//Lấy địa chỉ
 		
-	function getURLViewSystem(){return "/thu_lao/".$this->Id;}
+	function getURLViewSystem(){return "/thu-lao/".$this->Id;}
 	
-	function getURLUpdLoad(){return "/thu_lao/employee/".$this->Id ."/upd/load";}			
-	function getURLUpdExe(){return "/thu_lao/employee/".$this->Id ."/upd/exe";}			
-	function getURLDelLoad(){return "/thu_lao/employee/".$this->Id ."/del/load";}			
+	function getURLUpdLoad(){return "/thu-lao/employee/".$this->Id ."/upd/load";}			
+	function getURLUpdExe(){return "/thu-lao/employee/".$this->Id ."/upd/exe";}			
+	function getURLDelLoad(){return "/thu-lao/employee/".$this->Id ."/del/load";}			
+	function getURLDelExe(){return "/thu-lao/employee/".$this->Id ."/del/exe";}			
 	
 	function getURLViewIndex(){$Prefix = $this->getApp()->getAlias();return $Prefix;}
 		

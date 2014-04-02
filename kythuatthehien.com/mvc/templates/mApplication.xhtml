@@ -117,6 +117,9 @@
 			<li tal:attributes="class php:ActiveAdmin=='Report'?'active':'disable'">
 				<a tal:attributes="href '/thu-lao/report'"><i class="glyphicons-notes_2" />BÁO CÁO ĐIỂM THÙ LAO</a>
 			</li>
+			<li tal:attributes="class php:ActiveAdmin=='News'?'active':'disable'">
+				<a tal:attributes="href '/thu-lao/news'"><i class="glyphicons-table" />TIN TỨC NỘI BỘ</a>
+			</li>
 			<li tal:attributes="class php:ActiveAdmin=='Manager'?'active':'disable'" tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isAdmin()">
 				<a tal:attributes="href '/thu-lao/manager'"><i class="glyphicons-table" />QUẢN LÝ DANH MỤC</a>
 			</li>			
