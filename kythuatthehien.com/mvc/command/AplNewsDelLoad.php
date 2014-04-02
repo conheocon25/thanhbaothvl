@@ -1,6 +1,6 @@
 <?php
 	namespace MVC\Command;	
-	class AppNewsDelLoad extends Command{
+	class AplNewsDelLoad extends Command{
 		function doExecute( \MVC\Controller\Request $request ) {
 			require_once("mvc/base/domain/HelperFactory.php");			
 			//-------------------------------------------------------------
@@ -49,7 +49,7 @@
 			$request->setObject('News', $News);			
 			$request->setObject('Navigation', $Navigation);
 			$request->setProperty('Title', $Title);
-			$request->setProperty('ActiveItem', 'Home');
+			$request->setProperty('ActiveAdmin', "News");
 		}
 	}
 ?>

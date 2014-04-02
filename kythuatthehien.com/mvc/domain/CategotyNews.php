@@ -74,14 +74,14 @@ class CategoryNews extends Object{
 	function getURLUpdLoad(){			return "/app/category/news/".$this->getId()."/upd/load";}
 	function getURLUpdExe(){			return "/app/category/news/".$this->getId()."/upd/exe";}
 	
-	function getURLProfile(){			return "/app/category/news/".$this->getId()."/profile";}
-	function getURLProfileInsLoad(){	return "/app/category/news/".$this->getId()."/profile/ins/load";}
-	function getURLProfileInsExe(){		return "/app/category/news/".$this->getId()."/profile/ins/exe";}
 	
 	function getURLDelLoad(){return "/app/category/news/".$this->getId()."/del/load";}
 	function getURLDelExe(){return "/app/category/news/".$this->getId()."/del/exe";}
 	
 	function getURLNewsInsLoad(){return "/app/news/".$this->getId()."/ins/load";}
+	function getURLNewsInsLoad1(){return "/thu-lao/news/".$this->getId()."/ins/load";}
+	
+	function getURLNewsInsExe1(){return "/thu-lao/news/".$this->getId()."/ins/exe";}
 	function getURLNewsInsExe(){return "/app/news/".$this->getId()."/ins/exe";}
 	
 	//--------------------------------------------------------------------------

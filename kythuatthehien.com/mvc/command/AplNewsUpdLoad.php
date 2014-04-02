@@ -1,6 +1,6 @@
 <?php
 	namespace MVC\Command;	
-	class AppNewsUpdLoad extends Command{
+	class AplNewsUpdLoad extends Command{
 		function doExecute( \MVC\Controller\Request $request ){
 			require_once("mvc/base/domain/HelperFactory.php");			
 			//-------------------------------------------------------------
@@ -11,32 +11,21 @@
 			//-------------------------------------------------------------
 			//THAM SỐ GỬI ĐI
 			//-------------------------------------------------------------			
-			$IdNews = $request->getProperty('IdNews');
-			
+			$IdNews = $request->getProperty('IdNews');			
 			//-------------------------------------------------------------
 			//MAPPER DỮ LIỆU
 			//-------------------------------------------------------------			
-			
 			$mCategoryNews = new \MVC\Mapper\CategoryNews();
-			
-			
-			$mNews = new \MVC\Mapper\News();			
-			
-			
+			$mNews = new \MVC\Mapper\News();				
 			//-------------------------------------------------------------
 			//XỬ LÝ CHÍNH
 			//-------------------------------------------------------------
-			
-			$CategoryNewsAll = $mCategoryNews->findAll();
-			
+			$CategoryNewsAll = $mCategoryNews->findAll();			
 			$News = $mNews->find($IdNews);			
 			
-			$Title = mb_strtoupper($News->getTitle(), 'UTF8');
-			$Navigation = array(
-				array("TRANG CHỦ", "/trang-chu"),
-				array("QUẢN LÝ", "/app"),
-				array("TIN TỨC", "/app/category/news"),
-				array(mb_strtoupper($News->getCategory()->getName(),'UTF8') , $News->getCategory()->getURLView())
+			$Title = "CẬP NHẬT TIN TỨC";
+			$Navigation = array(			
+				array("TIN TỨC", "/thu-lao/news")
 			);
 			
 			//-------------------------------------------------------------
@@ -48,7 +37,7 @@
 			$request->setObject( 'News', $News );
 			
 			$request->setObject( 'Navigation', $Navigation );
-			$request->setProperty("ActiveItem", 'Home');
+			$request->setProperty('ActiveAdmin', "News");
 			$request->setProperty("Title", $Title);			
 		}
 	}

@@ -1,71 +1,90 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<span metal:use-macro="mAdmin.xhtml/IncludeMETA"/>
-		<span metal:use-macro="mAdmin.xhtml/IncludeCSS"/>
-		<link rel="stylesheet" type="text/css" href="/mvc/templates/theme/base/jquery-ui-1.8.11.custom.css" /> 
-		<link rel="stylesheet" type="text/css" href="/mvc/templates/theme/base/jquery-ui-timepicker-addon.css" />
-		
-		<span metal:use-macro="mAdmin.xhtml/IncludeJS"/>
-		<script type="text/javascript" language="javascript" src="/mvc/templates/script/library/jquery-ui-1.8.11.custom.min.js" />
-		<script type="text/javascript" language="javascript" src="/mvc/templates/script/library/jquery-ui-timepicker-addon.js" />
-		<script type="text/javascript" language="javascript" src="/mvc/templates/script/library/jquery.ui.datepicker-vi.js" />
-		<script type="text/javascript" language="javascript" src="/mvc/templates/script/library/jquery-ui-timepicker-vi.js" />
-		
-		<script type="text/javascript" language="javascript" src="/mvc/templates/script/library/ckeditor/ckeditor.js"/>
-		<script type="text/javascript">
-			/*<![CDATA[*/
-			$(function() {$('#Date').datetimepicker({ dateFormat: 'yy-mm-dd' });});
-			/*]]>*/
-		</script>
-	</head>	
+		<span metal:use-macro="mApplication.xhtml/IncludeMETA"/>
+		<span metal:use-macro="mApplication.xhtml/IncludeCSS"/>			
+	</head>
 	<body>
 		<div class="container-fluid">
-			<span metal:use-macro="mAdmin.xhtml/Header"/>
-			<div class="row-fluid">
-				<div class="span9 main">
-					<span metal:use-macro="mAdmin.xhtml/LocationBar"/>
-					<form class="form-horizontal" tal:attributes="action Category/getURLNewsInsExe" method="post">
-						<legend />
-						<div class="control-group">
-							<label class="control-label" for="Title">Tiêu đề</label>
-							<div class="controls">
-								<input type="text" id="Title" name="Title" />
-							</div>
+			<span metal:use-macro="mApplication.xhtml/Header"/>
+			<div metal:use-macro="mApplication.xhtml/Menu"/>
+			<div id="content">
+				<div metal:use-macro="mApplication.xhtml/ContentHeader"/>
+				<div metal:use-macro="mApplication.xhtml/LocationBar"/>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12" style="color:white;">		
+							<form class="form-horizontal" tal:attributes="action Category/getURLNewsInsExe1" method="post">
+								
+								<div class="control-group">
+									<label class="control-label" for="Title">Tiêu đề</label>
+									<div class="controls">
+										<input type="text" id="Title" name="Title" />
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="Type">Loại tin VIP</label>
+									<div class="controls">									
+										 <input type="checkbox" id="Type" name="Type" />
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="Date">Thời gian</label>
+									<div class="controls">
+										<input type="text" id="Date" name="Date" />
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="Author">Tác giả</label>
+									<div class="controls">
+										<input type="text" id="Author" name="Author" />
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="Author">Nội dung</label>
+									<div class="controls">
+										<textarea id="Content" class="ckeditor" name="Content" />
+									</div>
+								</div>
+								<div class="control-group">
+									<div class="controls">
+										<button type="submit" class="btn btn-primary btn-small" value="submit-value">Thêm mới</button>
+									</div>
+								</div>
+							</form>
 						</div>
-						<div class="control-group">
-							<label class="control-label" for="Type">Loại tin VIP</label>
-							<div class="controls">									
-								 <input type="checkbox" id="Type" name="Type" />
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label" for="Date">Thời gian</label>
-							<div class="controls">
-								<input type="text" id="Date" name="Date" />
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label" for="Author">Tác giả</label>
-							<div class="controls">
-								<input type="text" id="Author" name="Author" />
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label" for="Author">Nội dung</label>
-							<div class="controls">
-								<textarea id="Content" class="ckeditor" name="Content" />
-							</div>
-						</div>
-						<div class="control-group">
-							<div class="controls">
-								<button type="submit" class="btn" value="submit-value">Thêm mới</button>
-							</div>
-						</div>
-					</form>
-				</div>				
-			</div>
-			<span metal:use-macro="mAdmin.xhtml/Footer"/>
-		</div>
+					</div>
+				</div>
+			</div>			
+		</div>	
+		<span metal:use-macro="mApplication.xhtml/Footer"/>
+		<span metal:use-macro="mApplication.xhtml/IncludeJS"/>		
+		<span metal:use-macro="mApplication.xhtml/DialogChangeTime"/>
+		<script type="text/javascript" language="javascript" src="/mvc/templates/script/library/ckeditor/ckeditor.js"/>
+		 <script type="text/javascript">
+		/*<![CDATA[*/
+			$('#Date').datepicker({
+				format: 'yyyy/mm/dd'
+			})	
+			var today = $.datepicker.formatDate('yy/mm/dd', new Date());
+			$('#Date').val(today);
+			
+			$('#URLChangeTimeButton').click(function(e){
+				var mYear 	= $("#mYear").val();
+				var mMonth 	= $("#mMonth").val();				
+				URL = "thu-lao/app/changetime/"+mMonth+"/"+mYear;				
+				
+				$.ajax({
+					type: "POST", 
+					async: false,
+					url: URL,
+					dataType: 'json',
+					success: function(data){						
+					}
+				});
+				location.reload(true);
+			});
+		/*]]>*/
+		</script>
 	</body>
 </html>

@@ -1,6 +1,6 @@
 <?php
 	namespace MVC\Command;	
-	class AppNewsInsLoad extends Command {
+	class AplNewsInsLoad extends Command {
 		function doExecute( \MVC\Controller\Request $request ) {
 			require_once("mvc/base/domain/HelperFactory.php");			
 			//-------------------------------------------------------------
@@ -44,8 +44,8 @@
 			
 			$request->setObject( 'CategoryNewsAll', $CategoryNewsAll );			
 			$request->setObject( 'Category', $Category );
+			$request->setProperty('ActiveAdmin', "News");
 			
-			$request->setProperty("ActiveItem", 'Home');
 		}
 	}
 ?>

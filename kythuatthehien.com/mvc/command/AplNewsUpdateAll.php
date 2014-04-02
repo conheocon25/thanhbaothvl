@@ -1,6 +1,6 @@
 <?php
 	namespace MVC\Command;	
-	class AppNewsUpdateAll extends Command{
+	class AplNewsUpdateAll extends Command{
 		function doExecute( \MVC\Controller\Request $request ){
 			require_once("mvc/base/domain/HelperFactory.php");			
 			//-------------------------------------------------------------
@@ -39,7 +39,7 @@
 			//-------------------------------------------------------------
 			//THAM SỐ GỬI ĐI
 			//-------------------------------------------------------------						
-						
+			$request->setProperty('ActiveAdmin', "News");			
 			return self::statuses('CMD_OK');
 		}
 	}

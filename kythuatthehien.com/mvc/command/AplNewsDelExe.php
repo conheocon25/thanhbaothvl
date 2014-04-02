@@ -1,6 +1,6 @@
 <?php
 	namespace MVC\Command;	
-	class AppNewsDelExe extends Command {
+	class AplNewsDelExe extends Command {
 		function doExecute( \MVC\Controller\Request $request ){
 			require_once("mvc/base/domain/HelperFactory.php");
 			//-------------------------------------------------------------

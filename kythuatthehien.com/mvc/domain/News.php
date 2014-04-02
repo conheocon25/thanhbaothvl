@@ -88,6 +88,12 @@ class News extends Object{
 	
 	function getURLDelLoad(){return "/app/news/".$this->getIdCategory()."/".$this->getId()."/del/load";}	
 	function getURLDelExe(){return "/app/news/".$this->getIdCategory()."/".$this->getId()."/del/exe";}
+	
+	function getURLUpdLoad1(){return "/thu-lao/news/".$this->getIdCategory()."/".$this->getId()."/upd/load";}
+	function getURLUpdExe1(){return "/thu-lao/news/".$this->getIdCategory()."/".$this->getId()."/upd/exe";}
+	
+	function getURLDelLoad1(){return "/thu-lao/news/".$this->getIdCategory()."/".$this->getId()."/del/load";}	
+	function getURLDelExe1(){return "/thu-lao/news/".$this->getIdCategory()."/".$this->getId()."/del/exe";}
 			
 	//--------------------------------------------------------------------------
     static function findAll() {$finder = self::getFinder( __CLASS__ ); return $finder->findAll();}
