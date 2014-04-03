@@ -47,8 +47,7 @@
 			//-------------------------------------------------------------			
 			
 			$Title = "SAO LƯU CƠ SỞ DỮ LIỆU";
-			$Navigation = array(
-				//array("TRANG CHỦ", "/thu-lao/app"),
+			$Navigation = array(				
 				array("SAO LƯU DỮ LIỆU", "/thu-lao/backup")
 			);
 			

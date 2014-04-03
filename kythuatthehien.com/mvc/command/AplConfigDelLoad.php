@@ -36,9 +36,7 @@
 			$Config = $mConfig->find($IdConfig);
 			
 			$Title = mb_strtoupper($Config->getParam(), 'UTF8');
-			$Navigation = array(
-				array("TRANG CHỦ", "/trang-chu"),
-				array("QUẢN LÝ", "/app"),
+			$Navigation = array(				
 				array("CẤU HÌNH", "/app/config")
 			);
 			

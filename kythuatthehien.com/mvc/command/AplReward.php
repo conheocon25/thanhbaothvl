@@ -52,8 +52,7 @@
 				$ConfigAll = $mConfig->findAll();		
 				
 				$Title = "NHẬP ĐIỂM";
-				$Navigation = array(
-					array("TRANG CHỦ", "/trang-chu"),
+				$Navigation = array(					
 					array("QUẢN LÝ THÙ LAO", "/thu-lao/app")
 				);
 			

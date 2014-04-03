@@ -40,8 +40,7 @@
 			$ConfigAll = $mConfig->findAll();		
 			
 			$Title = "CẬP NHẬT DANH MỤC CHƯƠNG TRÌNH";
-			$Navigation = array(
-				array("TRANG CHỦ", "/trang-chu"),
+			$Navigation = array(			
 				array("QUẢN LÝ", "/thu-lao")
 			);
 			

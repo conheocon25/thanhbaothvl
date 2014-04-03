@@ -32,12 +32,9 @@
 			$News = $mNews->find($IdNews);
 			
 			
-			$Title = mb_strtoupper($News->getTitle(), 'UTF8');
-			$Navigation = array(
-				array("TRANG CHỦ", "/trang-chu"),
-				array("QUẢN LÝ", "/app"),
-				array("TIN TỨC", "/app/category/news"),
-				array(mb_strtoupper($News->getCategory()->getName(),'UTF8') , $News->getCategory()->getURLView())
+			$Title = "XÓA TIN TỨC";
+			$Navigation = array(				
+				array("TIN TỨC", "/thu-lao/news")
 			);
 			
 			//-------------------------------------------------------------

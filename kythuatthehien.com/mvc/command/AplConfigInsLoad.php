@@ -34,9 +34,7 @@
 			$AlbumAll = $mAlbum->findAll();
 						
 			$Title = "THÊM MỚI";
-			$Navigation = array(
-				array("TRANG CHỦ", "/trang-chu"),
-				array("QUẢN LÝ", "/app"),
+			$Navigation = array(			
 				array("CẤU HÌNH", "/app/config")
 			);
 			

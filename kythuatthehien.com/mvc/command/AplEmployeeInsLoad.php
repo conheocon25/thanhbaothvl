@@ -39,7 +39,6 @@
 				
 				$Title = "THÊM NHÂN VIÊN MỚI";
 				$Navigation = array(					
-					array("QUẢN LÝ THÙ LAO", "/thu-lao/app"),
 					array("QUẢN LÝ DOANH MỤC", "/thu-lao/manager")
 				);
 			

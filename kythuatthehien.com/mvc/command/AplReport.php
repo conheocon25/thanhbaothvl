@@ -41,9 +41,7 @@
 				$Reports = $mReport->findAll();		
 				
 				$Title = "THEO KHOẢN THỜI GIAN";
-				$Navigation = array(
-					array("TRANG CHỦ", "/trang-chu"),
-					array("QUẢN LÝ THÙ LAO", "/thu-lao/app"),
+				$Navigation = array(					
 					array("BÁO CÁO", "/thu-lao/Report")
 				);
 			

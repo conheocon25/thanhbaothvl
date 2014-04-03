@@ -39,9 +39,8 @@
 				$ConfigAll = $mConfig->findAll();		
 				
 				$Title = "CẬP NHẬT CHƯƠNG TRÌNH";
-				$Navigation = array(
-					array("TRANG CHỦ", "/trang-chu"),					
-					array("QUẢN LÝ DANH MỤC", "/thu-lao/manager"),
+				$Navigation = array(									
+					array("QUẢN LÝ DANH MỤC", "/thu-lao/manager")
 				);
 			
 			//-------------------------------------------------------------

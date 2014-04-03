@@ -30,9 +30,8 @@
 			$ConfigAll = $mConfig->findAll();
 			
 			$Title = "CẤU HÌNH";
-			$Navigation = array(
-				array("TRANG CHỦ", "/trang-chu"),
-				array("QUẢN LÝ", "/app")
+			$Navigation = array(				
+				
 			);
 			
 			if (!isset($Page)) $Page=1;			

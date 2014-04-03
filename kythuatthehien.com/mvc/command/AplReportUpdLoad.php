@@ -38,9 +38,7 @@
 				$ConfigAll = $mConfig->findAll();		
 				
 				$Title = "CẬP NHẬT THỜI GIAN BÁO CÁO";
-				$Navigation = array(
-					array("TRANG CHỦ", "/trang-chu"),
-					array("QUẢN LÝ THÙ LAO", "/thu-lao/app"),
+				$Navigation = array(					
 					array("BÁO CÁO", "/thu-lao/report")
 				);
 			
@@ -58,7 +56,7 @@
 				$request->setObject('ConfigAll', $ConfigAll);				
 				$request->setObject('Navigation', $Navigation);
 				$request->setProperty("Title", $Title);			
-				$request->setProperty("ActiveAdmin", 'Admin');
+				$request->setProperty("ActiveAdmin", 'Report');
 		}
 	}
 ?>

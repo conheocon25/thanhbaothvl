@@ -39,9 +39,7 @@
 				$ConfigAll = $mConfig->findAll();		
 				
 				$Title = "NHẬP MẬT KHẨU MỚI";
-				$Navigation = array(
-					array("TRANG CHỦ", "/trang-chu"),
-					array("QUẢN LÝ THÙ LAO", "/thu-lao/app"),
+				$Navigation = array(					
 					array("THAY ĐỔI MẬT KHẨU", "/thu-lao/changepass")
 				);
 			

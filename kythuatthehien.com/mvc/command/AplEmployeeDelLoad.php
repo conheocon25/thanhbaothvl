@@ -37,8 +37,7 @@
 				$ConfigAll = $mConfig->findAll();		
 				
 				$Title = "QUẢN LÝ NHÂN VIÊN";
-				$Navigation = array(					
-					array("QUẢN LÝ THÙ LAO", "/thu-lao/app"),
+				$Navigation = array(
 					array("XÓA NHÂN VIÊN", "/thu-lao/employee")
 				);
 			

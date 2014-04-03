@@ -29,11 +29,8 @@
 			
 			
 			$Title = "THÊM MỚI";
-			$Navigation = array(
-				array("TRANG CHỦ", "/trang-chu"),
-				array("QUẢN LÝ", "/app"),
-				array("TIN TỨC", "/app/category/news"),
-				array(mb_strtoupper($Category->getName(),'UTF8') , $Category->getURLView())
+			$Navigation = array(				
+				array("TIN TỨC", "/thu-lao/news")
 			);
 			
 			//-------------------------------------------------------------
