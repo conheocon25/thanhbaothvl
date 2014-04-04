@@ -28,20 +28,61 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
 			"SELECT * FROM ktth_salarydaily			
 			WHERE id_category=:id_category and month(date_work) =:mMonth and year(date_work) =:mYear
 			ORDER BY date_work desc" );
+			
+		$this->findByCateroryGroupByStmt = self::$PDO->prepare(
+			"SELECT `id`,`id_category`,`id_employee`,`content`,count(`count`) as `count`,`date_work`,`date_note`,`note` FROM `ktth_salarydaily` 			
+			WHERE `id_category`=:id_category and month(`date_work`) =:mMonth and year(`date_work`) =:mYear
+			GROUP BY `id_category`" );
+			
 		$this->findByCateroryYearStmt = self::$PDO->prepare(
 			"SELECT * FROM ktth_salarydaily			
 			WHERE id_category=:id_category and year(date_work) =:mYear
 			ORDER BY date_work desc" );
+		
+		$this->findByCateroryYearGroupByStmt = self::$PDO->prepare(
+			"SELECT `id`,`id_category`,`id_employee`,`content`,count(`count`) as `count`,`date_work`,`date_note`,`note` FROM `ktth_salarydaily` 			
+			WHERE `id_category`=:id_category and year(date_work) =:mYear
+			GROUP BY `id_category`" );
 		
 		$this->findByCateroryAllYearStmt = self::$PDO->prepare(
 			"SELECT * FROM ktth_salarydaily			
 			WHERE year(date_work) =:mYear
 			ORDER BY date_work desc" );
 			
+		$this->findByCateroryAllYearGroupByStmt = self::$PDO->prepare(
+			"SELECT `id`,`id_category`,`id_employee`,`content`,count(`count`) as `count`,`date_work`,`date_note`,`note` FROM `ktth_salarydaily` 	
+			WHERE year(date_work) =:mYear
+			GROUP BY `id_category`" );
+			
 		$this->findByCateroryAllStmt = self::$PDO->prepare(
 			"SELECT * FROM ktth_salarydaily			
 			WHERE month(date_work) =:mMonth and year(date_work) =:mYear
 			ORDER BY date_work desc" );
+			
+		$this->findByCateroryGroupByAllStmt = self::$PDO->prepare(
+			"SELECT `id`,`id_category`,`id_employee`,`content`,count(`count`) as `count`,`date_work`,`date_note`,`note` FROM `ktth_salarydaily`  		
+			WHERE month(date_work) =:mMonth and year(date_work) =:mYear
+			GROUP BY `id_category`" );
+			
+		$this->findByCateroryDateStmt = self::$PDO->prepare(
+			"SELECT * FROM ktth_salarydaily			
+			WHERE id_category=:id_category and date_work between :mDateStart and :mDateEnd
+			ORDER BY date_work desc" );	
+		
+		$this->findByCateroryDateGroupByStmt = self::$PDO->prepare(
+			"SELECT `id`,`id_category`,`id_employee`,`content`,count(`count`) as `count`,`date_work`,`date_note`,`note` FROM `ktth_salarydaily` 			
+			WHERE id_category=:id_category and date_work between :mDateStart and :mDateEnd
+			GROUP BY `id_category`" );	
+			
+		$this->findByCateroryAllDateStmt = self::$PDO->prepare(
+			"SELECT * FROM ktth_salarydaily			
+			WHERE date_work between :mDateStart and :mDateEnd
+			ORDER BY date_work desc" );	
+		
+		$this->findByCateroryAllDateGroupByStmt = self::$PDO->prepare(
+			"SELECT `id`,`id_category`,`id_employee`,`content`,count(`count`) as `count`,`date_work`,`date_note`,`note` FROM `ktth_salarydaily` 			
+			WHERE date_work between :mDateStart and :mDateEnd
+			GROUP BY `id_category`" );	
 			
 		$this->findByEmployeePageStmt = self::$PDO->prepare(
 			"SELECT * FROM ktth_salarydaily			
@@ -215,12 +256,27 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
 		$this->findByCateroryStmt->execute();
         return new SalarydailyCollection( $this->findByCateroryStmt->fetchAll(), $this );
     }
-	
+		
 	function findByCateroryYear( $values ) {
 		$this->findByCateroryYearStmt->bindValue(':id_category', $values[0], \PDO::PARAM_INT);		
 		$this->findByCateroryYearStmt->bindValue(':mYear', $values[1], \PDO::PARAM_INT);		
 		$this->findByCateroryYearStmt->execute();
         return new SalarydailyCollection( $this->findByCateroryYearStmt->fetchAll(), $this );
+    }
+	
+	function findByCateroryGroupBy( $values ) {
+		$this->findByCateroryGroupByStmt->bindValue(':id_category', $values[0], \PDO::PARAM_INT);
+		$this->findByCateroryGroupByStmt->bindValue(':mMonth', $values[1], \PDO::PARAM_INT);
+		$this->findByCateroryGroupByStmt->bindValue(':mYear', $values[2], \PDO::PARAM_INT);		
+		$this->findByCateroryGroupByStmt->execute();
+        return new SalarydailyCollection( $this->findByCateroryGroupByStmt->fetchAll(), $this );
+    }
+		
+	function findByCateroryYearGroupBy( $values ) {
+		$this->findByCateroryYearGroupByStmt->bindValue(':id_category', $values[0], \PDO::PARAM_INT);		
+		$this->findByCateroryYearGroupByStmt->bindValue(':mYear', $values[1], \PDO::PARAM_INT);		
+		$this->findByCateroryYearGroupByStmt->execute();
+        return new SalarydailyCollection( $this->findByCateroryYearGroupByStmt->fetchAll(), $this );
     }
 	
 	function findByCateroryAll( $values ) {
@@ -236,6 +292,46 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
         return new SalarydailyCollection( $this->findByCateroryAllYearStmt->fetchAll(), $this );
     }
 	
+	function findByCateroryAllGroupBy( $values ) {
+		$this->findByCateroryAllGroupByStmt->bindValue(':mMonth', $values[0], \PDO::PARAM_INT);
+		$this->findByCateroryAllGroupByStmt->bindValue(':mYear', $values[1], \PDO::PARAM_INT);		
+		$this->findByCateroryAllGroupByStmt->execute();
+        return new SalarydailyCollection( $this->findByCateroryAllGroupByStmt->fetchAll(), $this );
+    }
+	
+	function findByCateroryAllYearGroupBy( $values ) {		
+		$this->findByCateroryAllYearGroupByStmt->bindValue(':mYear', $values[0], \PDO::PARAM_INT);		
+		$this->findByCateroryAllYearGroupByStmt->execute();
+        return new SalarydailyCollection( $this->findByCateroryAllYearGroupByStmt->fetchAll(), $this );
+    }
+	
+	function findByCateroryDate( $values ) {
+		$this->findByCateroryDateStmt->bindValue(':id_category', $values[0], \PDO::PARAM_INT);
+		$this->findByCateroryDateStmt->bindValue(':mDateStart', $values[1], \PDO::PARAM_INT);
+		$this->findByCateroryDateStmt->bindValue(':mDateEnd', $values[2], \PDO::PARAM_INT);		
+		$this->findByCateroryDateStmt->execute();
+        return new SalarydailyCollection( $this->findByCateroryDateStmt->fetchAll(), $this );
+    }
+	function findByCateroryAllDate( $values ) {
+		$this->findByCateroryAllDateStmt->bindValue(':mDateStart', $values[0], \PDO::PARAM_INT);
+		$this->findByCateroryAllDateStmt->bindValue(':mDateEnd', $values[1], \PDO::PARAM_INT);		
+		$this->findByCateroryAllDateStmt->execute();
+        return new SalarydailyCollection( $this->findByCateroryAllDateStmt->fetchAll(), $this );
+    }
+	
+	function findByCateroryDateGroupBy( $values ) {
+		$this->findByCateroryDateGroupByStmt->bindValue(':id_category', $values[0], \PDO::PARAM_INT);
+		$this->findByCateroryDateGroupByStmt->bindValue(':mDateStart', $values[1], \PDO::PARAM_INT);
+		$this->findByCateroryDateGroupByStmt->bindValue(':mDateEnd', $values[2], \PDO::PARAM_INT);		
+		$this->findByCateroryDateGroupByStmt->execute();
+        return new SalarydailyCollection( $this->findByCateroryDateGroupByStmt->fetchAll(), $this );
+    }
+	function findByCateroryAllDateGroupBy( $values ) {
+		$this->findByCateroryAllDateGroupByStmt->bindValue(':mDateStart', $values[0], \PDO::PARAM_INT);
+		$this->findByCateroryAllDateGroupByStmt->bindValue(':mDateEnd', $values[1], \PDO::PARAM_INT);		
+		$this->findByCateroryAllDateGroupByStmt->execute();
+        return new SalarydailyCollection( $this->findByCateroryAllDateGroupByStmt->fetchAll(), $this );
+    }
     function selectStmt() {
         return $this->selectStmt;
     }	

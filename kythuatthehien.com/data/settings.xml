@@ -135,8 +135,12 @@
 		
 		<command name="AplBackup"><view>AplBackup</view></command>	
 		
-		<command name="AplSearch"><view>AplSearch</view></command>	
+		<command name="AplSearch"><view>AplSearch</view></command>
+		
 		<command name="AplSearchCategory"><view>AplSearchCategory</view></command>	
+		<command name="AplSearchCategory1"><view>AplSearchCategory1</view></command>	
+		<command name="AplSearchCategoryType"><view>AplSearchCategoryType</view></command>	
+		<command name="AplSearchCategoryType1"><view>AplSearchCategoryType1</view></command>	
 		
 		
 		

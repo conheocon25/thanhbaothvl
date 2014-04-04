@@ -152,12 +152,12 @@
 		/*<![CDATA[*/           
 			$("#RewardLoad").load("/thu-lao/reward/trang");
 			$('#DateStart').datepicker({
-				format: 'yyyy/mm/dd'
+				format: 'yyyy-mm-dd'
 			})			
 			$('#DateWork').datepicker({
-				format: 'yyyy/mm/dd'
+				format: 'yyyy-mm-dd'
 			})			
-			var today = $.datepicker.formatDate('yy/mm/dd', new Date());
+			var today = $.datepicker.formatDate('yy-mm-dd', new Date());
 			$('#DateStart').val(today);
 			
 			$('#BtnAddReward').click(function(e){				

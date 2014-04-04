@@ -1,6 +1,6 @@
 <?php
 	namespace MVC\Command;	
-	class AplSearchCategory extends Command {
+	class AplSearchCategoryType extends Command {
 		function doExecute( \MVC\Controller\Request $request ) {
 			require_once("mvc/base/domain/HelperFactory.php");			
 			//-------------------------------------------------------------
@@ -31,16 +31,16 @@
 				
 					if($IdCategory == 25000) {
 						if($Month == 13) {						
-							$SalarydailyAll = $mSalarydaily->findByCateroryAllYear(array($mCurrentYear));
+							$SalarydailyAll = $mSalarydaily->findByCateroryAllYearGroupBy(array($mCurrentYear));
 						}else {
-							$SalarydailyAll = $mSalarydaily->findByCateroryAll(array($Month, $mCurrentYear));
+							$SalarydailyAll = $mSalarydaily->findByCateroryAllGroupBy(array($Month, $mCurrentYear));
 						}
 												
 					} else {
 						if($Month == 13) {						
-							$SalarydailyAll = $mSalarydaily->findByCateroryYear(array($IdCategory, $mCurrentYear));
+							$SalarydailyAll = $mSalarydaily->findByCateroryYearGroupBy(array($IdCategory, $mCurrentYear));
 						}else {
-							$SalarydailyAll = $mSalarydaily->findByCaterory(array($IdCategory, $Month, $mCurrentYear));
+							$SalarydailyAll = $mSalarydaily->findByCateroryGroupBy(array($IdCategory, $Month, $mCurrentYear));
 						}
 					}
 					

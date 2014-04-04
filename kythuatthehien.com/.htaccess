@@ -58,12 +58,6 @@ RewriteRule ^psn-hay/danh-muc/([a-z0-9_-]+)$						?cmd=LibraryVideoCategory&KCat
 RewriteRule ^psn-hay/danh-muc/([a-z0-9_-]+)/trang/([0-9]+)$			?cmd=LibraryVideoCategory&KCategory=$1&Page=$2 [L]
 RewriteRule ^psn-hay/danh-muc/([a-z0-9_-]+)/([a-z0-9_-]+)$			?cmd=LibraryVideoCategoryPlay&KCategory=$1&KVideoLibrary=$2 [L]
 
-RewriteRule ^psn-hay/([a-z0-9_-]+)/giang-su/([a-z0-9_-]+)$					?cmd=LibraryVideoMonk&KBType=$1&KMonk=$2 [L]
-RewriteRule ^psn-hay/([a-z0-9_-]+)/giang-su/([a-z0-9_-]+)/trang/([0-9]+)$	?cmd=LibraryVideoMonk&KBType=$1&KMonk=$2&Page=$3 [L]
-RewriteRule ^psn-hay/([a-z0-9_-]+)/giang-su/([a-z0-9_-]+)/([a-z0-9_-]+)$	?cmd=LibraryVideoMonkPlay&KBType=$1&KMonk=$2&KVideo=$3 [L]
-
-RewriteRule ^library/video/pagoda/([a-z0-9]+)$						?cmd=LibraryVideoPagoda&IdPagoda=$1 [L]
-
 RewriteRule ^thu-vien-anh$											?cmd=LibraryAlbum [L]
 RewriteRule ^thu-vien-anh/([a-z0-9_-]+)$							?cmd=LibraryAlbum&KAlbum=$1 [L]
 
@@ -124,6 +118,9 @@ RewriteRule ^thu-lao/manager/([a-z0-9]+)/del/exe$ 					?cmd=AplManagerDelExe&IdC
 
 RewriteRule ^thu-lao/search$ 										?cmd=AplSearch [L]
 RewriteRule ^thu-lao/search/category/([a-z0-9]+)/([a-z0-9]+)$ 		?cmd=AplSearchCategory&IdCategory=$1&Month=$2 [L]
+RewriteRule ^thu-lao/search/category/([a-z0-9]+)/([a-z0-9]+)/type$ 		?cmd=AplSearchCategoryType&IdCategory=$1&Month=$2 [L]
+RewriteRule ^thu-lao/search/category/([a-z0-9]+)/([0-9]+)/([0-9]+)/([0-9]+)/([0-9]+)/([0-9]+)/([0-9]+)$ 		?cmd=AplSearchCategory1&IdCategory=$1&Y1=$2&M1=$3&D1=$4&Y2=$5&M2=$6&D2=$7 [L]
+RewriteRule ^thu-lao/search/category/([a-z0-9]+)/([0-9]+)/([0-9]+)/([0-9]+)/([0-9]+)/([0-9]+)/([0-9]+)/type$ 		?cmd=AplSearchCategoryType1&IdCategory=$1&Y1=$2&M1=$3&D1=$4&Y2=$5&M2=$6&D2=$7 [L]
 
 RewriteRule ^thu-lao/backup$ 										?cmd=AplBackup [L]
 
