@@ -19,12 +19,12 @@
 								<div class="control-group">
 									<label class="control-label" for="IdCategory">Tên Chương trình</label>
 									<div class="controls">
-										<select  name="IdCategory" id="IdCategory" >
-											<option value = "25000" >
-												<span>Tất cả Chương trình</span>
-											</option>
+										<select  name="IdCategory" id="IdCategory" >											
 											<option tal:repeat="CategoryPrograme CategoryProgrameAll" tal:attributes="value CategoryPrograme/getId" >
 												<span style="width:100%;" tal:content="CategoryPrograme/getName"/>
+											</option>
+											<option value = "25000" >
+												<span>Tất cả Chương trình</span>
 											</option>
 										</select>
 									</div>
@@ -32,10 +32,7 @@
 								<div class="control-group">
 									<label class="control-label" for="Month">Tháng</label>
 									<div class="controls">										
-										<select name="Month" id="Month">
-											<option value = "13" >
-												<span>Cả Năm</span>
-											</option>
+										<select name="Month" id="Month">											
 											<option value = "1" >
 												<span>Tháng 1</span>
 											</option>
@@ -72,7 +69,9 @@
 											<option value = "12" >
 												<span>Tháng 12</span>
 											</option>
-																						
+											<option value = "13" >
+												<span>Cả Năm</span>
+											</option>											
 										</select>
 									</div>
 								</div>

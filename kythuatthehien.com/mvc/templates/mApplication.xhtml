@@ -118,10 +118,13 @@
 				<a tal:attributes="href '/thu-lao/report'"><i class="glyphicons-notes_2" />BÁO CÁO ĐIỂM THÙ LAO</a>
 			</li>
 			<li tal:attributes="class php:ActiveAdmin=='News'?'active':'disable'">
-				<a tal:attributes="href '/thu-lao/news'"><i class="glyphicons-table" />TIN TỨC NỘI BỘ</a>
+				<a tal:attributes="href '/thu-lao/news'"><i class="glyphicons-folder_new" />TIN TỨC NỘI BỘ</a>
+			</li>
+			<li tal:attributes="class php:ActiveAdmin=='Schedule'?'active':'disable'">
+				<a tal:attributes="href '/thu-lao/schedule'"><i class="glyphicons-table" />LỊCH TRỰC</a>
 			</li>
 			<li tal:attributes="class php:ActiveAdmin=='Manager'?'active':'disable'" tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isAdmin()">
-				<a tal:attributes="href '/thu-lao/manager'"><i class="glyphicons-table" />QUẢN LÝ DANH MỤC</a>
+				<a tal:attributes="href '/thu-lao/manager'"><i class="glyphicons-notes" />QUẢN LÝ DANH MỤC</a>
 			</li>			
 			<li tal:attributes="class php:ActiveAdmin=='Search'?'active':'disable'" tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isAdmin()">
 				<a tal:attributes="href '/thu-lao/search'"><i class="glyphicons-book_open" />NHẬT KÝ CHƯƠNG TRÌNH</a>

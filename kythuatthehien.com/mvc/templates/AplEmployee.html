@@ -29,6 +29,7 @@
 											<th width="35px">STT</th>										
 											<th align="center">Họ Và Tên</th>
 											<th align="center">Tài Khoản</th>																																								
+											<th align="center">Điểm/Ngày</th>																																								
 											<th align="center" width="35px">Xóa</th>																		
 										</tr>
 									</thead>
@@ -43,6 +44,7 @@
 												</a>
 											</td>
 											<td align="center" tal:content="Employee/getUser" />													
+											<td align="center" tal:content="Employee/getRule" />													
 											<td align="center" width="35px">
 												<a tal:attributes="href Employee/getURLDelLoad"><i class="glyphicons-remove_2"/></a>
 											</td>										
