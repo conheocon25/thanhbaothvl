@@ -25,7 +25,7 @@
 			$mysqlDatabaseName = $StrConnection[1];
 			$mysqlUserName = $StrConnection[2];
 			$mysqlPassword = $StrConnection[3];
-			$mysqlPath ="D:\\xampp\\mysql\\bin\\";
+			$mysqlPath ="C:\\xampp\\mysql\\bin\\";
 			
 			$backupFileName = $mysqlDatabaseName. "_" . date("d-m-Y-H-i-s") . '.sql';
 			$backupPathFileName = ".\\data\\". $backupFileName ;

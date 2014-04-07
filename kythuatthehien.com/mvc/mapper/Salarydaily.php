@@ -30,7 +30,7 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
 			ORDER BY date_work desc" );
 			
 		$this->findByCateroryGroupByStmt = self::$PDO->prepare(
-			"SELECT `id`,`id_category`,`id_employee`,`content`,count(`count`) as `count`,`date_work`,`date_note`,`note` FROM `ktth_salarydaily` 			
+			"SELECT `id`,`id_category`,`id_employee`,`content`,Sum(`count`) as `count`,`date_work`,`date_note`,`note` FROM `ktth_salarydaily` 			
 			WHERE `id_category`=:id_category and month(`date_work`) =:mMonth and year(`date_work`) =:mYear
 			GROUP BY `id_category`" );
 			
@@ -40,7 +40,7 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
 			ORDER BY date_work desc" );
 		
 		$this->findByCateroryYearGroupByStmt = self::$PDO->prepare(
-			"SELECT `id`,`id_category`,`id_employee`,`content`,count(`count`) as `count`,`date_work`,`date_note`,`note` FROM `ktth_salarydaily` 			
+			"SELECT `id`,`id_category`,`id_employee`,`content`,Sum(`count`) as `count`,`date_work`,`date_note`,`note` FROM `ktth_salarydaily` 			
 			WHERE `id_category`=:id_category and year(date_work) =:mYear
 			GROUP BY `id_category`" );
 		
@@ -50,7 +50,7 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
 			ORDER BY date_work desc" );
 			
 		$this->findByCateroryAllYearGroupByStmt = self::$PDO->prepare(
-			"SELECT `id`,`id_category`,`id_employee`,`content`,count(`count`) as `count`,`date_work`,`date_note`,`note` FROM `ktth_salarydaily` 	
+			"SELECT `id`,`id_category`,`id_employee`,`content`,Sum(`count`) as `count`,`date_work`,`date_note`,`note` FROM `ktth_salarydaily` 	
 			WHERE year(date_work) =:mYear
 			GROUP BY `id_category`" );
 			
@@ -59,8 +59,8 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
 			WHERE month(date_work) =:mMonth and year(date_work) =:mYear
 			ORDER BY date_work desc" );
 			
-		$this->findByCateroryGroupByAllStmt = self::$PDO->prepare(
-			"SELECT `id`,`id_category`,`id_employee`,`content`,count(`count`) as `count`,`date_work`,`date_note`,`note` FROM `ktth_salarydaily`  		
+		$this->findByCateroryAllGroupByStmt = self::$PDO->prepare(
+			"SELECT `id`,`id_category`,`id_employee`,`content`,Sum(`count`) as `count`,`date_work`,`date_note`,`note` FROM `ktth_salarydaily`  		
 			WHERE month(date_work) =:mMonth and year(date_work) =:mYear
 			GROUP BY `id_category`" );
 			
@@ -70,7 +70,7 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
 			ORDER BY date_work desc" );	
 		
 		$this->findByCateroryDateGroupByStmt = self::$PDO->prepare(
-			"SELECT `id`,`id_category`,`id_employee`,`content`,count(`count`) as `count`,`date_work`,`date_note`,`note` FROM `ktth_salarydaily` 			
+			"SELECT `id`,`id_category`,`id_employee`,`content`,Sum(`count`) as `count`,`date_work`,`date_note`,`note` FROM `ktth_salarydaily` 			
 			WHERE id_category=:id_category and date_work between :mDateStart and :mDateEnd
 			GROUP BY `id_category`" );	
 			
@@ -80,7 +80,7 @@ class Salarydaily extends Mapper implements \MVC\Domain\SalarydailyFinder {
 			ORDER BY date_work desc" );	
 		
 		$this->findByCateroryAllDateGroupByStmt = self::$PDO->prepare(
-			"SELECT `id`,`id_category`,`id_employee`,`content`,count(`count`) as `count`,`date_work`,`date_note`,`note` FROM `ktth_salarydaily` 			
+			"SELECT `id`,`id_category`,`id_employee`,`content`,Sum(`count`) as `count`,`date_work`,`date_note`,`note` FROM `ktth_salarydaily` 			
 			WHERE date_work between :mDateStart and :mDateEnd
 			GROUP BY `id_category`" );	
 			

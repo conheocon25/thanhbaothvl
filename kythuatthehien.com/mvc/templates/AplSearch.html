@@ -77,9 +77,12 @@
 										</div>
 									</div>
 									<div class="control-group">
-										<label class="control-label" for="Type">Xem theo chi tiết</label>
+										<label class="control-label" for="Type">Tùy chọn Xem</label>
 										<div class="controls">									
-											 <input type="checkbox" id="Type" name="Type" />
+											 <select  name="Type" id="Type" >												
+												<option value = "1" ><span>Tóm tắt</span></option>
+												<option value = "2" ><span>Chi tiết</span></option>
+											</select>											
 										</div>
 									</div>
 									<div class="control-group">
@@ -117,9 +120,12 @@
 										</div>																				
 									</div>
 									<div class="control-group">
-										<label class="control-label" for="Type">Xem theo chi tiết</label>
+										<label class="control-label" for="Type">Tùy chọn Xem</label>
 										<div class="controls">									
-											 <input type="checkbox" id="Type1" name="Type1" />
+											 <select  name="Type1" id="Type1" >												
+												<option value = "1" ><span>Tóm tắt</span></option>
+												<option value = "2" ><span>Chi tiết</span></option>
+											</select>											
 										</div>
 									</div>
 									<div class="control-group">
@@ -156,15 +162,9 @@
 					
 					$("#CategoryAll").load("thu-lao/search/category/"+$("#IdCategory").val()+"/"+$("#Month").val());
 					
-					$('#Type:checkbox:checked').click(function(){
-							var val= $(this).val();
-							alert(val);
-					});
 					
 					$('#CmdSearch').click(function(){					
-						
-						
-						if ($("#Type").val() = 1 ) {
+						if ($("#Type").val() == 2 ) {
 							
 							$("#CategoryAll").load("thu-lao/search/category/"+$("#IdCategory").val()+"/"+$("#Month").val());						
 						}
@@ -175,7 +175,7 @@
 					});
 					
 					$('#CmdSearch1').click(function(){	
-						if ($("#Type1").val() == "on") {
+						if ($("#Type1").val() == 2 ) {
 							$("#CategoryAll").load("thu-lao/search/category/"+$("#IdCategory1").val()+"/"+$("#DateStart").val()+"/"+$("#DateEnd").val());										
 						}
 						else {
