@@ -4,6 +4,7 @@
 			<tr>
 				<th align="center" width="30px">STT</th>										
 				<th align="center">Tên Chương Trình</th>											
+				<th align="center">Thuộc Tổ</th>											
 				<th align="center" width="30px">SL</th>
 			</tr>
 		</thead>
@@ -13,6 +14,7 @@
 					<div tal:content="repeat/Salarydaily/number" />
 				</td>
 				<td align="left" tal:content="Salarydaily/getCategory/getName" />																	
+				<td align="left" tal:content="Salarydaily/getEmployee/getPosition/getName" />																	
 				<td align="center" tal:content="Salarydaily/getCount" />										
 			</tr>
 		</tbody>
