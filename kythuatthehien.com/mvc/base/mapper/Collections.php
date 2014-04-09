@@ -24,5 +24,6 @@ class ConfigCollection extends Collection implements \MVC\Domain\ConfigCollectio
 class GuestCollection extends Collection implements \MVC\Domain\GuestCollection {function targetClass( ) {return "\MVC\Domain\Guest";}}
 class PageCollection extends Collection implements \MVC\Domain\PageCollection {function targetClass( ) {return "\MVC\Domain\Page";}}
 class ReportCollection extends Collection implements \MVC\Domain\ReportCollection {function targetClass( ) {return "\MVC\Domain\Report";}}
+class ScheduleCollection extends Collection implements \MVC\Domain\ScheduleCollection {function targetClass( ) {return "\MVC\Domain\Schedule";}}
 
 ?>

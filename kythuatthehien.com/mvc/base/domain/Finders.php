@@ -28,4 +28,5 @@ interface ConfigFinder  		extends Finder {}
 interface GuestFinder  			extends Finder {}
 interface PageFinder  			extends Finder {}
 interface ReportFinder  		extends Finder {}
+interface ScheduleFinder  		extends Finder {}
 ?>
