@@ -14,8 +14,8 @@
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-12">
-							<div class="control-group">
-								<div class="controls">							
+							<div class="control-group" tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isManager()">
+								<div class="controls" >							
 									<a class="btn btn-primary btn-ins" tal:attributes="href 'thu-lao/schedule/ins/load'">
 												<span class="icon-plus"/> Thêm mới
 									</a>
@@ -30,8 +30,9 @@
 										<th align="center">Tổ Chuyên Môn</th>
 										<th align="center">Từ ngày</th>
 										<th width="center">Đến Ngày</th>										
+										<th width="center">Ghi chú</th>										
 										<th align="center" >Xem</th>																					
-										<th align="center" width="35px">XÓA</th>																		
+										<th align="center" width="35px" tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isManager()">XÓA</th>																		
 									</tr>
 								</thead>
 								<tbody>
@@ -39,20 +40,24 @@
 										<td width="35px" align="center">
 											<div tal:content="repeat/schedule/number" />
 										</td>
-										<td align="left">
+										<td align="left" tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isManager()">
 											<a tal:attributes="href schedule/getURLUpdLoad">
 												<div tal:content="schedule/getName" />
 											</a>
 										</td>
+										<td align="left" tal:condition="not: php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isManager()">
+											<div tal:content="schedule/getName" />											
+										</td>
 										<td align="center" tal:content="schedule/getPosition/getName" />
 										<td align="center" tal:content="schedule/getDateStartPrint" />
 										<td align="center" tal:content="schedule/getDateEndPrint" />
+										<td align="center" tal:content="schedule/getNote" />
 										<td align="center" >
 											<a tal:attributes="href schedule/getURLViewLoad" target="blank"><i class="glyphicons-eye_open"/></a>
 										</td>
-										<td align="center" width="35px">
+										<td align="center" width="35px" tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isManager()">
 											<a tal:attributes="href schedule/getURLDelLoad"><i class="glyphicons-remove_2"/></a>
-										</td>										
+										</td>																			
 									</tr>
 								</tbody>								
 							</table>
