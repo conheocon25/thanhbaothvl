@@ -1,6 +1,6 @@
 <?php
 	namespace MVC\Command;	
-	class AplScheduleUpdLoad extends Command {
+	class AplScheduleView extends Command {
 		function doExecute( \MVC\Controller\Request $request ) {
 			require_once("mvc/base/domain/HelperFactory.php");			
 			//-------------------------------------------------------------
@@ -39,7 +39,7 @@
 				$AlbumAll = $mAlbum->findAll();
 				$ConfigAll = $mConfig->findAll();		
 				
-				$Title = "CẬP NHẬT LỊCH TRỰC";
+				$Title = "XEM CHI TIẾT LỊCH TRỰC";
 				$Navigation = array(					
 					array("BÁO CÁO", "/thu-lao/schedule")
 				);

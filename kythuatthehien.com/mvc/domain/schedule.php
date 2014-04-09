@@ -80,6 +80,8 @@ class Schedule extends Object{
 	function getURLScheduleAll(){return "/thu-lao/schedule/".$this->getId()."/print/all";}
 	function getURLScheduleSummary(){return "/thu-lao/schedule/".$this->getId()."/print/summary";}
 	
+	function getURLViewLoad(){return "/thu-lao/schedule/".$this->getId()."/view";}
+	
 	function getURLUpdLoad(){return "/thu-lao/schedule/".$this->getId()."/upd/load";}
 	function getURLUpdExe(){return "/thu-lao/schedule/".$this->getId()."/upd/exe";}
 	

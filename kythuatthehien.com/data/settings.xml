@@ -198,8 +198,8 @@
 		<command name="AplScheduleDelLoad"><view>AplScheduleDelLoad</view></command>
 		<command name="AplScheduleDelExe"><view>AplScheduleDelExe</view><status value="CMD_OK"><forward>AplSchedule</forward></status></command>
 		
-		<command name="AplScheduleUser"><view>AplScheduleUser</view></command>		
-		<command name="AplScheduleAll"><view>AplScheduleAll</view></command>
+		<command name="AplScheduleView"><view>AplScheduleView</view></command>		
+		
 		<!-- ============================================================================== -->
 		<!-- GLOBAL			 																-->
 		<!-- ============================================================================== -->

@@ -26,7 +26,7 @@
 									<label class="control-label">Cho tổ chuyên môn</label>
 									<div class="controls">
 										<select id="IdPosition" name="IdPosition" >
-											<option  tal:repeat="Position PositionsAll" tal:attributes="value Position/getId" >
+											<option  tal:repeat="Position PositionsAll" tal:attributes="value Position/getId;selected php:Position->getId()==Schedule->getIdPosition()" >
 												<span tal:content="Position/getName"/>
 											</option>
 										</select>
@@ -47,7 +47,7 @@
 								<div class="control-group">
 									<label class="control-label" for="Author">Nội dung</label>
 									<div class="controls">
-										<textarea id="Decription" class="ckeditor" name="Decription" tal:content="Schedule/getDescription" />
+										<textarea id="Description" class="ckeditor" name="Description" tal:content="Schedule/getDescription" />
 									</div>
 								</div>
 								<div class="control-group">

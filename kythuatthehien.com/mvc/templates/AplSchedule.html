@@ -27,9 +27,10 @@
 									<tr>
 										<th width="35px">STT</th>										
 										<th align="center">Lịch trực</th>
+										<th align="center">Tổ Chuyên Môn</th>
 										<th align="center">Từ ngày</th>
 										<th width="center">Đến Ngày</th>										
-										<th align="center" >Ghi chú</th>																					
+										<th align="center" >Xem</th>																					
 										<th align="center" width="35px">XÓA</th>																		
 									</tr>
 								</thead>
@@ -43,9 +44,12 @@
 												<div tal:content="schedule/getName" />
 											</a>
 										</td>
+										<td align="center" tal:content="schedule/getPosition/getName" />
 										<td align="center" tal:content="schedule/getDateStartPrint" />
 										<td align="center" tal:content="schedule/getDateEndPrint" />
-										<td align="center" tal:content="schedule/getNote" />																				
+										<td align="center" >
+											<a tal:attributes="href schedule/getURLViewLoad" target="blank"><i class="glyphicons-eye_open"/></a>
+										</td>
 										<td align="center" width="35px">
 											<a tal:attributes="href schedule/getURLDelLoad"><i class="glyphicons-remove_2"/></a>
 										</td>										

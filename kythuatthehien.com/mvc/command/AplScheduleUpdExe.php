@@ -16,6 +16,8 @@
 			$DateStart = $request->getProperty('DateStart');
 			$DateEnd = $request->getProperty('DateEnd');
 			$ScheduleName = $request->getProperty('ScheduleName');
+			$Description =  \stripslashes($request->getProperty('Description'));
+			$Note = $request->getProperty('Note');
 			
 			//-------------------------------------------------------------
 			//MAPPER DỮ LIỆU
@@ -31,7 +33,9 @@
 			$domainSchedule = $mSchedule->find($IdSchedule);			
 			$domainSchedule->setName($ScheduleName);
 			$domainSchedule->setDateStart($DateStart);
+			$domainSchedule->setNote($Note);
 			$domainSchedule->setDateEnd($DateEnd);
+			$domainSchedule->setDescription($Description);
 			
 			$mSchedule->update($domainSchedule);
 			//-------------------------------------------------------------

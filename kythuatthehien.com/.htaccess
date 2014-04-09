@@ -155,6 +155,7 @@ RewriteRule ^thu-lao/schedule/([a-z0-9]+)/upd/load$ 				?cmd=AplScheduleUpdLoad&
 RewriteRule ^thu-lao/schedule/([a-z0-9]+)/upd/exe$ 					?cmd=AplScheduleUpdExe&IdSchedule=$1 [L]
 RewriteRule ^thu-lao/schedule/([a-z0-9]+)/del/load$ 				?cmd=AplScheduleDelLoad&IdSchedule=$1 [L]
 RewriteRule ^thu-lao/schedule/([a-z0-9]+)/del/exe$ 					?cmd=AplScheduleDelExe&IdSchedule=$1 [L]
+RewriteRule ^thu-lao/schedule/([a-z0-9]+)/view$ 					?cmd=AplScheduleView&IdSchedule=$1 [L]
 
 #---------------------------------------------------------------------------------------------------------------------------
 # APP
