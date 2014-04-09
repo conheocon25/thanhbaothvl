@@ -147,6 +147,15 @@ RewriteRule ^thu-lao/news/([0-9]+)/([0-9]+)/del/load$ 				?cmd=AplNewsDelLoad&Id
 RewriteRule ^thu-lao/news/([0-9]+)/([0-9]+)/del/exe$ 				?cmd=AplNewsDelExe&IdCategory=$1&IdNews=$2 [L]
 RewriteRule ^thu-lao/news/update/all$ 								?cmd=AplNewsUpdateAll [L]
 
+RewriteRule ^thu-lao/schedule$ 										?cmd=AplSchedule [L]
+RewriteRule ^thu-lao/schedule/trang/([0-9]+)$ 						?cmd=AplSchedule&Page=$1 [L]
+RewriteRule ^thu-lao/schedule/ins/load$ 							?cmd=AplScheduleInsLoad [L]
+RewriteRule ^thu-lao/schedule/ins/exe$ 								?cmd=AplScheduleInsExe [L]
+RewriteRule ^thu-lao/schedule/([a-z0-9]+)/upd/load$ 				?cmd=AplScheduleUpdLoad&IdSchedule=$1 [L]
+RewriteRule ^thu-lao/schedule/([a-z0-9]+)/upd/exe$ 					?cmd=AplScheduleUpdExe&IdSchedule=$1 [L]
+RewriteRule ^thu-lao/schedule/([a-z0-9]+)/del/load$ 				?cmd=AplScheduleDelLoad&IdSchedule=$1 [L]
+RewriteRule ^thu-lao/schedule/([a-z0-9]+)/del/exe$ 					?cmd=AplScheduleDelExe&IdSchedule=$1 [L]
+
 #---------------------------------------------------------------------------------------------------------------------------
 # APP
 #---------------------------------------------------------------------------------------------------------------------------

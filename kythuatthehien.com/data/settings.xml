@@ -185,6 +185,21 @@
 		<command name="AplNewsDelExe"><view>AplNewsDelExe</view><status value="CMD_OK"><forward>AplNews</forward></status></command>
 		<command name="AplNewsUpdateAll"><view>AplNewsUpdateAll</view><status value="CMD_OK"><forward>AplNews</forward></status></command>
 		
+		
+		<!-- ============================================================================== -->
+		<!-- APL.SCHEDULE																-->
+		<!-- ============================================================================== -->
+		<command name="AplSchedule"><view>AplSchedule</view></command>
+		
+		<command name="AplScheduleInsLoad"><view>AplScheduleInsLoad</view></command>
+		<command name="AplScheduleInsExe"><view>AplScheduleInsExe</view><status value="CMD_OK"><forward>AplSchedule</forward></status></command>		
+		<command name="AplScheduleUpdLoad"><view>AplScheduleUpdLoad</view></command>
+		<command name="AplScheduleUpdExe"><view>AplScheduleUpdExe</view><status value="CMD_OK"><forward>AplSchedule</forward></status></command>		
+		<command name="AplScheduleDelLoad"><view>AplScheduleDelLoad</view></command>
+		<command name="AplScheduleDelExe"><view>AplScheduleDelExe</view><status value="CMD_OK"><forward>AplSchedule</forward></status></command>
+		
+		<command name="AplScheduleUser"><view>AplScheduleUser</view></command>		
+		<command name="AplScheduleAll"><view>AplScheduleAll</view></command>
 		<!-- ============================================================================== -->
 		<!-- GLOBAL			 																-->
 		<!-- ============================================================================== -->

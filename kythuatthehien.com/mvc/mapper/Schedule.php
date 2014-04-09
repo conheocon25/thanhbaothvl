@@ -31,24 +31,24 @@ class Schedule extends Mapper implements \MVC\Domain\ScheduleFinder{
 	}
 	
     function getCollection( array $raw ){
-        return new ReportCollection( $raw, $this );
+        return new ScheduleCollection( $raw, $this );
     }
 
     protected function doCreateObject( array $array ) {
-        $obj = new \MVC\Domain\Report( 
+        $obj = new \MVC\Domain\Schedule( 
 			$array['id'],			
 			$array['idposition'],
 			$array['name'],
 			$array['date_start'],
 			$array['date_end'],
-			$array['description']		
+			$array['description'],	
 			$array['note']		
 		);
         return $obj;
     }
 
     protected function targetClass() {        
-		return "Report";
+		return "Schedule";
     }
 
     protected function doInsert( \MVC\Domain\Object $object ) {
@@ -57,7 +57,7 @@ class Schedule extends Mapper implements \MVC\Domain\ScheduleFinder{
 			$object->getName(),			
 			$object->getDateStart(),
 			$object->getDateEnd(),
-			$object->getDescription()
+			$object->getDescription(),
 			$object->getNote()
 		); 
         $this->insertStmt->execute( $values );
