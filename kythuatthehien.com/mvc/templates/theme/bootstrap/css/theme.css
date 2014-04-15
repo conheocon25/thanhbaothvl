@@ -22,13 +22,23 @@
 		.top-menu .dropdown-menu { background: #ff9f00;	 }
 				
 		.top-menu .dropdown-menu li {
+			height: 40px;
 			background: url("/data/images/bg/submenu.jpg") repeat top left transparent;
+			
 		}
 		.top-menu .dropdown-menu li a {			
 			color: #FFFFFF !important;
-			text-shadow: 1px 1px 0 #696969 !important;
-			margin-top: -4px  !important;
-			margin-bottom: 6px  !important;
+			text-shadow: 1px 1px 0 #696969 !important;	
+			margin-top: 1px  !important;
+		}
+		.top-menu .dropdown-menu li:first-child
+		{			
+			margin-top: -6px  !important;
+		}
+		
+		.top-menu .dropdown-menu li:last-child
+		{			
+			margin-bottom: -5px  !important;
 		}
 		
 		.top-menu .dropdown-menu li:hover a { background: rgba(0, 164, 128, .3) !important; }
