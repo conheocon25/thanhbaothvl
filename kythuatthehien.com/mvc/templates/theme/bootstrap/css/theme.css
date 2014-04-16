@@ -17,7 +17,7 @@
 			color: #FFFD5B !important;
 		}
 		
-		.top-menu .caret { border-top-color: #FFFFFF !important; }
+		.top-menu .caret { border-top-color: #FFFFFF !important; margin-left: 5px  !important; }
 		
 		.top-menu .dropdown-menu { background: #ff9f00;	 }
 				
@@ -59,9 +59,9 @@
 	.box { border: 1px solid #7CA324; }
 	
 		.box .b-title {
-			background-color: #00a480;
+			background-color: #0F4FA7;
 			*background: url("/data/images/bg/menu.jpg") repeat-x top left transparent;
-			border-bottom: 1px solid #00a480;
+			border-bottom: 1px solid #0F4FA7;
 		}
 		
 		.b-title .b-t-icon-content {
