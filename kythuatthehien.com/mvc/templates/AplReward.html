@@ -14,7 +14,8 @@
 				<div metal:use-macro="mApplication.xhtml/LocationBar"/>
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-12">							
+						<div class="col-12">
+							<center><legend>Thông Tin Điểm thù lao</legend></center>
 							<div align="center" class="well" style="hight:50%;font-size:18pt;padding-top:-10px;">
 									<label id="IdUser" tal:attributes="alt User/getId" align="center" tal:content="User/getNote" ></label>
 									Điểm CM: <b style="color:red;" id="NTotal" tal:content="php:NTotal->formatCurrency()"/>							
