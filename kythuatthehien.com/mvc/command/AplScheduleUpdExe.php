@@ -13,6 +13,7 @@
 			//THAM SỐ GỬI ĐẾN
 			//-------------------------------------------------------------
 			$IdSchedule = $request->getProperty('IdSchedule');		
+			$IdPosition = $request->getProperty('IdPosition');
 			$DateStart = $request->getProperty('DateStart');
 			$DateEnd = $request->getProperty('DateEnd');
 			$ScheduleName = $request->getProperty('ScheduleName');
@@ -31,6 +32,7 @@
 				return self::statuses('CMD_NO_AUTHOR');
 				
 			$domainSchedule = $mSchedule->find($IdSchedule);			
+			$domainSchedule->setIdPosition($IdPosition);
 			$domainSchedule->setName($ScheduleName);
 			$domainSchedule->setDateStart($DateStart);
 			$domainSchedule->setNote($Note);
