@@ -1,11 +1,14 @@
 <?php
-	include_once "class.AbsRssReader20.php";
-
-	$xml = new AbsRssReader20();
-
+	include_once "ReadRss.php";
 	$url = 'http://giacngo.vn/thongtin/rss/?ID=1';
+	$xml = new ReadRss($url);
+	$xml->ReadRssXMLByCurl();
+	//$chItems = $xml->GetItems();
+				
+	//print_r($chItems);
 	
-	$xml->Load($url);
+	
+	//$xml->Load($url);
 	/*
 	// Get Channel Tags
 	$chTags = $xml->GetChannelTags();
@@ -39,17 +42,7 @@ echo '<p> Get Items <br/></p>';
 			echo $item['pubDate'] ;
 			echo '<br />';
 		}
-		$HTML = file_get_html('http://giacngo.vn/phathoc/2013/08/14/1A4600/');	
-			$NewsTitle = $HTML->find('#ZoomContentHeadline', 0);
-				
-			$NewsAuthor = $HTML->find('.ctcSource', 0);
-							
-			$NewsContent = $HTML->find('.ctcBody', 0);
 		
-			foreach( $NewsContent->find('img') as $img){
-				if (substr($img->src,0,1) == "/")
-					$img->src = "http://giacngo.vn/".$img->src; 
-			}
 	}
 		
 	

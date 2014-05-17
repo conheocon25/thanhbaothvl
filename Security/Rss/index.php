@@ -10,4 +10,5 @@
 	curl_close($curl_handle);
 	$xml11 = simplexml_load_string($xml);
 	print_r($xml11);
+	
 ?>
