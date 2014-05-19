@@ -6,6 +6,7 @@ class AbsRssReader20
 
 	protected static $_doc = null;
 	protected static $_loaded = FALSE;
+	protected static $_rssUrl = FALSE;
 	/**
 	* Load the xml document
 	* @param string $filePath  The path to the xml document

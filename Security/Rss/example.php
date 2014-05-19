@@ -1,12 +1,12 @@
 <?php
 	include_once "ReadRss.php";
+
 	$url = 'http://giacngo.vn/thongtin/rss/?ID=1';
 	$xml = new ReadRss($url);
 	$xml->ReadRssXMLByCurl();
 	//$chItems = $xml->GetItems();
 				
 	//print_r($chItems);
-	
 	
 	//$xml->Load($url);
 	/*
@@ -25,11 +25,7 @@ echo '<p> Get Items <br/></p>';
 	// Get Items
 	$chItems = $xml->GetItems();
 	if (is_array($chItems) and count($chItems)>0)
-	{
-		//echo '<pre>';
-		//echo '<strong>Get Items</strong><hr size="1" />';
-		//print_r($chItems);
-		//echo '</pre>';
+	{		
 		foreach ($chItems as $key => $item)
 		{
 			echo $item['link'] ;
@@ -42,6 +38,12 @@ echo '<p> Get Items <br/></p>';
 			echo $item['pubDate'] ;
 			echo '<br />';
 		}
+/*
+			$HTML = file_get_html('http://giacngo.vn/phathoc/2013/08/14/1A4600/');	
+			$NewsTitle = $HTML->find('#ZoomContentHeadline', 0);				
+			$NewsAuthor = $HTML->find('.ctcSource', 0);							
+			$NewsContent = $HTML->find('.ctcBody', 0);
+*/
 		
 	}
 		
