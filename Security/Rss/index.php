@@ -1,4 +1,5 @@
 <?php
+/*
 	function getElementsByClassName(DOMDocument $DOMDocument, $ClassName)
 	{
 		$Elements = $DOMDocument->getElementsByTagName("*");
@@ -21,6 +22,21 @@
 		}
 
 		return $Matched;
+	}
+	*/
+	function getElementsByClassName($elements, $className) {
+		$matches = array();
+		foreach($elements as $element) {
+			if (!$element->hasAttribute('class')) {
+				continue;
+			}
+			$classes = preg_split('/\s+/', $element->getAttribute('class'));
+			if ( ! in_array($className, $classes)) {
+				continue;
+			}
+			$matches[] = $element;
+		}
+		return $matches;
 	}
 	/*
 	$url = 'http://giacngo.vn/thongtin/rss/?ID=1';
@@ -45,37 +61,46 @@
 		curl_setopt($curl_handle, CURLOPT_SSL_VERIFYPEER, FALSE);				
 		curl_setopt($curl_handle, CURLOPT_USERAGENT, 'giacngo.vn');
 		$data = curl_exec($curl_handle);
-	
-	$dom = new DOMDocument();
-	@$dom->loadHTML($data);
-	$test = getElementsByClassName($dom, "ctcBody");
-	$Elements = $test[0]->getElementsByTagName("img");	
+	curl_close($curl_handle);
+	//$dom = new DOMDocument();
+	//@$dom->load($data);
+	//$xpath = new DOMXPath($dom);
+	//$HTML = file_get_html('http://giacngo.vn/phathoc/2013/08/14/1A4600/');
+	//$allClass = $xpath->query("//@class");
+	$ctcBody = $xpath->query("//*[@class='ctcBody']");
+	$headlines = array();
+	for ($i = 0; $i < $ctcBody->length; ++$i) {
+			$headlines[] = $domnodelist->item($i);
+		}
+		
+	print_r($headlines);
+	//$test = getElementsByClassName($dom, "ctcBody");
+	//$Elements = $test[0]->getElementsByTagName("img");	
+	/*
 	for ($i = 0; $i < $Elements->length; ++$i) {		
 		if (substr($Elements->item($i)->getAttribute('src'),0,1) == "/")
 			$Elements->item($i)->setAttribute('src', "http://giacngo.vn/".$Elements->item($i)->getAttribute('src')); 		
-		
+				
 	}
-	
+	*/
 	//foreach($ElementKQ as $n) $domExport->appendChild($domExport->importNode($n,true));
-	$doc = new DOMDocument();
-	@$temp = null;	
-	$ElementKQ = $test[0]->getElementsByTagName("*");
-	$i = 0;
-	$element_ns = new DOMElement('pr:node1', 'thisvalue', 'http://xyz');
-	$doc->appendChild($element_ns);
-	//foreach ($ElementKQ as $item) {
-	for ($i = 0; $i < $ElementKQ->length; ++$i) {
+	//$temp = getElementsByClassName($dom, "ctcBody");	
+	//$ElementKQ = $temp[0]->getElementsByTagName("*");
+	//$ElementKQ = getElementsByClassName($dom->getElementsByTagName('*'), 'ctcBody');
+	//print_r($ElementKQ[0]);
+	//$Element = $ElementKQ[0]->getElementsByTagName("*");
+	//for ($i = 0; $i < $Element->length; ++$i) {
 		//echo $ElementKQ->item($i);
-		$doc->appendChild($ElementKQ->item($i));
-	}
-		
+		//echo $Element->item($i)->ownerDocument->saveXML( $Element->item($i) ); 
+	//}
 	
+	//echo $dom->saveHTML();
 	
 	//foreach($ElementKQ as $n) $doc->appendChild($n));
 	//echo $dom->saveHTML();
 	
 	//echo $test1[0];
-	echo $doc->saveHTML();
+	//echo $doc->saveHTML();
 	//print_r($test);
 	/*
 	$xpath = new DOMXPath($dom);
