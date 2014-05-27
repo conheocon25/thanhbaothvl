@@ -1,7 +1,7 @@
 <?php
 	require_once("Encrypted.php" );
 	
-	$Encrypted = new Encrypted( "ktth", "ktth", "adminktth");	
+	$Encrypted = new Encrypted();	
 	$Encrypted->writeStrConnection();	
 	//$Encrypted->writeDBUser();	
 	//$Encrypted->writeDBPass();	
