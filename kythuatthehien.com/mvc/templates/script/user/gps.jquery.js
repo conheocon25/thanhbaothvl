@@ -3,14 +3,14 @@
 	
     $.GoogleMapObjectDefaults = {        
         zoomLevel: 10,
-		imagewidth: 50,
-		imageheight: 50,
-		center: 'Chua Long Vien, Phuong 4, tp. Vinh Long, Vinh Long, Viet Nam',		
+		imagewidth: 60,
+		imageheight: 60,
+		center: 'Dai Phat Thanh Truyen Hinh Tinh Vinh Long',		
 		start: '#start',		
         end: '#end',
 		directions: 'directions',
         submit: '#getdirections',      	
-		tooltip: 'Chùa Long Viễn, Phường 4, TP. Vĩnh Long, tỉnh Vĩnh Long, Việt Nam',
+		tooltip: '<div style="overflow-x: hidden;"><img src="/data/images/bg/thvl.jpg" height="30px" width="30px"/><span style="font:bold 16px/30px arial;color:red;padding-left:10px">Đài PT-TH Vĩnh Long-Phòng Kỹ Thuật Thể Hiện</span><br /><span>Địa chỉ:số 50 , Phường4, TP.Vĩnh Long, Vĩnh Long</span><br /><span>Điện thoại:(070)3 822 345</span></div>',
 		image: 'false'
     };
 
@@ -24,10 +24,10 @@
     }
 	
 	function showMaker() {					
-		var center = new GLatLng(10.244739,105.983477);		
+		var center = new GLatLng(10.246623, 105.976523);		
 		var marker = new GMarker(center, {draggable: false}); 
 		map.addOverlay(marker);		
-		marker.openInfoWindowHtml('Chùa Long Viễn, Phường 4, TP. Vĩnh Long, tỉnh Vĩnh Long, Việt Nam');	
+		marker.openInfoWindowHtml('<div style="overflow-x: hidden;"><img src="/data/images/bg/thvl.jpg" height="30px" width="30px"/><span style="font:bold 16px/30px arial;color:red;padding-left:16%">Đài PT-TH Vĩnh Long<br />Phòng Kỹ Thuật Thể Hiện</span><br /><span>Địa chỉ:số 50 , Phường4, TP.Vĩnh Long, Vĩnh Long</span><br /><span>Điện thoại:(070)3 822 345</span></div>');	
 	}
 	
     $.extend(GoogleMapObject.prototype, {
@@ -65,7 +65,7 @@
 				}		
                 this._geocoder.getLatLng(center, function(point) {
 				
-                    center = new GLatLng(10.244739,105.983477);
+                    center = new GLatLng(10.246623, 105.976523);
 					
 					if (!point) { alert(center + " not found"); }
                     else {
