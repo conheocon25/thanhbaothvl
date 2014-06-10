@@ -36,6 +36,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtSubject = new System.Windows.Forms.TextBox();
             this.txtContent = new System.Windows.Forms.TextBox();
+            this.txtCCEmail = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtEmail
@@ -44,6 +46,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(211, 20);
             this.txtEmail.TabIndex = 0;
+            this.txtEmail.Enter += new System.EventHandler(this.txtEmail_Enter);
             // 
             // label1
             // 
@@ -106,11 +109,30 @@
             this.txtContent.Size = new System.Drawing.Size(388, 108);
             this.txtContent.TabIndex = 8;
             // 
+            // txtCCEmail
+            // 
+            this.txtCCEmail.Location = new System.Drawing.Point(373, 51);
+            this.txtCCEmail.Name = "txtCCEmail";
+            this.txtCCEmail.Size = new System.Drawing.Size(211, 20);
+            this.txtCCEmail.TabIndex = 9;
+            this.txtCCEmail.Enter += new System.EventHandler(this.txtCCEmail_Enter);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(315, 57);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "CC Email:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 435);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtCCEmail);
             this.Controls.Add(this.txtContent);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtSubject);
@@ -136,6 +158,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtSubject;
         private System.Windows.Forms.TextBox txtContent;
+        private System.Windows.Forms.TextBox txtCCEmail;
+        private System.Windows.Forms.Label label4;
     }
 }
 

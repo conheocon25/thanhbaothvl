@@ -21,7 +21,8 @@ namespace WindowsFormsApplication1
 
         private void btSendMail_Click(object sender, EventArgs e)
         {
-            SendMail("thanhbao2007vl@gmail.com", "UserName@gmail.com", "ccList if any", "subject", "body");
+            string result = SendMail(txtEmail.Text, "thanhbao2007vl@gmail.com", txtCCEmail.Text, txtSubject.Text, txtContent.Text);
+            MessageBox.Show(result);
         }
         public string SendMail(string toList, string from, string ccList,string subject, string body)
         {
@@ -48,7 +49,7 @@ namespace WindowsFormsApplication1
                     "thanhbao2007vl@gmail.com", "nhatkyty25");
 
                 smtpClient.Send(message);
-                msg = "Successful<BR>";
+                msg = "Gửi Mail Thành Công";
             }
             catch (Exception ex)
             {
@@ -56,6 +57,24 @@ namespace WindowsFormsApplication1
             }
             return msg;
         }
-        //End Send Email Function
+
+        private void txtEmail_Enter(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.IsBalloon = true;
+            tt.InitialDelay = 100;
+            tt.ShowAlways = true;
+            tt.SetToolTip(txtEmail, "Nhập email cần gửi vào đây!.");
+        }
+
+        private void txtCCEmail_Enter(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.IsBalloon = true;
+            tt.InitialDelay = 100;
+            tt.ShowAlways = true;
+            tt.SetToolTip(txtCCEmail, "Nhập email cần gửi CC vào đây!.");
+        }
+        
     }
 }
