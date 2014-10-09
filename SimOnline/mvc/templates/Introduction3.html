@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />		
+		<span metal:use-macro="macros.xhtml/Include"/>
+		<script>
+			/*<![CDATA[*/
+				$(document).ready(function() {			
+					$('#DataTable').find('tbody tr').hover(
+						function(){ $(this).find('td').addClass('table_highlighted');}, 
+						function(){	$(this).find('td').removeClass('table_highlighted');}
+					);
+				
+					var oTable = $('#DataTable').dataTable({				
+						"bScrollCollapse": true,
+						"bStateSave": false,
+						"bFilter": false,
+						"bInfo": false,
+						"bSort": true,
+						"bPaginate": false,
+						"fnDrawCallback": function(oSettings ){
+							if ( oSettings.bSorted || oSettings.bFiltered ){
+								for ( var i=0, iLen=oSettings.aiDisplay.length ; i<iLen ; i++ ){
+									$('td:eq(0)', oSettings.aoData[ oSettings.aiDisplay[i] ].nTr ).html( i+1 );
+								}
+							}
+						}
+					});
+					
+					new FixedHeader( oTable, { "top": true, "zTop": 105 } );
+				});	
+			/*]]>*/	
+		</script>
+	</head>	
+	<body>	
+		<div id="frame">
+			<span metal:use-macro="macros.xhtml/Header"/>
+			<span metal:use-macro="macros.xhtml/MenuIndex"/>
+			<div id="main">
+				<span metal:use-macro="macros.xhtml/main3_of1"/>
+				<div id="main3_of2">
+					<div id="tieude_main">Ý nghĩa các con số theo quan niệm Dân Gian</div>
+					<div align="justify" style="margin-bottom: 80px; padding: 0 20px 0 20px;">
+						<p style="text-indent:25px;">- 3456 : Bạn bè nể sợ (B-B-N-S)</p><br/>
+						<p style="text-indent:25px;">- 6789 : San bằng tất cả ( 6 - 7 - 8 - 9 : S - B - T - C ) hoặc Sống bằng tình cảm.</p><br/>
+						<p style="text-indent:25px;">- 6789 : san bằng tất cả</p><br/><br/>
+						<p style="text-indent:25px;">- 1102 : độc nhất vô nhị</p><br/>
+						<p style="text-indent:25px;">- 0378 : phong bao bão táp</p><br/>
+						<p style="text-indent:25px;">- 3899 : phát tài mãi mãi</p><br/>
+						<p style="text-indent:25px;">- 365078 : 1 năm 365 ngày không thất bát</p><br/>
+						<p style="text-indent:25px;">- 4078 : bốn mùa không thất bát</p><br/>
+						<p style="text-indent:25px;">- 6677028 : xấu xấu bẩn bẩn không ai tán</p><br/><br/>
+						<p style="text-indent:25px;">00 : trứng vịt</p><br/>
+						<p style="text-indent:25px;">01 - 41 - 81 : con cá trắng</p><br/>
+						<p style="text-indent:25px;">02 - 42 - 82 : ốc</p><br/>
+						<p style="text-indent:25px;">03 - 43 - 83 : xác chết (con vịt)</p><br/>
+						<p style="text-indent:25px;">04 - 44 - 84 : con công</p><br/>
+						<p style="text-indent:25px;">05 - 45 - 85 : con trùng</p><br/>
+						<p style="text-indent:25px;">06 - 46 - 86 : con cọp</p><br/>
+						<p style="text-indent:25px;">07 - 47 - 87 : con heo</p><br/>
+						<p style="text-indent:25px;">08 - 48 - 88 : con thỏ</p><br/>
+						<p style="text-indent:25px;">09 - 49 - 89 : con trâu</p><br/>
+						<p style="text-indent:25px;">10 - 50 - 90 : con rồng nằm</p><br/>
+						<p style="text-indent:25px;">11 - 51 - 91 : con chó</p><br/>
+						<p style="text-indent:25px;">12 - 52 - 92 : con ngựa</p><br/>
+						<p style="text-indent:25px;">13 - 53 - 93 : con voi</p><br/>
+						<p style="text-indent:25px;">14 - 54 - 94 : con mèo nhà</p><br/>
+						<p style="text-indent:25px;">15 - 55 - 95 : con chuột</p><br/>
+						<p style="text-indent:25px;">16 - 56 - 96 : con ong</p><br/>
+						<p style="text-indent:25px;">17 - 57 - 97 : con hạc</p><br/>
+						<p style="text-indent:25px;">18 - 58 - 98 : con mèo rừng</p><br/>
+						<p style="text-indent:25px;">19 - 59 - 99 : con bướm</p><br/>
+						<p style="text-indent:25px;">20 - 60 : con rết (con rít áh)</p><br/>
+						<p style="text-indent:25px;">21 - 61 : Thuý Kiều</p><br/>
+						<p style="text-indent:25px;">22 - 62 : bồ câu</p><br/>
+						<p style="text-indent:25px;">23 - 63 : con khỉ</p><br/>
+						<p style="text-indent:25px;">24 - 64 : con ếch</p><br/>
+						<p style="text-indent:25px;">25 - 65 : con ó</p><br/>
+						<p style="text-indent:25px;">26 - 66 : rồng bay</p><br/>
+						<p style="text-indent:25px;">27 - 67 : con rùa</p><br/>
+						<p style="text-indent:25px;">28 - 68 : con gà</p><br/>
+						<p style="text-indent:25px;">29- 69: con lươn</p><br/>
+						<p style="text-indent:25px;">30 - 70 : con cá đen</p><br/>
+						<p style="text-indent:25px;">31 - 71 : con tôm</p><br/>
+						<p style="text-indent:25px;">32 - 72 : con rắn</p><br/>
+						<p style="text-indent:25px;">33 - 73 : con nhện</p><br/>
+						<p style="text-indent:25px;">34 - 74 : con nai</p><br/>
+						<p style="text-indent:25px;">35 - 75 : con dê</p><br/>
+						<p style="text-indent:25px;">36 - 76 : bà vải</p><br/>
+						<p style="text-indent:25px;">37 - 77 : ông trời</p><br/>
+						<p style="text-indent:25px;">38 - 78 : ông địa</p><br/>
+						<p style="text-indent:25px;">39 - 79 : thần tài</p><br/>
+						<p style="text-indent:25px;">40 - 80 : ông táo</p><br/>
+						<p style="text-indent:25px;">- Chỉ điểm qua một chút thôi, nhưng hẳn các bạn đã thấy là có rất nhiều kiểu “Chơi SIM Số”. Thú “Chơi sim số đẹp” không dừng ở trong khuôn khổ là 1 quy tắc nhất định nào đó mà nó là muôn hình vạn trạng; nếu đã “Chơi sim số đẹp” thì mới biết có được một con sim số đẹp hợp ý nó vất vả và sung sướng thế nào</p><br/>
+					</div>
+					<span metal:use-macro="macros.xhtml/MenuXemThem"/> 
+					<br/>
+				</div>
+				<span metal:use-macro="macros.xhtml/main3_of3"/>
+				<div class="vide"></div>
+			</div>
+			<div id="line"></div>
+			<span metal:use-macro="macros.xhtml/Footer"/>
+			<div class="vide"></div>
+		</div>
+	</body>
+</html>

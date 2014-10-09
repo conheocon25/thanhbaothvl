@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<span metal:use-macro="mApplication.xhtml/IncludeMETA"/>
+		<span metal:use-macro="mApplication.xhtml/IncludeCSS"/>			
+	</head>
+	<body>
+		<div class="container-fluid">
+			<span metal:use-macro="mApplication.xhtml/Header"/>
+			<div metal:use-macro="mApplication.xhtml/Menu"/>
+			<div id="content">
+				<div metal:use-macro="mApplication.xhtml/ContentHeader"/>
+				<div metal:use-macro="mApplication.xhtml/LocationBar"/>
+				<div class="container-fluid">
+					<div class="row">
+						<div align="center" class="col-12" style="color:white;">
+							<form class="form-actions" tal:attributes="action News/getURLDelExe1" method="post">
+								<p>Bạn có chắc chắn muốn xóa ?</p>
+								<button type="submit" class="btn btn-primary btn-small" value="submit-value"><span class="icon-remove"/>Xóa</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>	
+		<span metal:use-macro="mApplication.xhtml/Footer"/>
+		<span metal:use-macro="mApplication.xhtml/IncludeJS"/>		
+		<span metal:use-macro="mApplication.xhtml/DialogChangeTime"/>
+		 <script type="text/javascript">
+		/*<![CDATA[*/
+			$('#URLChangeTimeButton').click(function(e){
+				
+				var mYear 	= $("#mYear").val();
+				var mMonth 	= $("#mMonth").val();				
+				URL = "thu-lao/app/changetime/"+mMonth+"/"+mYear;				
+				
+				$.ajax({
+					type: "POST", 
+					async: false,
+					url: URL,
+					dataType: 'json',
+					success: function(data){						
+					}
+				});
+				location.reload(true);
+			});
+		/*]]>*/
+		</script>
+	</body>
+</html>

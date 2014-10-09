@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<span metal:use-macro="mApplication.xhtml/IncludeMETA"/>
+		<span metal:use-macro="mApplication.xhtml/IncludeCSS"/>	
+	</head>
+	<body>
+		<div class="container-fluid">
+			<span metal:use-macro="mApplication.xhtml/Header"/>
+			<div metal:use-macro="mApplication.xhtml/Menu"/>
+			<div id="content">
+				<div metal:use-macro="mApplication.xhtml/ContentHeader"/>
+				<div metal:use-macro="mApplication.xhtml/LocationBar"/>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12">
+							<form style="color:white;" class="form-horizontal" tal:attributes="action 'thu-lao/employee/ins/exe'" method="post">
+								<div class="control-group">
+									<label class="control-label" for="IdPosition">Thuộc Tổ</label>									
+									<div class="controls">
+										<select name="IdPosition">
+											<option tal:repeat="Position PositionAll"  tal:attributes="value Position/getId" >
+												<span tal:content="Position/getName"/>
+											</option>
+										</select>
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="Name">Họ và Tên</label>
+									<div class="controls">
+										<input id="Note" name="Note" type="text" />
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="User">Tài khoản</label>
+									<div class="controls">
+										<input id="User" name="User" type="text" />
+									</div>
+								</div>
+								
+								<div class="control-group">
+									<label class="control-label" for="Pass">Mật Khẩu</label>
+									<div class="controls">
+										<input id="Pass" name="Pass" type="text" />
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="Gender">Giới tính</label>									
+									<div class="controls">
+										<select name="Gender">
+											<option value="1" >Nam</option>
+											<option value="0" >Nữ</option>
+										</select>
+									</div>
+								</div>	
+								<div class="control-group">
+									<label class="control-label" for="Rule">Điểm ABC/ngày</label>									
+									<div class="controls">
+										<select name="Rule">
+											<option value="5" >Đại Học</option>
+											<option value="2" >12/12</option>											
+											<option value="3" >Trung Cấp</option>
+											<option value="4" >Cao Đẳng</option>
+										</select>
+									</div>
+								</div>	
+								<div class="control-group">
+									<label class="control-label" for="Type">Quyền truy cập</label>									
+									<div class="controls">
+										<select name="Type">
+											<option value="0" >Người dùng</option>											
+											<option value="3" >Quản lý</option>
+											<option value="4" >Administrator</option>
+										</select>
+									</div>
+								</div>							
+								<div class="control-group">
+									<div class="controls">
+										<button type="submit" class="btn btn-primary btn-ins" value="submit-value">Thêm mới</button>
+									</div>
+								</div>						
+							</form>							
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>	
+		<span metal:use-macro="mApplication.xhtml/Footer"/>
+		<span metal:use-macro="mApplication.xhtml/IncludeJS"/>	
+	</body>
+</html>

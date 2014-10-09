@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Sim số đẹp giá rẻ</title>
+	<link  rel="stylesheet" type="text/css" href="../Template/css/main2.css"/>
+	<link rel="stylesheet" type="text/css" href="../Template/css/datatable.css"/>
+	<link rel="stylesheet" type="text/css" href="../Template/css/jquery-ui-1.8.11.custom.css"/>
+	<script type="text/javascript" language="javascript" src="../Template/script/main.js"/>
+	<script type="text/javascript" language="javascript" src="../Template/script/jquery.js"/>
+	<script type="text/javascript" language="javascript" src="../Template/script/jquery.dataTables.js"/>	
+	<script type="text/javascript" language="javascript" src="../Template/script/jquery.init.dataTables.js"/>	
+</head>
+<script>
+/*<![CDATA[*/
+$(document).ready(function() {	
+	
+});		
+	function CheckSubmit()
+	{
+		check = false;
+		check = checkTextNull($('#ordername'), $('#error'), "Điền thiếu thông tin xin vui lòng ghi thêm mục này!");			
+		if (check == true)
+		{
+			check = checkPhoneNumber($('#Phone'), $('#error'),"Điền thiếu thông tin xin vui lòng ghi thêm mục này!");
+			if (check == true)
+			{
+				check = checkEmail($('#Email'), $('#error'), "Điền thiếu thông tin xin vui lòng ghi thêm mục này!");
+				if (check == true)
+				{
+					check = checkPhoneNumber($('#Sim'), $('#error'),"Điền thiếu thông tin xin vui lòng ghi thêm mục này!");			
+					if (check == true)
+					{
+						check = checkTextNull($('#cboQuanHuyen'), $('#error'), "Điền thiếu thông tin xin vui lòng ghi thêm mục này!");
+						if (check == true)
+						{
+							check = checkTextNull($('#cboQuanHuyen'), $('#error'), "Điền thiếu thông tin xin vui lòng ghi thêm mục này!");
+							if (check == true)
+							{
+								check = checkTextNull($('#DiaChiGiaoHang'), $('#error'), "Điền thiếu thông tin xin vui lòng ghi thêm mục này!");
+								if (check == true)
+								{
+									check = checkTextNull($('#txtCaptcha'), $('#error'), "Điền thiếu thông tin xin vui lòng ghi thêm mục này!");
+									return check;									
+								}else{return false;}
+							}else{return false;}
+						}else{return false;}
+					}else{return false;}
+				}else{return false;}
+			}else{return false;}
+		}else{return false;}		
+	}
+/*]]>*/
+</script>
+<body>
+	<div id="frame">
+		<div id="header"></div>
+			<span metal:use-macro="macros.xhtml/MenuDatsim"/>
+		<div id="main">
+			<div id="main3_of1">
+				<span metal:use-macro="macros.xhtml/Main3of1"/>
+			</div>
+			<div id="main3_of2" style="height: 1297px;">
+				<div id="tieude_main">Thông tin đặt hàng</div>
+					<p>- <font color="red"><b>Bạn tìm số mình thích, bạn rất bận ….</b></font></p>
+					<p>- <b>Bạn không có thời gian ngồi bên cạnh máy vi tính để tìm sim số đẹp theo ý mình?</b></p>
+					<p>- Chúng tôi sẽ giúp bạn công việc đó.</p>
+					<p>- Bạn hãy điền yêu cầu theo mẫu bên dưới. Chúng tôi sẽ tìm giúp Bạn !</p>
+
+					<table width="100%">
+						<tr>
+							<td align="center">
+								<form id="form_LH" method="post" action="../../Command/datsim.php">
+									<input name='orderdate' type="hidden" id='orderdate' />
+
+										<div id="formTieude">Thông tin:</div>
+
+										<ol>
+											
+											<li>
+												<label>Họ tên:</label>
+												<input id="ordername name" type="text" value="" name="ordername" />&nbsp;<font color="red">(*)</font>
+											</li>
+											
+											<li>
+												<label>Số điện thoại:</label>
+												<input id="Phone" type="text" value="" name="orderphone" />&nbsp;<font color="red">(*)</font>
+											</li>
+											
+											<li>
+												<label>Email:</label>
+												<input id="Email" type="text" value="" name="orderemail" />&nbsp;<font color="red">(*)</font>
+											</li>
+											<li>
+												<label>Số điện thoại cần đặt:</label>
+												<input id="Sim" type="text" value="" name="ordersimnumber" />&nbsp;<font color="red">(*)</font>
+											</li>
+											
+										</ol>
+										
+										<div id="formTieude">Địa chỉ:</div>
+										
+										<ol>
+											<li>
+												<label>Tỉnh thành:</label>
+												<select style="width: 210px;" name="cboTinhThanh" id="cboTinhThanh">
+													<option label="Hồ Chí Minh" value="Hồ Chí Minh">Hồ Chí Minh</option>
+													<option label="Hà Nội" value="Hà Nội">Hà Nội</option>
+													<option label="Hải Phòng" value="Hải Phòng">Hải Phòng</option>
+													<option label="Thừa Thiên-Huế" value="Thừa Thiên-Huế">Thừa Thiên-Huế</option>
+													<option label="Đà Nẵng" value="Đà Nẵng">Đà Nẵng</option>
+													<option label="Cần Thơ" value="Cần Thơ">Cần Thơ</option>
+													<option label="An Giang" value="An Giang">An Giang</option>
+													<option label="BR - Vũng Tàu" value="BR - Vũng Tàu">BR - Vũng Tàu</option>
+													<option label="Bắc Cạn" value="Bắc Cạn">Bắc Cạn</option>
+													<option label="Bắc Giang" value="Bắc Giang">Bắc Giang</option>
+													<option label="Bạc Liêu" value="Bạc Liêu">Bạc Liêu</option>
+													<option label="Bắc Ninh" value="Bắc Ninh">Bắc Ninh</option>
+													<option label="Bến Tre" value="Bến Tre">Bến Tre</option>
+													<option label="Bình Định" value="Bình Định">Bình Định</option>
+													<option label="Bình Dương" value="Bình Dương">Bình Dương</option>
+													<option label="Bình Phước" value="Bình Phước">Bình Phước</option>
+													<option label="Bình Thuận" value="Bình Thuận">Bình Thuận</option>
+													<option label="Cà Mau" value="Cà Mau">Cà Mau</option>
+													<option label="Cao Bằng" value="Cao Bằng">Cao Bằng</option>
+													<option label="Đắk Lắk" value="Đắk Lắk">Đắk Lắk</option>
+													<option label="Đắk Nông" value="Đắk Nông">Đắk Nông</option>
+													<option label="Điện Biên" value="Điện Biên">Điện Biên</option>
+													<option label="Đồng Nai" value="Đồng Nai">Đồng Nai</option>
+													<option label="Đồng Tháp" value="Đồng Tháp">Đồng Tháp</option>
+													<option label="Gia Lai" value="Gia Lai">Gia Lai</option>
+													<option label="Hà Giang" value="Hà Giang">Hà Giang</option>
+													<option label="Hà Nam" value="Hà Nam">Hà Nam</option>
+													<option label="Hà Tĩnh" value="Hà Tĩnh">Hà Tĩnh</option>
+													<option label="Hải Dương" value="Hải Dương">Hải Dương</option>
+													<option label="Hậu Giang" value="Hậu Giang">Hậu Giang</option>
+													<option label="Hòa Bình" value="Hòa Bình">Hòa Bình</option>
+													<option label="Hưng Yên" value="Hưng Yên">Hưng Yên</option>
+													<option label="Khánh Hòa" value="Khánh Hòa">Khánh Hòa</option>
+													<option label="Kiên Giang" value="Kiên Giang">Kiên Giang</option>
+													<option label="Kon Tum" value="Kon Tum">Kon Tum</option>
+													<option label="Lai Châu" value="Lai Châu">Lai Châu</option>
+													<option label="Lâm Đồng" value="Lâm Đồng">Lâm Đồng</option>
+													<option label="Lạng Sơn" value="Lạng Sơn">Lạng Sơn</option>
+													<option label="Lào Cai" value="Lào Cai">Lào Cai</option>
+													<option label="Long An" value="Long An">Long An</option>
+													<option label="Nam Định" value="Nam Định">Nam Định</option>
+													<option label="Nghệ An" value="Nghệ An">Nghệ An</option>
+													<option label="Ninh Bình" value="Ninh Bình">Ninh Bình</option>
+													<option label="Ninh Thuận" value="Ninh Thuận">Ninh Thuận</option>
+													<option label="Phú Thọ" value="Phú Thọ">Phú Thọ</option>
+													<option label="Phú Yên" value="Phú Yên">Phú Yên</option>
+													<option label="Quảng Bình" value="Quảng Bình">Quảng Bình</option>
+													<option label="Quảng Nam" value="Quảng Nam">Quảng Nam</option>
+													<option label="Quảng Ngãi" value="Quảng Ngãi">Quảng Ngãi</option>
+													<option label="Quảng Ninh" value="Quảng Ninh">Quảng Ninh</option>
+													<option label="Quảng Trị" value="Quảng Trị">Quảng Trị</option>
+													<option label="Sóc Trăng" value="Sóc Trăng">Sóc Trăng</option>
+													<option label="Sơn La" value="Sơn La">Sơn La</option>
+													<option label="Tây Ninh" value="Tây Ninh">Tây Ninh</option>
+													<option label="Thái Bình" value="Thái Bình">Thái Bình</option>
+													<option label="Thái Nguyên" value="Thái Nguyên">Thái Nguyên</option>
+													<option label="Thanh Hóa" value="Thanh Hóa">Thanh Hóa</option>
+													<option label="Tiền Giang" value="Tiền Giang">Tiền Giang</option>
+													<option label="Trà Vinh" value="Trà Vinh">Trà Vinh</option>
+													<option label="Tuyên Quang" value="Tuyên Quang">Tuyên Quang</option>
+													<option label="Vĩnh Long" value="Vĩnh Long">Vĩnh Long</option>
+													<option label="Vĩnh Phúc" value="Vĩnh Phúc">Vĩnh Phúc</option>
+													<option label="Yên Bái" value="Yên Bái">Yên Bái</option>
+												</select>&nbsp;<font color="red">(*)</font>
+											</li>
+										
+											<li>
+												<label>Quận/Huyện:</label>
+												<input type="text" name="cboQuanHuyen" id="cboQuanHuyen"/>&nbsp;<font color="red">(*)</font>
+											</li>
+																																	
+											<li>
+												<label>Số nhà – tên đường:</label>
+												<input type="text" name="DiaChiGiaoHang" id="DiaChiGiaoHang" />&nbsp;<font color="red">(*)</font>
+											</li>
+											
+											<li>
+												<label>Tin nhắn của bạn:</label>
+												<textarea rows="7" cols="30" name="ordernote"></textarea>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											</li>
+											
+											<li>
+												<label>Mã xác nhận:</label>
+												<img id="imgCaptcha" src="create_image.php" />
+												<input id="txtCaptcha" type="text" name="txtCaptcha" value="" maxlength="10" size="32" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+												
+												<div style='color:red' id='error' tal:content="txterror" ></div>
+											</li>
+											
+											<li id="send">
+												<button class="send1" type="submit" onclick="return CheckSubmit();">Đặt hàng</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="send2" type="reset">Nhập lại</button>
+											</li>
+										
+										</ol>
+								</form>
+							</td>
+						</tr>
+					</table>  
+			</div>
+			<div id="main3_of3">
+				<span metal:use-macro="macros.xhtml/Main3of3Admin"/>  
+				<div style="border: 1px solid #999; height: 242px;">
+					<a href="http://tkpc.vn/" target="_blank" ><img width="100%" height="50%" border="0" src="../Template/images/tinkhoa.gif" alt="Quang Cao"/></a><br/>
+					<a href="http://sncpc.com/home/" target="_blank" ><img width="100%" height="50%" border="0" src="../Template/images/snc.gif" alt="Quang Cao"/></a><br/>
+				</div>
+			</div>
+			<div class="vide"></div>
+		</div>
+		<div id="line"></div>
+		<div metal:use-macro="macros.xhtml/Footer"/>		
+		<div class="vide"></div>
+	</div>
+</body>
+</html>

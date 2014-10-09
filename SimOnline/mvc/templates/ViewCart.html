@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />		
+		<span metal:use-macro="macros.xhtml/Include"/>
+		<script>
+			/*<![CDATA[*/
+				$(document).ready(function() {			
+					$('#DataTable').find('tbody tr').hover(
+						function(){ $(this).find('td').addClass('table_highlighted');}, 
+						function(){	$(this).find('td').removeClass('table_highlighted');}
+					);
+				
+					var oTable = $('#DataTable').dataTable({				
+						"bScrollCollapse": true,
+						"bStateSave": false,
+						"bFilter": false,
+						"bInfo": false,
+						"bSort": true,
+						"bPaginate": false,
+						"fnDrawCallback": function(oSettings ){
+							if ( oSettings.bSorted || oSettings.bFiltered ){
+								for ( var i=0, iLen=oSettings.aiDisplay.length ; i<iLen ; i++ ){
+									$('td:eq(0)', oSettings.aoData[ oSettings.aiDisplay[i] ].nTr ).html( i+1 );
+								}
+							}
+						}
+					});
+					
+					new FixedHeader( oTable, { "top": true, "zTop": 105 } );
+				});	
+			/*]]>*/	
+		</script>
+	</head>	
+	<body>	
+		<div id="frame">
+			<span metal:use-macro="macros.xhtml/Header"/>
+			<span metal:use-macro="macros.xhtml/MenuIndex"/>
+			<div id="main">
+				<span metal:use-macro="macros.xhtml/main3_of1"/>
+				<div id="main3_of2" style="height: 1220px;">
+					<div id="form_LH" style="margin: 0 auto;padding-right: 40px;">
+						<form id="formViewCart" action="#" method="POST">
+							<table style="margin-right:10px;" width="400" align="center" cellpadding="0" cellspacing="0" border="1">		
+								<tr>
+									<td colspan="4" class="BoxTitle" align='center'>Thông tin Giỏ Hàng</td>
+								</tr>
+								<tr>				
+									<td class="BoxTitle" align='center'>STT</td>
+									<td class="BoxTitle" align='center'>Số SIM</td>								
+									<td class="BoxTitle" align='center'>Giá</td>									
+									<td class="BoxTitle" align='center'><a href="?cmd=ClearCart" >Xóa hết</a></td>
+								</tr>					
+								<tr tal:repeat="LN ListNumber">
+									<td class="BoxGroup" align='center' tal:content="LN/getId"></td>
+									<td class="BoxGroup" align='center' tal:content="LN/getNumber"/>
+									<td class="BoxGroup" align='center'><span tal:content="LN/getPrice"></span><sup>vnd</sup></td>
+									<td class="BoxGroup" align='center'><a tal:attributes=" href LN/getURLDeleteCart">Xóa</a></td>
+								</tr>						
+							</table>
+							<div id='hr'></div>	
+								<table align='left'>
+									<tr>
+										<td style='padding-top:10px;'>							
+											<a style='float:center;margin-left:140px;' href="?cmd=CashCart" class="Button StateDefault ButtonIconLeft CornerAll">
+												Thanh Toán
+											</a>
+										</td>
+									</tr>							
+								</table>	
+						</form>
+					</div>
+				</div>
+			<span metal:use-macro="macros.xhtml/main3_of3"/>
+				<div class="vide"></div>
+			</div>
+			<div id="line"></div>
+			<span metal:use-macro="macros.xhtml/Footer"/>
+			<div class="vide"></div>
+		</div>
+	</body>
+</html>

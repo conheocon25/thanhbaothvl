@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />		
+		<span metal:use-macro="macros.xhtml/Include"/>
+		<script>
+			/*<![CDATA[*/
+				$(document).ready(function() {			
+					$('#DataTable').find('tbody tr').hover(
+						function(){ $(this).find('td').addClass('table_highlighted');}, 
+						function(){	$(this).find('td').removeClass('table_highlighted');}
+					);
+				
+					var oTable = $('#DataTable').dataTable({				
+						"bScrollCollapse": true,
+						"bStateSave": false,
+						"bFilter": false,
+						"bInfo": false,
+						"bSort": true,
+						"bPaginate": false,
+						"fnDrawCallback": function(oSettings ){
+							if ( oSettings.bSorted || oSettings.bFiltered ){
+								for ( var i=0, iLen=oSettings.aiDisplay.length ; i<iLen ; i++ ){
+									$('td:eq(0)', oSettings.aoData[ oSettings.aiDisplay[i] ].nTr ).html( i+1 );
+								}
+							}
+						}
+					});
+					
+					new FixedHeader( oTable, { "top": true, "zTop": 105 } );
+				});	
+			/*]]>*/	
+		</script>
+	</head>	
+	<body>	
+		<div id="frame">
+			<span metal:use-macro="macros.xhtml/Header"/>
+			<span metal:use-macro="macros.xhtml/MenuIndex"/>
+			<div id="main">
+				<div id="main3_of1">
+					<div id="tieude1" tal:content="Title_Network">Danh sách nhà mạng</div>
+					<div class="margin">
+						<ul id="menu_left" tal:repeat="Network Networks">
+							<li>
+								<a tal:attributes="href Network/getURLNumber" tal:content="Network/getName">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div id="tieude1" tal:content="Title_Category">Danh sách loại sim</div>
+					<div class="margin">
+						<ul id="menu_left" tal:repeat="Category Categorys">
+							<li>
+								<a tal:attributes="href Category/getURLNumber" tal:content="Category/getName">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="main3_of2">
+					<div metal:use-macro="macros.xhtml/MenuSearch"/>
+					<span id='error'></span>
+					<div id="tieude_main" >Danh sách sim</div>
+				</div>
+				<div id="main3_of3"></div>
+				<div class="vide"></div>
+			</div>
+			<span metal:use-macro="macros.xhtml/Footer"/>
+			<div class="vide"></div>
+		</div>
+	</body>
+</html>

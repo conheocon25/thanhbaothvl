@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<span metal:use-macro="mApplication.xhtml/IncludeMETA"/>
+		<span metal:use-macro="mApplication.xhtml/IncludeCSS"/>		
+		
+	</head>
+	<body>
+		<div class="container-fluid">
+			<span metal:use-macro="mApplication.xhtml/Header"/>
+			<div metal:use-macro="mApplication.xhtml/Menu"/>
+			<div id="content">
+				<div metal:use-macro="mApplication.xhtml/ContentHeader"/>
+				<div metal:use-macro="mApplication.xhtml/LocationBar"/>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12">
+							<div style="float:left;" width="50%">
+								<div style="color:white;" class="form-horizontal">														
+									<div class="control-group">
+										<label class="control-label" for="IdCategory">Tên Chương trình</label>
+										<div class="controls">
+											<select  name="IdCategory" id="IdCategory" >												
+												<option tal:repeat="CategoryPrograme CategoryProgrameAll" tal:attributes="value CategoryPrograme/getId" >
+													<span style="width:100%;" tal:content="CategoryPrograme/getName"/>
+												</option>
+												<option value = "25000" >
+													<span>Tất cả Chương trình</span>
+												</option>
+											</select>
+										</div>
+									</div>								
+									<div class="control-group">
+										<label class="control-label" for="Month">Tháng</label>
+										<div class="controls">										
+											<select name="Month" id="Month">											
+												<option value = "1" >
+													<span>Tháng 1</span>
+												</option>
+												<option value = "2" >
+													<span>Tháng 2</span>
+												</option>
+												<option value = "3" >
+													<span>Tháng 3</span>
+												</option>
+												<option value = "4" >
+													<span>Tháng 4</span>
+												</option>
+												<option value = "5" >
+													<span>Tháng 5</span>
+												</option>
+												<option value = "6" >
+													<span>Tháng 6</span>
+												</option>
+												<option value = "7" >
+													<span>Tháng 7</span>
+												</option>
+												<option value = "8" >
+													<span>Tháng 8</span>
+												</option>
+												<option value = "9" >
+													<span>Tháng 9</span>
+												</option>
+												<option value = "10" >
+													<span>Tháng 10</span>
+												</option>
+												<option value = "11" >
+													<span>Tháng 11</span>
+												</option>
+												<option value = "12" >
+													<span>Tháng 12</span>
+												</option>
+												<option value = "13" >
+													<span>Cả Năm</span>
+												</option>											
+											</select>
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label" for="Type">Tùy chọn Xem</label>
+										<div class="controls">									
+											 <select  name="Type" id="Type" >												
+												<option value = "1" ><span>Tóm tắt</span></option>
+												<option value = "2" ><span>Chi tiết</span></option>
+											</select>											
+										</div>
+									</div>
+									<div class="control-group">
+										<div class="controls">
+											<span  id="CmdSearch" class="btn btn-primary btn-ins" value="submit-value">Tìm kiếm</span>
+										</div>
+									</div>						
+								</div>
+							</div>
+							<div style="float:right;border-left: 3px solid white; padding-right:10%" width="50%">
+								<div style="color:white;" class="form-horizontal">														
+									<div class="control-group">
+										<label class="control-label" for="IdCategory">Tên Chương trình</label>
+										<div class="controls">
+											<select  name="IdCategory1" id="IdCategory1" >												
+												<option tal:repeat="CategoryPrograme CategoryProgrameAll" tal:attributes="value CategoryPrograme/getId" >
+													<span style="width:100%;" tal:content="CategoryPrograme/getName"/>
+												</option>
+												<option value = "25000" >
+													<span>Tất cả Chương trình</span>
+												</option>
+											</select>
+										</div>
+									</div>								
+									<div class="control-group">										
+										<label class="control-label">Từ Ngày</label>									
+										<div class='controls'>
+											<input type='text' style="width:50%" class="form-control input-small" name="DateStart"  id='DateStart'/>
+										</div>
+									</div>
+									<div class="control-group">										
+										<label class="control-label">Đến Ngày</label>									
+										<div class='controls'>
+											<input type='text' style="width:50%" class="form-control input-small" name="DateEnd"  id='DateEnd'/>
+										</div>																				
+									</div>
+									<div class="control-group">
+										<label class="control-label" for="Type">Tùy chọn Xem</label>
+										<div class="controls">									
+											 <select  name="Type1" id="Type1" >												
+												<option value = "1" ><span>Tóm tắt</span></option>
+												<option value = "2" ><span>Chi tiết</span></option>
+											</select>											
+										</div>
+									</div>
+									<div class="control-group">
+										<div class="controls">
+											<span  id="CmdSearch1" class="btn btn-primary btn-ins" value="submit-value">Tìm kiếm</span>
+										</div>
+									</div>
+									<div class="control-group">
+										<div class="controls">	
+										</div>
+									</div>
+								</div>
+							</div>							
+							<div  class="control-group" id="CategoryAll" />
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>	
+		<span metal:use-macro="mApplication.xhtml/Footer"/>
+		<div metal:use-macro="mApplication.xhtml/IncludeJS"/>		
+		<script type="text/javascript">
+		/*<![CDATA[*/
+				$(document).ready(function() {					
+					$('#DateStart').datepicker({
+						format: 'yyyy/mm/dd'
+					})			
+					$('#DateEnd').datepicker({
+						format: 'yyyy/mm/dd'
+					})			
+					var today = $.datepicker.formatDate('yy/mm/dd', new Date());
+					$('#DateStart').val(today);
+					$('#DateEnd').val(today);
+					
+					$("#CategoryAll").load("thu-lao/search/category/"+$("#IdCategory").val()+"/"+$("#Month").val());
+					
+					
+					$('#CmdSearch').click(function(){					
+						if ($("#Type").val() == 2 ) {
+							
+							$("#CategoryAll").load("thu-lao/search/category/"+$("#IdCategory").val()+"/"+$("#Month").val());						
+						}
+						else {
+							
+							$("#CategoryAll").load("thu-lao/search/category/"+$("#IdCategory").val()+"/"+$("#Month").val()+"/type");						
+						}
+					});
+					
+					$('#CmdSearch1').click(function(){	
+						if ($("#Type1").val() == 2 ) {
+							$("#CategoryAll").load("thu-lao/search/category/"+$("#IdCategory1").val()+"/"+$("#DateStart").val()+"/"+$("#DateEnd").val());										
+						}
+						else {
+							$("#CategoryAll").load("thu-lao/search/category/"+$("#IdCategory1").val()+"/"+$("#DateStart").val()+"/"+$("#DateEnd").val()+"/type");											
+						}
+						
+					});				
+				});				
+		/*]]>*/
+		</script>
+	</body>
+</html>

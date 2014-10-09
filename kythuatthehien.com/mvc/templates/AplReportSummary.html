@@ -1,0 +1,38 @@
+<style type="text/css">
+	.hor-minimalist-a{	background: #fff;margin: 45px; border-collapse: collapse;text-align: left;}
+	.hor-minimalist-a th{ font-weight: normal; border: 1px solid #000; }
+	.hor-minimalist-a td{ padding: 8px; border-right: 1px solid #000; border-left: 1px solid #000; border-bottom: 1px dashed #000 }
+</style>
+<body>	
+	<table width="100%" border="0" cellpadding="2" >
+		<tr>			
+			<td width="30%" align="center"><span>ĐÀI PT-TH VĨNH LONG</span></td>
+			<td width="70%" align="center"><B>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</B></td>			
+		</tr><tr>			
+			<td width="30%" align="center"><B>PHÒNG KỸ THUẬT THỀ HIỆN</B></td>
+			<td width="70%" align="center"><U>Độc lập - Tự do - Hạnh Phúc</U></td>			
+		</tr>
+		<br />
+		<tr>			
+			<td width="100%" align="right"><span align="right" tal:content="DateCurrent" /></td>
+		</tr>
+		<tr>			
+			<td width="100%" align="center"><h4 align="center" tal:content="Title" /></td>
+		</tr>		
+		<tr>			
+			<td width="100%" align="center">Từ <span  tal:content="Report/getDateStartPrint" /> đến <span  tal:content="Report/getDateEndPrint" /></td>
+		</tr>				
+	</table>		
+	<table class="hor-minimalist-a" width="100%" cellpadding="2">
+		<tr >
+			<th width="5%"><B>STT</B></th>			
+			<th width="85%" align="center"><B>TÊN CHƯƠNG TRÌNH</B></th>
+			<th width="10%" align="center" ><B>SL</B></th>					
+		</tr>
+		<tr tal:repeat="Salarydaily SalarydailyAll">
+			<td align="center" 	tal:content="repeat/Salarydaily/number" />
+			<td align="left" 	tal:content="Salarydaily/getCategory/getName" />
+			<td align="center" 	tal:content="Salarydaily/getCount" />		
+		</tr>		
+	</table>	
+</body>

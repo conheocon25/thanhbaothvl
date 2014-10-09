@@ -1,0 +1,1045 @@
+﻿/* -------------------FORM Login---------------------*/
+form{
+	border:0;
+	margin:0;
+	padding:0;
+}
+/*---------myform--------*/
+.myform{
+	margin:0 auto;
+	width:400px;
+	padding:14px;
+}
+/*--------stylized--------*/
+#stylized{
+	border:solid 1px #b7ddf2;
+	background:#ebf4fb;
+	padding-bottom:24px;
+	height:220px;
+	-webkit-border-radius:5px;  
+	-moz-border-radius:5px; 
+}
+#stylized h1{
+	font-size:16px;
+	font-weight:bold;
+	margin-bottom:8px;
+	text-align:center;
+}
+#stylized label{
+	display:block;
+	text-align:right;
+	width:140px;
+	margin-top:10px;
+	margin-right:20px;
+	float:left;
+	font-weight:bold;
+}
+#stylized .fr_input{
+	display:block;
+	font-size:12px;
+	padding:4px 2px;
+	border:solid 1px #aacfe4;
+	width:200px;
+	margin:20px 10px 10px 20px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+#stylized button{
+	clear:bold;
+	margin-left:130px;
+	margin-top:10px;
+	width:150px;
+	height:31px;
+	background:#666666;
+	text-align:center;
+	line-height:31px;
+	color:white;
+	cursor:pointer;
+	font-weight:bold;
+	border:0px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	
+}
+#label{
+float:left;
+margin:0 0 0 100px;
+
+}
+#check{
+float:left;
+margin-top:-35px;
+}
+#comments{
+margin:10px 0 0 0;
+}
+
+/*----------- END Form login-----------------*/
+
+/*----------- FORM Single-----------------*/
+
+#form{
+	margin:15px auto;
+	padding:14px;
+	width:350px;
+	border:1px solid #b7ddf2;
+	background:#ebf4fb;
+	padding-top:30px;
+	padding-bottom:30px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+#form label{
+	font-weight:bold;
+	margin-right:20px;
+}
+#form input {
+	clear:bold;
+	height:25px;
+	border:solid 1px #aacfe4;
+	margin-right:20px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+#form button{
+	font-weight:bold;
+	clear:bold;
+	color:white;
+	width:90px;
+	background:#666666;
+	height:25px;
+	border:solid 1px #aacfe4;
+	margin-right:0px;
+	cursor:pointer;
+	border:0px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}	
+/*---------------------- End Form Single--------------------------*/
+
+/*---------------------- FORM insert Category ------------- */
+
+#form_insert_category{
+	margin:15px auto;
+	padding:14px;
+	width:395px;
+	border:1px solid #b7ddf2;
+	background:#ebf4fb;
+	padding-top:30px;
+	padding-bottom:30px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+#form_insert_category label{
+	font-weight:bold;
+	margin-right:20px;
+}
+#form_insert_category input {
+	clear:bold;
+	height:25px;
+	border:solid 1px #aacfe4;
+	margin-right:20px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+#insert_category{
+	font-weight:bold;
+	clear:bold;
+	color:white;
+	cursor:pointer;
+	width:90px;
+	background:#666666;
+	height:25px;
+	border:solid 1px #aacfe4;
+	margin-right:20px;
+	line-height:25px;
+	border:0px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+/*----------------------- End form insert category ----------*/
+/*----------- FORM  insert domain-----------------*/
+#form_insert{
+	margin:15px auto;
+	padding:14px;
+	width:400px;
+	border:1px solid #b7ddf2;
+	background:#ebf4fb;
+	padding-top:30px;
+	padding-bottom:30px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+#form_insert label{
+	font-weight:bold;
+	margin-right:20px;
+}
+#form_insert input {
+	clear:bold;
+	height:25px;
+	border:solid 1px #aacfe4;
+	margin-right:20px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+#button{
+	font-weight:bold;
+	clear:bold;
+	color:white;
+	width:90px;
+	cursor:pointer;
+	background:#666666;
+	height:25px;
+	border:0px;
+	border:solid 1px #aacfe4;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}	
+
+/*---------------------- End Insert Domain--------------------------*/
+
+/*---------------------- Form ADD --------------------------*/
+
+#form_add{
+	margin:15px auto;
+	padding:14px;
+	width:400px;
+	border:1px solid #b7ddf2;;
+	background:#ebf4fb;
+	padding-top:30px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+#form_add label{
+	float:left;
+	font-weight:bold;
+	margin:10px 0px 0px 0px;
+}
+#form_add input {
+	height:25px;
+	width:150px;
+	border:solid 1px #aacfe4;
+	margin:10px 10px 10px 10px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+#input input{
+	font-weight:bold;
+	clear:bold;
+	color:white;
+	background:#666666;
+	width:80px;
+	height:25px;
+	border:solid 1px #aacfe4;
+	margin:0 0 10px 143px;
+	border:0px;
+	cursor:pointer;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+#form_add select {
+	margin:10px 10px 10px 10px;
+	width:150px;
+	height:25px
+}
+#container_add{
+	margin:0px 0px 0px 85px;
+}
+/* --------------------END FORM ADD -----------*/
+
+/*--------------------- FORM UPDATE -------------*/
+
+/*---------myform--------*/
+.myform_update{
+	margin:0 auto;
+	width:400px;
+	padding:14px;
+}
+/*--------stylized--------*/
+#form_update{
+	border:solid 1px #b7ddf2;
+	background:#ebf4fb;
+	padding-bottom:24px;
+	height:300px;
+	-webkit-border-radius:5px;  
+	-moz-border-radius:5px; 
+}
+#form_update h1{
+	font-size:22px;
+	font-weight:bold;
+	margin-bottom:8px;
+	text-align:center;
+}
+#form_update label{
+	display:block;
+	font-weight:bold;
+	text-align:right;
+	width:140px;
+	margin-top:10px;
+	margin-right:20px;
+	float:left;
+}
+#form_update input{
+	display:block;
+	font-size:12px;
+	padding:4px 2px;
+	border:solid 1px #aacfe4;
+	width:150px;
+	margin:15px 10px 10px 20px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+#form_update button{
+	clear:bold;
+	margin-left:210px;
+	margin-top:20px;
+	width:100px;
+	height:31px;
+	background:#666666;
+	text-align:center;
+	line-height:31px;
+	color:white;
+	font-weight:bold;
+	cursor:pointer;
+	border:0px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;	
+}
+
+/*-------------------- END FORM UPDATE -----------*/
+
+/*----------------------FORM UPDATE INFO-------*/
+
+
+
+.myform_update_info{
+	margin:15px auto;
+	width:350px;
+	border:solid 1px #b7ddf2;
+	background:#ebf4fb;
+	height:340px;
+	padding-top:10px;
+	padding-right:10px;
+	-webkit-border-radius:5px;  
+	-moz-border-radius:5px; 
+}
+
+.myform_update_info label{
+	display:block;
+	position:relative;
+	top:20px;
+	left:20px;
+	font-weight:bold;
+	text-align:right;
+	width:130px;
+	float:left;
+}
+
+.myform_update_info input{
+	display:block;
+	position:relative;
+	top:18px;
+	left:40px;
+	margin-bottom:10px;
+	font-size:12px;
+	border:solid 1px #aacfe4;
+	width:150px;
+	height:22px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+input.submit_info{
+	clear:bold;
+	position:relative;
+	top:60px;
+	left:130px;
+	width:100px;
+	height:25px;
+	background:#666666;
+	text-align:center;
+	line-height:25px;
+	color:white;
+	cursor:pointer;
+	border:0px;
+	font-weight:bold;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;	
+}
+
+.error{
+	position:relative;
+	top:-5px;
+	left:-60px;
+	color:red; 
+}
+span#info{color:#008000;font-weight:bold;}
+
+/*--------------- END FORM UPDATE INFO------------*/
+
+/*---------------- FORM seting USER -------------------*/
+
+/*---------form seting user--------*/
+.form_seting_user{
+	margin:15px auto;
+	width:380px;
+	padding:14px;
+}
+/*--------style seting user--------*/
+#style_seting_user{
+	border:solid 1px #b7ddf2;
+	background:#ebf4fb;
+	padding-bottom:24px;
+	height:240px;
+	-webkit-border-radius:5px;  
+	-moz-border-radius:5px; 
+}
+
+#style_seting_user label{
+	display:block;
+	text-align:right;
+	width:140px;
+	margin-top:10px;
+	margin-right:10px;
+	float:left;
+	font-weight:bold;
+}
+#style_seting_user input{
+	display:block;
+	font-size:12px;
+	padding:4px 2px;
+	border:solid 1px #aacfe4;
+	width:200px;
+	margin:20px 10px 10px 10px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+
+#style_seting_user button{
+	clear:bold;
+	margin-left:158px;
+	margin-top:20px;
+	width:100px;
+	height:25px;
+	background:#666666;
+	text-align:center;
+	line-height:25px;
+	cursor:pointer;
+	color:white;
+	border:0px;
+	font-weight:bold;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	
+}
+/*---------------END FORM setting USER -------------*/
+
+/*---------------- FORM update USER -------------------*/
+
+/*---------form_update_user--------*/
+.form_update_user{
+	margin:15px auto;
+	width:400px;
+	padding:14px;
+}
+/*--------style_update_user--------*/
+#style_update_user{
+	border:solid 1px #b7ddf2;
+	background:#ebf4fb;
+	padding-bottom:24px;
+	height:auto;
+	-webkit-border-radius:5px;  
+	-moz-border-radius:5px; 
+}
+#style_update_user h1{
+	font-size:20px;
+	font-weight:bold;
+	margin-bottom:8px;
+	text-align:center;
+}
+#style_update_user label{
+	display:block;
+	text-align:right;
+	width:140px;
+	margin-top:0;
+	margin-right:10px;
+	float:left;
+	font-size:12px;
+	font-weight:bold;
+}
+#style_update_user input{
+	display:block;
+	font-size:12px;
+	padding:4px 2px;
+	border:solid 1px #aacfe4;
+	width:200px;
+	margin:10px 10px 10px 20px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+#style_update_user select{
+	margin:0px 0 0 0;
+	width:100px;
+	-webkit-border-radius:5px;  
+	-moz-border-radius:5px; 
+}
+#style_update_user button{
+	clear:bold;
+	margin-left:150px;
+	margin-top:20px;
+	width:100px;
+	height:25px;
+	background:#666666;
+	text-align:center;
+	line-height:25px;
+	color:white;
+	cursor:pointer;
+	border:0px;
+	font-weight:bold;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	
+}
+/*---------------END FORM update USER -------------*/
+
+/*---------------FORM BACKUP----------------*/
+
+.my_form_backup{
+	margin:15px auto;
+	padding:14px;
+	width:460px;
+}
+#form_backup{
+	margin:15px auto;
+	padding:14px;
+	height:210px;
+	border:1px solid #b7ddf2;
+	background:#ebf4fb;
+	padding:0 10px 20px 0;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;	
+}
+
+#container_backup label{
+	float:left;
+	width:100px;
+	font-weight:bold;	
+	font-size:12px;
+	text-align:right;
+	display:block;
+	margin:0px 10px 0px 5px;
+}
+#container_backup input {
+	display:block;
+	width:200px;
+	height:20px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+#button_backup{
+	position:relative;
+	top:100px;
+	left:200px;
+	width:80px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+#container_backup select{
+	float:left;	
+	width:200px;
+	height:25px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+#container_backup h2{
+	font-size:14px;
+	text-align:center;
+	margin:20px 10px 20px 10px;
+}
+#container_backup hr{
+	width:80%;
+	border:5px;
+	background:#666;
+	margin-top:10px;
+	margin-left:50px;
+}
+#backup{
+	float:left;
+	font-weight:bold;
+	width:100px;
+	height:20px;
+	cursor:pointer;
+	background:#666666;
+	color:white;
+	border:0px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+#button_backup input{
+	width:100px;
+	height:25px;
+	font-weight:bold;
+	color:white;
+	border:none;
+	background:#666;
+	position:relative;
+	left:140px;
+	top:-125px;
+	cursor:pointer;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+#button_restore input{
+	width:100px;
+	height:25px;
+	font-weight:bold;
+	color:white;
+	border:none;
+	background:#666;
+	position:relative;
+	left:20px;
+	cursor:pointer;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+/*--------------END FORM BACKUP-----------*/
+/*-------------- FORM INSERT COURSE -------*/
+
+.myform_insert_course{
+	margin:15px auto;
+	width:330px;
+	padding:14px;
+}
+
+#form_insert_course{
+	border:solid 1px #b7ddf2;
+	background:#ebf4fb;
+	padding:10px 30px 15px 0;
+	height:auto;
+	-webkit-border-radius:5px;  
+	-moz-border-radius:5px; 
+}
+#form_insert_course .label_cour{
+	display:block;
+	text-align:right;
+	width:140px;
+	margin-top:2px;
+	margin-right:10px;
+	float:left;
+	font-size:12px;
+	font-weight:bold;
+}
+#form_insert_course .label_course{
+	display:block;
+	text-align:right;
+	width:140px;
+	margin-top:7px;
+	margin-right:10px;
+	float:left;
+	font-size:12px;
+	font-weight:bold;
+}
+#form_insert_course .input_course{
+	display:block;
+	font-size:12px;
+	padding:4px 2px;
+	border:solid 1px #aacfe4;
+	width:150px;
+	margin:15px 10px 10px 20px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+input#insert_course{
+	width:90px;
+	height:25px;
+	background:#666666;
+	cursor:pointer;
+	text-align:center;
+	color:white;
+	font-weight:bold;
+	margin:20px 0 0 150px;
+	border:0px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;	
+}
+/*------------------ END FORM INSERT COURSE --------------*/
+/*----------------------form change table ---------------*/
+
+
+.myform_change_table{
+	margin:15px auto;
+	width:400px;
+	padding:14px;
+	border:solid 1px #b7ddf2;
+	background:#ebf4fb;
+	font-weight:bold;
+	padding:0;
+	height:110px;	
+	-webkit-border-radius:5px;  
+	-moz-border-radius:5px; 
+}
+
+
+
+.myform_change_table select{
+	width:100px;
+	height:22px;
+}
+.myform_change_table input{
+	color:white;
+	cursor:pointer;
+	background:#666;
+	width:100px;
+	height:25px;
+	font-weight:bold;
+	line-height:25px;
+	border:0px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+.label_change_table{
+	position:relative;
+	width:130px;
+	height:auto;
+	top:30px;
+	left:80px;
+}
+
+.select_change_table{
+	position:relative;
+	width:100px;
+	top:8px;
+	left:230px;
+}
+
+.submitMove{
+	display:block;
+	position:relative;
+	width:100px;
+	top:30px;
+	left:150px;
+}
+/*----------------- end form change table ------------*/
+
+/*------------------ form_split_table ---------------*/
+
+.myform_split_table{
+	margin:5px auto;
+	width:420px;
+}
+#split_table{
+	font-weight:bold;
+	height:auto;
+	background:#ebf4fb;
+	border:1px solid #b7ddf2;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	
+}
+#split_select{
+	height:22px;
+	width:100px;
+	margin:0 0 0 30px;
+}
+input#split{
+	width:80px;
+	height:25px;
+	font-weight:bold;
+	line-height:25px;
+	color:white;
+	background:#666;
+	border:0px;
+	cursor:pointer;
+	margin:0px 0px 5px 170px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+#detail{
+	font-size:16px;
+}
+/*------------------ end_form_split_table ------------*/
+/*=============================================================================================*/
+/*----------------- form insert table ------------*/
+
+.myform_insert_table{
+	margin:15px auto;
+	width:300px;
+	padding:14px;
+	border:solid 1px #b7ddf2;
+	background:#ebf4fb;
+	padding-bottom:24px;
+	height:110px;
+	-webkit-border-radius:5px;  
+	-moz-border-radius:5px; 
+}
+
+.myform_insert_table label{
+	display:block;
+	position:relative;
+	top:2px;
+	left:0px;
+	margin-right:10px;
+	text-align:right;
+	width:90px;
+	float:left;
+	font-weight:bold;
+}
+
+.myform_insert_table input{
+	display:block;
+	font-size:12px;
+	padding:4px 2px;
+	border:solid 1px #aacfe4;
+	width:150px;
+	margin:0px 10px 0 10px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+
+.myform_insert_table button{
+	clear:bold;
+	position:relative;
+	top:20px;
+	left:110px;
+	width:100px;
+	height:25px;
+	background:#666666;
+	text-align:center;
+	line-height:25px;
+	color:white;
+	font-weight:bold;
+	cursor:pointer;
+	border:0px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+
+.myform_insert_table select{
+	height:22px;
+}
+/*---------------------- end form insert table--------*/
+
+/*---------------------- form statistics--------*/
+
+#form_statistics{		
+	width:95%;
+	height:170px;
+	border:1px solid #b7ddf2;
+	background:#ebf4fb;
+	padding:0 5px 20px 5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+#container_statistics{
+	padding:5px 0 0 0;
+}
+#container_statistics label{
+	float:left;
+	font-weight:bold;
+	margin:0 0 0 20px;
+}
+#container_statistics input{
+	float:left;
+	width: 85%;
+	margin:0 0 0 15px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+#container_statistics_print {
+	float:center;
+	font-weight:bold;
+	width:110px;
+	height:25px;
+	margin:-10px 0px 5px 50px;
+	background:#666666;
+	color:white;
+	border:0px;
+	text-align:center;
+	cursor:pointer;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+
+#container_statistics_print:hover {
+	float:center;
+	font-weight:bold;
+	width:110px;
+	height:25px;
+	margin:-10px 0px 5px 50px;
+	background:#8A888A;
+	color:black;
+	border:1px;
+	text-align:center;
+	cursor:pointer;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+
+input#statistics {
+	float:center;
+	font-weight:bold;
+	width:80px;
+	height:25px;
+	margin:-10px 0px 5px 50px;
+	background:#666666;
+	color:white;
+	border:0px;
+	cursor:pointer;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+input#statistics:hover {
+	float:center;
+	font-weight:bold;
+	width:80px;
+	height:25px;
+	margin:-10px 0px 5px 50px;
+	background:#979597;
+	color:#000;
+	border:1px solid;
+	cursor:pointer;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+/*---------------------- end form statistics--------*/
+
+/*------------------------ from update table --------*/
+
+.myform_update_table{
+	margin:15px auto;
+	width:330px;
+	padding:14px;
+}
+
+#form_update_table{
+	border:solid 1px #b7ddf2;
+	background:#ebf4fb;
+	padding:10px 20px 15px 0;
+	height:130px;
+	-webkit-border-radius:5px;  
+	-moz-border-radius:5px; 
+}
+
+#form_update_table label{
+	display:block;
+	font-size:14px;
+	font-weight:bold;
+	text-align:right;
+	width:140px;
+	margin:5px 10px 0 0;
+	float:left;
+}
+#form_update_table input{
+	display:block;
+	font-size:12px;
+	padding:4px 2px;
+	border:solid 1px #aacfe4;
+	width:150px;
+	margin:15px 10px 10px 20px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+input#update_table{
+	width:90px;
+	height:25px;
+	background:#666666;
+	text-align:center;
+	color:white;
+	font-weight:bold;
+	margin:20px 0 0 150px;
+	cursor:pointer;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;	
+}
+/*------------- end form update table-----------*/
+/*-------------- begin form change Profile --------*/
+
+.my_change_profile{
+	margin:15px auto;
+	width:300px;
+	padding:14px;
+}
+#change_profile{
+	background:#ebf4fb;
+	border: 1px solid #b7ddf2;
+	height:120px;
+	font-weight:bold;
+	font-size:12px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+.profile{
+	text-align:right;
+	width:120px;
+	height:30px;
+	
+}
+select{
+	width:100px;
+	font-weight:bold;
+	font-size:12px;
+}
+#button_profile{
+	width:80px;
+	height:25px;
+	background:#666;
+	border:none;
+	cursor:pointer;
+	color:white;
+	font-weight:bold;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+/*-------------- End form change Profile --------*/
+
+/*-------------- form Insert Profile +(update profile)--------*/
+
+.my_insert_profile{
+	margin:15px auto;
+	width:400px;
+	padding:14px;
+}
+#insert_profile{
+	height:190px;
+	background:#ebf4fb;
+	border: 1px solid #b7ddf2;
+	font-weight:bold;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+#insert_profile label{
+	display:block;
+	font-size:14px;
+	font-weight:bold;
+	text-align:right;
+	width:200px;
+	float:left;
+	margin-right:10px;
+}
+#insert_profile input{
+	display:block;
+	font-size:12px;
+	padding:4px 2px;
+	border:solid 1px #aacfe4;
+	width:150px;
+	margin:15px 10px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+div#button_insert_profile input{
+	color:white;
+	border:none;
+	background:#666;
+	font-weight:bold;
+	line-height:25px;
+	width:100px;
+	height:25px;
+	margin:30px 0 10px 150px;
+	cursor:pointer;
+}
+#insert_profile strong{
+	float:right;
+	position:relative;
+	top:-37px;
+	left:-20px;
+}
+/*-------------- End form Insert Profile +(update profile)--------*/

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<span metal:use-macro="mApplication.xhtml/IncludeMETA"/>
+		<span metal:use-macro="mApplication.xhtml/IncludeCSS"/>
+		
+	</head>
+	<body>
+		<div class="container-fluid">
+			<span metal:use-macro="mApplication.xhtml/Header"/>
+			<div metal:use-macro="mApplication.xhtml/Menu"/>
+			<div id="content">
+				<div metal:use-macro="mApplication.xhtml/ContentHeader"/>
+				<div metal:use-macro="mApplication.xhtml/LocationBar"/>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12">
+							<form style="color:white;" class="form-horizontal" tal:attributes="action 'thu-lao/report/ins/exe'" method="post">
+								<div class="control-group">
+									<label class="control-label" for="ReportName">Báo cáo</label>
+									<div class="controls">
+										<input id="ReportName" name="ReportName" type="text" />
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="DateStart">Từ Ngày</label>
+									<div class="controls">
+										<input id="DateStart" name="DateStart" readonly="true" type="text" />
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="DateEnd">Đến Ngày</label>
+									<div class="controls">
+										<input id="DateEnd" name="DateEnd" readonly="true" type="text" />
+									</div>
+								</div>								
+								<div class="control-group">
+									<div class="controls">
+										<button type="submit" class="btn btn-primary btn-ins" value="submit-value">Thêm mới</button>
+									</div>
+								</div>						
+							</form>							
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>	
+		<span metal:use-macro="mApplication.xhtml/Footer"/>	
+		<span metal:use-macro="mApplication.xhtml/IncludeJS"/>		
+		<script type="text/javascript">
+		/*<![CDATA[*/			
+			$('#DateStart').datepicker({
+				format: 'yyyy/mm/dd'
+			})			
+			$('#DateEnd').datepicker({
+				format: 'yyyy/mm/dd'
+			})			
+			var today = $.datepicker.formatDate('yy/mm/dd', new Date());
+			$('#DateStart').val(today);
+			$('#DateEnd').val(today);
+		/*]]>*/
+		</script>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<span metal:use-macro="mApplication.xhtml/IncludeMETA"/>
+		<span metal:use-macro="mApplication.xhtml/IncludeCSS"/>				
+	</head>
+	<body>
+		<div class="container-fluid">
+			<span metal:use-macro="mApplication.xhtml/Header"/>
+			<div metal:use-macro="mApplication.xhtml/Menu"/>
+			<div id="content">
+				<div metal:use-macro="mApplication.xhtml/ContentHeader"/>
+				<div metal:use-macro="mApplication.xhtml/LocationBar"/>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12" style="color:white;">
+						<form  class="form-horizontal" tal:attributes="action '/app/config/ins/exe'" method="post">						
+							<div class="control-group">
+								<label class="control-label" for="Param">Tham số</label>
+								<div class="controls">
+									<input type="text" id="Param" name="Param" />
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="Value">Giá trị</label>
+								<div class="controls">
+									<input type="text" id="Value" name="Value" />
+								</div>
+							</div>						
+							<div class="control-group">
+								<div class="controls">
+									<button type="submit" class="btn btn-primary btn-ins" value="submit-value">Thêm mới</button>
+								</div>
+							</div>						
+						</form>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>	
+		<span metal:use-macro="mApplication.xhtml/Footer"/>
+		<span metal:use-macro="mApplication.xhtml/IncludeJS"/>		
+	</body>
+</html>
