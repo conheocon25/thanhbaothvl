@@ -1,0 +1,12 @@
+<html>
+    <body>
+      <form method="post" action="result.php">
+        <?php
+          require_once('recaptchalib.php');
+          $publickey = "6LeI1_sSAAAAAPOfyRCc3i_eKtqPkT6elia5fedg"; // you got this from the signup page
+          echo recaptcha_get_html($publickey);
+        ?>
+        <input type="submit" />
+      </form>
+    </body>
+  </html>
