@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomerList xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CustomerArray>
+    <Customer>
+      <Id>1</Id>
+      <Name>lacadr</Name>
+      <Type>0</Type>
+      <Card />
+      <Phone>0703822487</Phone>
+      <Address />
+      <Note />
+      <Discount>0</Discount>
+      <State>0</State>
+    </Customer>
+    <Customer>
+      <Id>2</Id>
+      <Name>dua lanh</Name>
+      <Type>0</Type>
+      <Card />
+      <Phone>01259669583</Phone>
+      <Address />
+      <Note />
+      <Discount>0</Discount>
+      <State>0</State>
+    </Customer>
+    <Customer>
+      <Id>3</Id>
+      <Name>cafe hiep tai</Name>
+      <Type>0</Type>
+      <Card />
+      <Phone>0919282500</Phone>
+      <Address />
+      <Note />
+      <Discount>0</Discount>
+      <State>0</State>
+    </Customer>
+    <Customer>
+      <Id>4</Id>
+      <Name>gas</Name>
+      <Type>0</Type>
+      <Card />
+      <Phone>0703883883</Phone>
+      <Address />
+      <Note />
+      <Discount>0</Discount>
+      <State>0</State>
+    </Customer>
+    <Customer>
+      <Id>5</Id>
+      <Name>lam (tien)</Name>
+      <Type>0</Type>
+      <Card />
+      <Phone>01663005556</Phone>
+      <Address />
+      <Note />
+      <Discount>0</Discount>
+      <State>0</State>
+    </Customer>
+  </CustomerArray>
+  <Name>Khách hàng</Name>
+</CustomerList>

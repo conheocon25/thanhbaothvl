@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EmployeeList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EmployeeArray>
+    <Employee>
+      <Id>6</Id>
+      <Name>dat</Name>
+      <Gender>0</Gender>
+      <Job>NV</Job>
+      <Card />
+      <Phone />
+      <Address>Đồng Tháp</Address>
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>7</Id>
+      <Name>khanh</Name>
+      <Gender>1</Gender>
+      <Job>pv</Job>
+      <Card />
+      <Phone />
+      <Address>Đồng Tháp</Address>
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>9</Id>
+      <Name>thom</Name>
+      <Gender>0</Gender>
+      <Job>NV PV</Job>
+      <Card />
+      <Phone />
+      <Address>Đồng Tháp</Address>
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>10</Id>
+      <Name>a phong bep</Name>
+      <Gender>1</Gender>
+      <Job>bep nuong</Job>
+      <Card />
+      <Phone />
+      <Address>Đồng Tháp</Address>
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>12</Id>
+      <Name>a thanh</Name>
+      <Gender>0</Gender>
+      <Job>bao ve</Job>
+      <Card />
+      <Phone />
+      <Address />
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>13</Id>
+      <Name>cuong</Name>
+      <Gender>0</Gender>
+      <Job>phu bep</Job>
+      <Card />
+      <Phone />
+      <Address />
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>14</Id>
+      <Name>co tap vu</Name>
+      <Gender>1</Gender>
+      <Job />
+      <Card />
+      <Phone />
+      <Address />
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>17</Id>
+      <Name>DU</Name>
+      <Gender>0</Gender>
+      <Job>NV BEP</Job>
+      <Card />
+      <Phone />
+      <Address />
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>18</Id>
+      <Name>hau</Name>
+      <Gender>0</Gender>
+      <Job>nv bep</Job>
+      <Card />
+      <Phone />
+      <Address />
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>21</Id>
+      <Name>nam</Name>
+      <Gender>0</Gender>
+      <Job>nv pv</Job>
+      <Card />
+      <Phone />
+      <Address />
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>22</Id>
+      <Name>an </Name>
+      <Gender>0</Gender>
+      <Job>nv pv</Job>
+      <Card />
+      <Phone />
+      <Address />
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>23</Id>
+      <Name>nhi</Name>
+      <Gender>0</Gender>
+      <Job>nv pv</Job>
+      <Card />
+      <Phone />
+      <Address />
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>25</Id>
+      <Name>a phong giu xe</Name>
+      <Gender>0</Gender>
+      <Job>gx</Job>
+      <Card />
+      <Phone />
+      <Address />
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>27</Id>
+      <Name>tay</Name>
+      <Gender>0</Gender>
+      <Job>nv pv</Job>
+      <Card />
+      <Phone />
+      <Address />
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>28</Id>
+      <Name>giang</Name>
+      <Gender>0</Gender>
+      <Job>nv pv</Job>
+      <Card />
+      <Phone />
+      <Address />
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>29</Id>
+      <Name>than</Name>
+      <Gender>0</Gender>
+      <Job>pv</Job>
+      <Card />
+      <Phone />
+      <Address />
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>30</Id>
+      <Name>nhu y</Name>
+      <Gender>1</Gender>
+      <Job>thu ngan</Job>
+      <Card />
+      <Phone />
+      <Address />
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>31</Id>
+      <Name>a chien bv</Name>
+      <Gender>0</Gender>
+      <Job>nv bao ve</Job>
+      <Card />
+      <Phone />
+      <Address />
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>32</Id>
+      <Name>quy</Name>
+      <Gender>0</Gender>
+      <Job>pv</Job>
+      <Card />
+      <Phone />
+      <Address />
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>33</Id>
+      <Name>hong</Name>
+      <Gender>1</Gender>
+      <Job>nv pv</Job>
+      <Card />
+      <Phone />
+      <Address />
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+  </EmployeeArray>
+  <Name>Nhân viên</Name>
+</EmployeeList>

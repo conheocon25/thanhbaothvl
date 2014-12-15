@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DomainList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DomainArray>
+    <Domain>
+      <Id>1</Id>
+      <Name>KHU TUM</Name>
+      <State>0</State>
+    </Domain>
+    <Domain>
+      <Id>2</Id>
+      <Name>KHU VIP</Name>
+      <State>0</State>
+    </Domain>
+    <Domain>
+      <Id>3</Id>
+      <Name>KHU TRONG</Name>
+      <State>0</State>
+    </Domain>
+    <Domain>
+      <Id>4</Id>
+      <Name>KHU NGOÀI</Name>
+      <State>0</State>
+    </Domain>
+    <Domain>
+      <Id>5</Id>
+      <Name>KH MUA VỀ</Name>
+      <State>0</State>
+    </Domain>
+    <Domain>
+      <Id>7</Id>
+      <Name>ĐẶT TIỆC</Name>
+      <State>0</State>
+    </Domain>
+  </DomainArray>
+  <Name>Khu vực</Name>
+</DomainList>

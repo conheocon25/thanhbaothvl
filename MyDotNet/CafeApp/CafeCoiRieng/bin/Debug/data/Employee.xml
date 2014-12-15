@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EmployeeList xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EmployeeArray>
+    <Employee>
+      <Id>21</Id>
+      <Name>duy son</Name>
+      <Gender>0</Gender>
+      <Job />
+      <Card />
+      <Phone />
+      <Address>33/20-k4-phạm thái bường f4-tpvl</Address>
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>22</Id>
+      <Name>Nhi</Name>
+      <Gender>1</Gender>
+      <Job>PHUC VU</Job>
+      <Card />
+      <Phone>01286989788</Phone>
+      <Address>V.long</Address>
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>23</Id>
+      <Name>Ngọc</Name>
+      <Gender>1</Gender>
+      <Job>PV</Job>
+      <Card />
+      <Phone>0924012952</Phone>
+      <Address>V.long</Address>
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>26</Id>
+      <Name>Vĩnh</Name>
+      <Gender>0</Gender>
+      <Job>PHA CHẾ (pha chế ca sáng)</Job>
+      <Card />
+      <Phone>0932927767</Phone>
+      <Address>V.long</Address>
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>28</Id>
+      <Name>Mãi</Name>
+      <Gender>0</Gender>
+      <Job>bảo vệ (ca tối)</Job>
+      <Card />
+      <Phone>0913101511</Phone>
+      <Address>v.long</Address>
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>29</Id>
+      <Name>Hiền</Name>
+      <Gender>0</Gender>
+      <Job>bảo vệ (ca tối)</Job>
+      <Card />
+      <Phone>01642364459</Phone>
+      <Address>v.long</Address>
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>30</Id>
+      <Name>Thuy Dung</Name>
+      <Gender>1</Gender>
+      <Job>PV</Job>
+      <Card />
+      <Phone>01689002524</Phone>
+      <Address>vl</Address>
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>31</Id>
+      <Name>Toàn</Name>
+      <Gender>0</Gender>
+      <Job>bảo vệ</Job>
+      <Card />
+      <Phone>01886867939</Phone>
+      <Address>VL</Address>
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>32</Id>
+      <Name>Ngọc Châu</Name>
+      <Gender>1</Gender>
+      <Job>pv</Job>
+      <Card />
+      <Phone>0916090922</Phone>
+      <Address>Vũng Liêm VL</Address>
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+    <Employee>
+      <Id>33</Id>
+      <Name>trâm</Name>
+      <Gender>0</Gender>
+      <Job />
+      <Card />
+      <Phone>01865367166</Phone>
+      <Address>f4-VL</Address>
+      <SalaryBase>0</SalaryBase>
+      <State>0</State>
+    </Employee>
+  </EmployeeArray>
+  <Name>Nhân viên</Name>
+</EmployeeList>

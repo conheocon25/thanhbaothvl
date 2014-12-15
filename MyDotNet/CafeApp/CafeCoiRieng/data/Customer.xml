@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomerList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CustomerArray>
+    <Customer>
+      <Id>1</Id>
+      <Name>Khách lẻ</Name>
+      <Type>0</Type>
+      <Card>1</Card>
+      <Phone />
+      <Address />
+      <Note />
+      <Discount>0</Discount>
+      <State>0</State>
+    </Customer>
+    <Customer>
+      <Id>24</Id>
+      <Name>tuan</Name>
+      <Type>0</Type>
+      <Card>123456</Card>
+      <Phone>0909099999</Phone>
+      <Address />
+      <Note />
+      <Discount>0</Discount>
+      <State>0</State>
+    </Customer>
+  </CustomerArray>
+  <Name>Khách hàng</Name>
+</CustomerList>

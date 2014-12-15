@@ -36,3 +36,6 @@ D:\AppWebServer\SPN_DOTNET\SendMail\WindowsFormsApplication1\bin\Debug\WindowsFo
 D:\AppWebServer\SPN_DOTNET\SendMail\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Main.resources
 D:\AppWebServer\SPN_DOTNET\SendMail\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.FrmEncrypt.resources
 D:\AppWebServer\SPN_DOTNET\SendMail\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.FrmInfoSystem.resources
+D:\AppWebServer\SPN_MyCode\MyDotNet\SendMail\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+D:\AppWebServer\SPN_MyCode\MyDotNet\SendMail\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+D:\AppWebServer\SPN_MyCode\MyDotNet\SendMail\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb

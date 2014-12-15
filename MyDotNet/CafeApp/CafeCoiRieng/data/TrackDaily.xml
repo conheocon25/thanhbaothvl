@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TrackDailyList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TrackDailyArray>
+    <TrackDaily>
+      <Id>635420318369572846</Id>
+      <TableName>NGỌC TRAI</TableName>
+      <EmployeeName />
+      <DateTime>2014-07-27T04:23:56</DateTime>
+      <CustomerName>Khách lẻ</CustomerName>
+      <Value>970000</Value>
+      <State>0</State>
+    </TrackDaily>
+    <TrackDaily>
+      <Id>635420318231434945</Id>
+      <TableName>SAO BIỂN</TableName>
+      <EmployeeName />
+      <DateTime>2014-07-27T04:23:43</DateTime>
+      <CustomerName>Khách lẻ</CustomerName>
+      <Value>74000</Value>
+      <State>0</State>
+    </TrackDaily>
+    <TrackDaily>
+      <Id>635420317300551702</Id>
+      <TableName>THUYỀN TRƯỞNG</TableName>
+      <EmployeeName />
+      <DateTime>2014-07-27T04:22:10</DateTime>
+      <CustomerName>Khách lẻ</CustomerName>
+      <Value>200000</Value>
+      <State>0</State>
+    </TrackDaily>
+    <TrackDaily>
+      <Id>635420317256859203</Id>
+      <TableName>HẢI ĐĂNG</TableName>
+      <EmployeeName />
+      <DateTime>2014-07-27T04:22:05</DateTime>
+      <CustomerName>Khách lẻ</CustomerName>
+      <Value>58000</Value>
+      <State>0</State>
+    </TrackDaily>
+    <TrackDaily>
+      <Id>635420317125161670</Id>
+      <TableName>CÁNH BUỒM</TableName>
+      <EmployeeName />
+      <DateTime>2014-07-27T04:21:52</DateTime>
+      <CustomerName>Khách lẻ</CustomerName>
+      <Value>79000</Value>
+      <State>0</State>
+    </TrackDaily>
+    <TrackDaily>
+      <Id>635420307817869323</Id>
+      <TableName>SAO BIỂN</TableName>
+      <EmployeeName />
+      <DateTime>2014-07-27T04:06:21</DateTime>
+      <CustomerName>Khách lẻ</CustomerName>
+      <Value>215000</Value>
+      <State>0</State>
+    </TrackDaily>
+  </TrackDailyArray>
+  <Name>Theo dõi phiếu</Name>
+</TrackDailyList>

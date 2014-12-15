@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<SessionList xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SessionArray>
+    <Session>
+      <Id>635431787192907110</Id>
+      <IdTable>30</IdTable>
+      <IdUser>1</IdUser>
+      <IdEmployee>21</IdEmployee>
+      <IdCustomer>1</IdCustomer>
+      <DateTime>2014-08-09T10:58:39.3647152+07:00</DateTime>
+      <DateTimeEnd>2014-08-09T10:58:39.3647152+07:00</DateTimeEnd>
+      <Note>Phiếu tính tiền</Note>
+      <Status>0</Status>
+      <DiscountValue>0</DiscountValue>
+      <DiscountPercent>0</DiscountPercent>
+      <Surtax>0</Surtax>
+      <Payment>0</Payment>
+      <State>1</State>
+    </Session>
+    <Session>
+      <Id>635431792136259853</Id>
+      <IdTable>33</IdTable>
+      <IdUser>1</IdUser>
+      <IdEmployee>23</IdEmployee>
+      <IdCustomer>1</IdCustomer>
+      <DateTime>2014-08-09T11:06:53.6289855+07:00</DateTime>
+      <DateTimeEnd>2014-08-09T11:06:53.6289855+07:00</DateTimeEnd>
+      <Note>Phiếu tính tiền</Note>
+      <Status>0</Status>
+      <DiscountValue>0</DiscountValue>
+      <DiscountPercent>0</DiscountPercent>
+      <Surtax>0</Surtax>
+      <Payment>0</Payment>
+      <State>2</State>
+    </Session>
+  </SessionArray>
+  <Name>Khu vực</Name>
+</SessionList>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<TrackDailyDomainList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TrackDailyDomainArray>
+    <TrackDailyDomain>
+      <Id>635420524454390223</Id>
+      <IdDomain>2</IdDomain>
+      <DomainName>KHU VIP</DomainName>
+      <DateTime>2014-07-27T00:00:00</DateTime>
+      <Value>1259000</Value>
+      <State>1</State>
+    </TrackDailyDomain>
+    <TrackDailyDomain>
+      <Id>635420524454380223</Id>
+      <IdDomain>1</IdDomain>
+      <DomainName>KHU TUM</DomainName>
+      <DateTime>2014-07-27T00:00:00</DateTime>
+      <Value>337000</Value>
+      <State>1</State>
+    </TrackDailyDomain>
+  </TrackDailyDomainArray>
+  <Name>Theo dõi khu vực</Name>
+</TrackDailyDomainList>

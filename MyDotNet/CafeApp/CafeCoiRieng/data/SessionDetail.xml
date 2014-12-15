@@ -1,0 +1,248 @@
+<?xml version="1.0"?>
+<SessionDetailList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SessionDetailArray>
+    <SessionDetail>
+      <Id>635420307818379352</Id>
+      <IdSession>635420307817869323</IdSession>
+      <IdCourse>116</IdCourse>
+      <NameCourse>SG do</NameCourse>
+      <Count>10</Count>
+      <Price>9000</Price>
+      <Enable>1</Enable>
+      <IdEmployee>0</IdEmployee>
+      <State>0</State>
+    </SessionDetail>
+    <SessionDetail>
+      <Id>635420307914784866</Id>
+      <IdSession>635420307817869323</IdSession>
+      <IdCourse>503</IdCourse>
+      <NameCourse>Ga ta nuong muoi ot</NameCourse>
+      <Count>0.5</Count>
+      <Price>250000</Price>
+      <Enable>1</Enable>
+      <IdEmployee>0</IdEmployee>
+      <State>0</State>
+    </SessionDetail>
+    <SessionDetail>
+      <Id>635420317125571693</Id>
+      <IdSession>635420317125161670</IdSession>
+      <IdCourse>189</IdCourse>
+      <NameCourse>Ken lon</NameCourse>
+      <Count>1</Count>
+      <Price>19000</Price>
+      <Enable>1</Enable>
+      <IdEmployee>0</IdEmployee>
+      <State>0</State>
+    </SessionDetail>
+    <SessionDetail>
+      <Id>635420317183565010</Id>
+      <IdSession>635420317125161670</IdSession>
+      <IdCourse>545</IdCourse>
+      <NameCourse>Muc xao sa te</NameCourse>
+      <Count>1</Count>
+      <Price>60000</Price>
+      <Enable>1</Enable>
+      <IdEmployee>0</IdEmployee>
+      <State>0</State>
+    </SessionDetail>
+    <SessionDetail>
+      <Id>635420317257119217</Id>
+      <IdSession>635420317256859203</IdSession>
+      <IdCourse>577</IdCourse>
+      <NameCourse>Goi muc tom Thai</NameCourse>
+      <Count>1</Count>
+      <Price>58000</Price>
+      <Enable>1</Enable>
+      <IdEmployee>0</IdEmployee>
+      <State>0</State>
+    </SessionDetail>
+    <SessionDetail>
+      <Id>635420317300781715</Id>
+      <IdSession>635420317300551702</IdSession>
+      <IdCourse>601</IdCourse>
+      <NameCourse>Muc ong</NameCourse>
+      <Count>1</Count>
+      <Price>70000</Price>
+      <Enable>1</Enable>
+      <IdEmployee>0</IdEmployee>
+      <State>0</State>
+    </SessionDetail>
+    <SessionDetail>
+      <Id>635420317324293060</Id>
+      <IdSession>635420317300551702</IdSession>
+      <IdCourse>765</IdCourse>
+      <NameCourse>lau muc trung</NameCourse>
+      <Count>1</Count>
+      <Price>130000</Price>
+      <Enable>1</Enable>
+      <IdEmployee>0</IdEmployee>
+      <State>0</State>
+    </SessionDetail>
+    <SessionDetail>
+      <Id>635420318231644957</Id>
+      <IdSession>635420318231434945</IdSession>
+      <IdCourse>405</IdCourse>
+      <NameCourse>333 lon</NameCourse>
+      <Count>1</Count>
+      <Price>11000</Price>
+      <Enable>1</Enable>
+      <IdEmployee>0</IdEmployee>
+      <State>0</State>
+    </SessionDetail>
+    <SessionDetail>
+      <Id>635420318238825368</Id>
+      <IdSession>635420318231434945</IdSession>
+      <IdCourse>411</IdCourse>
+      <NameCourse>333 chai</NameCourse>
+      <Count>1</Count>
+      <Price>10000</Price>
+      <Enable>1</Enable>
+      <IdEmployee>0</IdEmployee>
+      <State>0</State>
+    </SessionDetail>
+    <SessionDetail>
+      <Id>635420318247325854</Id>
+      <IdSession>635420318231434945</IdSession>
+      <IdCourse>489</IdCourse>
+      <NameCourse>SG lon xanh</NameCourse>
+      <Count>1</Count>
+      <Price>13000</Price>
+      <Enable>1</Enable>
+      <IdEmployee>0</IdEmployee>
+      <State>0</State>
+    </SessionDetail>
+    <SessionDetail>
+      <Id>635420318254376257</Id>
+      <IdSession>635420318231434945</IdSession>
+      <IdCourse>490</IdCourse>
+      <NameCourse>Nuoc ngot</NameCourse>
+      <Count>1</Count>
+      <Price>12000</Price>
+      <Enable>1</Enable>
+      <IdEmployee>0</IdEmployee>
+      <State>0</State>
+    </SessionDetail>
+    <SessionDetail>
+      <Id>635420318261956691</Id>
+      <IdSession>635420318231434945</IdSession>
+      <IdCourse>491</IdCourse>
+      <NameCourse>Nuoc suoi</NameCourse>
+      <Count>1</Count>
+      <Price>8000</Price>
+      <Enable>1</Enable>
+      <IdEmployee>0</IdEmployee>
+      <State>0</State>
+    </SessionDetail>
+    <SessionDetail>
+      <Id>635420318271837256</Id>
+      <IdSession>635420318231434945</IdSession>
+      <IdCourse>837</IdCourse>
+      <NameCourse>sapporo</NameCourse>
+      <Count>1</Count>
+      <Price>20000</Price>
+      <Enable>1</Enable>
+      <IdEmployee>0</IdEmployee>
+      <State>0</State>
+    </SessionDetail>
+    <SessionDetail>
+      <Id>635420318369802859</Id>
+      <IdSession>635420318369572846</IdSession>
+      <IdCourse>495</IdCourse>
+      <NameCourse>Canh ga nuong muoi ot</NameCourse>
+      <Count>1</Count>
+      <Price>55000</Price>
+      <Enable>1</Enable>
+      <IdEmployee>0</IdEmployee>
+      <State>0</State>
+    </SessionDetail>
+    <SessionDetail>
+      <Id>635420318377143279</Id>
+      <IdSession>635420318369572846</IdSession>
+      <IdCourse>496</IdCourse>
+      <NameCourse>Canh ga chien nuoc mam</NameCourse>
+      <Count>1</Count>
+      <Price>55000</Price>
+      <Enable>1</Enable>
+      <IdEmployee>0</IdEmployee>
+      <State>0</State>
+    </SessionDetail>
+    <SessionDetail>
+      <Id>635420318383533645</Id>
+      <IdSession>635420318369572846</IdSession>
+      <IdCourse>497</IdCourse>
+      <NameCourse>Canh ga nuong ngu vi</NameCourse>
+      <Count>1</Count>
+      <Price>55000</Price>
+      <Enable>1</Enable>
+      <IdEmployee>0</IdEmployee>
+      <State>0</State>
+    </SessionDetail>
+    <SessionDetail>
+      <Id>635420318390724056</Id>
+      <IdSession>635420318369572846</IdSession>
+      <IdCourse>498</IdCourse>
+      <NameCourse>Canh ga nuong chao</NameCourse>
+      <Count>1</Count>
+      <Price>55000</Price>
+      <Enable>1</Enable>
+      <IdEmployee>0</IdEmployee>
+      <State>0</State>
+    </SessionDetail>
+    <SessionDetail>
+      <Id>635420318397544446</Id>
+      <IdSession>635420318369572846</IdSession>
+      <IdCourse>503</IdCourse>
+      <NameCourse>Ga ta nuong muoi ot</NameCourse>
+      <Count>1</Count>
+      <Price>250000</Price>
+      <Enable>1</Enable>
+      <IdEmployee>0</IdEmployee>
+      <State>0</State>
+    </SessionDetail>
+    <SessionDetail>
+      <Id>635420318404134823</Id>
+      <IdSession>635420318369572846</IdSession>
+      <IdCourse>505</IdCourse>
+      <NameCourse>Ga ta nuong ngu vi</NameCourse>
+      <Count>1</Count>
+      <Price>250000</Price>
+      <Enable>1</Enable>
+      <IdEmployee>0</IdEmployee>
+      <State>0</State>
+    </SessionDetail>
+    <SessionDetail>
+      <Id>635420318413105336</Id>
+      <IdSession>635420318369572846</IdSession>
+      <IdCourse>509</IdCourse>
+      <NameCourse>Ga ta nau la giang</NameCourse>
+      <Count>1</Count>
+      <Price>250000</Price>
+      <Enable>1</Enable>
+      <IdEmployee>0</IdEmployee>
+      <State>0</State>
+    </SessionDetail>
+    <SessionDetail>
+      <Id>635420318419895724</Id>
+      <IdSession>635420318369572846</IdSession>
+      <IdCourse>566</IdCourse>
+      <NameCourse>Lau cua gach, lau ghe</NameCourse>
+      <Count>1</Count>
+      <Price>0</Price>
+      <Enable>1</Enable>
+      <IdEmployee>0</IdEmployee>
+      <State>0</State>
+    </SessionDetail>
+    <SessionDetail>
+      <Id>635420529197241499</Id>
+      <IdSession>635420529196821475</IdSession>
+      <IdCourse>190</IdCourse>
+      <NameCourse>Tiger nau</NameCourse>
+      <Count>1</Count>
+      <Price>12000</Price>
+      <Enable>1</Enable>
+      <IdEmployee>0</IdEmployee>
+      <State>1</State>
+    </SessionDetail>
+  </SessionDetailArray>
+  <Name>Chi tiết giao dịch</Name>
+</SessionDetailList>

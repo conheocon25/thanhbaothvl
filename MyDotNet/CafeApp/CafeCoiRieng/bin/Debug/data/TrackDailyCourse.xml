@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<TrackDailyCourseList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TrackDailyCourseArray>
+    <TrackDailyCourse>
+      <Id>635420524454410225</Id>
+      <IdCourse>116</IdCourse>
+      <CourseName>SG do</CourseName>
+      <DateTime>2014-07-27T00:00:00</DateTime>
+      <Count>10</Count>
+      <State>1</State>
+    </TrackDailyCourse>
+    <TrackDailyCourse>
+      <Id>635420524454410225</Id>
+      <IdCourse>503</IdCourse>
+      <CourseName>Ga ta nuong muoi ot</CourseName>
+      <DateTime>2014-07-27T00:00:00</DateTime>
+      <Count>1.5</Count>
+      <State>1</State>
+    </TrackDailyCourse>
+    <TrackDailyCourse>
+      <Id>635420524454410225</Id>
+      <IdCourse>189</IdCourse>
+      <CourseName>Ken lon</CourseName>
+      <DateTime>2014-07-27T00:00:00</DateTime>
+      <Count>1</Count>
+      <State>1</State>
+    </TrackDailyCourse>
+    <TrackDailyCourse>
+      <Id>635420524454410225</Id>
+      <IdCourse>405</IdCourse>
+      <CourseName>333 lon</CourseName>
+      <DateTime>2014-07-27T00:00:00</DateTime>
+      <Count>1</Count>
+      <State>1</State>
+    </TrackDailyCourse>
+    <TrackDailyCourse>
+      <Id>635420524454410225</Id>
+      <IdCourse>411</IdCourse>
+      <CourseName>333 chai</CourseName>
+      <DateTime>2014-07-27T00:00:00</DateTime>
+      <Count>1</Count>
+      <State>1</State>
+    </TrackDailyCourse>
+    <TrackDailyCourse>
+      <Id>635420524454410225</Id>
+      <IdCourse>489</IdCourse>
+      <CourseName>SG lon xanh</CourseName>
+      <DateTime>2014-07-27T00:00:00</DateTime>
+      <Count>1</Count>
+      <State>1</State>
+    </TrackDailyCourse>
+    <TrackDailyCourse>
+      <Id>635420524454410225</Id>
+      <IdCourse>490</IdCourse>
+      <CourseName>Nuoc ngot</CourseName>
+      <DateTime>2014-07-27T00:00:00</DateTime>
+      <Count>1</Count>
+      <State>1</State>
+    </TrackDailyCourse>
+    <TrackDailyCourse>
+      <Id>635420524454410225</Id>
+      <IdCourse>491</IdCourse>
+      <CourseName>Nuoc suoi</CourseName>
+      <DateTime>2014-07-27T00:00:00</DateTime>
+      <Count>1</Count>
+      <State>1</State>
+    </TrackDailyCourse>
+    <TrackDailyCourse>
+      <Id>635420524454410225</Id>
+      <IdCourse>495</IdCourse>
+      <CourseName>Canh ga nuong muoi ot</CourseName>
+      <DateTime>2014-07-27T00:00:00</DateTime>
+      <Count>1</Count>
+      <State>1</State>
+    </TrackDailyCourse>
+    <TrackDailyCourse>
+      <Id>635420524454410225</Id>
+      <IdCourse>496</IdCourse>
+      <CourseName>Canh ga chien nuoc mam</CourseName>
+      <DateTime>2014-07-27T00:00:00</DateTime>
+      <Count>1</Count>
+      <State>1</State>
+    </TrackDailyCourse>
+    <TrackDailyCourse>
+      <Id>635420524454410225</Id>
+      <IdCourse>497</IdCourse>
+      <CourseName>Canh ga nuong ngu vi</CourseName>
+      <DateTime>2014-07-27T00:00:00</DateTime>
+      <Count>1</Count>
+      <State>1</State>
+    </TrackDailyCourse>
+    <TrackDailyCourse>
+      <Id>635420524454410225</Id>
+      <IdCourse>498</IdCourse>
+      <CourseName>Canh ga nuong chao</CourseName>
+      <DateTime>2014-07-27T00:00:00</DateTime>
+      <Count>1</Count>
+      <State>1</State>
+    </TrackDailyCourse>
+    <TrackDailyCourse>
+      <Id>635420524454410225</Id>
+      <IdCourse>505</IdCourse>
+      <CourseName>Ga ta nuong ngu vi</CourseName>
+      <DateTime>2014-07-27T00:00:00</DateTime>
+      <Count>1</Count>
+      <State>1</State>
+    </TrackDailyCourse>
+    <TrackDailyCourse>
+      <Id>635420524454410225</Id>
+      <IdCourse>509</IdCourse>
+      <CourseName>Ga ta nau la giang</CourseName>
+      <DateTime>2014-07-27T00:00:00</DateTime>
+      <Count>1</Count>
+      <State>1</State>
+    </TrackDailyCourse>
+    <TrackDailyCourse>
+      <Id>635420524454410225</Id>
+      <IdCourse>545</IdCourse>
+      <CourseName>Muc xao sa te</CourseName>
+      <DateTime>2014-07-27T00:00:00</DateTime>
+      <Count>1</Count>
+      <State>1</State>
+    </TrackDailyCourse>
+    <TrackDailyCourse>
+      <Id>635420524454410225</Id>
+      <IdCourse>566</IdCourse>
+      <CourseName>Lau cua gach, lau ghe</CourseName>
+      <DateTime>2014-07-27T00:00:00</DateTime>
+      <Count>1</Count>
+      <State>1</State>
+    </TrackDailyCourse>
+    <TrackDailyCourse>
+      <Id>635420524454410225</Id>
+      <IdCourse>577</IdCourse>
+      <CourseName>Goi muc tom Thai</CourseName>
+      <DateTime>2014-07-27T00:00:00</DateTime>
+      <Count>1</Count>
+      <State>1</State>
+    </TrackDailyCourse>
+    <TrackDailyCourse>
+      <Id>635420524454410225</Id>
+      <IdCourse>601</IdCourse>
+      <CourseName>Muc ong</CourseName>
+      <DateTime>2014-07-27T00:00:00</DateTime>
+      <Count>1</Count>
+      <State>1</State>
+    </TrackDailyCourse>
+    <TrackDailyCourse>
+      <Id>635420524454410225</Id>
+      <IdCourse>765</IdCourse>
+      <CourseName>lau muc trung</CourseName>
+      <DateTime>2014-07-27T00:00:00</DateTime>
+      <Count>1</Count>
+      <State>1</State>
+    </TrackDailyCourse>
+    <TrackDailyCourse>
+      <Id>635420524454410225</Id>
+      <IdCourse>837</IdCourse>
+      <CourseName>sapporo</CourseName>
+      <DateTime>2014-07-27T00:00:00</DateTime>
+      <Count>1</Count>
+      <State>1</State>
+    </TrackDailyCourse>
+  </TrackDailyCourseArray>
+  <Name>Theo dõi món ăn</Name>
+</TrackDailyCourseList>

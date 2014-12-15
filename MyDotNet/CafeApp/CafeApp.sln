@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CafeDB", "CafeDB\CafeDB.csproj", "{B579E23E-7978-4D3A-9E93-C6C7FF2D66B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CafeGateway", "CafeGateway\CafeGateway.csproj", "{48FF9BA2-896B-467E-AB83-BBF00E277DC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CafeModel", "CafeModel\CafeModel.csproj", "{B34EC254-4658-48D4-83C8-E0B93F17C919}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CafeXML", "CafeXML\CafeXML.csproj", "{6963356E-7431-4839-80DB-4071FFA88A71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CafeHappy4", "CafeHappy4\CafeHappy4.csproj", "{EC005C64-AA4B-4751-90D2-F4B52F67F566}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CafeCoiRieng", "CafeCoiRieng\CafeCoiRieng.csproj", "{EB1A7CB5-C264-41B7-AFD6-C26CD3EE2790}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B579E23E-7978-4D3A-9E93-C6C7FF2D66B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B579E23E-7978-4D3A-9E93-C6C7FF2D66B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B579E23E-7978-4D3A-9E93-C6C7FF2D66B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B579E23E-7978-4D3A-9E93-C6C7FF2D66B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48FF9BA2-896B-467E-AB83-BBF00E277DC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48FF9BA2-896B-467E-AB83-BBF00E277DC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48FF9BA2-896B-467E-AB83-BBF00E277DC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48FF9BA2-896B-467E-AB83-BBF00E277DC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B34EC254-4658-48D4-83C8-E0B93F17C919}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B34EC254-4658-48D4-83C8-E0B93F17C919}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B34EC254-4658-48D4-83C8-E0B93F17C919}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B34EC254-4658-48D4-83C8-E0B93F17C919}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6963356E-7431-4839-80DB-4071FFA88A71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6963356E-7431-4839-80DB-4071FFA88A71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6963356E-7431-4839-80DB-4071FFA88A71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6963356E-7431-4839-80DB-4071FFA88A71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC005C64-AA4B-4751-90D2-F4B52F67F566}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC005C64-AA4B-4751-90D2-F4B52F67F566}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC005C64-AA4B-4751-90D2-F4B52F67F566}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC005C64-AA4B-4751-90D2-F4B52F67F566}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB1A7CB5-C264-41B7-AFD6-C26CD3EE2790}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB1A7CB5-C264-41B7-AFD6-C26CD3EE2790}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB1A7CB5-C264-41B7-AFD6-C26CD3EE2790}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB1A7CB5-C264-41B7-AFD6-C26CD3EE2790}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal

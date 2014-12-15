@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<SessionDetailList xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SessionDetailArray>
+    <SessionDetail>
+      <Id>635431792530902426</Id>
+      <IdSession>635431792136259853</IdSession>
+      <IdCourse>148</IdCourse>
+      <NameCourse>Cafe đá</NameCourse>
+      <Count>2</Count>
+      <Price>10000</Price>
+      <Enable>1</Enable>
+      <IdEmployee>0</IdEmployee>
+      <State>2</State>
+    </SessionDetail>
+    <SessionDetail>
+      <Id>635431792848820609</Id>
+      <IdSession>635431792136259853</IdSession>
+      <IdCourse>248</IdCourse>
+      <NameCourse>sting sữa</NameCourse>
+      <Count>3</Count>
+      <Price>18000</Price>
+      <Enable>1</Enable>
+      <IdEmployee>0</IdEmployee>
+      <State>3</State>
+    </SessionDetail>
+    <SessionDetail>
+      <Id>635431793785784201</Id>
+      <IdSession>635431792136259853</IdSession>
+      <IdCourse>326</IdCourse>
+      <NameCourse>Dừa đá</NameCourse>
+      <Count>1</Count>
+      <Price>17000</Price>
+      <Enable>1</Enable>
+      <IdEmployee>0</IdEmployee>
+      <State>1</State>
+    </SessionDetail>
+  </SessionDetailArray>
+  <Name>Chi tiết giao dịch</Name>
+</SessionDetailList>

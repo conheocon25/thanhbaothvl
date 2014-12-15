@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CategoryList xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CategoryArray>
+    <Category>
+      <Id>13</Id>
+      <Name>Cafe</Name>
+      <Picture />
+      <Enable>1</Enable>
+      <State>0</State>
+    </Category>
+    <Category>
+      <Id>15</Id>
+      <Name>Nước ép</Name>
+      <Picture />
+      <Enable>1</Enable>
+      <State>0</State>
+    </Category>
+    <Category>
+      <Id>16</Id>
+      <Name>Kem</Name>
+      <Picture />
+      <Enable>1</Enable>
+      <State>0</State>
+    </Category>
+    <Category>
+      <Id>17</Id>
+      <Name>Yaoua</Name>
+      <Picture />
+      <Enable>1</Enable>
+      <State>0</State>
+    </Category>
+    <Category>
+      <Id>18</Id>
+      <Name>Nước uống đóng chai</Name>
+      <Picture />
+      <Enable>1</Enable>
+      <State>0</State>
+    </Category>
+    <Category>
+      <Id>19</Id>
+      <Name>Nước chế biến</Name>
+      <Picture />
+      <Enable>1</Enable>
+      <State>0</State>
+    </Category>
+    <Category>
+      <Id>20</Id>
+      <Name>Trà</Name>
+      <Picture />
+      <Enable>1</Enable>
+      <State>0</State>
+    </Category>
+    <Category>
+      <Id>21</Id>
+      <Name>Sữa</Name>
+      <Picture />
+      <Enable>1</Enable>
+      <State>0</State>
+    </Category>
+    <Category>
+      <Id>22</Id>
+      <Name>Ca cao</Name>
+      <Picture />
+      <Enable>1</Enable>
+      <State>0</State>
+    </Category>
+    <Category>
+      <Id>23</Id>
+      <Name>Chanh</Name>
+      <Picture />
+      <Enable>1</Enable>
+      <State>0</State>
+    </Category>
+    <Category>
+      <Id>24</Id>
+      <Name>Thuốc lá</Name>
+      <Picture />
+      <Enable>1</Enable>
+      <State>0</State>
+    </Category>
+    <Category>
+      <Id>32</Id>
+      <Name>Sinh tố</Name>
+      <Picture />
+      <Enable>1</Enable>
+      <State>0</State>
+    </Category>
+    <Category>
+      <Id>33</Id>
+      <Name>Trái cây ăn</Name>
+      <Picture />
+      <Enable>1</Enable>
+      <State>0</State>
+    </Category>
+    <Category>
+      <Id>34</Id>
+      <Name>Khăn lạnh</Name>
+      <Picture />
+      <Enable>1</Enable>
+      <State>0</State>
+    </Category>
+    <Category>
+      <Id>35</Id>
+      <Name>Dừa</Name>
+      <Picture />
+      <Enable>1</Enable>
+      <State>0</State>
+    </Category>
+  </CategoryArray>
+  <Name>Danh mục</Name>
+</CategoryList>

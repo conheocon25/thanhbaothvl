@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <UserArray>
+    <User>
+      <Id>1</Id>
+      <Name>Quản lý</Name>
+      <Email>quanly@gmail.com</Email>
+      <Password>0918107132</Password>
+      <Gender>0</Gender>
+      <Note />
+      <DateCreated>0001-01-01T00:00:00</DateCreated>
+      <DateUpdated>0001-01-01T00:00:00</DateUpdated>
+      <DateActivity>0001-01-01T00:00:00</DateActivity>
+      <Type>4</Type>
+      <Code />
+      <State>0</State>
+    </User>
+    <User>
+      <Id>3</Id>
+      <Name>Thái</Name>
+      <Email>thai@gmail.com</Email>
+      <Password>123456</Password>
+      <Gender>0</Gender>
+      <Note />
+      <DateCreated>0001-01-01T00:00:00</DateCreated>
+      <DateUpdated>0001-01-01T00:00:00</DateUpdated>
+      <DateActivity>0001-01-01T00:00:00</DateActivity>
+      <Type>2</Type>
+      <Code />
+      <State>0</State>
+    </User>
+  </UserArray>
+  <Name>Người dùng</Name>
+</UserList>

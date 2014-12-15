@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableList xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <TableArray>
+    <Table>
+      <Id>2</Id>
+      <IdDomain>1</IdDomain>
+      <Name>SV: 19</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>3</Id>
+      <IdDomain>1</IdDomain>
+      <Name>SV: 20</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>4</Id>
+      <IdDomain>1</IdDomain>
+      <Name>SV: 21</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>28</Id>
+      <IdDomain>1</IdDomain>
+      <Name>SV: 22</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>29</Id>
+      <IdDomain>2</IdDomain>
+      <Name>PL: 01</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>30</Id>
+      <IdDomain>2</IdDomain>
+      <Name>PL: 02</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>31</Id>
+      <IdDomain>2</IdDomain>
+      <Name>PL: 03</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>32</Id>
+      <IdDomain>2</IdDomain>
+      <Name>PL: 04</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>33</Id>
+      <IdDomain>2</IdDomain>
+      <Name>PL: 05</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>34</Id>
+      <IdDomain>2</IdDomain>
+      <Name>PL: 06</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>35</Id>
+      <IdDomain>2</IdDomain>
+      <Name>PL: 07</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>36</Id>
+      <IdDomain>2</IdDomain>
+      <Name>PL: 08</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>37</Id>
+      <IdDomain>2</IdDomain>
+      <Name>PL: 09</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>38</Id>
+      <IdDomain>2</IdDomain>
+      <Name>PL; 10</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>39</Id>
+      <IdDomain>2</IdDomain>
+      <Name>PL: 11</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>40</Id>
+      <IdDomain>2</IdDomain>
+      <Name>PL: 12</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>41</Id>
+      <IdDomain>2</IdDomain>
+      <Name>PL: 13</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>42</Id>
+      <IdDomain>2</IdDomain>
+      <Name>PL: 14</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>43</Id>
+      <IdDomain>2</IdDomain>
+      <Name>PL: 15</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>44</Id>
+      <IdDomain>2</IdDomain>
+      <Name>PL: 16</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>45</Id>
+      <IdDomain>2</IdDomain>
+      <Name>PL: 17</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>49</Id>
+      <IdDomain>4</IdDomain>
+      <Name>1</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>50</Id>
+      <IdDomain>4</IdDomain>
+      <Name>2</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>51</Id>
+      <IdDomain>4</IdDomain>
+      <Name>3</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>52</Id>
+      <IdDomain>4</IdDomain>
+      <Name>4</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>53</Id>
+      <IdDomain>4</IdDomain>
+      <Name>5</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>54</Id>
+      <IdDomain>4</IdDomain>
+      <Name>6</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>55</Id>
+      <IdDomain>4</IdDomain>
+      <Name>7</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>56</Id>
+      <IdDomain>4</IdDomain>
+      <Name>8</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>57</Id>
+      <IdDomain>4</IdDomain>
+      <Name>9</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>58</Id>
+      <IdDomain>4</IdDomain>
+      <Name>10</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>63</Id>
+      <IdDomain>1</IdDomain>
+      <Name>SV: 23</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>70</Id>
+      <IdDomain>2</IdDomain>
+      <Name>PL: 18A</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>71</Id>
+      <IdDomain>1</IdDomain>
+      <Name>SV: 24</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>72</Id>
+      <IdDomain>2</IdDomain>
+      <Name>PL: 18B</Name>
+      <State>0</State>
+    </Table>
+    <Table>
+      <Id>73</Id>
+      <IdDomain>5</IdDomain>
+      <Name>N.H: 1</Name>
+      <State>0</State>
+    </Table>
+  </TableArray>
+  <Name>Danh mục</Name>
+</TableList>

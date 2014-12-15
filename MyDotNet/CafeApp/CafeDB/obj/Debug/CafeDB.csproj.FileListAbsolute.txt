@@ -1,0 +1,16 @@
+D:\AppWebServer\SPNTracking\CafeApp\CafeDB\bin\Debug\CafeDB.dll
+D:\AppWebServer\SPNTracking\CafeApp\CafeDB\bin\Debug\CafeDB.pdb
+D:\AppWebServer\SPNTracking\CafeApp\CafeDB\bin\Debug\CafeModel.dll
+D:\AppWebServer\SPNTracking\CafeApp\CafeDB\bin\Debug\MySql.Data.Entity.EF6.dll
+D:\AppWebServer\SPNTracking\CafeApp\CafeDB\bin\Debug\CafeModel.pdb
+D:\AppWebServer\SPNTracking\CafeApp\CafeDB\obj\Debug\CafeDB.csprojResolveAssemblyReference.cache
+D:\AppWebServer\SPNTracking\CafeApp\CafeDB\obj\Debug\CafeDB.dll
+D:\AppWebServer\SPNTracking\CafeApp\CafeDB\obj\Debug\CafeDB.pdb
+D:\SPN_DOTNET\CafeApp\CafeDB\bin\Debug\CafeDB.dll
+D:\SPN_DOTNET\CafeApp\CafeDB\bin\Debug\CafeDB.pdb
+D:\SPN_DOTNET\CafeApp\CafeDB\bin\Debug\CafeModel.dll
+D:\SPN_DOTNET\CafeApp\CafeDB\bin\Debug\MySql.Data.Entity.EF6.dll
+D:\SPN_DOTNET\CafeApp\CafeDB\bin\Debug\CafeModel.pdb
+D:\SPN_DOTNET\CafeApp\CafeDB\obj\Debug\CafeDB.csprojResolveAssemblyReference.cache
+D:\SPN_DOTNET\CafeApp\CafeDB\obj\Debug\CafeDB.dll
+D:\SPN_DOTNET\CafeApp\CafeDB\obj\Debug\CafeDB.pdb

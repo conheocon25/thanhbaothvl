@@ -1,0 +1,8 @@
+D:\AppWebServer\SPNTracking\CafeApp\CafeModel\bin\Debug\CafeModel.dll
+D:\AppWebServer\SPNTracking\CafeApp\CafeModel\bin\Debug\CafeModel.pdb
+D:\AppWebServer\SPNTracking\CafeApp\CafeModel\obj\Debug\CafeModel.dll
+D:\AppWebServer\SPNTracking\CafeApp\CafeModel\obj\Debug\CafeModel.pdb
+D:\SPN_DOTNET\CafeApp\CafeModel\bin\Debug\CafeModel.dll
+D:\SPN_DOTNET\CafeApp\CafeModel\bin\Debug\CafeModel.pdb
+D:\SPN_DOTNET\CafeApp\CafeModel\obj\Debug\CafeModel.dll
+D:\SPN_DOTNET\CafeApp\CafeModel\obj\Debug\CafeModel.pdb

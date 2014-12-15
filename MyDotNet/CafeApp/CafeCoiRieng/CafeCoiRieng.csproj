@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EB1A7CB5-C264-41B7-AFD6-C26CD3EE2790}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CafeCoiRieng</RootNamespace>
+    <AssemblyName>CafeCoiRieng</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>coffee_mug.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="0 Main\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="0 Main\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="0 Main\Global.cs" />
+    <Compile Include="0 Main\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="0 Main\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="0 Main\frmSync.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="0 Main\frmSync.Designer.cs">
+      <DependentUpon>frmSync.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingCategory.Designer.cs">
+      <DependentUpon>frmSettingCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingCategoryInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingCategoryInsert.Designer.cs">
+      <DependentUpon>frmSettingCategoryInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingCategoryUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingCategoryUpdate.Designer.cs">
+      <DependentUpon>frmSettingCategoryUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingCourse.Designer.cs">
+      <DependentUpon>frmSettingCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingCourseInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingCourseInsert.Designer.cs">
+      <DependentUpon>frmSettingCourseInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingCourseUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingCourseUpdate.Designer.cs">
+      <DependentUpon>frmSettingCourseUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingCustomer.Designer.cs">
+      <DependentUpon>frmSettingCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingCustomerInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingCustomerInsert.Designer.cs">
+      <DependentUpon>frmSettingCustomerInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingCustomerUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingCustomerUpdate.Designer.cs">
+      <DependentUpon>frmSettingCustomerUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingDomain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingDomain.Designer.cs">
+      <DependentUpon>frmSettingDomain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingDomainInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingDomainInsert.Designer.cs">
+      <DependentUpon>frmSettingDomainInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingDomainUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingDomainUpdate.Designer.cs">
+      <DependentUpon>frmSettingDomainUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingEmployee.Designer.cs">
+      <DependentUpon>frmSettingEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingEmployeeInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingEmployeeInsert.Designer.cs">
+      <DependentUpon>frmSettingEmployeeInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingEmployeeUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingEmployeeUpdate.Designer.cs">
+      <DependentUpon>frmSettingEmployeeUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingTable.Designer.cs">
+      <DependentUpon>frmSettingTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingTableInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingTableInsert.Designer.cs">
+      <DependentUpon>frmSettingTableInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingTableUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingTableUpdate.Designer.cs">
+      <DependentUpon>frmSettingTableUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingUnit.Designer.cs">
+      <DependentUpon>frmSettingUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingUnitInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingUnitInsert.Designer.cs">
+      <DependentUpon>frmSettingUnitInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingUnitUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingUnitUpdate.Designer.cs">
+      <DependentUpon>frmSettingUnitUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingUser.Designer.cs">
+      <DependentUpon>frmSettingUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingUserInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingUserInsert.Designer.cs">
+      <DependentUpon>frmSettingUserInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingUserUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4 Setting\frmSettingUserUpdate.Designer.cs">
+      <DependentUpon>frmSettingUserUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1 Selling\frmSelling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 Selling\frmSelling.Designer.cs">
+      <DependentUpon>frmSelling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1 Selling\frmSellingSessionDetailUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 Selling\frmSellingSessionDetailUpdate.Designer.cs">
+      <DependentUpon>frmSellingSessionDetailUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1 Selling\frmSellingSessionPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 Selling\frmSellingSessionPrint.Designer.cs">
+      <DependentUpon>frmSellingSessionPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1 Selling\frmSellingSessionUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 Selling\frmSellingSessionUpdate.Designer.cs">
+      <DependentUpon>frmSellingSessionUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="3 Report\frmReportDaily.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Report\frmReportDaily.Designer.cs">
+      <DependentUpon>frmReportDaily.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="0 Main\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0 Main\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0 Main\frmSync.resx">
+      <DependentUpon>frmSync.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4 Setting\frmSettingCategory.resx">
+      <DependentUpon>frmSettingCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4 Setting\frmSettingCategoryInsert.resx">
+      <DependentUpon>frmSettingCategoryInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4 Setting\frmSettingCategoryUpdate.resx">
+      <DependentUpon>frmSettingCategoryUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4 Setting\frmSettingCourse.resx">
+      <DependentUpon>frmSettingCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4 Setting\frmSettingCourseInsert.resx">
+      <DependentUpon>frmSettingCourseInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4 Setting\frmSettingCourseUpdate.resx">
+      <DependentUpon>frmSettingCourseUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4 Setting\frmSettingCustomer.resx">
+      <DependentUpon>frmSettingCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4 Setting\frmSettingCustomerInsert.resx">
+      <DependentUpon>frmSettingCustomerInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4 Setting\frmSettingCustomerUpdate.resx">
+      <DependentUpon>frmSettingCustomerUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4 Setting\frmSettingDomain.resx">
+      <DependentUpon>frmSettingDomain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4 Setting\frmSettingDomainInsert.resx">
+      <DependentUpon>frmSettingDomainInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4 Setting\frmSettingDomainUpdate.resx">
+      <DependentUpon>frmSettingDomainUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4 Setting\frmSettingEmployee.resx">
+      <DependentUpon>frmSettingEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4 Setting\frmSettingEmployeeInsert.resx">
+      <DependentUpon>frmSettingEmployeeInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4 Setting\frmSettingEmployeeUpdate.resx">
+      <DependentUpon>frmSettingEmployeeUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4 Setting\frmSettingTable.resx">
+      <DependentUpon>frmSettingTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4 Setting\frmSettingTableInsert.resx">
+      <DependentUpon>frmSettingTableInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4 Setting\frmSettingTableUpdate.resx">
+      <DependentUpon>frmSettingTableUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4 Setting\frmSettingUnit.resx">
+      <DependentUpon>frmSettingUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4 Setting\frmSettingUnitInsert.resx">
+      <DependentUpon>frmSettingUnitInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4 Setting\frmSettingUnitUpdate.resx">
+      <DependentUpon>frmSettingUnitUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4 Setting\frmSettingUser.resx">
+      <DependentUpon>frmSettingUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4 Setting\frmSettingUserInsert.resx">
+      <DependentUpon>frmSettingUserInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4 Setting\frmSettingUserUpdate.resx">
+      <DependentUpon>frmSettingUserUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 Selling\frmSelling.resx">
+      <DependentUpon>frmSelling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 Selling\frmSellingSessionDetailUpdate.resx">
+      <DependentUpon>frmSellingSessionDetailUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 Selling\frmSellingSessionPrint.resx">
+      <DependentUpon>frmSellingSessionPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 Selling\frmSellingSessionUpdate.resx">
+      <DependentUpon>frmSellingSessionUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="3 Report\frmReportDaily.resx">
+      <DependentUpon>frmReportDaily.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CafeGateway\CafeGateway.csproj">
+      <Project>{48ff9ba2-896b-467e-ab83-bbf00e277dc1}</Project>
+      <Name>CafeGateway</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CafeModel\CafeModel.csproj">
+      <Project>{b34ec254-4658-48d4-83c8-e0b93f17c919}</Project>
+      <Name>CafeModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CafeXML\CafeXML.csproj">
+      <Project>{6963356e-7431-4839-80db-4071ffa88a71}</Project>
+      <Name>CafeXML</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_fix.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="2 Import\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="coffee_mug.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
