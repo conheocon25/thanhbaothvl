@@ -1,16 +1,22 @@
 	
-	body { background: url("/data/images/bg/ktth_movie_bg.jpg") repeat top left #033594 !important; }
+	body { background: url("/data/images/bg/ktth_movie_bg.jpg") repeat top left #2F2E30 !important; }
 	
-	.container { box-shadow: 0 0 2px 2px #000000; }
+	.container { box-shadow: 0 0 2px 2px #2F2E30; }
 	
-	.top-menu { background: url("/data/images/bg/menu.jpg") repeat-x top left transparent; }
+	.top-menu { 
+		background-color: #2F2E30; 
+		border-top: 2px solid #FAFAFA;
+		border-bottom: 2px solid #FAFAFA;
+		border-radius: 2px;
+		box-shadow: 0 0 3px 3px rgba(0, 0, 0, .1);
+	}
 	
 		.top-menu li a {
 			color: #FFFFFF !important;
 			text-shadow: 1px 1px 0 #696969 !important;
 		}
 		
-		.top-menu li:hover a { background: rgba(0, 164, 128, .3) !important; }
+		.top-menu li:hover a { background: rgba(0, 164, 128, .3) !important;  }
 		
 		.top-menu li.active a {
 			background: none !important;
@@ -19,11 +25,14 @@
 		
 		.top-menu .caret { border-top-color: #FFFFFF !important; margin-left: 5px  !important; }
 		
-		.top-menu .dropdown-menu { background: #ff9f00;	 }
+		.top-menu .dropdown-menu { background: #707070;	 }
 				
 		.top-menu .dropdown-menu li {
-			height: 40px;
-			background: url("/data/images/bg/submenu.jpg") repeat top left transparent;
+			height: 35px;
+			background-color: #707070; 			
+			border-bottom: 2px solid #FAFAFA;
+			border-radius: 2px;
+			box-shadow: 0 0 3px 3px rgba(0, 0, 0, .1);
 			
 		}
 		.top-menu .dropdown-menu li a {			
@@ -46,22 +55,22 @@
 	/* ======================================================================== */
 	/* MAIN																		*/
 	/* ======================================================================== */
-	.main { background-color: white; }
+	.main { background-color: #E8E8E8; }
 	
 	/* ======================================================================== */
 	/* FOOTER																	*/
 	/* ======================================================================== */
 	.footer {
-		background: url("/data/images/bg/footer.jpg") no-repeat top left transparent;
+		background-color: #2F2E30;						
+		box-shadow: 0 0 3px 3px rgba(0, 0, 0, .1);
 		color: white;
 	}
 	
-	.box { border: 1px solid #7CA324; }
+	.box { border: 1px solid #FAFAFA; }
 	
 		.box .b-title {
-			background-color: #0F4FA7;
-			*background: url("/data/images/bg/menu.jpg") repeat-x top left transparent;
-			border-bottom: 1px solid #0F4FA7;
+			background-color: #707070;			
+			border-bottom: 1px solid #707070;
 		}
 		
 		.b-title .b-t-icon-content {
@@ -86,7 +95,7 @@
 	.fixed-function { background-color: rgba(0, 0, 0, .7); }
 	
 		.bubble {
-			background-color: #0D8700;
+			background-color: #707070;
 			color: white;
 			border: 1px solid white;
 		}
@@ -119,13 +128,13 @@
 	.news-content .news-author p,
 	.news-content .news-author p a,
 	.eventCalendar-wrap
-	{ color: #0D8700 !important; }
+	{ color: #FFFFFF !important; }
 
 	
 	.news-content .news-author {
-		border-top: 1px solid #0D8700;
-		border-bottom: 1px solid #0D8700;
-		background-color: #FFEAC9;
+		border-top: 1px solid #2F2E30;
+		border-bottom: 1px solid #2F2E30;
+		background-color: #707070;
 	}
 	
 	.list-3 li.active a {
@@ -133,8 +142,8 @@
 	}
 	
 	.eventsCalendar-currentTitle {
-		background-color: #0D8700;
-		outline: 1px solid #0D8700;
+		background-color: #707070;
+		outline: 1px solid #707070;
 		border: 1px solid #E3E3E3;
 	}
 	
@@ -144,8 +153,8 @@
 	}
 	
 	.eventsCalendar-list .eventsCalendar-noEvents {
-		background-color: #0D8700;
-		box-shadow: 0 0 10px #0D8700;
+		background-color: #707070;
+		box-shadow: 0 0 10px #707070;
 	}
 	
 	.pg-header {
@@ -155,15 +164,15 @@
 		padding: 15px 10px 27px 60px;
 	}
 	
-		.pg-header-video { background: url("/data/images/bg/video.png") no-repeat top left #0D8700; }
-		.pg-header-videos { background: url("/data/images/bg/videos.png") no-repeat top left #0D8700; }
-		.pg-header-news { background: url("/data/images/bg/news.png") no-repeat top left #0D8700; }
-		.pg-header-pagoda { background: url("/data/images/bg/pagoda.png") no-repeat top left #0D8700; }
-		.pg-header-paper { background: url("/data/images/bg/paper.png") no-repeat top left #0D8700; }
-		.pg-header-picture { background: url("/data/images/bg/picture.png") no-repeat top left #0D8700; }
-		.pg-header-location { background: url("/data/images/bg/location.png") no-repeat top left #0D8700; }
-		.pg-header-question { background: url("/data/images/bg/question.png") no-repeat top left #0D8700; }
-		.pg-header-event { background: url("/data/images/bg/event.png") no-repeat top left #0D8700; }
+		.pg-header-video { background: url("/data/images/bg/video.png") no-repeat top left #707070; }
+		.pg-header-videos { background: url("/data/images/bg/videos.png") no-repeat top left #707070; }
+		.pg-header-news { background: url("/data/images/bg/news.png") no-repeat top left #707070; }
+		.pg-header-pagoda { background: url("/data/images/bg/pagoda.png") no-repeat top left #707070; }
+		.pg-header-paper { background: url("/data/images/bg/paper.png") no-repeat top left #707070; }
+		.pg-header-picture { background: url("/data/images/bg/picture.png") no-repeat top left #707070; }
+		.pg-header-location { background: url("/data/images/bg/location.png") no-repeat top left #707070; }
+		.pg-header-question { background: url("/data/images/bg/question.png") no-repeat top left #707070; }
+		.pg-header-event { background: url("/data/images/bg/event.png") no-repeat top left #707070; }
 
 	.pg-header a {
 		color: white !important;
@@ -196,17 +205,17 @@
 		);
 	}
 	.calendar-table tr:first-child  {
-		background-color: #823918;
-		outline: 1px solid #823918;
+		background-color: #707070;
+		outline: 1px solid #707070;
 		border: 1px solid #E3E3E3;
 		color: #fff;
 	}
 		.calendar-table tr:first-child a { color: white; }
-		.calendar-table .day-title td { color: #823918; }
+		.calendar-table .day-title td { color: #707070; }
 		.calendar-table .day-list td {
 			border-top: solid 1px #fff;
 			border-right: solid 1px #BCBCBC;
-			color: #823918;
+			color: #707070;
 		}
 			.calendar-table .day-list td div { color: #3B579D; }
 			.calendar-table .day-list td.homnay {
@@ -218,8 +227,8 @@
 		background-color: #E4E4E4;
 	}
 	.calendar-paper {
-		background: url("/data/images/bg/calendar.png") no-repeat top center #8D4E0B;
-		color: #FFDD00;
+		background-color: #D0D0D0;
+		color: #000;
 		box-shadow: 3px 3px 2px #696969;
 		border-radius: 5px;
 	}
