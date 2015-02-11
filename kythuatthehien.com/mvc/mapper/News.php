@@ -38,6 +38,12 @@ class News extends Mapper implements \MVC\Domain\NewsFinder {
 			LIMIT :start,:max"
 		, $tblNews);
 		
+		$findByDateTimeStmt = sprintf(
+			"select *  
+			from %s 
+			where id_category = ? AND date >= ? AND date <= ?"
+		, $tblNews);
+		
 		$findByPageStmt = sprintf("SELECT * FROM  %s ORDER BY date desc LIMIT :start,:max" , $tblNews);
 		
         $this->selectAllStmt = self::$PDO->prepare($selectAllStmt);
@@ -55,7 +61,7 @@ class News extends Mapper implements \MVC\Domain\NewsFinder {
 		$this->findByCategoryDateStmt = self::$PDO->prepare($findByCategoryDateStmt);
 		$this->findByPageStmt = self::$PDO->prepare($findByPageStmt);
 		$this->findByCategoryPageStmt = self::$PDO->prepare($findByCategoryPageStmt);
-
+		$this->findByDateTimeStmt = self::$PDO->prepare($findByDateTimeStmt);
     } 
     function getCollection( array $raw ) {
         return new NewsCollection( $raw, $this );
@@ -169,5 +175,11 @@ class News extends Mapper implements \MVC\Domain\NewsFinder {
         $object = $this->doCreateObject( $array );
         return $object;		
     }
+	
+	function findByDateTime( $values ) {		
+		$this->findByDateTimeStmt->execute($values);
+        return new NewsCollection( $this->findByDateTimeStmt->fetchAll(), $this );
+    }
+	
 }
 ?>

@@ -17,10 +17,12 @@ interface VideoCollection 			extends \Iterator {function add( Object $Video );}
 interface SalaryDailyCollection 	extends \Iterator {function add( Object $SalaryDaily );}
 interface PositionsCollection 		extends \Iterator {function add( Object $Positions );}
 interface NewsCollection 			extends \Iterator {function add( Object $News );}
+interface NewsRssCollection 			extends \Iterator {function add( Object $NewsRss );}
 interface ConfigCollection 			extends \Iterator {function add( Object $Config );}
 interface GuestCollection 			extends \Iterator {function add( Object $Guest );}
 interface PageCollection 			extends \Iterator {function add( Object $Page );}
 interface ReportCollection 			extends \Iterator {function add( Object $Report );}
 interface PageNavigationCollection 	extends \Iterator {function add( Object $PageNavigation );}
 interface ScheduleCollection 	extends \Iterator {function add( Object $Schedule );}
+interface RssLinkCollection 	extends \Iterator {function add( Object $RssLink );}
 ?>

@@ -1,0 +1,1 @@
+"C:/ffmpeg/bin\ffile.exe" "//mamdemo.production.vc/tulieu1/6/6_42fc60c56ffd0dc/66_402ecbcbf0c6041.avi" 1>"C:\inetpub\wwwroot\mam\include/../filestore/tmp/thanhlv/filesize.vc" 2>>&1

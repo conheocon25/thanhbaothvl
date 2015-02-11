@@ -1,0 +1,553 @@
+body,.cf,#CentralSpaceLogin,#CentralSpaceContainer #CentralSpace iframe#left,#CentralSpaceContainer #CentralSpace iframe#right{*zoom:1;}
+body:before,.cf:before,#CentralSpaceLogin:before,#CentralSpaceContainer #CentralSpace iframe#left:before,#CentralSpaceContainer #CentralSpace iframe#right:before,body:after,.cf:after,#CentralSpaceLogin:after,#CentralSpaceContainer #CentralSpace iframe#left:after,#CentralSpaceContainer #CentralSpace iframe#right:after{content:'';display:table}
+body:after,.cf:after,#CentralSpaceLogin:after,#CentralSpaceContainer #CentralSpace iframe#left:after,#CentralSpaceContainer #CentralSpace iframe#right:after{clear:both}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
+audio,canvas,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+[hidden],template{display:none}
+html{font-family:sans-serif;text-size-adjust:100%}
+body{margin:0}
+a{background:transparent}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+hr{box-sizing:content-box;height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace,sans-serif;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+input[type="search"]{-webkit-appearance:textfield;box-sizing:content-box}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,*:before,*:after,*::before,*::after{*behavior:url("js/vendor/boxsizing.htc");box-sizing:border-box;margin:0;padding:0}
+html{overflow-y:scroll;overflow-x:hidden}
+body{width:100%}
+img,video,audio,embed,object,input,iframe{max-width:100%}
+html{font-family:"sans-serif",Helvetica,Arial,sans-serif;font-weight:200;color:#444;font-size:16.18px;line-height:24.270000000000003px}
+a{color:#00a6fc;}
+a:hover{color:#0095e3}
+h1,h2,h3,h4,h5,h6,p,ul,ol,dt,pre,code{margin-top:0}
+h1,h2,h3,h4,h5,h6,dt{font-family:"sans-serif",Helvetica,Arial,sans-serif;font-weight:200;color:#111;letter-spacing:-.015em;}
+h1{font-size:45.304px;line-height:30px;margin-bottom:16.18px}
+h2{font-size:40.45px;line-height:45.304px;margin-bottom:12.944px}
+h3{font-size:35.596000000000004px;line-height:42.068000000000005px;margin-bottom:9.708px}
+h4{font-size:32.36px;line-height:38.832px;margin-bottom:6.472px}
+h5{font-size:25.888px;line-height:35.596000000000004px;margin-bottom:3.236px}
+h6{font-size:21.034000000000002px;line-height:32.36px;margin-bottom:0}
+p,ul,ol,pre,dl{margin-bottom:16.18px}
+ul,ol{padding-left:1.4em}
+li,dd{margin-bottom:8.09px}
+pre{font-size:12.944px}
+header p{color:#aaa}
+header h1 ~ p{margin-top:-8.09px}
+header h2 ~ p{margin-top:-6.472px}
+header h3 ~ p{margin-top:-4.854px}
+header h4 ~ p{margin-top:-3.236px}
+header h5 ~ p{margin-top:-1.618px}
+header h6 ~ p{margin-top:-1.618px}
+code{padding:3px 4px;color:#444;background-color:#f5f5f5;border:1px solid #e1e1e8;border-radius:3px;font-family:Menlo,Monaco,monospace}
+pre{display:block;padding:7px;background-color:#f5f5f5;border:1px solid #e1e1e8;border-radius:3px;white-space:pre-wrap;word-break:break-all;font-family:Menlo,Monaco,monospace;line-height:160%}
+@media all and (max-width: 768px) {
+html{font-size:14.139999999999999px;line-height:21.209999999999997px}
+h1{font-size:39.592px;line-height:42.419999999999995px;margin-bottom:14.139999999999999px}
+h2{font-size:35.35px;line-height:39.592px;margin-bottom:11.312px}
+h3{font-size:31.107999999999997px;line-height:36.763999999999996px;margin-bottom:8.484px}
+h4{font-size:26.866px;line-height:33.936px;margin-bottom:5.656px}
+h5{font-size:22.624px;line-height:31.107999999999997px;margin-bottom:2.828px}
+h6{font-size:18.381999999999998px;line-height:28.279999999999998px;margin-bottom:0}
+p,ul,ol,pre,dl{margin-bottom:14.139999999999999px}
+li,dd{margin-bottom:7.069999999999999px}
+pre{font-size:11.312px}
+header h1 ~ p{margin-top:-7.069999999999999px}
+header h2 ~ p{margin-top:-5.656px}
+header h3 ~ p{margin-top:-4.242px}
+header h4 ~ p{margin-top:-2.828px}
+header h5 ~ p{margin-top:-1.414px}
+header h6 ~ p{margin-top:-1.414px}
+}
+*,*:after,*:before{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
+a{color:#FFFFFF}
+a:hover{color:#b9b9b9;text-decoration:underline}
+a:focus{outline:none}
+html{font-family:sans-serif;font-size:11px;line-height:1.42857;color:#FFFFFF;font-weight:normal;overflow-x:hidden}
+overflow-y scroll,body{background:#141414}
+input,textarea,select{padding:1px;border:1px solid #bbb}
+h1,h2,h3,h4,h5,h6{font-family:sans-serif;color:#FFFFFF}
+.clearerleft{clear:left}
+@font-face{font-family:'fontello';src:url("../iconfont/fontello.eot?33604550");src:url("../iconfont/fontello.eot?33604550#iefix") format('embedded-opentype'),url("../iconfont/fontello.woff?33604550") format('woff'),url("../iconfont/fontello.ttf?33604550") format('truetype'),url("../iconfont/fontello.svg?33604550#fontello") format('svg');font-weight:normal;font-style:normal}
+[class^="icon-"]:before,[class*=" icon-"]:before,.expanded:before,.collapsed:before,.VerticalNav ul li:before,#SearchBarContainer #SearchBox #SearchBoxPanel	.SearchSpace h2:before,.Selected:after,.IconEmail a:before,.IconCollect a:before,.IconCollectOut a:before,.IconPreview a:before,.KeyEmail:before,.KeyCollectOut:before,.KeyCollect:before,.KeyPreview:before,.ui-widget:after{font-family:"fontello";font-style:normal;font-weight:normal;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:.2em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;margin-left:.2em;}
+.icon-search:before{content:'\e800'}
+.icon-plus:before{content:'\e801'}
+.icon-user:before{content:'\e802'}
+.icon-videocam:before{content:'\e803'}
+.icon-picture:before{content:'\e804'}
+.icon-camera:before{content:'\e805'}
+.icon-home:before{content:'\e806'}
+.icon-download:before{content:'\e807'}
+.icon-upload:before{content:'\e808'}
+.icon-edit:before{content:'\e809'}
+.icon-bell-alt:before{content:'\e80a'}
+.icon-trash:before{content:'\e81d'}
+.icon-folder:before{content:'\e80b'}
+.icon-cog:before{content:'\e80c'}
+.icon-cog-alt:before{content:'\e80d'}
+.icon-logout:before{content:'\e80e'}
+.icon-mail-alt:before{content:'\e810'}
+.icon-down-open:before{content:'\e811'}
+.icon-left-open:before{content:'\e812'}
+.icon-right-open:before{content:'\e813'}
+.icon-up-open:before{content:'\e814'}
+.icon-angle-left:before{content:'\e815'}
+.icon-angle-right:before{content:'\e816'}
+.icon-angle-up:before{content:'\e817'}
+.icon-angle-down:before{content:'\e818'}
+.icon-angle-circled-right:before{content:'\e819'}
+.icon-expand:before{content:'\e81a'}
+.icon-collapse:before{content:'\e81b'}
+.icon-sort:before{content:'\e81c'}
+.icon-cancel:before{content:'\e820'}
+.icon-book-open:before{content:'\e81e'}
+.icon-archive:before{content:'\e81f'}
+.icon-resize-full-alt:before{content:'\e80f'}
+#CentralSpaceLogin{width:auto;max-width:400px;float:none;display:block;margin-right:auto;margin-left:auto;padding-left:0;padding-right:0;border:1px solid #d9d9d9;border-top:5px solid #4d7496;padding:20px;background:#fff;margin-top:50px;}
+#CentralSpaceLogin sup{color:#b44326}
+#CentralSpaceLogin h1{text-align:center;font-size:22px;line-height:30px}
+#CentralSpaceLogin .FormIncorrect{border-radius:5px;padding:10px;border:1px solid #f9df53;-webkit-box-shadow:1px 1px 3px rgba(0,0,0,0.05);position:relative;font-weight:bold;text-shadow:1px 1px 1px rgba(255,255,255,0.2);margin-bottom:20px;text-align:center}
+#CentralSpaceLogin .Question{margin-bottom:15px;}
+#CentralSpaceLogin .Question >label{float:left;width:100%}
+#CentralSpaceLogin .Question >input,#CentralSpaceLogin .Question >textarea{float:left;width:100%}
+#CentralSpaceLogin .QuestionSubmit{margin-bottom:15px;}
+#CentralSpaceLogin .QuestionSubmit >input{border-radius:3px;font-size:12px;line-height:1.5;padding:5px 10px;background:#007bb5;cursor:pointer;text-align:center;border:1px solid #007bb5;color:#fff}
+#CentralSpaceLogin #loginform .QuestionSubmit{text-align:center;margin-bottom:0;}
+#CentralSpaceLogin #loginform .QuestionSubmit input[name="Submit"]{border-radius:3px;font-size:12px;line-height:1.5;padding:5px 10px;background:#ce3f38;cursor:pointer;text-align:center;border:1px solid #ce3f38;color:#fff}
+#CentralSpaceLogin #loginform .Question .stdwidth{border:1px solid #d9d9d9;border-left:2px solid #4d7496;padding:8px 12px;width:48px;margin-bottom:20px;width:100%}
+#CentralSpaceLogin #loginform .Question .stdwidth:focus{border-color:#4d7496}
+#CentralSpaceLogin #loginform .Question #capswarning{border-radius:5px;padding:10px;border:1px solid #f9df53;-webkit-box-shadow:1px 1px 3px rgba(0,0,0,0.05);position:relative;font-weight:bold;text-shadow:1px 1px 1px rgba(255,255,255,0.2);text-align:center;clear:both}
+#CentralSpaceLogin #loginform .Question label[for="remember"]{float:left;width:auto;margin-right:15px}
+#CentralSpaceLogin #loginform .Question #remember{float:left;width:auto;position:relative;top:-2px}
+.ui-layout-pane{overflow-y:auto;overflow-x:hidden}
+#Footer{display:none}
+.ui-layout-resizer{background:#999 url("../gfx/whitegry/interface/CollectDivide.gif") repeat-x}
+.CollectBack{repeat-x;color:#b6bbc1;}
+.CollectBack #CollectionMenu{font-size:11px;left:15px;position:absolute;text-align:left;width:255px;border-right:1px solid #79899c;}
+.CollectBack #CollectionMenu h2{color:#fff;font-size:1.3em;margin-bottom:0}
+.CollectBack #CollectionMenu #CollectionsPanelHeader .icon-footheading{margin-right:5px}
+.CollectBack #CollectionMenu #colselect{margin-bottom:8px;}
+.CollectBack #CollectionMenu #colselect .SearchWidth{font-size:11px;margin:0;padding:0;width:245px}
+.CollectBack #CollectionMenu ul{list-style:none;padding:0;}
+.CollectBack #CollectionMenu ul li{float:left;padding:0;width:50%;margin-bottom:0;}
+.CollectBack #CollectionMenu ul li a{color:#b6bbc1}
+.CollectBack #CollectionSpace{font-size:.95em;text-align:left}
+.CollectBack .CollectionSpace{left:290px;position:absolute;}
+.CollectBack .CollectionSpace .CollectionPanelShell{float:left;height:120px;margin:0 15px 5px 0;padding:0;width:97px;}
+.CollectBack .CollectionSpace .CollectionPanelShell .CollectionResourceAlign{height:85px;text-align:center;vertical-align:middle;width:97px}
+.CollectBack .CollectionSpace .CollectionPanelShell .CollectionPanelInfo a{color:#b6bbc1}
+.CollectBack .CollectionSpace .CollectionPanelShell .CollectionPanelInfo a:visited{text-decoration:none}
+.CollectBack #CollectionMinDiv{padding-top:8px;font-size:11px;}
+.CollectBack #CollectionMinDiv #CollectionMinTitle{float:left;margin:4px 10px 0;}
+.CollectBack #CollectionMinDiv #CollectionMinTitle h2{color:#fff;padding:0 15px 0 0;font-size:14px;line-height:13px;margin:0;}
+.CollectBack #CollectionMinDiv #CollectionMinTitle h2 .icon-footheading{margin-right:5px}
+.CollectBack #CollectionMinDiv #CollectionMinRightNav{float:right;margin:0 25px 0 0;padding:.25em 0;}
+.CollectBack #CollectionMinDiv #CollectionMinRightNav ul{padding:0;margin:0;list-style:none;}
+.CollectBack #CollectionMinDiv #CollectionMinRightNav ul li{display:inline;border-left:1px solid #b6bbc1;}
+.CollectBack #CollectionMinDiv #CollectionMinRightNav ul li a{color:#b6bbc1;padding:0 3px;margin-top:4px}
+.CollectBack #CollectionMinDiv #CollectionMinRightNav ul li:first-child{border-left:none}
+.CollectBack #CollectionMinDiv #CollectionMinDropTitle{float:left;margin-top:4px;color:#fff}
+.CollectBack #CollectionMinDiv #CollectionMinDrop{float:left;padding:.2em 0;color:#fff;margin-top:2px;}
+.CollectBack #CollectionMinDiv #CollectionMinDrop form{padding:0;margin:0;}
+.CollectBack #CollectionMinDiv #CollectionMinDrop form .SearchWidth{font-size:10px;padding:0;width:150px}
+.CollectBack #CollectionMinDiv #CollectionMinitems{float:left;color:#fff;margin-left:5px;margin-top:4px}
+#Header{clear:both;font-size:12px;width:100%;background-color:#141414;}
+#Header a{color:#fff}
+#Header .HorizontalNav ul{list-style:none;margin:0}
+#Header .HorizontalNav ul li{float:left;margin-bottom:0}
+#Header .headerlink{float:left;width:auto;padding-left:25px;margin:5px 0 10px;}
+#Header .headerlink img{height:50px;width:auto}
+#Header #HeaderNav1{float: right;font-size:10px;height:30px;padding-right: 20px;}
+#Header #HeaderNav1 ul li a{text-align:right;display:block;text-transform:uppercase;padding:5px 5px 5px;border:none;text-decoration:none;font-weight:bold;}
+#Header #HeaderNav1 ul li a >.icon-header{margin-right:5px}
+#Header #HeaderNav1 ul li a:hover{background:#007bb5;border-color:#4d6184 #4d6184 #007bb5;border-width:1px;border-style:solid}
+#Header #HeaderNav2{clear:both;background:#5a5a5a;height:30px;padding-left: 10px;}
+#Header #HeaderNav2 ul{height:30px;float: right;padding-right: 18px;}
+#Header #HeaderNav2 ul li a{display:block;text-transform:uppercase;padding:0 10px;line-height:30px;}
+#Header #HeaderNav2 ul li a >.icon-header{margin-right:3px}
+#CentralSpaceContainer{clear:both;margin:0;}
+#CentralSpaceContainer #CentralSpace td + td{border-left:none}
+#CentralSpaceContainer #CentralSpace iframe#left{float:left;display:inline;clear:none;padding-left:0;padding-right:0;text-align:inherit;width:25%;margin-left:0%;margin-right:0%;overflow-x:scroll}
+#CentralSpaceContainer #CentralSpace iframe#right{float:left;display:inline;clear:none;padding-left:0;padding-right:0;text-align:inherit;width:75%;margin-left:0%;margin-right:0%}
+#CentralSpaceContainer #CentralSpace sup{color:#b44326}
+#CentralSpaceContainer #CentralSpace #requiredfiled{color:#b44326;margin-left:20px}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordHeader{font-size:16px;margin:25px 0 0;padding:0 10px;color:#fff;border-radius:3px 3px 0 0;letter-spacing:1px;}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordHeader h1{margin-bottom:0;font-size:1.5em;color:#fff;}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordHeader h1 .DeletedResourceTitle{background:#f00;color:#fff;font-size:16px;border-radius:3px;padding:5px}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordHeader .backtoresults{float:right;margin-top:10px;}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordHeader .backtoresults a{color:#fff;font-size:12px}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource{padding:5px;padding-top:15px}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource .Picture{float:left;margin:0 10px 10px 0}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft{float:left;width:480px;margin-right:20px;}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload{float:left;width: 480px;margin-top:5px}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .DownloadDBlend td{color:#fff}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace{}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace #resourcetools{color:#fff;font-size:20px;font-weight:400;margin-bottom:0}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadDBlend td{padding:0 10px;max-width:100%;border-collapse:collapse;border-spacing:0;width:100%;margin-bottom:18px;border:1px solid #292424;border-collapse:separate;*border-collapse:collapsed;border-radius:0px;th + th, td + td, th + td, td + th { border-left: 1px solid #ddd; }}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadDBlend td th,#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadDBlend td td{padding:8px;line-height:18px;text-align:left;vertical-align:top;border-top:1px solid #ddd}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadDBlend td th{font-weight:bold}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadDBlend td thead th{vertical-align:bottom}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadDBlend td thead:first-child tr th,#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadDBlend td thead:first-child tr td{border-top:0}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadDBlend td tbody + tbody{border-top:2px solid #ddd}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadDBlend td th,#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadDBlend td td{padding:4px 5px}
+th + th, td + td, th + td, td + th { border-left: 1px solid #ddd; }
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadDBlend td thead:first-child tr:first-child th,#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadDBlend td tbody:first-child tr:first-child th,#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadDBlend td tbody:first-child tr:first-child td{border-top:0}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadDBlend td thead:first-child tr:first-child th:first-child,#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadDBlend td tbody:first-child tr:first-child td:first-child{border-radius:4px 0 0 0;}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadDBlend td thead:first-child tr:first-child th:last-child,#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadDBlend td tbody:first-child tr:first-child td:last-child{border-radius:0 4px 0 0;}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadDBlend td thead:last-child tr:last-child th:first-child,#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadDBlend td tbody:last-child tr:last-child td:first-child{border-radius:0 0 0 4px;}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadDBlend td thead:last-child tr:last-child th:last-child,#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadDBlend td tbody:last-child tr:last-child td:last-child{border-radius:0 0 4px 0;}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadDBlend td tbody tr:nth-child(odd) td,#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadDBlend td tbody tr:nth-child(odd) th{background-color:#f9f9f9}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadDBlend td tbody tr:hover td,#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadDBlend td tbody tr:hover th{background-color:#f5f5f5}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadDBlend h2{font-size:12px;margin:0;color:#fff;padding:0 8px}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadButton{border-radius:3px;font-size:12px;line-height:1.5;padding:5px 10px;background:#ce3f38;cursor:pointer;text-align:center;border:1px solid #ce3f38;color:#fff;}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace .DownloadButton a{color:#fff}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace ul{margin:0;padding:0;padding-top:10px}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace ul li{list-style:none;float:left;margin-bottom:5px;font-size:11px;width:50%;}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewleft #RecordDownload .RecordDownloadSpace ul li a{color:#fff}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewright{margin-left:495px;border:1px solid #292424;}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewright .Title{padding:10px 30px 5px;font-size:16px;letter-spacing:1px}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewright .TabbedPanel{width:100%;padding:0 30px 5px;}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewright .TabbedPanel .rsmetadata{display:table;width:100%;}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewright .TabbedPanel .rsmetadata .itemNarrow{display:inline-table;width:100%;color:#fff;}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewright .TabbedPanel .rsmetadata .itemNarrow h3{font-size:11px;width:30%;float:left;line-height:15px;margin:0;padding:0;text-align:left}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewright .TabbedPanel .rsmetadata .itemNarrow p{font-size:11px;width:70%;float:left;line-height:15px;margin-bottom:0;background-color: #000;color: #fff;padding-left:5px}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewright .TabbedPanel .rsmetadata .itemNarrow a{color:#fff}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewright .TabbedPanel .rsmetadata .item h3,#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewright .TabbedPanel .rsmetadata .RecordStory h3{font-size:11px;width:30%;float:left;line-height:15px;margin:0;padding:0;text-align:left}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewright .TabbedPanel .rsmetadata .item p,#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewright .TabbedPanel .rsmetadata .RecordStory p{font-size:11px;width:70%;float:left;line-height:15px;margin-bottom:8px;color: #fff;background-color: #000;padding-left:5px;}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewright .TabbedPanel .rsmetadata .item p + p,#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewright .TabbedPanel .rsmetadata .RecordStory p + p{margin-left:50%}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewright .TabbedPanel .rsmetadata .item a,#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResource #viewright .TabbedPanel .rsmetadata .RecordStory a{color:#fff}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResouce{padding:20px;color:#fff;}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResouce a{color:#fff}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResouce .Title{clear:both;border-bottom:1px solid #b9c4d5;padding:10px 0px;font-size:20px;font-weight:400;margin-bottom:20px}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResouce #findsimilar .SearchSimilar{float:left;width:10%}
+#CentralSpaceContainer #CentralSpace .RecordBox .RecordPanel .RecordResouce #findsimilar input[name="search"]{border-radius:3px;font-size:12px;line-height:1.5;padding:5px 10px;background:#007bb5;cursor:pointer;text-align:center;border:1px solid #007bb5;color:#fff}
+#CentralSpaceContainer #CentralSpace .BasicsBox{margin:0 25px 25px;}
+#CentralSpaceContainer #CentralSpace .BasicsBox .FormError{border-radius:5px;padding:10px;border:1px solid #e26153;-webkit-box-shadow:1px 1px 3px rgba(0,0,0,0.05);position:relative;color:#fff;font-weight:bold;text-shadow:1px 1px 1px rgba(0,0,0,0.2);clear:both}
+#CentralSpaceContainer #CentralSpace .BasicsBox h1{font-size:24px;margin-top:10px;margin-bottom:10px;border-bottom:1px solid #7e7e7e;padding:0;}
+#CentralSpaceContainer #CentralSpace .BasicsBox h1 >.icon-heading{margin-right:10px}
+#CentralSpaceContainer #CentralSpace .BasicsBox h2{font-size:20px;font-weight:400}
+#CentralSpaceContainer #CentralSpace .BasicsBox input[name="submit"]{border-radius:3px;font-size:12px;line-height:1.5;padding:5px 10px;background:#007bb5;cursor:pointer;text-align:center;border:1px solid #007bb5;color:#fff;margin-bottom:20px}
+#CentralSpaceContainer #CentralSpace .BasicsBox .defaultbutton{display:none}
+#CentralSpaceContainer #CentralSpace .BasicsBox .tight{border-left:5px solid #f8ca5c;color:#FFFFFF;background:#5a5a5a;margin:0 0 20px;padding:10px 20px}
+#CentralSpaceContainer #CentralSpace .BasicsBox .VerticalNav ul{list-style:none;padding:0}
+#CentralSpaceContainer #CentralSpace .BasicsBox .VerticalNav ul li:before{content:'\e819';margin-right:10px;font-size:16px}
+#CentralSpaceContainer #CentralSpace .BasicsBox .InfoTable{max-width:100%;border-collapse:collapse;border-spacing:0;width:100%;margin-bottom:18px;border:1px solid #5a5a5a;border-collapse:separate;*border-collapse:collapsed;border-radius:5px;th + th, td + td, th + td, td + th { border-left: 1px solid #ddd; }}
+#CentralSpaceContainer #CentralSpace .BasicsBox .InfoTable th,#CentralSpaceContainer #CentralSpace .BasicsBox .InfoTable td{padding:8px;line-height:18px;text-align:left;vertical-align:top;border-top:1px solid #ddd}
+#CentralSpaceContainer #CentralSpace .BasicsBox .InfoTable th{font-weight:bold}
+#CentralSpaceContainer #CentralSpace .BasicsBox .InfoTable thead th{vertical-align:bottom}
+#CentralSpaceContainer #CentralSpace .BasicsBox .InfoTable thead:first-child tr th,#CentralSpaceContainer #CentralSpace .BasicsBox .InfoTable thead:first-child tr td{border-top:0}
+#CentralSpaceContainer #CentralSpace .BasicsBox .InfoTable tbody + tbody{border-top:2px solid #ddd}
+th + th, td + td, th + td, td + th { border-left: 1px solid #ddd; }
+#CentralSpaceContainer #CentralSpace .BasicsBox .InfoTable thead:first-child tr:first-child th,#CentralSpaceContainer #CentralSpace .BasicsBox .InfoTable tbody:first-child tr:first-child th,#CentralSpaceContainer #CentralSpace .BasicsBox .InfoTable tbody:first-child tr:first-child td{border-top:0;background-color: #5a5a5a}
+#CentralSpaceContainer #CentralSpace .BasicsBox .InfoTable thead:first-child tr:first-child th:first-child,#CentralSpaceContainer #CentralSpace .BasicsBox .InfoTable tbody:first-child tr:first-child td:first-child{border-radius:4px 0 0 0;background-color: #5a5a5a}
+#CentralSpaceContainer #CentralSpace .BasicsBox .InfoTable thead:first-child tr:first-child th:last-child,#CentralSpaceContainer #CentralSpace .BasicsBox .InfoTable tbody:first-child tr:first-child td:last-child{border-radius:0 4px 0 0;}
+#CentralSpaceContainer #CentralSpace .BasicsBox .InfoTable thead:last-child tr:last-child th:first-child,#CentralSpaceContainer #CentralSpace .BasicsBox .InfoTable tbody:last-child tr:last-child td:first-child{border-radius:0 0 0 4px;}
+#CentralSpaceContainer #CentralSpace .BasicsBox .InfoTable thead:last-child tr:last-child th:last-child,#CentralSpaceContainer #CentralSpace .BasicsBox .InfoTable tbody:last-child tr:last-child td:last-child{border-radius:0 0 4px 0;}
+#CentralSpaceContainer #CentralSpace .BasicsBox .InfoTable tbody tr:nth-child(odd) td,#CentralSpaceContainer #CentralSpace .BasicsBox .InfoTable tbody tr:nth-child(odd) th{background-color:#141414;color:#FFFFFF;}
+#CentralSpaceContainer #CentralSpace .BasicsBox .InfoTable tbody tr:nth-child(odd) td a,#CentralSpaceContainer #CentralSpace .BasicsBox .InfoTable tbody tr:nth-child(odd) th a{color:#000}
+#CentralSpaceContainer #CentralSpace .BasicsBox .InfoTable tbody tr:hover td,#CentralSpaceContainer #CentralSpace .BasicsBox .InfoTable tbody tr:hover th{background-color:#5a5a5a;color:#b9b9b9}
+#CentralSpaceContainer #CentralSpace .BasicsBox #myform .QuestionSubmit input[name="send"]{border-radius:3px;font-size:12px;line-height:1.5;padding:5px 10px;background:#007bb5;cursor:pointer;text-align:center;border:1px solid #007bb5;color:#fff;margin-bottom:20px}
+#CentralSpaceContainer #CentralSpace .BasicsBox #SubmitBlock input[name="download"]{border-radius:3px;font-size:12px;line-height:1.5;padding:5px 10px;background:#ce3f38;cursor:pointer;text-align:center;border:1px solid #ce3f38;color:#fff}
+#CentralSpaceContainer #CentralSpace .BasicsBox .manage_plugins{border:1px solid #007bb5;margin-bottom:20px;border-radius:5px 5px 0 0;}
+#CentralSpaceContainer #CentralSpace .BasicsBox .manage_plugins h2{font-size:16px;margin:0;padding:0 10px;background:#007bb5;color:#fff;letter-spacing:1px}
+#CentralSpaceContainer #CentralSpace .BasicsBox .manage_plugins .Listview{max-width:100%;border-collapse:collapse;border-spacing:0;width:100%;margin-bottom:18px;margin-bottom:0;padding:20px;background:#fff;border:none;}
+#CentralSpaceContainer #CentralSpace .BasicsBox .manage_plugins .Listview th,#CentralSpaceContainer #CentralSpace .BasicsBox .manage_plugins .Listview td{padding:8px;line-height:18px;text-align:left;vertical-align:top;border-top:1px solid #ddd}
+#CentralSpaceContainer #CentralSpace .BasicsBox .manage_plugins .Listview th{font-weight:bold}
+#CentralSpaceContainer #CentralSpace .BasicsBox .manage_plugins .Listview thead th{vertical-align:bottom}
+#CentralSpaceContainer #CentralSpace .BasicsBox .manage_plugins .Listview thead:first-child tr th,#CentralSpaceContainer #CentralSpace .BasicsBox .manage_plugins .Listview thead:first-child tr td{border-top:0}
+#CentralSpaceContainer #CentralSpace .BasicsBox .manage_plugins .Listview tbody + tbody{border-top:2px solid #ddd}
+#CentralSpaceContainer #CentralSpace .BasicsBox .manage_plugins .Listview tbody tr:nth-child(odd) td,#CentralSpaceContainer #CentralSpace .BasicsBox .manage_plugins .Listview tbody tr:nth-child(odd) th{background-color:#f9f9f9}
+#CentralSpaceContainer #CentralSpace .BasicsBox .manage_plugins .Listview tbody tr:hover td,#CentralSpaceContainer #CentralSpace .BasicsBox .manage_plugins .Listview tbody tr:hover th{background-color:#f5f5f5}
+#CentralSpaceContainer #CentralSpace .BasicsBox .manage_plugins .Listview .ListviewStyle{width:100%;}
+#CentralSpaceContainer #CentralSpace .BasicsBox .manage_plugins .Listview .ListviewStyle .ListviewTitleStyle td{background:#5a5a5a;color:#000;font-weight:bold;border-top:#d9edf7}
+#CentralSpaceContainer #CentralSpace .BasicsBox #upload_plugin form{padding:20px;background:#fff;}
+#CentralSpaceContainer #CentralSpace .BasicsBox #upload_plugin form input[name="submit"]{border-radius:3px;font-size:12px;line-height:1.5;padding:5px 10px;background:#007bb5;cursor:pointer;text-align:center;border:1px solid #007bb5;color:#fff}
+#CentralSpaceContainer #CentralSpace .BasicsBox #upload_plugin .upload_plugin_success{border-radius:5px;padding:10px;border:1px solid #5fd790;-webkit-box-shadow:1px 1px 3px rgba(0,0,0,0.05);position:relative;color:#fff;font-weight:bold;text-shadow:1px 1px 1px rgba(0,0,0,0.2);}
+#CentralSpaceContainer #CentralSpace .BasicsBox #installed_plugins p{padding:5px 20px}
+#CentralSpaceContainer #CentralSpace .BasicsBox .Question{clear:both;padding:0 20px 15px;margin-top:20px;border-bottom:0px solid #ddd;}
+#CentralSpaceContainer #CentralSpace .BasicsBox .Question .FormError{margin-top:10px}
+#CentralSpaceContainer #CentralSpace .BasicsBox .Question td{border:none}
+#CentralSpaceContainer #CentralSpace .BasicsBox .Question >label{float:left;width:25%;margin-right:10px}
+#CentralSpaceContainer #CentralSpace .BasicsBox .Question .medwidth{width:264px;font-size:12px}
+#CentralSpaceContainer #CentralSpace .BasicsBox .Question .medcomplementwidth{margin:0 0 0 2px;border-radius:3px;font-size:12px;line-height:1.5;padding:5px 10px;background:#007bb5;cursor:pointer;text-align:center;border:1px solid #007bb5;color:#fff}
+#CentralSpaceContainer #CentralSpace .BasicsBox .Question #users{margin-top:10px}
+#CentralSpaceContainer #CentralSpace .BasicsBox .Question .stdwidth{width:402px}
+#CentralSpaceContainer #CentralSpace .BasicsBox .Question #autocomplete{width:402px;margin-right:15px}
+#CentralSpaceContainer #CentralSpace .BasicsBox .QuestionSubmit{margin:20px 0 0}
+#CentralSpaceContainer #CentralSpace .BasicsBox .Question .tickset .Inline{display:inline;}
+#CentralSpaceContainer #CentralSpace .BasicsBox .Question .tickset .Inline input[name="Submit"]{border-radius:3px;font-size:12px;line-height:1;padding:5px 10px;background:#5a5a5a;cursor:pointer;text-align:center;border:1px solid #5a5a5a;color:#fff;width:80px}
+#CentralSpaceContainer #CentralSpace .BasicsBox .Question .tickset .Inline input[name="Clear"]{border-radius:3px;font-size:12px;line-height:1;padding:5px 10px;background:#5a5a5a;cursor:pointer;text-align:center;border:1px solid #5a5a5a;color:#fff;width:80px}
+#CentralSpaceContainer #CentralSpace .BasicsBox .Question .tickset .Inline input[value="Clear all"]{border-radius:3px;font-size:12px;line-height:1.5;padding:5px 10px;background:#ce3f38;cursor:pointer;text-align:center;border:1px solid #ce3f38;color:#fff}
+#CentralSpaceContainer #CentralSpace .BasicsBox .Question .tickset .Inline input[name="createsubmit"]{border-radius:3px;font-size:12px;line-height:1.5;padding:5px 10px;background:#47a447;cursor:pointer;text-align:center;border:1px solid #47a447;color:#fff}
+#CentralSpaceContainer #CentralSpace .BasicsBox .BasicsBox{margin-bottom:20px}
+#CentralSpaceContainer #CentralSpace .BasicsBox .TopInpageNav{margin-bottom:20px;}
+#CentralSpaceContainer #CentralSpace .BasicsBox .TopInpageNav .InpageNavLeftBlock{display:inline;}
+#CentralSpaceContainer #CentralSpace .BasicsBox .TopInpageNav .InpageNavLeftBlock .Selected{font-weight:bold}
+#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview{margin-top:10px;max-width:100%;border-collapse:collapse;border-spacing:0;width:100%;margin-bottom:18px;border:1px solid #5a5a5a;border-collapse:separate;*border-collapse:collapsed;th + th, td + td, th + td, td + th { border-left: 1px solid #ddd; }}
+#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview th,#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview td{padding:8px;line-height:18px;text-align:left;vertical-align:top;border-top:1px solid #ddd}
+#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview th{font-weight:bold}
+#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview thead th{vertical-align:bottom}
+#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview thead:first-child tr th,#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview thead:first-child tr td{border-top:0}
+#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview tbody + tbody{border-top:2px solid #ddd}
+#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview th,#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview td{padding:4px 5px}
+th + th, td + td, th + td, td + th { border-left: 1px solid #ddd; }
+#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview thead:first-child tr:first-child th,#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview tbody:first-child tr:first-child th,#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview tbody:first-child tr:first-child td{border-top:0}
+#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview thead:first-child tr:first-child th:first-child,#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview tbody:first-child tr:first-child td:first-child{border-radius:4px 0 0 0;}
+#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview thead:first-child tr:first-child th:last-child,#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview tbody:first-child tr:first-child td:last-child{border-radius:0 4px 0 0;}
+#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview thead:last-child tr:last-child th:first-child,#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview tbody:last-child tr:last-child td:first-child{border-radius:0 0 0 4px;}
+#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview thead:last-child tr:last-child th:last-child,#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview tbody:last-child tr:last-child td:last-child{border-radius:0 0 4px 0;}
+#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview tbody tr:nth-child(odd) td,#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview tbody tr:nth-child(odd) th{background-color:#141414;color:#FFFFFF;}
+#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview tbody tr:nth-child(odd) td a,#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview tbody tr:nth-child(odd) th a{color:#FFFFFF}
+#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview tbody tr:hover td,#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview tbody tr:hover th{background-color:#5a5a5a;color:#FFFFFF}
+#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview .ListviewStyle{font-size:11px;width:100%;}
+#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview .ListviewStyle .ListviewTitleStyle{color:#fff;}
+#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview .ListviewStyle .ListviewTitleStyle td{background:#5a5a5a}
+#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview .ListviewStyle .ListviewTitleStyle a{color:#fff;font-size:14px}
+#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview .ListviewStyle .ListviewTitleStyle .Selected{font-weight:bold}
+#CentralSpaceContainer #CentralSpace .BasicsBox #collectionform .Listview .ListviewStyle .ListviewTitleStyle .Selected:after{content:'\e81c'}
+#CentralSpaceContainer #CentralSpace .BasicsBox .QuestionSubmit input[name="resetform"]{border-radius:3px;font-size:12px;line-height:1.5;padding:5px 10px;background:#ce3f38;cursor:pointer;text-align:center;border:1px solid #ce3f38;color:#fff}
+#CentralSpaceContainer #CentralSpace .BasicsBox .QuestionSubmit input[name="save"]{border-radius:3px;font-size:12px;line-height:1.5;padding:5px 10px;background:#007bb5;cursor:pointer;text-align:center;border:1px solid #007bb5;color:#fff;}
+#CentralSpaceContainer #CentralSpace .BasicsBox #question_file .Fixed{float:left}
+#CentralSpaceContainer #CentralSpace .BasicsBox #question_copyfrom{margin-bottom:0;border-bottom:none;padding:0 20px;}
+#CentralSpaceContainer #CentralSpace .BasicsBox #question_copyfrom input[name="copyfromsubmit"]{border-radius:3px;font-size:12px;line-height:1.5;padding:5px 10px;background:#47a447;cursor:pointer;text-align:center;border:1px solid #47a447;color:#fff}
+#CentralSpaceContainer #CentralSpace .BasicsBox #pluploader_container{padding:0;}
+#CentralSpaceContainer #CentralSpace .BasicsBox #pluploader_container .plupload .plupload_content .plupload_filelist_footer{height:38px}
+#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox{margin-top:15px;border:1px solid #5a5a5a;background:#141414;}
+#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .RecordHeader{padding:10px 15px;background:#141414;margin:0;border-radius:0;}
+#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .RecordHeader h1{border-bottom:none;padding:0;color:#fff;font-size:20px;font-weight:400;margin:0}
+#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .RecordHeader a{color:#fff;font-size:12px}
+#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview{max-width:100%;border-collapse:collapse;border-spacing:0;width:100%;margin-bottom:18px;border:1px solid #428bca;border-collapse:separate;*border-collapse:collapsed;border-radius:5px;th + th, td + td, th + td, td + th { border-left: 1px solid #ddd; }margin-bottom:0;padding:20px;background:#141414;border:none;border-radius:0;}
+#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview th,#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview td{padding:8px;line-height:18px;text-align:left;vertical-align:top;border-top:1px solid #5a5a5a}
+#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview th{font-weight:bold}
+#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview thead th{vertical-align:bottom}
+#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview thead:first-child tr th,#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview thead:first-child tr td{border-top:0}
+#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview tbody + tbody{border-top:2px solid #ddd}
+#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview th,#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview td{padding:4px 5px}
+th + th, td + td, th + td, td + th { border-left: 1px solid #ddd; }
+#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview thead:first-child tr:first-child th,#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview tbody:first-child tr:first-child th,#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview tbody:first-child tr:first-child td{border-top:0}
+#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview thead:first-child tr:first-child th:first-child,#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview tbody:first-child tr:first-child td:first-child{border-radius:0 0 0 0;}
+#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview thead:first-child tr:first-child th:last-child,#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview tbody:first-child tr:first-child td:last-child{border-radius:0 0 0 0;}
+#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview thead:last-child tr:last-child th:first-child,#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview tbody:last-child tr:last-child td:first-child{border-radius:0 0 0 0;}
+#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview thead:last-child tr:last-child th:last-child,#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview tbody:last-child tr:last-child td:last-child{border-radius:0 0 0 0;}
+#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview tbody tr:nth-child(odd) td,#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview tbody tr:nth-child(odd) th{background-color:#141414}
+#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview tbody tr:hover td,#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview tbody tr:hover th{background-color:#5a5a5a}
+#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview .ListviewStyle{font-size:11px;width:100%;}
+#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview .ListviewStyle .ListviewBoxedTitleStyle{font-size:14px;}
+#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox .RecordPanel .Listview .ListviewStyle .ListviewBoxedTitleStyle td{background:#5a5a5a;color:#FFF;font-weight:bold;border-top:#d9edf7}
+#CentralSpaceContainer #CentralSpace .BasicsBox #themeform .RecordBox:last-of-type{margin-bottom:20px}
+#CentralSpaceContainer #CentralSpace .BasicsBox #advancedform .Question{padding:0 0px 0px;margin-top:15px;}
+#CentralSpaceContainer #CentralSpace .BasicsBox #advancedform .Question td[valign="middle"]{border:none;padding-right:8px}
+#CentralSpaceContainer #CentralSpace .BasicsBox #advancedform .Question label{width:25%;float:left}
+#CentralSpaceContainer #CentralSpace .BasicsBox #advancedform .Question .stdwidth{width:402px}
+#CentralSpaceContainer #CentralSpace .BasicsBox #advancedform .AdvancedSectionHead{border-bottom:none;font-size:16px;padding:0 10px;background:#5a5a5a;color:#fff}
+#CentralSpaceContainer #CentralSpace .BasicsBox #advancedform .expanded:before{content:'\e81a';margin-right:10px;font-size:16px;position:relative}
+#CentralSpaceContainer #CentralSpace .BasicsBox #advancedform .collapsed:before{content:'\e81b';margin-right:10px;font-size:16px;position:relative}
+#CentralSpaceContainer #CentralSpace .BasicsBox #advancedform .AdvancedSection{padding:0 20px 20px;}
+#CentralSpaceContainer #CentralSpace .BasicsBox #advancedform .AdvancedSection .Question{padding-bottom:2px;padding-left:0;border-bottom:0px solid #ddd;padding-top:5px;margin-top:0px}
+#CentralSpaceContainer #CentralSpace .BasicsBox #advancedform .AdvancedSection .Question >label{width:25%;float:left;margin-right:0}
+#CentralSpaceContainer #CentralSpace .BasicsBox #advancedform .AdvancedSection .Question .Fixed{width:75%;float:left;}
+#CentralSpaceContainer #CentralSpace .BasicsBox #advancedform .AdvancedSection .Question .Fixed .CategoryBox{display:none}
+#CentralSpaceContainer #CentralSpace .BasicsBox #advancedform .AdvancedSection .Question .Fixed .CategoryTree1{font-size:11px;padding-top:10px;}
+#CentralSpaceContainer #CentralSpace .BasicsBox #advancedform .AdvancedSection .Question .Fixed .CategoryTree1 .treetext{display:block;margin-left:5px;}
+#CentralSpaceContainer #CentralSpace .BasicsBox #advancedform .AdvancedSection .Question .Fixed .CategoryTree1 .treetext img{margin-right:5px}
+#CentralSpaceContainer #CentralSpace .BasicsBox #advancedform .AdvancedSection .Question .Fixed .CategoryTree1 .treetext input{margin-right:5px}
+#CentralSpaceContainer #CentralSpace .BasicsBox #advancedform .AdvancedSection .Question .Fixed .CategoryTree1 .treetext >label{width:auto;float:none}
+#CentralSpaceContainer #CentralSpace .BasicsBox #advancedform .AdvancedSection .Question .Fixed .CategoryTree1 .treetext .treetext{padding:5px 0 0}
+#CentralSpaceContainer #CentralSpace .BasicsBox #advancedform .AdvancedSection .Question .SearchWidth{width:111px}
+#CentralSpaceContainer #CentralSpace .BasicsBox #advancedform .AdvancedSection .Question:last-of-type{border-bottom:none;padding-bottom:0}
+#CentralSpaceContainer #CentralSpace .BasicsBox #advancedform .QuestionSubmit{margin:20px 0;}
+#CentralSpaceContainer #CentralSpace .BasicsBox #advancedform .QuestionSubmit input[name="dosearch"]{border-radius:3px;font-size:12px;line-height:1.5;padding:5px 10px;background:#007bb5;cursor:pointer;text-align:center;border:1px solid #007bb5;color:#fff}
+#CentralSpaceContainer #CentralSpace .BasicsBox #EmailMe #EmailSetup .Question .Fixed{margin-left:26%;}
+#CentralSpaceContainer #CentralSpace .BasicsBox #EmailMe #EmailSetup .Question .Fixed input[name="email_days"]{margin-bottom:15px}
+#CentralSpaceContainer #CentralSpace .BasicsBox #EmailMe #EmailSetup .Question .Fixed input[name="send_all_users"]{margin-left:10px}
+#CentralSpaceContainer #CentralSpace .BasicsBox #EmailMe #EmailSetup .Question .Fixed input[name="createemail"]{border-radius:3px;font-size:12px;line-height:1.5;padding:5px 10px;background:#90c657;cursor:pointer;text-align:center;border:1px solid #90c657;color:#fff}
+#CentralSpaceContainer #CentralSpace #rscontent{table-layout:fixed}
+#CentralSpaceContainer #CentralSpace #themebar{width: 20%;font-size:11px;background:#141414;border-right:1px solid #7e7e7e;padding-left: 10px;}
+#CentralSpaceContainer #CentralSpace #themebar #SearchBarContainer{padding:0 10px;color:#FFFFFF;overflow-x:auto;overflow-y:hidden;}
+#CentralSpaceContainer #CentralSpace #themebar #SearchBarContainer #SearchBox{display:block;}
+#CentralSpaceContainer #CentralSpace #themebar #SearchBarContainer #SearchBox #SearchBoxPanel #searchspace h2{font-size:16px;margin-bottom:0;color:#fff;text-transform:uppercase}
+#CentralSpaceContainer #CentralSpace #themebar #SearchBarContainer #SearchBox #SearchBoxPanel #searchspace #form1 .ui-widget{margin-bottom:15px;}
+#CentralSpaceContainer #CentralSpace #themebar #SearchBarContainer #SearchBox #SearchBoxPanel #searchspace #form1 .ui-widget #ssearchbox{width:87%;height:20px}
+#CentralSpaceContainer #CentralSpace #themebar #SearchBarContainer #SearchBox #SearchBoxPanel #searchspace #form1 #searchbarrt{float:left;margin-bottom:20px;}
+#CentralSpaceContainer #CentralSpace #themebar #SearchBarContainer #SearchBox #SearchBoxPanel #searchspace #form1 #searchbarrt .tick{width:50%;float:left}
+#CentralSpaceContainer #CentralSpace #themebar #SearchBarContainer #SearchBox #SearchBoxPanel #searchspace #form1 .SearchItem{margin-bottom:10px;font-size:11px;font-weight:bold;color:#FFFFFF;clear:left;}
+#CentralSpaceContainer #CentralSpace #themebar #SearchBarContainer #SearchBox #SearchBoxPanel #searchspace #form1 .SearchItem input[name="Clear"]{border-radius:3px;font-size:12px;line-height:1;padding:5px 5px;background:#5a5a5a;;cursor:pointer;text-align:center;border:1px solid #5a5a5a;;color:#fff;margin-right:10px;width: 80px;}
+#CentralSpaceContainer #CentralSpace #themebar #SearchBarContainer #SearchBox #SearchBoxPanel #searchspace #form1 .SearchItem input[name="Submit"]{border-radius:3px;font-size:12px;line-height:1;padding:5px 5px;background:#5a5a5a;;cursor:pointer;text-align:center;border:1px solid #5a5a5a;;color:#fff;width: 80px;}
+#CentralSpaceContainer #CentralSpace #themebar #SearchBarContainer #SearchBox #SearchBoxPanel #searchspace #form1 .SearchItem .MiniCategoryBox{display:none}
+#CentralSpaceContainer #CentralSpace #themebar #SearchBarContainer #SearchBox #SearchBoxPanel #searchspace #form1 .SearchItem .RecordPanel1{font-size:11px;font-weight:normal;margin-top:5px;}
+#CentralSpaceContainer #CentralSpace #themebar #SearchBarContainer #SearchBox #SearchBoxPanel #searchspace #form1 .SearchItem .RecordPanel1 .Fixed .CategoryTree1 .treetext{display:block;margin-left:5px;}
+#CentralSpaceContainer #CentralSpace #themebar #SearchBarContainer #SearchBox #SearchBoxPanel #searchspace #form1 .SearchItem .RecordPanel1 .Fixed .CategoryTree1 .treetext img{margin-right:5px}
+#CentralSpaceContainer #CentralSpace #themebar #SearchBarContainer #SearchBox #SearchBoxPanel #searchspace #form1 .SearchItem .RecordPanel1 .Fixed .CategoryTree1 .treetext input{margin-right:5px}
+#CentralSpaceContainer #CentralSpace #themebar #SearchBarContainer #SearchBox #SearchBoxPanel #searchspace #form1 .SearchItem .RecordPanel1 .Fixed .CategoryTree1 .treetext .treetext{padding:5px 0 0}
+#CentralSpaceContainer #CentralSpace #themebar #SearchBarContainer #SearchBox #SearchBoxPanel #searchspace #form1 .SearchItem .SearchWidth{width:100%}
+#CentralSpaceContainer #CentralSpace #themebar #SearchBarContainer #SearchBox #SearchBoxPanel #searchspace #form1 .SearchItem .SearchItem{margin-top:10px;}
+#CentralSpaceContainer #CentralSpace #themebar #SearchBarContainer #SearchBox #SearchBoxPanel #searchspace #form1 .SearchItem #basicyear,#CentralSpaceContainer #CentralSpace #themebar #SearchBarContainer #SearchBox #SearchBoxPanel #searchspace #form1 .SearchItem #basicmonth{width:49%}
+#CentralSpaceContainer #CentralSpace #themebar #SearchBarContainer #SearchBox #SearchBoxPanel #searchspace #form1 #basicdate{padding-top:0;color:#FFFFFF;}
+#CentralSpaceContainer #CentralSpace #themebar #SearchBarContainer #SearchBox #SearchBoxPanel #searchspace #form1 #basicdate #basicyear,#CentralSpaceContainer #CentralSpace #themebar #SearchBarContainer #SearchBox #SearchBoxPanel #searchspace #form1 #basicdate #basicmonth,#CentralSpaceContainer #CentralSpace #themebar #SearchBarContainer #SearchBox #SearchBoxPanel #searchspace #form1 #basicdate #basicday{width:100%;margin-bottom:5px}
+#CentralSpaceContainer #CentralSpace #CollapsibleSections{color:#b9b9b9;}
+#CentralSpaceContainer #CentralSpace #CollapsibleSections .CollapsibleSectionHead,#CentralSpaceContainer #CentralSpace #CollapsibleSections #StatusRelationshipsSectionHead{font-size:15px;margin:5px 0 0;padding:0 10px;background:#5a5a5a;color:#fff;}
+#CentralSpaceContainer #CentralSpace #CollapsibleSections .expanded:before{content:'\e81a';margin-right:10px;font-size:16px;position:relative}
+#CentralSpaceContainer #CentralSpace #CollapsibleSections .collapsed:before{content:'\e81b';margin-right:10px;font-size:16px;position:relative}
+#CentralSpaceContainer #CentralSpace #CollapsibleSections .CollapsibleSection,#CentralSpaceContainer #CentralSpace #CollapsibleSections #StatusRelationshipsSection{padding:5px 20px 20px;background:#141414;padding-bottom:0px}
+#CentralSpaceContainer #CentralSpace #CollapsibleSections .CollapsibleSection .Question,#CentralSpaceContainer #CentralSpace #CollapsibleSections #StatusRelationshipsSection .Question{}
+#CentralSpaceContainer #CentralSpace #CollapsibleSections .CollapsibleSection .Question >label,#CentralSpaceContainer #CentralSpace #CollapsibleSections #StatusRelationshipsSection .Question >label{width:25%;float:left}
+#CentralSpaceContainer #CentralSpace #CollapsibleSections .CollapsibleSection .Question .stdwidth,#CentralSpaceContainer #CentralSpace #CollapsibleSections #StatusRelationshipsSection .Question .stdwidth{width:70%}
+#CentralSpaceContainer #CentralSpace #CollapsibleSections .CollapsibleSection .Question:last-of-type,#CentralSpaceContainer #CentralSpace #CollapsibleSections #StatusRelationshipsSection .Question:last-of-type{border-bottom:none;padding-bottom:0}
+#CentralSpaceContainer #CentralSpace #CollapsibleSections .CollapsibleSection .Question{margin-bottom:3px;}
+#CentralSpaceContainer #CentralSpace #CollapsibleSections .CollapsibleSection .Question .stdwidth{margin-bottom:5px}
+#CentralSpaceContainer #CentralSpace #CollapsibleSections .CollapsibleSection .Question .Fixed{width:75%;float:left;}
+#CentralSpaceContainer #CentralSpace #CollapsibleSections .CollapsibleSection .Question .Fixed .CategoryBox1{display:none}
+#CentralSpaceContainer #CentralSpace #CollapsibleSections .CollapsibleSection .Question .Fixed .CategoryTree1{font-size:11px;padding-top:10px;}
+#CentralSpaceContainer #CentralSpace #CollapsibleSections .CollapsibleSection .Question .Fixed .CategoryTree1 .treetext{display:block;margin-left:5px;}
+#CentralSpaceContainer #CentralSpace #CollapsibleSections .CollapsibleSection .Question .Fixed .CategoryTree1 .treetext img{margin-right:5px}
+#CentralSpaceContainer #CentralSpace #CollapsibleSections .CollapsibleSection .Question .Fixed .CategoryTree1 .treetext input{margin-right:2px}
+#CentralSpaceContainer #CentralSpace #CollapsibleSections .CollapsibleSection .Question .Fixed .CategoryTree1 .treetext .treetext{padding:5px 0 0}
+#CentralSpaceContainer #CentralSpace #CollapsibleSections #UploadOptionsSection #question_noexif{border-bottom:none}
+#CentralSpaceContainer #CentralSpace #CollapsibleSections #UploadOptionsSection #question_collectionadd{padding-top:20px;}
+#CentralSpaceContainer #CentralSpace #CollapsibleSections #UploadOptionsSection #question_collectionadd #collectioninfo{}
+#CentralSpaceContainer #CentralSpace #CollapsibleSections #UploadOptionsSection #question_collectionadd #collectioninfo #collectionname >label{width:25%;float:left}
+#CentralSpaceContainer #CentralSpace #CollapsibleSections .QuestionSubmit{margin-top:20px;}
+#CentralSpaceContainer #CentralSpace #CollapsibleSections .QuestionSubmit input[name="resetform"]{border-radius:3px;font-size:12px;line-height:1.5;padding:5px 10px;background:#ce3f38;cursor:pointer;text-align:center;border:1px solid #ce3f38;color:#fff}
+#CentralSpaceContainer #CentralSpace #CollapsibleSections .QuestionSubmit input[name="save"]{border-radius:3px;font-size:12px;line-height:1.5;padding:5px 10px;background:#007bb5;cursor:pointer;text-align:center;border:1px solid #007bb5;color:#fff}
+#CentralSpaceContainer #CentralSpace #mainform .BasicsBox h1{border-bottom: 1px solid #7e7e7e;}
+#CentralSpaceContainer #CentralSpace #mainform{padding:5px;width:100%;float:left;padding-top:15px}
+#CentralSpaceContainer #CentralSpace #mainform .BasicsBox{float:left;}
+#CentralSpaceContainer #CentralSpace #mainform .BasicsBox .Question{border-bottom:none}
+#CentralSpaceContainer #CentralSpace #mainform .BasicsBox #ResourceTypeSection{float:left}
+#CentralSpaceContainer #CentralSpace #mainform #CollapsibleSections{margin-left:490px;border:1px solid #292424;height:510px;overflow-y:auto}
+#CentralSpaceContainer #CentralSpace #mainform .BasicsBox .edit_multi_checkbox:first-child,#CentralSpaceContainer #CentralSpace #mainform .BasicsBox #editmultiple_status{margin-top:20px}
+#CentralSpaceContainer #CentralSpace #mainformmeta{font-size:11px;color:#000;}
+#CentralSpaceContainer #CentralSpace #mainformmeta input,#CentralSpaceContainer #CentralSpace #mainformmeta select,#CentralSpaceContainer #CentralSpace #mainformmeta textarea{padding:0}
+#CentralSpaceContainer #CentralSpace #mainformmeta #editresource{margin:0;font-size:16px;color:#000}
+#CentralSpaceContainer #CentralSpace #mainformmeta .BasicsBox{margin:0 20px;background:#fff;}
+#CentralSpaceContainer #CentralSpace #mainformmeta .BasicsBox .Question{padding:5px;margin-top:0;border-bottom:1px solid #edeadb;}
+#CentralSpaceContainer #CentralSpace #mainformmeta .BasicsBox .Question >label{width:50%;margin:0}
+#CentralSpaceContainer #CentralSpace #mainformmeta .BasicsBox .Question .stdwidth{width:50%}
+#CentralSpaceContainer #CentralSpace #mainformmeta .BasicsBox .Question select[name="field_12-d"]{width:40px}
+#CentralSpaceContainer #CentralSpace #mainformmeta .BasicsBox .Question input[name="copyfromsubmit"]{border-radius:3px;font-size:12px;line-height:1.5;padding:5px 10px;background:#47a447;cursor:pointer;text-align:center;border:1px solid #47a447;color:#fff;border-radius:0;padding:0 3px;font-size:10px}
+#CentralSpaceContainer #CentralSpace #mainformmeta #CollapsibleSections h1{margin:0}
+#CentralSpaceContainer #CentralSpace #mainformmeta #CollapsibleSections .CollapsibleSectionHead,#CentralSpaceContainer #CentralSpace #mainformmeta #CollapsibleSections #StatusRelationshipsSectionHead{background:#ece9d8;font-size:14px;border-radius:0;color:#000;padding:0;line-height:48px}
+#CentralSpaceContainer #CentralSpace #mainformmeta #CollapsibleSections #StatusRelationshipsSectionHead{padding-left:20px}
+#CentralSpaceContainer #CentralSpace #mainformmeta #CollapsibleSections .expanded:before,#CentralSpaceContainer #CentralSpace #mainformmeta #CollapsibleSections .collapsed:before{font-size:14px}
+#CentralSpaceContainer #CentralSpace #mainformmeta #CollapsibleSections .CollapsibleSection,#CentralSpaceContainer #CentralSpace #mainformmeta #CollapsibleSections #StatusRelationshipsSection{border:none;margin:0 20px;background:#fff;padding:0;}
+#CentralSpaceContainer #CentralSpace #mainformmeta #CollapsibleSections .CollapsibleSection .Question,#CentralSpaceContainer #CentralSpace #mainformmeta #CollapsibleSections #StatusRelationshipsSection .Question{padding:5px;margin:0;border-bottom:1px solid #edeadb;}
+#CentralSpaceContainer #CentralSpace #mainformmeta #CollapsibleSections .CollapsibleSection .Question >label,#CentralSpaceContainer #CentralSpace #mainformmeta #CollapsibleSections #StatusRelationshipsSection .Question >label{width:50%;margin:0}
+#CentralSpaceContainer #CentralSpace #mainformmeta #CollapsibleSections .CollapsibleSection .Question .Fixed,#CentralSpaceContainer #CentralSpace #mainformmeta #CollapsibleSections #StatusRelationshipsSection .Question .Fixed{width:50%;}
+#CentralSpaceContainer #CentralSpace #mainformmeta #CollapsibleSections .CollapsibleSection .Question .Fixed .CategoryTree1,#CentralSpaceContainer #CentralSpace #mainformmeta #CollapsibleSections #StatusRelationshipsSection .Question .Fixed .CategoryTree1{font-size:11px}
+#CentralSpaceContainer #CentralSpace #mainformmeta #CollapsibleSections .CollapsibleSection .Question .stdwidth,#CentralSpaceContainer #CentralSpace #mainformmeta #CollapsibleSections #StatusRelationshipsSection .Question .stdwidth{width:50%;margin:0}
+#CentralSpaceContainer #CentralSpace #mainformmeta #CollapsibleSections .QuestionSubmit{margin-left:20px}
+#CentralSpaceContainer #CentralSpace .TopInpageNav{font-size:11px;padding:0 0 10px;text-align:left;border-bottom:1px solid #7e7e7e;}
+#CentralSpaceContainer #CentralSpace .TopInpageNav .InpageNavLeftBlock{float:left;padding-right:10px;margin-left:15px;border-right:1px solid #7e7e7e;}
+#CentralSpaceContainer #CentralSpace .TopInpageNav .InpageNavLeftBlock .Selected{font-weight:bold}
+#CentralSpaceContainer #CentralSpace .HorizontalWhiteNav{float:right;margin-bottom:10px;font-size: 10px;}
+#CentralSpaceContainer #CentralSpace .Listview{clear:right;max-width:100%;border-collapse:collapse;border-spacing:0;width:100%;margin-bottom:18px;border:1px solid #5a5a5a;border-collapse:separate;*border-collapse:collapsed;border-radius:5px;th + th, td + td, th + td, td + th { border-left: 1px solid #ddd; }border:1px solid #5a5a5a;border-radius:0;}
+#CentralSpaceContainer #CentralSpace .Listview th,#CentralSpaceContainer #CentralSpace .Listview td{padding:8px;line-height:18px;text-align:left;vertical-align:top;border-top:1px solid #ddd}
+#CentralSpaceContainer #CentralSpace .Listview th{font-weight:bold}
+#CentralSpaceContainer #CentralSpace .Listview thead th{vertical-align:bottom}
+#CentralSpaceContainer #CentralSpace .Listview thead:first-child tr th,#CentralSpaceContainer #CentralSpace .Listview thead:first-child tr td{border-top:0}
+#CentralSpaceContainer #CentralSpace .Listview tbody + tbody{border-top:2px solid #ddd}
+th + th, td + td, th + td, td + th { border-left: 1px solid #ddd; }
+#CentralSpaceContainer #CentralSpace .Listview thead:first-child tr:first-child th,#CentralSpaceContainer #CentralSpace .Listview tbody:first-child tr:first-child th,#CentralSpaceContainer #CentralSpace .Listview tbody:first-child tr:first-child td{border-top:0}
+#CentralSpaceContainer #CentralSpace .Listview thead:first-child tr:first-child th:first-child,#CentralSpaceContainer #CentralSpace .Listview tbody:first-child tr:first-child td:first-child{border-radius:4px 0 0 0;}
+#CentralSpaceContainer #CentralSpace .Listview thead:first-child tr:first-child th:last-child,#CentralSpaceContainer #CentralSpace .Listview tbody:first-child tr:first-child td:last-child{border-radius:0 4px 0 0;}
+#CentralSpaceContainer #CentralSpace .Listview thead:last-child tr:last-child th:first-child,#CentralSpaceContainer #CentralSpace .Listview tbody:last-child tr:last-child td:first-child{border-radius:0 0 0 4px;}
+#CentralSpaceContainer #CentralSpace .Listview thead:last-child tr:last-child th:last-child,#CentralSpaceContainer #CentralSpace .Listview tbody:last-child tr:last-child td:last-child{border-radius:0 0 4px 0;}
+#CentralSpaceContainer #CentralSpace .Listview tbody tr:nth-child(odd) td,#CentralSpaceContainer #CentralSpace .Listview tbody tr:nth-child(odd) th{background-color:#141414;color:#b9b9b9;}
+#CentralSpaceContainer #CentralSpace .Listview tbody tr:nth-child(odd) td a,#CentralSpaceContainer #CentralSpace .Listview tbody tr:nth-child(odd) th a{color:#FFFFFF}
+#CentralSpaceContainer #CentralSpace .Listview tbody tr:hover td,#CentralSpaceContainer #CentralSpace .Listview tbody tr:hover th{background-color:#5a5a5a;color:#b9b9b9}
+#CentralSpaceContainer #CentralSpace .Listview .ListviewStyle{width:100%;font-size:12px;}
+#CentralSpaceContainer #CentralSpace .Listview .ListviewStyle .ListviewTitleStyle{color:#fff;font-size:14px;}
+#CentralSpaceContainer #CentralSpace .Listview .ListviewStyle .ListviewTitleStyle td{background:#5a5a5a}
+#CentralSpaceContainer #CentralSpace .Listview .ListviewStyle .ListviewTitleStyle a{color:#fff;font-size:14px}
+#CentralSpaceContainer #CentralSpace .Listview .ListviewStyle .ListviewTitleStyle .Selected{font-weight:bold}
+#CentralSpaceContainer #CentralSpace .Listview .ListviewStyle .ListviewTitleStyle .Selected:after{content:'\e817'}
+#CentralSpaceContainer #CentralSpace .searchcrumbs{font-size:14px;background:#5a5a5a;border-radius:4px;margin:20px 0 0;line-height:32px;font-size:12px;color:#fff;font-weight:bold;text-transform:uppercase;letter-spacing:1px}
+#CentralSpaceContainer #CentralSpace .searchcrumbs a{padding:8px 0 8px 15px;color:#fff}
+#CentralSpaceContainer #CentralSpace h1 .searchcrumbs{font-size:14px;background:#007bb5;border-radius:4px;margin:20px 0 0;line-height:32px;font-size:12px;color:#fff;font-weight:bold;text-transform:uppercase;letter-spacing:1px;}
+#CentralSpaceContainer #CentralSpace h1 .searchcrumbs a{padding:8px 5px;color:#fff}
+#CentralSpaceContainer #CentralSpace h1 .searchcrumbs a:first-child{padding-left:15px}
+#CentralSpaceContainer #CentralSpace .ResourcePanelInfo{margin:0 5px 4px;overflow:hidden;padding:0;white-space:nowrap}
+#CentralSpaceContainer #CentralSpace .ResourcePanelIcons{display:inline;padding-left:5px}
+#CentralSpaceContainer #CentralSpace .IconPreview,#CentralSpaceContainer #CentralSpace .IconCollect,#CentralSpaceContainer #CentralSpace .IconCollectOut,#CentralSpaceContainer #CentralSpace .IconEmail{float:right;display:block;height:12px;width:16px}
+#CentralSpaceContainer #CentralSpace .IconPreview a,#CentralSpaceContainer #CentralSpace .IconCollect a,#CentralSpaceContainer #CentralSpace .IconCollectOut a,#CentralSpaceContainer #CentralSpace .IconEmail a{text-decoration:none}
+#CentralSpaceContainer #CentralSpace .IconPreview a:before{content:'\e80f';position:relative;top:-3px;right:10px}
+#CentralSpaceContainer #CentralSpace .IconCollect a:before{content:'\e801';position:relative;right:5px}
+#CentralSpaceContainer #CentralSpace .IconCollectOut a:before{content:'\e81d';position:relative;top:0px;right:5px}
+#CentralSpaceContainer #CentralSpace .IconEmail a:before{content:'\e810';position:relative;right:8px}
+#CentralSpaceContainer #CentralSpace .ResourcePanelShellLarge{float:left;width:365px;margin:20px 15px 0 0;padding:0 0 10px;}
+#CentralSpaceContainer #CentralSpace .ResourcePanelShellLarge .ResourcePanelLarge{background:#5a5a5a;}
+#CentralSpaceContainer #CentralSpace .ResourcePanelShellLarge .ResourcePanelLarge .ResourceAlignLarge{height:365px;width:365px;text-align:center;vertical-align:middle;}
+#CentralSpaceContainer #CentralSpace .ResourcePanelShellLarge .ResourcePanelLarge .ResourceAlignLarge .ImageBorder{border:1px solid #000}
+#CentralSpaceContainer #CentralSpace .ResourcePanelShell{float:left;width:174px;padding-left: 10px;padding-bottom: 10px;}
+#CentralSpaceContainer #CentralSpace .ResourcePanelShell .ResourcePanel{background:#000;padding-bottom:5px;padding-top:10px}
+#CentralSpaceContainer #CentralSpace .ResourcePanelShell .ResourcePanel .ResourceAlign{height: 105px;width: 164px;text-align:center;vertical-align:middle}
+#CentralSpaceContainer #CentralSpace .ResourcePanelShellSmall{float:left;width:105px;margin:20px 15px 10px 0;padding:0;}
+#CentralSpaceContainer #CentralSpace .ResourcePanelShellSmall .ResourcePanelSmall{background:#5a5a5a;}
+#CentralSpaceContainer #CentralSpace .ResourcePanelShellSmall .ResourcePanelSmall .ResourceAlignSmall{height:90px;width:105px;text-align:center;vertical-align:middle}
+#CentralSpaceContainer #CentralSpace .BottomInpageKey{clear:left;padding-top:20px;}
+#CentralSpaceContainer #CentralSpace .BottomInpageKey .KeyEmail,#CentralSpaceContainer #CentralSpace .BottomInpageKey .KeyCollectOut,#CentralSpaceContainer #CentralSpace .BottomInpageKey .KeyCollect,#CentralSpaceContainer #CentralSpace .BottomInpageKey .KeyPreview{display:inline;margin:0 20px 0 10px}
+#CentralSpaceContainer #CentralSpace .BottomInpageKey .KeyEmail:before{content:'\e810'}
+#CentralSpaceContainer #CentralSpace .BottomInpageKey .KeyCollectOut:before{content:'\e81d'}
+#CentralSpaceContainer #CentralSpace .BottomInpageKey .KeyCollect:before{content:'\e801'}
+#CentralSpaceContainer #CentralSpace .BottomInpageKey .KeyPreview:before{content:'\e80f'}
+#CentralSpaceContainer #CentralSpace .BottomInpageNav{margin:5px 15px 0 0;}
+#CentralSpaceContainer #CentralSpace .BottomInpageNav .InpageNavLeftBlock{display:inline;margin-right:20px;margin-left:10px}
+#CentralSpaceContainer #CentralSpace .BottomInpageNav .HorizontalWhiteNav{font-size:10px}
+#CentralSpaceContainer #CentralSpace #rightcontent{background:#141414;padding-left: 10px;padding-top:8px}
+#CentralSpaceContainer #CentralSpace #rightcontent .HorizontalWhiteNav{width: 100%;text-align: right;margin-bottom: 15px;float: left;}
+#CentralSpaceContainer #CentralSpace #rightcontent .BasicsBox{padding:0;margin:0 0px 25px 0;}
+#CentralSpaceContainer #CentralSpace #rightcontent .BasicsBox .TopInpageNav .InpageNavLeftBlock{border-right:none;padding-right:0;margin-left:0}
+#CentralSpaceContainer #CentralSpace #rightcontent .BasicsBox .BasicsBox .Question{padding:0 0 15px}
+#CentralSpaceContainer #CentralSpace #rightcontent #CollapsibleSections{padding:0;}
+#CentralSpaceContainer #CentralSpace #rightcontent .RecordBox{margin-bottom:10px}
+#CentralSpaceContainer #CentralSpace #rightcontent .RecordPanel .RecordHeader{margin:0}
+#CentralSpaceContainer #CentralSpace #rightcontent .RecordPanel .RecordResouce{padding:0px 5px}
+#InfoBox{display:none;position:absolute;top:0;left:0;width:362px;height:303px;background-repeat:no-repeat;behavior:url("../css/iepngfix.htc")}
+#InfoBoxInner{color:#272727;margin:15px 32px 15px 18px;height:210px;overflow:hidden}
+#InfoBoxInner img{float:right}
+#InfoBoxInner h2{color:#272727;font-size:1.2em;font-weight:bold;margin:0;padding:0}
+#InfoBoxInner p{font-size:11px;color:#272727;padding:0;margin:0 0 5px 0}
+#InfoBoxCollection{display:none;position:absolute;top:0;left:0;width:376px;height:120px;background-repeat:no-repeat;behavior:url("../css/iepngfix.htc")}
+#InfoBoxCollectionInner{color:#272727;margin:6px 32px 10px 20px;height:104px;overflow:hidden}
+#InfoBoxCollectionInner img{float:right}
+#InfoBoxCollectionInner h2{color:#272727;font-size:1.2em;font-weight:bold;text-align:left;margin:0;padding:0}
+#InfoBoxCollectionInner p{font-size:11px;color:#272727;padding:0;margin:0 0 5px 0;text-align:left}
+#CentralSpaceContainer #CentralSpace #rscontent tbody tr #rightcontent #mainform .QuestionSubmit input[name="resetform"]{border-radius:3px;font-size:12px;line-height:1;padding:5px 10px;background:#5a5a5a;;cursor:pointer;text-align:center;border:1px solid #5a5a5a;color:#fff;width:80px}
+#CentralSpaceContainer #CentralSpace #rscontent tbody tr #rightcontent #mainform .QuestionSubmit input[name="save"]{border-radius:3px;font-size:12px;line-height:1;padding:5px 10px;background:#5a5a5a;cursor:pointer;text-align:center;border:1px solid #5a5a5a;color:#fff;width:80px}
+@media all and (max-width: 1024px) {
+#CentralSpaceContainer #CentralSpace #themebar{width:25%}
+#CentralSpaceContainer #CentralSpace #rightcontent .TopInpageNav .InpageNavLeftBlock{width:48%;margin-right:2%;padding:10px 0 0;margin-left:0;border-right:none}
+#CentralSpaceContainer #CentralSpace #rightcontent .HorizontalWhiteNav{width: 100%;text-align: left;margin-bottom: 15px;float: left;}
+}
+@media all and (min-width:1366px) {
+.CollectBack .CollectionSpace{left:21%;position:absolute;}
+#CentralSpaceContainer #CentralSpace #rightcontent .HorizontalWhiteNav{width: 100%;text-align: right;margin-bottom: 0px;float: left;padding-right:25px;}
+.CollectBack #CollectionMenu{font-size:11px;left:15px;position:absolute;text-align:left;width:19%;border-right:1px solid #79899c;}
+.CollectBack .CollectionSpace{left:21%;position:absolute;}
+}

@@ -1,22 +1,29 @@
 	
-	body { background: url("/data/images/bg/ktth_movie_bg.jpg") repeat top left #2F2E30 !important; }
+	body { background: url("/data/images/bg/ktth_movie_bg.jpg") repeat top left #073E78 !important; }
 	
-	.container { box-shadow: 0 0 2px 2px #2F2E30; }
+	.container { box-shadow: 0 0 2px 2px #073E78; }
 	
 	.top-menu { 
-		background-color: #2F2E30; 
-		border-top: 2px solid #FAFAFA;
-		border-bottom: 2px solid #FAFAFA;
-		border-radius: 2px;
+		
+		border-top: 1px solid #FAFAFA;
+		border-bottom: 1px solid #FAFAFA;
+		border-radius: 3px;
 		box-shadow: 0 0 3px 3px rgba(0, 0, 0, .1);
+		
+		background: -webkit-linear-gradient(#0C75E1, #073E78); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(#0C75E1, #073E78); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(#0C75E1, #073E78); /* For Firefox 3.6 to 15 */
+		background: linear-gradient( #0C75E1, #073E78); /* Standard syntax */
+		
 	}
 	
 		.top-menu li a {
 			color: #FFFFFF !important;
 			text-shadow: 1px 1px 0 #696969 !important;
+			
 		}
 		
-		.top-menu li:hover a { background: rgba(0, 164, 128, .3) !important;  }
+		.top-menu li:hover a { background: rgba(0, 231, 0, .3) !important;  }
 		
 		.top-menu li.active a {
 			background: none !important;
@@ -25,13 +32,17 @@
 		
 		.top-menu .caret { border-top-color: #FFFFFF !important; margin-left: 5px  !important; }
 		
-		.top-menu .dropdown-menu { background: #707070;	 }
+		.top-menu .dropdown-menu { background: #073E78;	 }
 				
 		.top-menu .dropdown-menu li {
 			height: 35px;
-			background-color: #707070; 			
-			border-bottom: 2px solid #FAFAFA;
-			border-radius: 2px;
+			background: -webkit-linear-gradient(#0C75E1, #073E78); /* For Safari 5.1 to 6.0 */
+			background: -o-linear-gradient(#0C75E1, #073E78); /* For Opera 11.1 to 12.0 */
+			background: -moz-linear-gradient(#0C75E1, #073E78); /* For Firefox 3.6 to 15 */
+			background: linear-gradient( #0C75E1, #073E78); /* Standard syntax */			
+			border-top: 1px solid #FAFAFA;
+			border-bottom: 1px solid #FAFAFA;
+			border-radius: 3px;
 			box-shadow: 0 0 3px 3px rgba(0, 0, 0, .1);
 			
 		}
@@ -50,7 +61,7 @@
 			margin-bottom: -5px  !important;
 		}
 		
-		.top-menu .dropdown-menu li:hover a { background: rgba(0, 164, 128, .3) !important; }
+		.top-menu .dropdown-menu li:hover a { background: rgba(0, 231, 0, .3) !important; }
 		
 	/* ======================================================================== */
 	/* MAIN																		*/
@@ -61,7 +72,13 @@
 	/* FOOTER																	*/
 	/* ======================================================================== */
 	.footer {
-		background-color: #2F2E30;						
+		background: -webkit-linear-gradient(#0C75E1, #073E78); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(#0C75E1, #073E78); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(#0C75E1, #073E78); /* For Firefox 3.6 to 15 */
+		background: linear-gradient( #0C75E1, #073E78); /* Standard syntax */					
+		border-top: 1px solid #FAFAFA;
+		border-bottom: 1px solid #FAFAFA;
+		border-radius: 3px;
 		box-shadow: 0 0 3px 3px rgba(0, 0, 0, .1);
 		color: white;
 	}
@@ -69,7 +86,10 @@
 	.box { border: 1px solid #FAFAFA; }
 	
 		.box .b-title {
-			background-color: #707070;			
+			background: -webkit-linear-gradient(#0C75E1, #073E78); /* For Safari 5.1 to 6.0 */
+			background: -o-linear-gradient(#0C75E1, #073E78); /* For Opera 11.1 to 12.0 */
+			background: -moz-linear-gradient(#0C75E1, #073E78); /* For Firefox 3.6 to 15 */
+			background: linear-gradient( #0C75E1, #073E78); /* Standard syntax */			
 			border-bottom: 1px solid #707070;
 		}
 		
@@ -95,7 +115,10 @@
 	.fixed-function { background-color: rgba(0, 0, 0, .7); }
 	
 		.bubble {
-			background-color: #707070;
+			background: -webkit-linear-gradient(#0C75E1, #073E78); /* For Safari 5.1 to 6.0 */
+			background: -o-linear-gradient(#0C75E1, #073E78); /* For Opera 11.1 to 12.0 */
+			background: -moz-linear-gradient(#0C75E1, #073E78); /* For Firefox 3.6 to 15 */
+			background: linear-gradient( #0C75E1, #073E78); /* Standard syntax */
 			color: white;
 			border: 1px solid white;
 		}
@@ -105,7 +128,7 @@
 		.bubble-item { color: white; }
 		
 	.history-box {
-		color: #980707;
+		color: #084694;
 		text-shadow: 0px 0px 3px #FFFFFF;
 	}
 	
@@ -115,11 +138,11 @@
 		
 		.history-bot { background: url("/data/images/bg/history_bot.png") no-repeat top left transparent; }
 		
-	.news-list-title { color: #A99999; }
+	.news-list-title { color: #FFFFFF; }
 	
-		.news-list-item a { color: #2c17b1 !important; }
+		.news-list-item a { color: #084694 !important; }
 		
-		.new-list-polaroid .media-time { color: #696969; }
+		.new-list-polaroid .media-time { color: #084694; }
 
 	.grid-item li a,
 	.grid-item-2 li a,
@@ -132,9 +155,14 @@
 
 	
 	.news-content .news-author {
-		border-top: 1px solid #2F2E30;
-		border-bottom: 1px solid #2F2E30;
-		background-color: #707070;
+		background: -webkit-linear-gradient(#0C75E1, #073E78); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(#0C75E1, #073E78); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(#0C75E1, #073E78); /* For Firefox 3.6 to 15 */
+		background: linear-gradient( #0C75E1, #073E78); /* Standard syntax */					
+		border-top: 1px solid #FAFAFA;
+		border-bottom: 1px solid #FAFAFA;
+		border-radius: 3px;
+		box-shadow: 0 0 3px 3px rgba(0, 0, 0, .1);
 	}
 	
 	.list-3 li.active a {
@@ -161,20 +189,32 @@
 		color: white;
 		border-top-left-radius: 7px;
 		border-top-right-radius: 7px;
-		padding: 15px 10px 27px 60px;
+		padding: -30px 15px 10px 10px;
+		
+		background: -webkit-linear-gradient(#0C75E1, #073E78); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(#0C75E1, #073E78); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(#0C75E1, #073E78); /* For Firefox 3.6 to 15 */
+		background: linear-gradient( #0C75E1, #073E78); /* Standard syntax */			
+		border-top: 1px solid #FAFAFA;
+		border-bottom: 1px solid #FAFAFA;			
+		box-shadow: 0 0 3px 3px rgba(0, 0, 0, .1);
 	}
 	
-		.pg-header-video { background: url("/data/images/bg/video.png") no-repeat top left #707070; }
-		.pg-header-videos { background: url("/data/images/bg/videos.png") no-repeat top left #707070; }
-		.pg-header-news { background: url("/data/images/bg/news.png") no-repeat top left #707070; }
-		.pg-header-pagoda { background: url("/data/images/bg/pagoda.png") no-repeat top left #707070; }
-		.pg-header-paper { background: url("/data/images/bg/paper.png") no-repeat top left #707070; }
-		.pg-header-picture { background: url("/data/images/bg/picture.png") no-repeat top left #707070; }
-		.pg-header-location { background: url("/data/images/bg/location.png") no-repeat top left #707070; }
-		.pg-header-question { background: url("/data/images/bg/question.png") no-repeat top left #707070; }
-		.pg-header-event { background: url("/data/images/bg/event.png") no-repeat top left #707070; }
+		.pg-header-video { background: url("/data/images/bg/video.png") no-repeat 5px 1px transparent; }
+		.pg-header-videos { background: url("/data/images/bg/videos.png") no-repeat 5px 1px transparent; }
+		.pg-header .pg-header-news { 
+			background: url("/data/images/bg/news.png") no-repeat 5px 1px transparent;
+			padding: 25px 15px 10px 60px;
+		}
+		.pg-header-pagoda { background: url("/data/images/bg/pagoda.png") no-repeat 5px 1px transparent; }
+		.pg-header-paper { background: url("/data/images/bg/paper.png") no-repeat 5px 1px transparent; }
+		.pg-header .pg-header-picture { background: url("/data/images/bg/picture.png") no-repeat 5px 1px transparent; padding: 25px 15px 10px 60px; }
+		.pg-header .pg-header-location { background: url("/data/images/bg/location.png") no-repeat 5px 1px transparent; padding: 25px 15px 10px 60px; font-size:27px;}
+		.pg-header-question { background: url("/data/images/bg/question.png") no-repeat 5px 1px transparent; }
+		.pg-header-event { background: url("/data/images/bg/event.png") no-repeat 5px 1px transparent; }
 
 	.pg-header a {
+			
 		color: white !important;
 	}
 	
@@ -190,32 +230,32 @@
 	/* CALENDAR */
 	.calendar-table {
 		border: 1px solid #E3E3E3;
-		background-color:#CCCCCC;
-		background-image: linear-gradient(top, #EEEEEE 42%, #CCCCCC 71%);
-		background-image: -o-linear-gradient(top, #EEEEEE 42%, #CCCCCC 71%);
-		background-image: -moz-linear-gradient(top, #EEEEEE 42%, #CCCCCC 71%);
-		background-image: -webkit-linear-gradient(top, #EEEEEE 42%, #CCCCCC 71%);
-		background-image: -ms-linear-gradient(top, #EEEEEE 42%, #CCCCCC 71%);
+		background-color:#077678;
+		background-image: linear-gradient(top, #EEEEEE 42%, #077678 71%);
+		background-image: -o-linear-gradient(top, #EEEEEE 42%, #077678 71%);
+		background-image: -moz-linear-gradient(top, #EEEEEE 42%, #077678 71%);
+		background-image: -webkit-linear-gradient(top, #EEEEEE 42%, #077678 71%);
+		background-image: -ms-linear-gradient(top, #EEEEEE 42%, #077678 71%);
 		background-image: -webkit-gradient(
 			linear,
 			left top,
 			left bottom,
 			color-stop(0.42, #EEEEEE),
-			color-stop(0.71, #CCCCCC)
+			color-stop(0.71, #077678)
 		);
 	}
 	.calendar-table tr:first-child  {
-		background-color: #707070;
-		outline: 1px solid #707070;
+		background-color: #077678;
+		outline: 1px solid #077678;
 		border: 1px solid #E3E3E3;
 		color: #fff;
 	}
 		.calendar-table tr:first-child a { color: white; }
-		.calendar-table .day-title td { color: #707070; }
+		.calendar-table .day-title td { color: #077678; }
 		.calendar-table .day-list td {
 			border-top: solid 1px #fff;
 			border-right: solid 1px #BCBCBC;
-			color: #707070;
+			color: #077678;
 		}
 			.calendar-table .day-list td div { color: #3B579D; }
 			.calendar-table .day-list td.homnay {
@@ -227,10 +267,15 @@
 		background-color: #E4E4E4;
 	}
 	.calendar-paper {
-		background-color: #D0D0D0;
-		color: #000;
-		box-shadow: 3px 3px 2px #696969;
-		border-radius: 5px;
+		background: -webkit-linear-gradient(#0C75E1, #073E78); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(#0C75E1, #073E78); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(#0C75E1, #073E78); /* For Firefox 3.6 to 15 */
+		background: linear-gradient( #0C75E1, #073E78); /* Standard syntax */
+		color: #FFF;
+		border-top: 1px solid #FAFAFA;
+		border-bottom: 1px solid #FAFAFA;
+		border-radius: 3px;
+		box-shadow: 0 0 3px 3px rgba(0, 0, 0, .1);
 	}
 	
 	.titleReward {
@@ -244,10 +289,15 @@
 	}
 	/* NAME CARD */
 	.name-card {
-		background: url('/data/images/bg/name_card.jpg') no-repeat bottom right #372920;
+		background: -webkit-linear-gradient(#0C75E1, #073E78); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(#0C75E1, #073E78); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(#0C75E1, #073E78); /* For Firefox 3.6 to 15 */
+		background: linear-gradient( #0C75E1, #073E78); /* Standard syntax */
 		color: white;
-		box-shadow: 0 0 2px 2px #666;
-		border: 1px solid #FAFAFA;
+		border-top: 1px solid #FAFAFA;
+		border-bottom: 1px solid #FAFAFA;
+		border-radius: 3px;
+		box-shadow: 0 0 3px 3px rgba(0, 0, 0, .1);
 	}
-		.name-card h2 { text-shadow: 0 0 5px #FFF; }
+		.name-card h2 { text-shadow: 0 0 5px #073E78; }
 		.name-card hr { border-color: #FAFAFA; }

@@ -1,0 +1,1 @@
+"C:/ffmpeg/bin\ffile.exe" "//mamdemo.production.vc/tulieu1/5/1_289ea02f0db073d/51_8aa889d4593299e.mp4" 1>"C:\inetpub\wwwroot\mam\include/../filestore/tmp/nghia.nguyen/filesize.vc" 2>>&1

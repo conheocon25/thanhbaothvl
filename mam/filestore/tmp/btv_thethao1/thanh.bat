@@ -1,0 +1,1 @@
+"C:/ffmpeg/bin\ffile.exe" "//mamdemo.production.vc/tulieu1/4/1_bd8b6cdd6b48087/41_8f7d640a7832dc0.mxf" 1>"C:\inetpub\wwwroot\mam\include/../filestore/tmp/btv_thethao1/filesize.vc" 2>>&1

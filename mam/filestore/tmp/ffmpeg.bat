@@ -1,0 +1,1 @@
+"c:/ffmpeg/bin\ffmpeg.exe"  -y -t 0 -i "//mamdemo.production.vc/tulieu1/1/5_1cc23c731776ab4/15_0244cc3aa99f790.mxf" -f flv -ar 22050 -b 650k -ab 32k -ac 1 -s 480x270 "//mamdemo.production.vc/proxy1/1/5_1cc23c731776ab4/15pre_1fab2a963bcd015.flv" 1> "../filestore/tmp/ktvingest1.vc" 2>>&1

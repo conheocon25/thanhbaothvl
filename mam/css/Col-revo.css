@@ -1,0 +1,7 @@
+a{text-decoration:none}
+#NoHeader{display:none}
+#LoadingBox{position:absolute;top:50%;left:50%;background-color:#fff;width:200px;padding:10px;border:1px solid;border-radius:5px;font-size:14px;-moz-border-radius:5px;-webkit-border-radius:5px;-webkit-box-shadow:4px 5px 5px rgba(0,0,0,0.2);-moz-box-shadow:4px 5px 5px rgba(0,0,0,0.2);box-shadow:4px 5px 5px rgba(0,0,0,0.2);z-index:99999;line-height:200%;color:#000;display:none}
+#LoadingBox img{float:right;vertical-align:middle}
+.NewFlag{display:inline;background:#f04124;color:#fff;padding:1px 4px;margin-left:5px}
+.ASC,.DESC{display:inline}
+.NoFind{margin-top:20px}

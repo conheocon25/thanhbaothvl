@@ -24,9 +24,11 @@ interface VideoFinder  			extends Finder {}
 interface SalaryDailyFinder  	extends Finder {}
 interface PositionsFinder  		extends Finder {}
 interface NewsFinder  			extends Finder {}
+interface NewsRssFinder  			extends Finder {}
 interface ConfigFinder  		extends Finder {}
 interface GuestFinder  			extends Finder {}
 interface PageFinder  			extends Finder {}
 interface ReportFinder  		extends Finder {}
 interface ScheduleFinder  		extends Finder {}
+interface RssLinkFinder  		extends Finder {}
 ?>

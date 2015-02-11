@@ -1,0 +1,51 @@
+ffmpeg version N-60761-g916a792 Copyright (c) 2000-2014 the FFmpeg developers
+  built on Feb 19 2014 22:07:22 with gcc 4.8.2 (GCC)
+  configuration: --enable-gpl --enable-version3 --disable-w32threads --enable-avisynth --enable-bzlib --enable-fontconfig --enable-frei0r --enable-gnutls --enable-iconv --enable-libass --enable-libbluray --enable-libcaca --enable-libfreetype --enable-libgsm --enable-libilbc --enable-libmodplug --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libopus --enable-librtmp --enable-libschroedinger --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvo-aacenc --enable-libvo-amrwbenc --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libx264 --enable-libx265 --enable-libxavs --enable-libxvid --enable-zlib
+  libavutil      52. 65.100 / 52. 65.100
+  libavcodec     55. 52.102 / 55. 52.102
+  libavformat    55. 33.100 / 55. 33.100
+  libavdevice    55. 10.100 / 55. 10.100
+  libavfilter     4.  1.103 /  4.  1.103
+  libswscale      2.  5.101 /  2.  5.101
+  libswresample   0. 17.104 /  0. 17.104
+  libpostproc    52.  3.100 / 52.  3.100
+Guessed Channel Layout for  Input Stream #0.1 : mono
+Guessed Channel Layout for  Input Stream #0.2 : mono
+Guessed Channel Layout for  Input Stream #0.3 : mono
+Guessed Channel Layout for  Input Stream #0.4 : mono
+Input #0, mxf, from '//mamdemo.production.vc/tulieu1/1/5_1cc23c731776ab4/15_0244cc3aa99f790.mxf':
+  Metadata:
+    uid             : 0c0e1475-a254-4365-a2de-3cd3df66251b
+    generation_uid  : 3c2ccbac-8a6f-431a-ac1e-4975441a3f60
+    company_name    : SONY
+    product_name    : Opt 
+    product_version : 2.06
+    application_platform: SONY MXF Development Kit (Win32)
+    product_uid     : 060e2b34-0401-0103-0e06-012002420300
+    modification_date: 2014-01-20 09:27:14
+    timecode        : 18:21:33:19
+  Duration: 00:00:13.64, start: 0.000000, bitrate: 38550 kb/s
+    Stream #0:0: Video: mpeg2video (Main), yuv420p(tv, bt709), 1920x1080 [SAR 1:1 DAR 16:9], max. 35000 kb/s, 25 fps, 25 tbr, 25 tbn, 50 tbc
+    Stream #0:1: Audio: pcm_s16le, 48000 Hz, mono, s16, 768 kb/s
+    Stream #0:2: Audio: pcm_s16le, 48000 Hz, mono, s16, 768 kb/s
+    Stream #0:3: Audio: pcm_s16le, 48000 Hz, mono, s16, 768 kb/s
+    Stream #0:4: Audio: pcm_s16le, 48000 Hz, mono, s16, 768 kb/s
+Please use -b:a or -b:v, -b is ambiguous
+Output #0, flv, to '//mamdemo.production.vc/proxy1/1/5_1cc23c731776ab4/15pre_1fab2a963bcd015.flv':
+  Metadata:
+    uid             : 0c0e1475-a254-4365-a2de-3cd3df66251b
+    generation_uid  : 3c2ccbac-8a6f-431a-ac1e-4975441a3f60
+    company_name    : SONY
+    product_name    : Opt 
+    product_version : 2.06
+    application_platform: SONY MXF Development Kit (Win32)
+    product_uid     : 060e2b34-0401-0103-0e06-012002420300
+    modification_date: 2014-01-20 09:27:14
+    timecode        : 18:21:33:19
+    encoder         : Lavf55.33.100
+    Stream #0:0: Video: flv1 (flv) ([2][0][0][0] / 0x0002), yuv420p, 480x270 [SAR 1:1 DAR 16:9], q=2-31, 650 kb/s, 1k tbn, 25 tbc
+    Stream #0:1: Audio: mp3 (libmp3lame) ([2][0][0][0] / 0x0002), 22050 Hz, mono, s16p, 32 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (mpeg2video -> flv)
+  Stream #0:1 -> #0:1 (pcm_s16le -> libmp3lame)
+Press [q] to stop, [?] for help

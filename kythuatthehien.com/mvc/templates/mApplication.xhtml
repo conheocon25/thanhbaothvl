@@ -140,6 +140,9 @@
 			<li tal:attributes="class php:ActiveAdmin=='Employee'?'active':'disable'" tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isAdmin()">
 				<a tal:attributes="href '/thu-lao/employee'"><i class="glyphicons-group" />QUẢN LÝ NHÂN VIÊN</a>
 			</li>
+			<li tal:attributes="class php:ActiveAdmin=='RssLink'?'active':'disable'" tal:condition="php: @\MVC\Base\SessionRegistry::instance()->getCurrentUser()->isAdmin()">
+				<a tal:attributes="href '/thu-lao/rss'"><i class="glyphicons-group" />RSS TIN TỨC TỰ ĐỘNG</a>
+			</li>
 			<li tal:attributes="class php:ActiveAdmin=='ChangePass'?'active':'disable'">
 				<a tal:attributes="href '/thu-lao/changepass'"><i class="glyphicons-keys" />ĐỔI MẬT KHẨU</a>
 			</li>

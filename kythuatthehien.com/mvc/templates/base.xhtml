@@ -108,10 +108,10 @@
 	<!-- THANH TIÊU ĐỀ LỊCH DƯƠNG - ÂM											  -->
 	<!-- ======================================================================== -->
 	<div metal:define-macro="CallendarBar" class="row reset-margin date-time">
-		<div id="date-time" class="span6 fix-width" style="color:#000000;font-style:bold;">
+		<div id="date-time" class="span6 fix-width" style="color:#08498E;font-style:bold;">
 			<script type="text/javascript">getLunarDateString(09,11,2012,16,39,13);</script>
 		</div>
-		<div class="span6 fix-width" style="color:#000000;font-style:bold;">
+		<div class="span6 fix-width" style="color:#08498E;font-style:bold;">
 			<marquee behavior="scroll" direction="left" scrollamount="2">
 				DVE-WEBSITE - Trang thông tin nội bộ của Phòng Kỹ thuật Thể hiện - Đài Phát Thanh - Truyền Hình Vĩnh Long - www.ktthehien.com
 			</marquee>
@@ -223,6 +223,9 @@
 	<!-- LIÊN HỆ																  -->
 	<!-- ======================================================================== -->
 	<div metal:define-macro="ContactBox" class="box">
+		<div class="b-title">
+			<div class="b-t-icon-content">Liên hệ</div>
+		</div>
 		<div class="b-content"><a href="/lien-he"><img width="100%" src="/data/images/logo/contact.jpg" /></a></div>
 	</div>
 	
@@ -253,10 +256,10 @@
 					<tr><td colspan="2" id="hoangdao" class="hoangdao"></td></tr>
 				</tbody>
 			</table>
+			<!-- document.writeln(printSelectedMonth()); -->
 			<script language="JavaScript">
 			<!--
-				setOutputSize("small");
-				document.writeln(printSelectedMonth());
+				setOutputSize("small");				
 				loadToDay();
 			-->
 			</script>
@@ -334,7 +337,7 @@
 				<li tal:attributes="class php:ActiveItem=='Home'?'active':'?'"><a href="/trang-chu">Trang chủ</a></li>
 				<li tal:attributes="class php:ActiveItem=='Introduction'?'active':'?'" ><a href="/gioi-thieu">Giới thiệu</a></li>				
 				<li tal:attributes="class php:ActiveItem=='GroupProfessional'?'active dropdown':'dropdown'">
-					<a class="dropdown-toggle" data-toggle="dropdown">Tổ CHuyên Môn<b class="caret"/></a>
+					<a class="dropdown-toggle" data-toggle="dropdown">Tổ Chuyên Môn<b class="caret"/></a>
 					<ul class="dropdown-menu">
 						<li >
 							<a tal:attributes="href '/to-chuyen-mon/kt-dung'">Kỹ Thuật Dựng</a>							

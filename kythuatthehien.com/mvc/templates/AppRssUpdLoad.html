@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<span metal:use-macro="mApplication.xhtml/IncludeMETA"/>
+		<span metal:use-macro="mApplication.xhtml/IncludeCSS"/>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<span metal:use-macro="mApplication.xhtml/Header"/>
+			<div metal:use-macro="mApplication.xhtml/Menu"/>
+			<div id="content">
+				<div id="content-header">
+					<h1>CẬP NHẬT RSS TIN TỨC</h1>
+				</div>
+			<div metal:use-macro="mApplication.xhtml/LocationBar"/>			
+			<div class="container-fluid">
+					<div class="row">
+						<div class="col-12" style="color:white;">
+								<form class="form-horizontal" tal:attributes="action Rss/getURLUpdExe" method="post">
+									<div class="control-group">
+										<label class="control-label" for="Title">Tên</label>
+										<div class="controls">
+											<input type="text" id="Name" name="Name" tal:attributes="value Rss/getName"/>
+										</div>
+									</div>									
+									<div class="control-group">
+										<label class="control-label" for="Weburl">Địa chỉ Web Lấy tin</label>
+										<div class="controls">											
+											<input type="text" id="Weburl" name="Weburl" tal:attributes="value Rss/getWeburl" />
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label" for="Rssurl">Địa chỉ Rss Lấy tin</label>
+										<div class="controls">
+											<input type="text" id="Rssurl" name="Rssurl" tal:attributes="value Rss/getRssurl" />
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label" for="Rssurl">Lớp Lấy Nội dung tin</label>
+										<div class="controls">
+											<input type="text" id="ClassContentName" name="ClassContentName" tal:attributes="value Rss/getClassContentName" />
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label" for="Rssurl">Lớp Lấy Tên Tác giả</label>
+										<div class="controls">
+											<input type="text" id="ClassAuthor" name="ClassAuthor" tal:attributes="value Rss/getClassAuthor" />
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label" for="Rssurl">Đường dẫn Hình đầy đủ</label>
+										<div class="controls">
+											<select name="ImgPath" id="ImgPath">
+												<option value="1" ><span>Đầy đủ</span></option>
+												<option value="0" ><span>Không đầy đủ</span></option>
+											</select>											
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label" for="Type">Loại Rss</label>
+										<div class="controls">
+											<select name="Type" id="Type">
+												<option value="1" ><span>Loại 1</span></option>
+												<option value="2" ><span>Loại 2</span></option>
+												<option value="3" ><span>Loại 3</span></option>
+												<option value="4" ><span>Loại 4</span></option>
+											</select>
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label" for="IdCategory">Thêm vào Danh mục tin tức</label>
+										<div class="controls">
+											<select name="IdCategory" id="IdCategory">
+												<option tal:repeat="CategoryNew AllCategoryNews" tal:attributes="value CategoryNew/getId;">
+													<span tal:content="CategoryNew/getName"/>
+												</option>
+											</select>											
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label" for="Enable">Khả dụng</label>
+										<div class="controls">
+											<select name="Enable" id="Enable">
+												<option value="1" ><span>Áp Dụng</span></option>
+												<option value="0" ><span>Không Áp Dụng</span></option>
+											</select>											
+										</div>
+									</div>
+									<div class="form-actions">
+										<button type="submit" class="btn btn-success" value="submit-value">Lưu</button>
+									</div>
+								</form>
+							</div>
+					</div>
+				</div>
+			</div>			
+		</div>	
+		<span metal:use-macro="mApplication.xhtml/Footer"/>
+		<span metal:use-macro="mApplication.xhtml/IncludeJS"/>		
+		<span metal:use-macro="mApplication.xhtml/DialogChangeTime"/>
+		 <script type="text/javascript">
+		/*<![CDATA[*/
+			$('#URLChangeTimeButton').click(function(e){
+				
+				var mYear 	= $("#mYear").val();
+				var mMonth 	= $("#mMonth").val();				
+				URL = "thu-lao/app/changetime/"+mMonth+"/"+mYear;				
+				
+				$.ajax({
+					type: "POST", 
+					async: false,
+					url: URL,
+					dataType: 'json',
+					success: function(data){						
+					}
+				});
+				location.reload(true);
+			});
+		/*]]>*/
+		</script>
+	</body>
+</html>

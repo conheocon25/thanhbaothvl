@@ -20,10 +20,12 @@ class UserCollection extends Collection implements \MVC\Domain\UserCollection {f
 class SalaryDailyCollection extends Collection implements \MVC\Domain\SalaryDailyCollection {function targetClass( ) {return "\MVC\Domain\SalaryDaily";}}
 
 class NewsCollection extends Collection implements \MVC\Domain\NewsCollection {function targetClass( ) {return "\MVC\Domain\News";}}
+class NewsRssCollection extends Collection implements \MVC\Domain\NewsRssCollection {function targetClass( ) {return "\MVC\Domain\NewsRss";}}
 class ConfigCollection extends Collection implements \MVC\Domain\ConfigCollection {function targetClass( ) {return "\MVC\Domain\Config";}}
 class GuestCollection extends Collection implements \MVC\Domain\GuestCollection {function targetClass( ) {return "\MVC\Domain\Guest";}}
 class PageCollection extends Collection implements \MVC\Domain\PageCollection {function targetClass( ) {return "\MVC\Domain\Page";}}
 class ReportCollection extends Collection implements \MVC\Domain\ReportCollection {function targetClass( ) {return "\MVC\Domain\Report";}}
 class ScheduleCollection extends Collection implements \MVC\Domain\ScheduleCollection {function targetClass( ) {return "\MVC\Domain\Schedule";}}
+class RssLinkCollection extends Collection implements \MVC\Domain\RssLinkCollection {function targetClass( ) {return "\MVC\Domain\RssLink";}}
 
 ?>
