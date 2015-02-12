@@ -157,9 +157,15 @@
 									if (isset($ssContent)) $ssContent->hidden = "hidden";
 								}
 								
-								foreach( $NewsContent->find('div[id=ads_zone6981]', 0) as $Zone) {
+								foreach( $NewsContent->find('script') as $Zone) {
+									if (isset($Zone)) $Zone->src = "";
+								}
+								
+								foreach( $NewsContent->find('#ads_zone6981') as $Zone) {
 									if (isset($Zone)) $Zone->hidden = "hidden";
 								}
+								
+								
 								
 								if ( $ImgPath == 0) {
 									foreach( $NewsContent->find('img') as $img){

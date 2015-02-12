@@ -58,23 +58,35 @@ class News extends Object{
 		\ob_start();
 		\ob_end_clean();
 		if(preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $this->Content, $matches)){
-			$first_img = $matches[1][0];
+			$first_img = $matches[1][0];	
+			$tailImg = substr($matches[1][0] , -3);
+			$tailImg = strtolower($tailImg);
+			if($tailImg != "jpg" && $tailImg != "gif") {
+				$first_img = "/data/images/news.jpg";
+			}
 		}
 		else {
 			$first_img = "/data/images/news.jpg";
 		}
+		
 		return $first_img;
 	}
 	
 	function setKey( $Key ){$this->Key = $Key;$this->markDirty();}
 	function getKey( ) {return $this->Key;}
 	function reKey( ){
-		$Str = new \MVC\Library\String($this->Title." ".$this->getId());
+		$Id = $this->getId();
+		if (!isset($Id)||$Id==0) $Id = time();
+		$Str = new \MVC\Library\String($this->Title." ".$Id);
 		$this->Key = $Str->converturl();
 	}
 	
 	
-	function getContentReduce(){$S = new \MVC\Library\String($this->Content);return $S->reduceHTML(320);}
+	function getContentReduce(){
+			if( $this->IdCategory >= 3){
+				return $this->Title;
+			} else { $S = new \MVC\Library\String($this->Content);return $S->reduceHTML(320); }
+	}
 	//-------------------------------------------------------------------------------
 	//GET LISTs
 	//-------------------------------------------------------------------------------

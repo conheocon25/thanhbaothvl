@@ -95,10 +95,10 @@
 		
 		.b-title .b-t-icon-content {
 			background: url("/data/images/bg/title_icon.png") no-repeat 5px 1px transparent;
-			color: white;
+			color: #FFFFFF;
 		}
 		
-		.box .b-content { background-color: white; }
+		.box .b-content { background-color: #FFFFFF; }
 		
 	.ads-popup {
 		background-color: rgba(0, 0, 0, .9);

@@ -61,45 +61,46 @@
 				<li tal:attributes="class php:ActiveItem=='Home'?'active':'?'"><a href="/trang-chu">Trang chủ</a></li>
 				<li tal:attributes="class php:ActiveItem=='Introduction'?'active':'?'" ><a href="/gioi-thieu">Giới thiệu</a></li>
 				<li tal:attributes="class php:ActiveItem=='GroupProfessional'?'active dropdown':'dropdown'">
-					<a class="dropdown-toggle" data-toggle="dropdown">Tổ Chuyên Môn<b class="caret"/></a>
+					<a class="dropdown-toggle" data-toggle="dropdown">Tổ chuyên môn<b class="caret"/></a>
 					<ul class="dropdown-menu">
 						<li >
-							<a tal:attributes="href '/to-chuyen-mon/kt-dung'">Kỹ Thuật Dựng</a>							
+							<a tal:attributes="href '/to-chuyen-mon/kt-dung'">Kỹ thuật dựng</a>							
 						</li>
 						<li>
-							<a tal:attributes="href '/to-chuyen-mon/kt-am-thanh'">Kỹ Thuật Âm Thanh</a>
+							<a tal:attributes="href '/to-chuyen-mon/kt-am-thanh'">Kỹ thuật âm thanh</a>
 						</li>
 						<li>
-							<a tal:attributes="href '/to-chuyen-mon/do-hoa'">Đồ Họa</a>
+							<a tal:attributes="href '/to-chuyen-mon/do-hoa'">Đồ họa</a>
 						</li>
 					</ul>
 				</li>
 				<li tal:attributes="class php:ActiveItem=='ReadCategory'?'active dropdown':'dropdown'">
 					<a class="dropdown-toggle" data-toggle="dropdown">Tin tức<b class="caret"/></a>
 					<ul class="dropdown-menu">
-						<li >
-							<a tal:attributes="href '/tin-tuc/tin-dia-phuong'">Tin Địa Phương</a>							
+						<li tal:attributes="class php:ActiveItem=='tin-dia-phuong'?'active':'?'">
+							<a tal:attributes="href '/tin-tuc/tin-dia-phuong'">Tin địa phương</a>							
 						</li>
-						<li>
-							<a tal:attributes="href '/tin-tuc/tin-trong-nuoc'">Tin Trong nước</a>
+						<li tal:attributes="class php:ActiveItem=='tin-trong-nuoc'?'active':'?'">
+							<a tal:attributes="href '/tin-tuc/tin-trong-nuoc'">Tin trong nước</a>
 						</li>
-						<li>
-							<a tal:attributes="href '/tin-tuc/tin-the-thao'">Tin Thể Thao</a>
+						<li tal:attributes="class php:ActiveItem=='tin-the-thao'?'active':'?'">
+							<a tal:attributes="href '/tin-tuc/tin-the-thao'">Tin thể thao</a>
 						</li>
 					</ul>
 				</li>
-				<li tal:attributes="class php:ActiveItem=='Subject'?'active':'?'" ><a href="/tin-tuc/chuyen-de">Chuyên đề</a></li>
-				<li tal:attributes="class php:ActiveItem=='VideoClip'?'active':'?'" ><a href="/tin-tuc/video-clip">Video clip</a></li>				
+				<li tal:attributes="class php:ActiveItem=='chuong-trinh-nhan-dao'?'active':'?'" ><a href="/tin-tuc/chuong-trinh-nhan-dao">Chương trình nhân đạo</a></li>
+				<li tal:attributes="class php:ActiveItem=='chuyen-de'?'active':'?'" ><a href="/tin-tuc/chuyen-de">Chuyên đề</a></li>
+				<li tal:attributes="class php:ActiveItem=='video-clip'?'active':'?'" ><a href="/tin-tuc/video-clip">Video clip</a></li>
+				<li tal:attributes="class php:ActiveItem=='LibraryAlbum'?'active':'?'"><a href="/thu-vien-anh">Ảnh hoạt động</a></li>							
+				<li tal:attributes="class php:ActiveItem=='Contact'?'active':'?'"><a href="/lien-he">Liên hệ</a></li>
 				<li tal:attributes="class php:ActiveItem=='GroupAplication'?'active dropdown':'dropdown'">
-					<a class="dropdown-toggle" data-toggle="dropdown">Ứng Dụng<b class="caret"/></a>
+					<a class="dropdown-toggle" data-toggle="dropdown">Ứng dụng<b class="caret"/></a>
 						<ul class="dropdown-menu">
 						<li>
-							<a tal:attributes="href '/thu-lao'">Quản lý Điểm Thù Lao</a>
+							<a tal:attributes="href '/thu-lao'">Quản lý điểm thù lao</a>
 						</li>						
 					</ul>
-				</li>				
-				<li tal:attributes="class php:ActiveItem=='LibraryAlbum'?'active':'?'"><a href="/thu-vien-anh">Ảnh hoạt động</a></li>							
-				<li tal:attributes="class php:ActiveItem=='Contact'?'active':'?'"><a href="/lien-he">Liên hệ</a></li>							
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -337,45 +338,46 @@
 				<li tal:attributes="class php:ActiveItem=='Home'?'active':'?'"><a href="/trang-chu">Trang chủ</a></li>
 				<li tal:attributes="class php:ActiveItem=='Introduction'?'active':'?'" ><a href="/gioi-thieu">Giới thiệu</a></li>				
 				<li tal:attributes="class php:ActiveItem=='GroupProfessional'?'active dropdown':'dropdown'">
-					<a class="dropdown-toggle" data-toggle="dropdown">Tổ Chuyên Môn<b class="caret"/></a>
+					<a class="dropdown-toggle" data-toggle="dropdown">Tổ chuyên môn<b class="caret"/></a>
 					<ul class="dropdown-menu">
 						<li >
-							<a tal:attributes="href '/to-chuyen-mon/kt-dung'">Kỹ Thuật Dựng</a>							
+							<a tal:attributes="href '/to-chuyen-mon/kt-dung'">Kỹ thuật dựng</a>							
 						</li>
 						<li>
-							<a tal:attributes="href '/to-chuyen-mon/kt-am-thanh'">Kỹ Thuật Âm Thanh</a>
+							<a tal:attributes="href '/to-chuyen-mon/kt-am-thanh'">Kỹ thuật âm thanh</a>
 						</li>
 						<li>
-							<a tal:attributes="href '/to-chuyen-mon/do-hoa'">Đồ Họa</a>
+							<a tal:attributes="href '/to-chuyen-mon/do-hoa'">Đồ họa</a>
 						</li>
 					</ul>
 				</li>
 				<li tal:attributes="class php:ActiveItem=='ReadCategory'?'active dropdown':'dropdown'">
 					<a class="dropdown-toggle" data-toggle="dropdown">Tin tức<b class="caret"/></a>
 					<ul class="dropdown-menu">
-						<li >
-							<a tal:attributes="href '/tin-tuc/tin-dia-phuong'">Tin Địa Phương</a>							
+						<li tal:attributes="class php:ActiveItem=='tin-dia-phuong'?'active':'?'">
+							<a tal:attributes="href '/tin-tuc/tin-dia-phuong'">Tin địa phương</a>							
 						</li>
-						<li>
-							<a tal:attributes="href '/tin-tuc/tin-trong-nuoc'">Tin Trong nước</a>
+						<li tal:attributes="class php:ActiveItem=='tin-trong-nuoc'?'active':'?'">
+							<a tal:attributes="href '/tin-tuc/tin-trong-nuoc'">Tin trong nước</a>
 						</li>
-						<li>
-							<a tal:attributes="href '/tin-tuc/tin-the-thao'">Tin Thể Thao</a>
+						<li tal:attributes="class php:ActiveItem=='tin-the-thao'?'active':'?'">
+							<a tal:attributes="href '/tin-tuc/tin-the-thao'">Tin thể thao</a>
 						</li>
 					</ul>
 				</li>
-				<li tal:attributes="class php:ActiveItem=='Subject'?'active':'?'" ><a href="/tin-tuc/chuyen-de">Chuyên đề</a></li>
-				<li tal:attributes="class php:ActiveItem=='VideoClip'?'active':'?'" ><a href="/tin-tuc/video-clip">Video clip</a></li>
-				<li tal:attributes="class php:ActiveItem=='GroupAplication'?'active dropdown':'dropdown'">
-					<a class="dropdown-toggle" data-toggle="dropdown">Ứng Dụng<b class="caret"/></a>
-						<ul class="dropdown-menu">
-						<li>
-							<a tal:attributes="href '/thu-lao'">Quản lý Điểm Thù Lao</a>
-						</li>							
-					</ul>
-				</li>				
+				<li tal:attributes="class php:ActiveItem=='chuong-trinh-nhan-dao'?'active':'?'" ><a href="/tin-tuc/chuong-trinh-nhan-dao">Chương trình nhân đạo</a></li>
+				<li tal:attributes="class php:ActiveItem=='chuyen-de'?'active':'?'" ><a href="/tin-tuc/chuyen-de">Chuyên đề</a></li>
+				<li tal:attributes="class php:ActiveItem=='video-clip'?'active':'?'" ><a href="/tin-tuc/video-clip">Video clip</a></li>								
 				<li tal:attributes="class php:ActiveItem=='LibraryAlbum'?'active':'?'"><a href="/thu-vien-anh">Ảnh hoạt động</a></li>							
 				<li tal:attributes="class php:ActiveItem=='Contact'?'active':'?'"><a href="/lien-he">Liên hệ</a></li>
+				<li tal:attributes="class php:ActiveItem=='GroupAplication'?'active dropdown':'dropdown'">
+					<a class="dropdown-toggle" data-toggle="dropdown">Ứng dụng<b class="caret"/></a>
+						<ul class="dropdown-menu">
+						<li>
+							<a tal:attributes="href '/thu-lao'">Quản lý điểm thù lao</a>
+						</li>							
+					</ul>
+				</li>
 			</ul>
 		</div>
 		<div class="row reset-margin">			

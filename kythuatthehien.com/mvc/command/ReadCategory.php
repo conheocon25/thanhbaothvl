@@ -51,7 +51,7 @@
 			$request->setObject("NewsAll", $NewsAll);	
 			
 			$request->setObject("PN", $PN);			
-			$request->setProperty("ActiveItem", 'ReadCategory');
+			$request->setProperty("ActiveItem", $Key1);
 			$request->setProperty("Page", $Page);	
 			
 			return self::statuses('CMD_DEFAULT');
