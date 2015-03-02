@@ -9,7 +9,7 @@ class CategoryNews extends Mapper implements \MVC\Domain\CategoryNewsFinder {
 				
 		$tblCategory = "ktth_category_news";
 		
-		$selectAllStmt = sprintf("select * from %s ORDER BY `order`", $tblCategory);
+		$selectAllStmt = sprintf("select * from %s where id<17 ORDER BY `order`", $tblCategory);
 		$selectStmt = sprintf("select *  from %s where id=?", $tblCategory);
 		$updateStmt = sprintf("update %s set name=?, `order`=?, `key`=? where id=?", $tblCategory);
 		$insertStmt = sprintf("insert into %s ( name, `order`, `key`) values(?, ?, ?)", $tblCategory);

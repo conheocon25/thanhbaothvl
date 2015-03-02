@@ -184,7 +184,8 @@
 									$NewsAuthor = "Nguồn THVL.VN";
 								}else {
 									$NewsAuthor = html_entity_decode($NewsAuthor->plaintext, ENT_QUOTES, 'UTF-8');
-								}				
+								}		
+								
 								// Thêm tin mới	nếu $AUTONEWS = 1 thì ko cần duyệt tin còn $AUTONEWS = 0 thì vào NewsRss chờ duyệt tin	
 								if ($AUTONEWS == 1) {
 									$News = new \MVC\Domain\News(
